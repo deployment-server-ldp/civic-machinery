@@ -10,7 +10,7 @@ export const siteConfig = {
   legalName: "Civic Tobacco Machinery",
   // Set the real domain in production via NEXT_PUBLIC_SITE_URL.
   url:
-    (process.env.NEXT_PUBLIC_SITE_URL || "https://www.civictobaccomachinery.com").replace(
+    (process.env.NEXT_PUBLIC_SITE_URL || "https://civic-tobacco-machinery.com").replace(
       /\/$/,
       ""
     ),
@@ -21,7 +21,7 @@ export const siteConfig = {
   phoneDisplay: "+92 301 1111184",
   phone: "+923011111184",
   whatsapp: "923011111184",
-  email: "info@civictobaccomachinery.com",
+  email: "info@civic-tobacco-machinery.com",
   address: {
     street: "Plot No. A, 8/D Fakhruddin Valika Rd, Metroville S.I.T.E.",
     locality: "Karachi",

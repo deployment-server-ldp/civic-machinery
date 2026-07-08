@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
-import { siteConfig, whatsappLink, fullAddress } from "@/lib/site";
+import { siteConfig, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us — Cigarette Machinery Suppliers in Pakistan",
@@ -16,7 +16,12 @@ export const metadata: Metadata = buildMetadata({
   ],
 });
 
-const mapQuery = encodeURIComponent(fullAddress());
+// Google Maps listing for the workshop (Civic Enterprises).
+const mapEmbedSrc =
+  "https://www.google.com/maps?q=" +
+  encodeURIComponent("Civic Enterprises, 8/D Fakhruddin Valika Road, SITE, Karachi") +
+  "&output=embed";
+const mapPlaceUrl = "https://maps.google.com/?cid=11182906624603889619";
 
 export default function ContactPage() {
   return (
@@ -93,8 +98,8 @@ export default function ContactPage() {
             {/* Map */}
             <div className="mt-8 overflow-hidden rounded-2xl border border-brand-100">
               <iframe
-                title="Civic Tobacco Machinery location on the map"
-                src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+                title="Civic Tobacco Machinery location on Google Maps"
+                src={mapEmbedSrc}
                 width="100%"
                 height="320"
                 loading="lazy"
@@ -102,6 +107,18 @@ export default function ContactPage() {
                 className="block w-full"
               />
             </div>
+            <a
+              href={mapPlaceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-700 hover:underline"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Open in Google Maps
+            </a>
           </div>
 
           {/* Form */}

@@ -36,7 +36,6 @@ const manufacturingCat = cat("manufacturing-machines");
 const usedCat = cat("used-machinery");
 
 export const mainNav: NavItem[] = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
     label: "Packing",

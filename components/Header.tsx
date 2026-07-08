@@ -62,7 +62,7 @@ export default function Header() {
 
         {/* Desktop nav — single-line glass pill */}
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-0.5 rounded-full border border-white/70 bg-white/50 px-1.5 py-1.5 shadow-[0_6px_24px_-12px_rgba(28,35,45,0.4)] ring-1 ring-black/5 backdrop-blur-md">
+          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/90 bg-white/60 px-1.5 py-1.5 shadow-[0_6px_20px_-10px_rgba(28,35,45,0.35)] ring-1 ring-brand-900/[0.06] backdrop-blur-md">
             {mainNav.map((item) => (
               <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
             ))}
