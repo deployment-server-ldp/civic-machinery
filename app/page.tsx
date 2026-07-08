@@ -110,7 +110,6 @@ export default function HomePage() {
           playsInline
           preload="metadata"
         >
-          <source src="/videos/mark-8-post-64.webm" type="video/webm" />
           <source src="/videos/mark-8-post-64.mp4" type="video/mp4" />
         </video>
 
