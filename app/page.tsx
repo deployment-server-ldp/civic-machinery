@@ -20,19 +20,19 @@ export const metadata: Metadata = buildMetadata({
   description: siteConfig.description,
   path: "/",
   keywords: [
-    "Cigarette Manufacturing Machines in Karachi",
-    "Cigarette Packing Machines in Karachi",
-    "Cigarette Wrapping Machines Karachi",
-    "Used Cigarette Machines Karachi",
-    "Tobacco Machinery in Karachi",
-    "Tobacco Manufacturing Machines in Karachi",
-    "Tobacco Packing Machines in Karachi",
+    "Cigarette Manufacturing Machines in Pakistan",
+    "Cigarette Packing Machines in Pakistan",
+    "Cigarette Wrapping Machines Pakistan",
+    "Used Cigarette Machines Pakistan",
+    "Tobacco Machinery in Pakistan",
+    "Tobacco Manufacturing Machines in Pakistan",
+    "Tobacco Packing Machines in Pakistan",
   ],
 });
 
 const homeFaqs = [
   {
-    question: "Do you sell both new and used cigarette machines in Karachi?",
+    question: "Do you sell both new and used cigarette machines in Pakistan?",
     answer:
       "Yes. We supply new machines as well as carefully reconditioned used cigarette and tobacco machinery. Every used machine is inspected, serviced and tested before we sell it, and it comes with an honest condition report so you know exactly what you are buying.",
   },
@@ -47,9 +47,9 @@ const homeFaqs = [
       "We do. We help with installation and setting the machine correctly on your floor, and we support you afterwards with spare parts and service. Getting a maker or packer running is not a plug-and-play job, so we stay involved until it runs the way it should.",
   },
   {
-    question: "Where are you located and do you deliver outside Karachi?",
+    question: "Where are you located and do you deliver across Pakistan?",
     answer:
-      "Our workshop is in the SITE industrial estate of Karachi. We serve customers across Karachi and the rest of Pakistan, and we can arrange delivery and installation wherever your factory is.",
+      "Our workshop is in the SITE industrial estate in Karachi. We serve customers across Pakistan, and we can arrange delivery and installation wherever your factory is.",
   },
 ];
 
@@ -57,7 +57,7 @@ const stats = [
   { value: "25+", label: "Years in tobacco machinery" },
   { value: "300+", label: "Machines supplied" },
   { value: "6", label: "Machine categories" },
-  { value: "Karachi", label: "Workshop & support" },
+  { value: "Pakistan", label: "Nationwide support" },
 ];
 
 const reasons = [
@@ -78,7 +78,7 @@ const reasons = [
   },
   {
     title: "Local, on-the-ground help",
-    text: "We are based right here in SITE, Karachi. When you need parts or a technician, help is close by, not overseas.",
+    text: "We are based right here in Pakistan. When you need parts or a technician, help is close by, not overseas.",
     icon: "pin",
   },
 ];
@@ -114,10 +114,10 @@ export default function HomePage() {
         <div className="container relative mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-in-up">
             <p className="eyebrow text-accent-300">
-              Cigarette &amp; Tobacco Machinery — Karachi
+              Cigarette &amp; Tobacco Machinery — Pakistan
             </p>
             <h1 className="mt-3 text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
-              Cigarette Manufacturing, Packing &amp; Wrapping Machines in Karachi
+              Cigarette Manufacturing, Packing &amp; Wrapping Machines in Pakistan
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-200">
               Civic Tobacco Machinery supplies new and reconditioned cigarette
@@ -190,7 +190,7 @@ export default function HomePage() {
           </h2>
           <p className="mt-4 text-brand-600">
             From the maker that forms the rod to the boxer that packs the carton,
-            we supply and support the full range of tobacco machinery in Karachi.
+            we supply and support the full range of tobacco machinery in Pakistan.
           </p>
         </div>
 
@@ -270,9 +270,9 @@ export default function HomePage() {
       <section className="bg-brand-950 py-16 text-white">
         <div className="container mx-auto grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="eyebrow text-accent-300">Serving Karachi &amp; All Pakistan</p>
+            <p className="eyebrow text-accent-300">Serving All of Pakistan</p>
             <h2 className="mt-2 text-3xl text-white sm:text-4xl">
-              Your Local Tobacco Machinery Partner in Karachi
+              Your Tobacco Machinery Partner in Pakistan
             </h2>
             <p className="mt-4 text-brand-200">
               Being based in the SITE industrial estate means we are close to the

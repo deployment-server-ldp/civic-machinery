@@ -1,7 +1,7 @@
 # Civic Tobacco Machinery — Website
 
 Production-ready, SEO-first website for **Civic Tobacco Machinery**, a supplier of
-cigarette manufacturing, packing, wrapping and used tobacco machinery in Karachi.
+cigarette manufacturing, packing, wrapping and used tobacco machinery in Pakistan.
 
 Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, and
 server-side rendering / static generation.

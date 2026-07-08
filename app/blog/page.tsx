@@ -9,12 +9,12 @@ import { blogPosts } from "@/lib/blog";
 export const metadata: Metadata = buildMetadata({
   title: "Blog — Cigarette & Tobacco Machinery Guides",
   description:
-    "Practical guides on cigarette and tobacco machinery — choosing packing machines, comparing makers, and buying used machines in Karachi. From Civic Tobacco Machinery.",
+    "Practical guides on cigarette and tobacco machinery — choosing packing machines, comparing makers, and buying used machines in Pakistan. From Civic Tobacco Machinery.",
   path: "/blog",
   keywords: [
     "cigarette machinery blog",
     "tobacco machinery guides",
-    "buying cigarette machines Karachi",
+    "buying cigarette machines Pakistan",
   ],
 });
 

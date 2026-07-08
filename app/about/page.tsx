@@ -6,14 +6,14 @@ import CtaBand from "@/components/CtaBand";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us — Cigarette & Tobacco Machinery Suppliers in Karachi",
+  title: "About Us — Cigarette & Tobacco Machinery Suppliers in Pakistan",
   description:
-    "About Civic Tobacco Machinery — cigarette and tobacco machinery suppliers in Karachi. Who we are, what we stand for, and how we support your factory with new and used machines.",
+    "About Civic Tobacco Machinery — cigarette and tobacco machinery suppliers in Pakistan. Who we are, what we stand for, and how we support your factory with new and used machines.",
   path: "/about",
   keywords: [
     "about Civic Tobacco Machinery",
-    "tobacco machinery suppliers Karachi",
-    "cigarette machine dealers Karachi",
+    "tobacco machinery suppliers Pakistan",
+    "cigarette machine dealers Pakistan",
   ],
 });
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Cigarette & Tobacco Machinery, Backed by People Who Know It"
-        intro="Civic Tobacco Machinery has spent years helping factories in Karachi and across Pakistan build, expand and maintain their cigarette lines."
+        intro="Civic Tobacco Machinery has spent years helping factories across Pakistan build, expand and maintain their cigarette lines."
         crumbs={[
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="prose-content lg:col-span-2">
             <h2 className="text-2xl">Who we are</h2>
             <p>
-              We are a Karachi-based supplier of cigarette and tobacco machinery.
+              We are a Pakistan-based supplier of cigarette and tobacco machinery.
               Over the years we have worked with everything from small workshops
               taking their first steps into cigarette production to established
               factories adding a second or third line. That experience shapes how
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 <div>
                   <dt className="text-brand-500">We serve</dt>
                   <dd className="font-medium text-brand-800">
-                    Karachi &amp; all of Pakistan
+                    All of Pakistan
                   </dd>
                 </div>
                 <div>

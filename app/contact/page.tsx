@@ -5,14 +5,14 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig, whatsappLink, fullAddress } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us — Cigarette Machinery Suppliers in Karachi",
+  title: "Contact Us — Cigarette Machinery Suppliers in Pakistan",
   description:
-    "Contact Civic Tobacco Machinery in Karachi. Call, WhatsApp or send an enquiry about cigarette manufacturing, packing, wrapping and used machines. Workshop in SITE, Karachi.",
+    "Contact Civic Tobacco Machinery in Pakistan. Call, WhatsApp or send an enquiry about cigarette manufacturing, packing, wrapping and used machines. Workshop in SITE, Karachi.",
   path: "/contact",
   keywords: [
-    "contact cigarette machinery Karachi",
+    "contact cigarette machinery Pakistan",
     "tobacco machinery suppliers contact",
-    "Civic Tobacco Machinery Karachi",
+    "Civic Tobacco Machinery Pakistan",
   ],
 });
 

@@ -51,7 +51,7 @@ export default function Header() {
             <span aria-hidden="true" className="text-brand-700">
               |
             </span>
-            <span>SITE, Karachi</span>
+            <span>Pakistan</span>
           </div>
         </div>
       </div>

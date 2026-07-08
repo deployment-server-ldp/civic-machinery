@@ -22,21 +22,21 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-choose-cigarette-packing-machine-karachi",
     title: "How to Choose the Right Cigarette Packing Machine for Your Factory",
     description:
-      "A practical guide to choosing a cigarette packing machine in Karachi — hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
+      "A practical guide to choosing a cigarette packing machine in Pakistan — hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
     excerpt:
       "Hard pack or soft pack? 180 or 225 a minute? New or reconditioned? A plain-English guide to picking a packing machine that fits your factory.",
     date: "2026-01-14",
     author: "Civic Tobacco Machinery",
     readMinutes: 6,
     keywords: [
-      "Cigarette Packing Machines in Karachi",
+      "Cigarette Packing Machines in Pakistan",
       "choose packing machine",
       "hard pack soft pack",
     ],
     body: [
       {
         paragraphs: [
-          "Buying a packing machine is a big decision, and it is easy to get lost in speeds and model numbers. This guide keeps it simple. We will walk through the few things that really decide which machine is right for you, based on what we see every day with factories here in Karachi.",
+          "Buying a packing machine is a big decision, and it is easy to get lost in speeds and model numbers. This guide keeps it simple. We will walk through the few things that really decide which machine is right for you, based on what we see every day with factories here in Pakistan.",
         ],
       },
       {
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Talk to us before you decide",
         paragraphs: [
-          "Every factory is a little different. Tell us your format, your target output and your budget, and we will point you to the machine that fits — no pressure, just honest advice. Message us on WhatsApp or drop by our workshop in SITE, Karachi.",
+          "Every factory is a little different. Tell us your format, your target output and your budget, and we will point you to the machine that fits — no pressure, just honest advice. Message us on WhatsApp or drop by our workshop in SITE, Pakistan.",
         ],
       },
     ],
@@ -81,7 +81,7 @@ export const blogPosts: BlogPost[] = [
     slug: "hauni-mark-8-vs-mark-9-cigarette-makers",
     title: "Hauni Mark 8 vs Mark 9: Which Cigarette Maker Suits You?",
     description:
-      "Comparing the Hauni Mark 8 and Mark 9 cigarette making machines — speed, control and cost. Practical advice from Civic Tobacco Machinery in Karachi.",
+      "Comparing the Hauni Mark 8 and Mark 9 cigarette making machines — speed, control and cost. Practical advice from Civic Tobacco Machinery in Pakistan.",
     excerpt:
       "Both are legends. But which Hauni maker is right for your floor? We compare the Mark 8 and Mark 9 in plain terms.",
     date: "2026-02-03",
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     keywords: [
       "Hauni Mark 8",
       "Hauni Mark 9",
-      "Cigarette Manufacturing Machines in Karachi",
+      "Cigarette Manufacturing Machines in Pakistan",
     ],
     body: [
       {
@@ -121,16 +121,16 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "buying-used-tobacco-machinery-karachi-checklist",
-    title: "Buying Used Tobacco Machinery in Karachi: A Buyer's Checklist",
+    title: "Buying Used Tobacco Machinery in Pakistan: A Buyer's Checklist",
     description:
-      "What to check before buying used cigarette machines in Karachi — condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
+      "What to check before buying used cigarette machines in Pakistan — condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
     excerpt:
       "Used machinery can save you a fortune — or cost you one. Here is the checklist we would use before handing over any money.",
     date: "2026-03-10",
     author: "Civic Tobacco Machinery",
     readMinutes: 6,
     keywords: [
-      "Used Cigarette Machines Karachi",
+      "Used Cigarette Machines Pakistan",
       "used tobacco machinery",
       "buying used cigarette machines",
     ],
@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
         heading: "5. Does it fit your line?",
         paragraphs: [
           "A brilliant machine at the wrong speed or format still becomes a bottleneck. Make sure any used machine matches the rest of your line. We always check this before recommending anything.",
-          "Buying used the right way is one of the smartest moves a factory can make. Come and see our stock in SITE, Karachi, or message us on WhatsApp and we will tell you what is available today.",
+          "Buying used the right way is one of the smartest moves a factory can make. Come and see our stock in SITE, Pakistan, or message us on WhatsApp and we will tell you what is available today.",
         ],
       },
     ],
