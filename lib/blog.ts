@@ -19,7 +19,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "how-to-choose-cigarette-packing-machine-karachi",
+    slug: "how-to-choose-cigarette-packing-machine-pakistan",
     title: "How to Choose the Right Cigarette Packing Machine for Your Factory",
     description:
       "A practical guide to choosing a cigarette packing machine in Pakistan — hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "buying-used-tobacco-machinery-karachi-checklist",
+    slug: "buying-used-tobacco-machinery-pakistan-checklist",
     title: "Buying Used Tobacco Machinery in Pakistan: A Buyer's Checklist",
     description:
       "What to check before buying used cigarette machines in Pakistan — condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
