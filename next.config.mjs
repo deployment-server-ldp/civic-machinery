@@ -1,15 +1,24 @@
+// Set EXPORT_STATIC=1 to build a static site (out/) for shared hosting such
+// as Hostinger. In that mode Next can't run a server, so image optimisation,
+// redirects and headers are handled at the host level (see deploy/.htaccess).
+const isExport = process.env.EXPORT_STATIC === "1";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  images: {
-    // Modern formats for smaller, faster images (Core Web Vitals).
-    formats: ["image/avif", "image/webp"],
-    // When you add real machine photos hosted elsewhere, whitelist the host here, e.g.:
-    // remotePatterns: [{ protocol: "https", hostname: "images.civictobaccomachinery.com" }],
-  },
+  ...(isExport ? { output: "export", trailingSlash: true } : {}),
+  images: isExport
+    ? { unoptimized: true }
+    : {
+        // Modern formats for smaller, faster images (Core Web Vitals).
+        formats: ["image/avif", "image/webp"],
+        // When you add real machine photos hosted elsewhere, whitelist the host here, e.g.:
+        // remotePatterns: [{ protocol: "https", hostname: "images.civic-tobacco-machinery.com" }],
+      },
   async redirects() {
+    if (isExport) return []; // handled by deploy/.htaccess on static hosting
     // Permanent (308) redirects from old URLs to the new clean structure.
     return [
       // Blog: old "karachi" URLs → "pakistan" URLs.
@@ -72,6 +81,7 @@ const nextConfig = {
     ];
   },
   async headers() {
+    if (isExport) return []; // headers come from deploy/.htaccess on static hosting
     return [
       {
         source: "/:path*",

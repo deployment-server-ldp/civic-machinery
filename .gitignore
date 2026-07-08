@@ -16,6 +16,9 @@
 # production
 /build
 
+# static-export bundle for manual hosting
+/civic-tobacco-machinery-hostinger.zip
+
 # misc
 .DS_Store
 *.pem

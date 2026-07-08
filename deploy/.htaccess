@@ -1,0 +1,52 @@
+# Civic Tobacco Machinery — Apache / LiteSpeed config for the static export.
+# Upload this file to the ROOT of your Hostinger site (public_html/.htaccess),
+# alongside the exported files. It reproduces the redirects + security headers
+# that the Node server would normally provide.
+
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # ---- 301 redirects: old URLs -> new clean URLs ----
+
+  # Blog: old "karachi" slugs -> "pakistan" slugs
+  RewriteRule ^blog/how-to-choose-cigarette-packing-machine-karachi/?$ /blog/how-to-choose-cigarette-packing-machine-pakistan/ [R=301,L]
+  RewriteRule ^blog/buying-used-tobacco-machinery-karachi-checklist/?$ /blog/buying-used-tobacco-machinery-pakistan-checklist/ [R=301,L]
+
+  # Packing / wrapping category slugs
+  RewriteRule ^packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
+  RewriteRule ^packing-machines/(.+?)/?$ /cigarette-packing-machines/$1/ [R=301,L]
+  RewriteRule ^wrapping-machines/?$ /cigarette-box-wrapping-machines/ [R=301,L]
+  RewriteRule ^wrapping-machines/(.+?)/?$ /cigarette-box-wrapping-machines/$1/ [R=301,L]
+
+  # Manufacturing sub-categories flattened to root
+  RewriteRule ^manufacturing-machines/cigarette-making-machines/?$ /cigarette-making-machines/ [R=301,L]
+  RewriteRule ^manufacturing-machines/cigarette-making-machines/(.+?)/?$ /cigarette-making-machines/$1/ [R=301,L]
+  RewriteRule ^manufacturing-machines/cigarette-filter-making-machines/?$ /cigarette-filter-making-machines/ [R=301,L]
+  RewriteRule ^manufacturing-machines/cigarette-filter-making-machines/(.+?)/?$ /cigarette-filter-making-machines/$1/ [R=301,L]
+  RewriteRule ^manufacturing-machines/tobacco-machinery/?$ /tobacco-machinery/ [R=301,L]
+  RewriteRule ^manufacturing-machines/tobacco-machinery/(.+?)/?$ /tobacco-machinery/$1/ [R=301,L]
+
+  # Used-machinery products flattened to root (landing page /used-machinery/ stays)
+  RewriteRule ^used-machinery/(.+?)/?$ /$1/ [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
