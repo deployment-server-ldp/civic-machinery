@@ -1248,12 +1248,51 @@ export const getProduct = (category: string, slug: string, subcategory?: string)
       (subcategory ? p.subcategory === subcategory : !p.subcategory)
   );
 
+/* ------------------------------------------------------------------ */
+/* Canonical URL paths                                                 */
+/*                                                                     */
+/* Clean, keyword-first URLs. Category/sub-category landing pages and  */
+/* product pages live at these paths; the folder structure under app/  */
+/* mirrors them, and next.config redirects the old paths here.         */
+/* ------------------------------------------------------------------ */
+
+export const categoryPaths: Record<CategorySlug, string> = {
+  "packing-machines": "/cigarette-packing-machines",
+  "wrapping-machines": "/cigarette-box-wrapping-machines",
+  "manufacturing-machines": "/manufacturing-machines",
+  "used-machinery": "/used-machinery",
+};
+
+// Manufacturing sub-categories are flattened to the site root.
+export const subcategoryPaths: Record<string, string> = {
+  "cigarette-making-machines": "/cigarette-making-machines",
+  "cigarette-filter-making-machines": "/cigarette-filter-making-machines",
+  "tobacco-machinery": "/tobacco-machinery",
+};
+
+export const categoryHref = (c: Category) => categoryPaths[c.slug];
+
+export const subcategoryHref = (s: Subcategory) => subcategoryPaths[s.slug];
+
 /** Build the canonical path for a product. */
-export const productHref = (p: Product) =>
-  p.subcategory
-    ? `/${p.category}/${p.subcategory}/${p.slug}`
-    : `/${p.category}/${p.slug}`;
+export const productHref = (p: Product): string => {
+  if (p.subcategory) return `${subcategoryPaths[p.subcategory]}/${p.slug}`;
+  // Used machinery products live at the site root.
+  if (p.category === "used-machinery") return `/${p.slug}`;
+  return `${categoryPaths[p.category]}/${p.slug}`;
+};
 
-export const categoryHref = (c: Category) => `/${c.slug}`;
-
-export const subcategoryHref = (s: Subcategory) => `/${s.category}/${s.slug}`;
+/** Breadcrumb trail for a product page (Home → … → Product). */
+export const productCrumbs = (p: Product): { name: string; path: string }[] => {
+  const cat = getCategory(p.category)!;
+  const trail = [
+    { name: "Home", path: "/" },
+    { name: cat.navLabel, path: categoryHref(cat) },
+  ];
+  if (p.subcategory) {
+    const sub = getSubcategory(p.subcategory)!;
+    trail.push({ name: sub.navLabel, path: subcategoryHref(sub) });
+  }
+  trail.push({ name: p.name, path: productHref(p) });
+  return trail;
+};

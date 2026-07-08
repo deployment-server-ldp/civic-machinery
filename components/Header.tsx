@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
       {/* Utility bar */}
-      <div className="hidden bg-brand-950 text-brand-100 lg:block">
+      <div className="hidden bg-brand-950 text-brand-100 xl:block">
         <div className="container mx-auto flex h-9 items-center justify-between text-xs">
           <p>{siteConfig.tagline}</p>
           <div className="flex items-center gap-5">
@@ -57,11 +57,11 @@ export default function Header() {
       </div>
 
       {/* Main bar */}
-      <div className="container mx-auto flex h-16 items-center justify-between gap-4 lg:h-[4.75rem]">
+      <div className="container mx-auto flex h-[4.5rem] items-center justify-between gap-4 xl:h-[5.25rem]">
         <Logo />
 
         {/* Desktop nav — single-line glass pill */}
-        <nav aria-label="Primary" className="hidden lg:block">
+        <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/90 bg-white/60 px-1.5 py-1.5 shadow-[0_6px_20px_-10px_rgba(28,35,45,0.35)] ring-1 ring-brand-900/[0.06] backdrop-blur-md">
             {mainNav.map((item) => (
               <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
@@ -76,7 +76,7 @@ export default function Header() {
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-200/70 bg-white/60 text-brand-800 backdrop-blur hover:bg-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-200/70 bg-white/60 text-brand-800 backdrop-blur hover:bg-white xl:hidden"
         >
           {mobileOpen ? <IconClose /> : <IconMenu />}
         </button>
@@ -109,10 +109,11 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
   return (
     <li className="group relative">
-      <Link href={item.href} className={linkCls} aria-haspopup="true">
+      {/* Parent is a trigger only — it opens the dropdown, it doesn't navigate. */}
+      <button type="button" className={linkCls} aria-haspopup="true">
         {item.label}
         <IconChevron className="h-3 w-3 opacity-70 transition-transform group-hover:rotate-180" />
-      </Link>
+      </button>
 
       {/* Simple dropdown */}
       {item.children && (
@@ -164,7 +165,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
               <span className="text-brand-600">
                 Looking for a specific machine or a full line?
               </span>
-              <Link href={item.href} className="link-accent">
+              <Link href="/manufacturing-machines" className="link-accent">
                 View all manufacturing machines →
               </Link>
             </div>
@@ -179,7 +180,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
 function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
   return (
-    <div id="mobile-menu" className="lg:hidden">
+    <div id="mobile-menu" className="xl:hidden">
       <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-brand-100 bg-white/95 px-4 pb-8 pt-2 backdrop-blur">
         <ul className="divide-y divide-brand-100">
           {mainNav.map((item) => (
@@ -231,26 +232,18 @@ function MobileNavItem({
 
   return (
     <li>
-      <div className="flex items-center justify-between">
-        <Link
-          href={item.href}
-          onClick={onNavigate}
-          className="py-3 text-base font-medium text-brand-800"
-        >
-          {item.label}
-        </Link>
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={`Toggle ${item.label} submenu`}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-brand-500 hover:bg-brand-50"
-        >
-          <IconChevron
-            className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`}
-          />
-        </button>
-      </div>
+      {/* Parent row toggles the submenu (it has no page of its own). */}
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between py-3 text-left text-base font-medium text-brand-800"
+      >
+        <span>{item.label}</span>
+        <IconChevron
+          className={`h-4 w-4 text-brand-500 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
 
       {open && (
         <div className="pb-3">

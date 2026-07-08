@@ -6,9 +6,11 @@ import {
   getCategory,
   getProduct,
   getProductsByCategory,
+  productHref,
+  productCrumbs,
 } from "@/lib/products";
 
-const CATEGORY = "wrapping-machines" as const;
+const CATEGORY = "packing-machines" as const;
 const category = getCategory(CATEGORY)!;
 
 export function generateStaticParams() {
@@ -25,12 +27,12 @@ export function generateMetadata({
   return buildMetadata({
     title: product.name,
     description: product.metaDescription,
-    path: `/${CATEGORY}/${product.slug}`,
+    path: productHref(product),
     keywords: product.keywords,
   });
 }
 
-export default function WrappingMachinePage({
+export default function PackingMachinePage({
   params,
 }: {
   params: { slug: string };
@@ -46,11 +48,7 @@ export default function WrappingMachinePage({
     <ProductDetail
       product={product}
       categoryLabel={category.navLabel}
-      crumbs={[
-        { name: "Home", path: "/" },
-        { name: "Wrapping Machines", path: "/wrapping-machines" },
-        { name: product.name, path: `/${CATEGORY}/${product.slug}` },
-      ]}
+      crumbs={productCrumbs(product)}
       related={related}
     />
   );

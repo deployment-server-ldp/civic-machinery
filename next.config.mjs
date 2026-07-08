@@ -10,8 +10,9 @@ const nextConfig = {
     // remotePatterns: [{ protocol: "https", hostname: "images.civictobaccomachinery.com" }],
   },
   async redirects() {
-    // Old "karachi" blog URLs → new "pakistan" URLs (keep SEO equity / no 404s).
+    // Permanent (308) redirects from old URLs to the new clean structure.
     return [
+      // Blog: old "karachi" URLs → "pakistan" URLs.
       {
         source: "/blog/how-to-choose-cigarette-packing-machine-karachi",
         destination: "/blog/how-to-choose-cigarette-packing-machine-pakistan",
@@ -20,6 +21,52 @@ const nextConfig = {
       {
         source: "/blog/buying-used-tobacco-machinery-karachi-checklist",
         destination: "/blog/buying-used-tobacco-machinery-pakistan-checklist",
+        permanent: true,
+      },
+
+      // Packing / wrapping category slugs → keyword-first slugs.
+      {
+        source: "/packing-machines",
+        destination: "/cigarette-packing-machines",
+        permanent: true,
+      },
+      {
+        source: "/packing-machines/:slug",
+        destination: "/cigarette-packing-machines/:slug",
+        permanent: true,
+      },
+      {
+        source: "/wrapping-machines",
+        destination: "/cigarette-box-wrapping-machines",
+        permanent: true,
+      },
+      {
+        source: "/wrapping-machines/:slug",
+        destination: "/cigarette-box-wrapping-machines/:slug",
+        permanent: true,
+      },
+
+      // Manufacturing sub-categories flattened to the site root.
+      {
+        source: "/manufacturing-machines/cigarette-making-machines/:path*",
+        destination: "/cigarette-making-machines/:path*",
+        permanent: true,
+      },
+      {
+        source: "/manufacturing-machines/cigarette-filter-making-machines/:path*",
+        destination: "/cigarette-filter-making-machines/:path*",
+        permanent: true,
+      },
+      {
+        source: "/manufacturing-machines/tobacco-machinery/:path*",
+        destination: "/tobacco-machinery/:path*",
+        permanent: true,
+      },
+
+      // Used-machinery product pages flattened to the site root.
+      {
+        source: "/used-machinery/:slug",
+        destination: "/:slug",
         permanent: true,
       },
     ];

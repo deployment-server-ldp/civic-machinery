@@ -32,14 +32,13 @@ const cat = (slug: string) => categories.find((c) => c.slug === slug)!;
 
 const packingCat = cat("packing-machines");
 const wrappingCat = cat("wrapping-machines");
-const manufacturingCat = cat("manufacturing-machines");
-const usedCat = cat("used-machinery");
 
 export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   {
-    label: "Packing",
-    href: categoryHref(packingCat),
+    // Top-level items are dropdown triggers only (no own page — use "#").
+    label: "Packing Machines",
+    href: "#",
     children: [
       { label: "Cigarette Packing Machines", href: categoryHref(packingCat) },
       ...getProductsByCategory("packing-machines").map((p) => ({
@@ -49,8 +48,8 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
-    label: "Wrapping",
-    href: categoryHref(wrappingCat),
+    label: "Wrapping Machines",
+    href: "#",
     children: [
       { label: "Cigarette Wrapping Machines", href: categoryHref(wrappingCat) },
       ...getProductsByCategory("wrapping-machines").map((p) => ({
@@ -60,8 +59,8 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
-    label: "Manufacturing",
-    href: categoryHref(manufacturingCat),
+    label: "Manufacturing Machines",
+    href: "#",
     columns: getSubcategoriesFor("manufacturing-machines").map((sub) => ({
       heading: sub.navLabel,
       headingHref: subcategoryHref(sub),
@@ -76,12 +75,12 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Used Machinery",
-    href: categoryHref(usedCat),
+    href: "#",
     children: getProductsByCategory("used-machinery").map((p) => ({
       label: p.name.replace("Used Cigarette ", "Used ").replace("Used ", "Used "),
       href: productHref(p),
     })),
   },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
 ];

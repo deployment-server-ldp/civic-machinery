@@ -3,16 +3,18 @@ import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import ProductDetail from "@/components/ProductDetail";
 import {
-  getCategory,
+  getSubcategory,
   getProduct,
-  getProductsByCategory,
+  getProductsBySubcategory,
+  productHref,
+  productCrumbs,
 } from "@/lib/products";
 
-const CATEGORY = "used-machinery" as const;
-const category = getCategory(CATEGORY)!;
+const SUB = "cigarette-making-machines";
+const sub = getSubcategory(SUB)!;
 
 export function generateStaticParams() {
-  return getProductsByCategory(CATEGORY).map((p) => ({ slug: p.slug }));
+  return getProductsBySubcategory(SUB).map((p) => ({ slug: p.slug }));
 }
 
 export function generateMetadata({
@@ -20,37 +22,33 @@ export function generateMetadata({
 }: {
   params: { slug: string };
 }): Metadata {
-  const product = getProduct(CATEGORY, params.slug);
+  const product = getProduct("manufacturing-machines", params.slug, SUB);
   if (!product) return {};
   return buildMetadata({
     title: product.name,
     description: product.metaDescription,
-    path: `/${CATEGORY}/${product.slug}`,
+    path: productHref(product),
     keywords: product.keywords,
   });
 }
 
-export default function UsedMachineryProductPage({
+export default function MakingMachineProductPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const product = getProduct(CATEGORY, params.slug);
+  const product = getProduct("manufacturing-machines", params.slug, SUB);
   if (!product) notFound();
 
-  const related = getProductsByCategory(CATEGORY).filter(
+  const related = getProductsBySubcategory(SUB).filter(
     (p) => p.slug !== product.slug
   );
 
   return (
     <ProductDetail
       product={product}
-      categoryLabel={category.navLabel}
-      crumbs={[
-        { name: "Home", path: "/" },
-        { name: "Used Machinery", path: "/used-machinery" },
-        { name: product.name, path: `/${CATEGORY}/${product.slug}` },
-      ]}
+      categoryLabel={sub.navLabel}
+      crumbs={productCrumbs(product)}
       related={related}
     />
   );

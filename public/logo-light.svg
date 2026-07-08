@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="150" viewBox="0 0 900 150" role="img" aria-label="Civic Tobacco Machinery">
-  <text x="450" y="66" text-anchor="middle" textLength="800" lengthAdjust="spacingAndGlyphs"
-        font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="62"
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="172" viewBox="0 0 900 172" role="img" aria-label="Civic Tobacco Machinery">
+  <text x="450" y="66" text-anchor="middle" textLength="820" lengthAdjust="spacingAndGlyphs"
+        font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="64"
         letter-spacing="0.5" fill="#ffffff">CIVIC TOBACCO MACHINERY</text>
-  <line x1="150" y1="92" x2="750" y2="92" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2"/>
-  <text x="450" y="124" text-anchor="middle"
-        font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="23"
-        letter-spacing="0.5" fill="#d7c9f3">Cigarette Manufacturing&#160;&#160;|&#160;&#160;Tobacco Machinery</text>
+  <line x1="120" y1="98" x2="780" y2="98" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2.5"/>
+  <text x="450" y="140" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="33"
+        letter-spacing="1" fill="#e4dcf5">Cigarette Manufacturing&#160;&#160;|&#160;&#160;Tobacco Machinery</text>
 </svg>

@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
-import { getCategory, getProductsByCategory } from "@/lib/products";
+import { getCategory, getProductsByCategory, categoryHref } from "@/lib/products";
 
-const category = getCategory("wrapping-machines")!;
+const category = getCategory("packing-machines")!;
 
 export const metadata: Metadata = buildMetadata({
   title: category.title,
   description: category.description,
-  path: "/wrapping-machines",
+  path: categoryHref(category),
   keywords: category.keywords,
 });
 
-export default function WrappingMachinesPage() {
+export default function PackingMachinesPage() {
   return (
     <CategoryListing
-      eyebrow="Wrapping Machines"
+      eyebrow="Packing Machines"
       title={category.title}
       intro={category.intro}
       crumbs={[
         { name: "Home", path: "/" },
-        { name: "Wrapping Machines", path: "/wrapping-machines" },
+        { name: category.navLabel, path: categoryHref(category) },
       ]}
-      products={getProductsByCategory("wrapping-machines")}
+      products={getProductsByCategory("packing-machines")}
     />
   );
 }
