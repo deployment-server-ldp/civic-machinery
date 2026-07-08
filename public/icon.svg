@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Civic Tobacco Machinery">
+  <rect width="64" height="64" rx="14" fill="#12171e"/>
+  <path d="M32 12 a20 20 0 1 0 13.9 34.3 l-9.4-9.4 a6.7 6.7 0 1 1 0-18.7 L45.9 8.9 A20 20 0 0 0 32 12 Z" fill="#c8952e"/>
+  <circle cx="32" cy="32" r="5.6" fill="#c8952e"/>
+</svg>

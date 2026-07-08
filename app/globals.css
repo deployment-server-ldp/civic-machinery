@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #1c232d;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold tracking-tight text-brand-900;
+    text-wrap: balance;
+  }
+
+  /* Visible focus for keyboard users. */
+  :focus-visible {
+    outline: 2px solid theme("colors.accent.500");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply container mx-auto;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent-500 text-brand-950 hover:bg-accent-400 focus-visible:ring-accent-500;
+  }
+
+  .btn-secondary {
+    @apply btn border border-brand-200 bg-white text-brand-800 hover:border-brand-300 hover:bg-brand-50 focus-visible:ring-brand-400;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-white/25 text-white hover:bg-white/10 focus-visible:ring-white;
+  }
+
+  .link-accent {
+    @apply font-medium text-accent-700 underline-offset-4 hover:underline;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-accent-600;
+  }
+
+  /* Rich text (blog + long content). */
+  .prose-content {
+    @apply max-w-prose text-brand-700 leading-relaxed;
+  }
+  .prose-content p {
+    @apply mb-5;
+  }
+  .prose-content h2 {
+    @apply mb-3 mt-10 text-2xl;
+  }
+  .prose-content h3 {
+    @apply mb-2 mt-8 text-xl;
+  }
+}

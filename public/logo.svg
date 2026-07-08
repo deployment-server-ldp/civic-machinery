@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="96" viewBox="0 0 440 96" role="img" aria-label="Civic Tobacco Machinery">
+  <rect width="440" height="96" fill="none"/>
+  <g>
+    <rect x="6" y="18" width="60" height="60" rx="12" fill="#12171e"/>
+    <path d="M36 30 a18 18 0 1 0 12.5 30.9 l-8.5-8.5 a6 6 0 1 1 0-16.8 l8.5-8.5 A18 18 0 0 0 36 30 Z" fill="#c8952e"/>
+    <circle cx="36" cy="48" r="5" fill="#c8952e"/>
+  </g>
+  <text x="82" y="44" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="700" fill="#12171e" letter-spacing="0.5">CIVIC TOBACCO</text>
+  <text x="82" y="74" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" fill="#a97524" letter-spacing="4">MACHINERY</text>
+</svg>

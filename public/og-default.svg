@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Civic Tobacco Machinery">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c232d"/>
+      <stop offset="1" stop-color="#12171e"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="10" fill="#c8952e"/>
+  <g transform="translate(96,150)">
+    <rect x="0" y="0" width="88" height="88" rx="18" fill="#c8952e"/>
+    <path d="M44 16 a28 28 0 1 0 19.4 48 l-13.2-13.2 a9.3 9.3 0 1 1 0-26 l13.2-13.2 A28 28 0 0 0 44 16 Z" fill="#12171e"/>
+    <circle cx="44" cy="44" r="8" fill="#12171e"/>
+  </g>
+  <text x="96" y="330" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#ffffff">Civic Tobacco Machinery</text>
+  <text x="98" y="392" font-family="Arial, sans-serif" font-size="34" fill="#e2b968">Cigarette &amp; Tobacco Machinery Suppliers in Karachi</text>
+  <text x="98" y="470" font-family="Arial, sans-serif" font-size="26" fill="#a2b0c1">Manufacturing · Packing · Wrapping · Filter · New &amp; Used</text>
+</svg>
