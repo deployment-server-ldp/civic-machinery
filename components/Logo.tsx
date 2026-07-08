@@ -1,47 +1,35 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
- * Text wordmark logo — "Civic Tobacco Machinery".
- * `variant` switches colours for light headers vs dark footers.
+ * Brand wordmark logo.
+ * `variant="light"` swaps to the white version for dark backgrounds (footer, dark hero).
+ * To use your own file instead, drop it in /public and update the `src` below.
  */
 export default function Logo({
   variant = "dark",
+  className = "h-9 w-auto sm:h-10",
 }: {
   variant?: "dark" | "light";
+  className?: string;
 }) {
-  const primary = variant === "light" ? "text-white" : "text-brand-900";
-  const sub = variant === "light" ? "text-accent-300" : "text-accent-600";
+  const src = variant === "light" ? "/logo-light.svg" : "/logo.svg";
 
   return (
     <Link
       href="/"
       aria-label="Civic Tobacco Machinery — Home"
-      className="group inline-flex items-center gap-3"
+      className="inline-flex shrink-0 items-center"
     >
-      <span
-        aria-hidden="true"
-        className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-900 transition-colors group-hover:bg-brand-800"
-      >
-        <svg viewBox="0 0 40 40" className="h-7 w-7">
-          <path
-            d="M20 6 a14 14 0 1 0 9.7 24 l-6.6-6.6 a4.7 4.7 0 1 1 0-13.1 L29.7 4 A14 14 0 0 0 20 6 Z"
-            fill="#c8952e"
-          />
-          <circle cx="20" cy="20" r="4" fill="#c8952e" />
-        </svg>
-      </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={`font-display text-lg font-bold tracking-tight sm:text-xl ${primary}`}
-        >
-          Civic Tobacco
-        </span>
-        <span
-          className={`text-[0.7rem] font-semibold uppercase tracking-[0.28em] ${sub}`}
-        >
-          Machinery
-        </span>
-      </span>
+      <Image
+        src={src}
+        alt="Civic Tobacco Machinery"
+        width={900}
+        height={150}
+        priority
+        unoptimized
+        className={className}
+      />
     </Link>
   );
 }

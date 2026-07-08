@@ -39,7 +39,7 @@ export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
-    label: packingCat.navLabel,
+    label: "Packing",
     href: categoryHref(packingCat),
     children: [
       { label: "Cigarette Packing Machines", href: categoryHref(packingCat) },
@@ -50,7 +50,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
-    label: wrappingCat.navLabel,
+    label: "Wrapping",
     href: categoryHref(wrappingCat),
     children: [
       { label: "Cigarette Wrapping Machines", href: categoryHref(wrappingCat) },
@@ -61,7 +61,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   {
-    label: manufacturingCat.navLabel,
+    label: "Manufacturing",
     href: categoryHref(manufacturingCat),
     columns: getSubcategoriesFor("manufacturing-machines").map((sub) => ({
       heading: sub.navLabel,
@@ -76,7 +76,7 @@ export const mainNav: NavItem[] = [
     })),
   },
   {
-    label: usedCat.navLabel,
+    label: "Used Machinery",
     href: categoryHref(usedCat),
     children: getProductsByCategory("used-machinery").map((p) => ({
       label: p.name.replace("Used Cigarette ", "Used ").replace("Used ", "Used "),
@@ -84,5 +84,5 @@ export const mainNav: NavItem[] = [
     })),
   },
   { label: "Blog", href: "/blog" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact", href: "/contact" },
 ];
