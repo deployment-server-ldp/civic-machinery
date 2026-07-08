@@ -98,9 +98,32 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-950 text-white">
+        {/* Background video — Mark 8 Post 64 cigarette manufacturing machine.
+            Drop the file at public/videos/mark-8-post-64.mp4 (optionally .webm).
+            Until then the dark gradient below shows as a graceful fallback. */}
+        <video
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/videos/mark-8-post-64.webm" type="video/webm" />
+          <source src="/videos/mark-8-post-64.mp4" type="video/mp4" />
+        </video>
+
+        {/* Readability overlay so the copy stays legible over any footage. */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-[0.07]"
+          className="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/85 to-brand-950/60"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-brand-950/25" />
+
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
@@ -111,7 +134,7 @@ export default function HomePage() {
           aria-hidden="true"
           className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent-500/20 blur-3xl"
         />
-        <div className="container relative mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
+        <div className="container relative z-10 mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-in-up">
             <p className="eyebrow text-accent-300">
               Cigarette &amp; Tobacco Machinery — Pakistan
