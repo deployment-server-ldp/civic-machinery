@@ -4,11 +4,17 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig, whatsappLink } from "@/lib/site";
 import {
   categoryPaths,
+  subcategoryPaths,
   getProduct,
+  getProductsByCategory,
+  getProductsBySubcategory,
   productHref,
   type Product,
 } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
+import MachineCarousel, {
+  type CarouselGroup,
+} from "@/components/MachineCarousel";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
@@ -92,6 +98,38 @@ export default function HomePage() {
     getProduct("packing-machines", "hlp-200"),
     getProduct("packing-machines", "hlp-225"),
   ].filter(Boolean) as Product[];
+
+  // Tabbed carousel: one tab per main range, each scrolling all its machines.
+  const toItems = (list: Product[]) =>
+    list.map((p) => ({
+      name: p.name,
+      href: productHref(p),
+      tagline: p.tagline,
+      image: p.image,
+    }));
+
+  const carouselGroups: CarouselGroup[] = [
+    {
+      label: "Cigarette Making Machines",
+      href: subcategoryPaths["cigarette-making-machines"],
+      items: toItems(getProductsBySubcategory("cigarette-making-machines")),
+    },
+    {
+      label: "Cigarette Packing Machines",
+      href: categoryPaths["packing-machines"],
+      items: toItems(getProductsByCategory("packing-machines")),
+    },
+    {
+      label: "Cigarette Filter Making Machines",
+      href: subcategoryPaths["cigarette-filter-making-machines"],
+      items: toItems(getProductsBySubcategory("cigarette-filter-making-machines")),
+    },
+    {
+      label: "Cigarette Box Wrapping Machines",
+      href: categoryPaths["wrapping-machines"],
+      items: toItems(getProductsByCategory("wrapping-machines")),
+    },
+  ];
 
   return (
     <>
@@ -295,6 +333,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Machine ranges carousel */}
+      <MachineCarousel groups={carouselGroups} />
 
       {/* Local SEO block */}
       <section className="bg-brand-950 py-16 text-white">
