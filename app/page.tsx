@@ -16,7 +16,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  title: `${siteConfig.name}, ${siteConfig.tagline}`,
   description: siteConfig.description,
   path: "/",
   keywords: [
@@ -53,13 +53,6 @@ const homeFaqs = [
   },
 ];
 
-const stats = [
-  { value: "25+", label: "Years in tobacco machinery" },
-  { value: "300+", label: "Machines supplied" },
-  { value: "6", label: "Machine categories" },
-  { value: "Pakistan", label: "Nationwide support" },
-];
-
 const reasons = [
   {
     title: "Machines that keep running",
@@ -68,7 +61,7 @@ const reasons = [
   },
   {
     title: "Honest condition reports",
-    text: "Every used machine is inspected, serviced and tested. You get a straight account of its condition — no surprises.",
+    text: "Every used machine is inspected, serviced and tested. You get a straight account of its condition, no surprises.",
     icon: "check",
   },
   {
@@ -86,10 +79,10 @@ const reasons = [
 export default function HomePage() {
   // A small, hand-picked set of featured machines across the range.
   const featured = [
+    getProduct("manufacturing-machines", "mark-8-post-64", "cigarette-making-machines"),
+    getProduct("manufacturing-machines", "mark-8d-max-15", "cigarette-making-machines"),
     getProduct("packing-machines", "hlp-200"),
-    getProduct("manufacturing-machines", "mark-9-max-s", "cigarette-making-machines"),
-    getProduct("manufacturing-machines", "hauni-kdf-2", "cigarette-filter-making-machines"),
-    getProduct("wrapping-machines", "regular-wrapper-cp1"),
+    getProduct("packing-machines", "hlp-225"),
   ].filter(Boolean) as Product[];
 
   return (
@@ -98,7 +91,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-950 text-white">
-        {/* Background video — Mark 8 Post 64 cigarette manufacturing machine.
+        {/* Background video, Mark 8 Post 64 cigarette manufacturing machine.
             Drop the file at public/videos/mark-8-post-64.mp4 (optionally .webm).
             Until then the dark gradient below shows as a graceful fallback. */}
         <video
@@ -126,15 +119,12 @@ export default function HomePage() {
         />
         <div className="container relative z-10 mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-in-up">
-            <p className="eyebrow text-accent-300">
-              Cigarette &amp; Tobacco Machinery — Pakistan
-            </p>
-            <h1 className="mt-3 text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
               Cigarette Manufacturing, Packing &amp; Wrapping Machines in Pakistan
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-200">
               Civic Tobacco Machinery supplies new and reconditioned cigarette
-              making, filter, packing and wrapping machines — with installation,
+              making, filter, packing and wrapping machines, with installation,
               spare parts and service you can count on.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -160,7 +150,7 @@ export default function HomePage() {
             <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-300">
               Browse by machine type
             </p>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               {categories.map((c) => (
                 <Link
                   key={c.slug}
@@ -180,20 +170,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <section className="border-b border-brand-100 bg-white">
-        <div className="container mx-auto grid grid-cols-2 gap-6 py-8 sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="font-display text-2xl font-bold text-brand-900 sm:text-3xl">
-                {s.value}
-              </p>
-              <p className="mt-1 text-xs text-brand-500 sm:text-sm">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Categories */}
       <section className="container mx-auto py-16">
         <div className="mx-auto max-w-2xl text-center">
@@ -207,7 +183,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {categories.map((c) => (
             <Link
               key={c.slug}
@@ -291,7 +267,7 @@ export default function HomePage() {
               Being based in the SITE industrial estate means we are close to the
               factories we serve. When you need a part, a technician or honest
               advice on a machine, you are dealing with people just across the
-              city — not a supplier on another continent.
+              city, not a supplier on another continent.
             </p>
             <ul className="mt-6 space-y-3 text-brand-200">
               <li className="flex gap-3">

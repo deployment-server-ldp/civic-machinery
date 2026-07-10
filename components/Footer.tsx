@@ -27,7 +27,7 @@ export default function Footer() {
             <Logo variant="light" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-300">
               Suppliers of new and used cigarette manufacturing, packing and
-              wrapping machines in Pakistan — with installation, spares and
+              wrapping machines in Pakistan, with installation, spares and
               service you can rely on.
             </p>
             <a

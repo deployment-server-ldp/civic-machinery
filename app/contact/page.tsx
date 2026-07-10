@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us — Cigarette Machinery Suppliers in Pakistan",
+  title: "Contact Us, Cigarette Machinery Manufacturers in Pakistan",
   description:
     "Contact Civic Tobacco Machinery in Pakistan. Call, WhatsApp or send an enquiry about cigarette manufacturing, packing, wrapping and used machines. Workshop in SITE, Karachi.",
   path: "/contact",
@@ -42,8 +42,8 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl">Reach us directly</h2>
             <p className="mt-3 text-brand-600">
-              The quickest way to get a straight answer on a machine — its
-              condition, price or availability — is to message us on WhatsApp or
+              The quickest way to get a straight answer on a machine, its
+              condition, price or availability, is to message us on WhatsApp or
               give us a call.
             </p>
 

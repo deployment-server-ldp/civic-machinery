@@ -8,6 +8,10 @@ Options -MultiViews
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Hide index.html: redirect any request that exposes it to the clean URL
+  RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
   # ---- 301 redirects: old URLs -> new clean URLs ----
 
   # Blog: old "karachi" slugs -> "pakistan" slugs
@@ -28,8 +32,13 @@ Options -MultiViews
   RewriteRule ^manufacturing-machines/tobacco-machinery/?$ /tobacco-machinery/ [R=301,L]
   RewriteRule ^manufacturing-machines/tobacco-machinery/(.+?)/?$ /tobacco-machinery/$1/ [R=301,L]
 
-  # Used-machinery products flattened to root (landing page /used-machinery/ stays)
-  RewriteRule ^used-machinery/(.+?)/?$ /$1/ [R=301,L]
+  # Retired "used" pages -> relevant machine sections
+  RewriteRule ^used-machinery(/.*)?$ /manufacturing-machines/ [R=301,L]
+  RewriteRule ^used-manufacturing-machines/?$ /manufacturing-machines/ [R=301,L]
+  RewriteRule ^used-cigarette-filter-machinery/?$ /cigarette-filter-making-machines/ [R=301,L]
+  RewriteRule ^used-packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
+  RewriteRule ^used-wrapping-machines/?$ /cigarette-box-wrapping-machines/ [R=301,L]
+  RewriteRule ^used-tobacco-machinery/?$ /tobacco-machinery/ [R=301,L]
 </IfModule>
 
 <IfModule mod_headers.c>

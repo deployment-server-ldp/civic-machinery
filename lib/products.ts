@@ -1,5 +1,5 @@
 /**
- * Product catalogue — the single source of truth for machines.
+ * Product catalogue, the single source of truth for machines.
  *
  * Every category and product page, the mega menu, breadcrumbs, the sitemap
  * and the JSON-LD Product schema all read from the data below. Add a machine
@@ -9,8 +9,7 @@
 export type CategorySlug =
   | "packing-machines"
   | "wrapping-machines"
-  | "manufacturing-machines"
-  | "used-machinery";
+  | "manufacturing-machines";
 
 export interface Category {
   slug: CategorySlug;
@@ -67,9 +66,9 @@ export const categories: Category[] = [
     navLabel: "Packing Machines",
     title: "Cigarette Packing Machines in Pakistan",
     description:
-      "Cigarette packing machines in Pakistan — HLP and SASIB hard and soft pack lines from 180 to 225 packs per minute. Supplied, installed and supported by Civic Tobacco Machinery.",
+      "Cigarette packing machines in Pakistan, HLP and SASIB hard and soft pack lines from 180 to 225 packs per minute. Supplied, installed and supported by Civic Tobacco Machinery.",
     intro: [
-      "A packing line is where your product finally takes shape, so it has to be steady, clean and easy to run shift after shift. At Civic Tobacco Machinery we supply cigarette packing machines in Pakistan that are chosen for exactly that — dependable output and packs that look the same every single time.",
+      "A packing line is where your product finally takes shape, so it has to be steady, clean and easy to run shift after shift. At Civic Tobacco Machinery we supply cigarette packing machines in Pakistan that are chosen for exactly that, dependable output and packs that look the same every single time.",
       "Our range covers hard pack and soft pack formats, from 180 up to 225 packs per minute, with both new and carefully reconditioned options. Whether you are setting up a fresh line or adding capacity to an existing one, we help you match the right machine to your volume, your budget and the brands you produce.",
     ],
     keywords: [
@@ -84,7 +83,7 @@ export const categories: Category[] = [
     navLabel: "Wrapping Machines",
     title: "Cigarette Wrapping Machines in Pakistan",
     description:
-      "Cigarette wrapping machines in Pakistan — overwrappers, boxers and cellophane wrapping machines that seal your packs cleanly. Sales, spares and service from Civic Tobacco Machinery.",
+      "Cigarette wrapping machines in Pakistan, overwrappers, boxers and cellophane wrapping machines that seal your packs cleanly. Sales, spares and service from Civic Tobacco Machinery.",
     intro: [
       "The wrapper is the last thing your customer sees before they open the pack, which is why a clean, tight seal matters so much. Civic Tobacco Machinery supplies cigarette wrapping machines in Pakistan that give you a neat film finish, a straight tear tape and packs that stay fresh on the shelf.",
       "From single-pack overwrappers to box wrapping and carton boxers, we cover the full range. Every machine we sell is checked, set up and handed over ready to run, with spares and service you can call on when you need them.",
@@ -101,7 +100,7 @@ export const categories: Category[] = [
     navLabel: "Manufacturing Machines",
     title: "Cigarette Manufacturing Machines in Pakistan",
     description:
-      "Cigarette manufacturing machines in Pakistan — Hauni and Molins making machines, filter makers and tobacco machinery. New and reconditioned lines from Civic Tobacco Machinery.",
+      "Cigarette manufacturing machines in Pakistan, Hauni and Molins making machines, filter makers and tobacco machinery. New and reconditioned lines from Civic Tobacco Machinery.",
     intro: [
       "Making a good cigarette starts long before the pack. It starts with a maker that lays down an even rod, a filter line that cuts clean, and tobacco machinery that keeps the whole floor fed. Civic Tobacco Machinery supplies cigarette manufacturing machines in Pakistan across all three areas.",
       "We handle Hauni and Molins making machines, KDF and PM filter makers, and the feeders, cutters and reclaimers that support them. Tell us the brands you run and the output you need, and we will help you build a line that holds its speed and quality day after day.",
@@ -113,23 +112,6 @@ export const categories: Category[] = [
       "Hauni Molins machines",
     ],
     hasSubcategories: true,
-  },
-  {
-    slug: "used-machinery",
-    navLabel: "Used Machinery",
-    title: "Used Cigarette Machines in Pakistan",
-    description:
-      "Used cigarette machines in Pakistan — reconditioned making, packing, wrapping, filter and tobacco machinery. Inspected, tested and backed by Civic Tobacco Machinery.",
-    intro: [
-      "Buying used is a smart way to add capacity without the price of a brand-new line — as long as the machine has been looked after. Civic Tobacco Machinery deals in used cigarette machines in Pakistan that we inspect, service and test before they ever reach your floor.",
-      "You will find reconditioned making machines, packing and wrapping lines, filter makers and tobacco machinery here. Each one comes with an honest condition report, so you know exactly what you are getting and what to expect from it.",
-    ],
-    keywords: [
-      "Used Cigarette Machines Pakistan",
-      "used tobacco machinery Pakistan",
-      "reconditioned cigarette machines",
-      "second hand packing machines",
-    ],
   },
 ];
 
@@ -144,7 +126,7 @@ export const subcategories: Subcategory[] = [
     navLabel: "Cigarette Making Machines",
     title: "Cigarette Making Machines in Pakistan",
     description:
-      "Cigarette making machines in Pakistan — Hauni Mark 8 and Mark 9 makers and Protos lines. High-speed rod makers supplied and serviced by Civic Tobacco Machinery.",
+      "Cigarette making machines in Pakistan, Hauni Mark 8 and Mark 9 makers and Protos lines. High-speed rod makers supplied and serviced by Civic Tobacco Machinery.",
     intro: [
       "The maker is the heart of any cigarette factory. It takes cut tobacco and paper and turns them into a finished rod, thousands of times a minute, without a break in quality. Civic Tobacco Machinery supplies cigarette making machines in Pakistan that are built to hold that pace.",
       "Our line-up runs from the trusted Hauni Mark 8 series through the faster Mark 9 makers and the Protos family. Each one can be matched with a suitable filter maker so the two run in step and give you a smooth, balanced line.",
@@ -162,9 +144,9 @@ export const subcategories: Subcategory[] = [
     navLabel: "Cigarette Filter Making Machines",
     title: "Cigarette Filter Making Machines in Pakistan",
     description:
-      "Cigarette filter making machines in Pakistan — Hauni KDF, Molins PM and hollow tube makers. Filter rod lines supplied and supported by Civic Tobacco Machinery.",
+      "Cigarette filter making machines in Pakistan, Hauni KDF, Molins PM and hollow tube makers. Filter rod lines supplied and supported by Civic Tobacco Machinery.",
     intro: [
-      "A good filter does more than finish the cigarette — it controls draw, firmness and the whole feel of the smoke. Civic Tobacco Machinery supplies cigarette filter making machines in Pakistan that turn out consistent rods your maker can rely on.",
+      "A good filter does more than finish the cigarette, it controls draw, firmness and the whole feel of the smoke. Civic Tobacco Machinery supplies cigarette filter making machines in Pakistan that turn out consistent rods your maker can rely on.",
       "We stock Hauni KDF and Molins PM filter makers along with hollow tube machines for speciality formats. Whatever filter length or type you produce, we will help you pick a line that matches the speed of your makers.",
     ],
     keywords: [
@@ -180,9 +162,9 @@ export const subcategories: Subcategory[] = [
     navLabel: "Tobacco Machinery",
     title: "Tobacco Machinery in Pakistan",
     description:
-      "Tobacco machinery in Pakistan — feeders, cutters, reclaimers and stem flatteners that keep your primary and secondary floors running. Supplied by Civic Tobacco Machinery.",
+      "Tobacco machinery in Pakistan, feeders, cutters, reclaimers and stem flatteners that keep your primary and secondary floors running. Supplied by Civic Tobacco Machinery.",
     intro: [
-      "Behind every maker and packer there is a set of quieter machines doing the heavy lifting — feeding tobacco, cutting it, saving what would otherwise be lost. Civic Tobacco Machinery supplies tobacco machinery in Pakistan that keeps this side of the floor moving.",
+      "Behind every maker and packer there is a set of quieter machines doing the heavy lifting, feeding tobacco, cutting it, saving what would otherwise be lost. Civic Tobacco Machinery supplies tobacco machinery in Pakistan that keeps this side of the floor moving.",
       "Feeders, cutters, reclaimers and stem flatteners all work together to hold a steady supply to your line and cut down on waste. We help you fit the right units around the makers and packers you already run.",
     ],
     keywords: [
@@ -207,7 +189,7 @@ const packing: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Hard pack line running a steady 180 packs per minute.",
     metaDescription:
-      "HLP-180 cigarette packing machine in Pakistan — 180 packs per minute hard pack line for hinge-lid packs. Supplied and serviced by Civic Tobacco Machinery.",
+      "HLP-180 cigarette packing machine in Pakistan, 180 packs per minute hard pack line for hinge-lid packs. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: [
       "HLP-180 packing machine",
       "cigarette packing machine 180 ppm",
@@ -215,7 +197,7 @@ const packing: Product[] = [
     ],
     intro: [
       "The HLP-180 is a favourite for factories that want reliable hard pack output without pushing into the very top speeds. At 180 packs a minute it gives you room to grow while staying easy to run and easy to maintain.",
-      "It handles the full hinge-lid pack cycle — collating cigarettes, folding the inner frame, forming the box and applying the tear tape — in one continuous flow. The result is a firm, square pack that looks the same from the first shift to the last.",
+      "It handles the full hinge-lid pack cycle, collating cigarettes, folding the inner frame, forming the box and applying the tear tape, in one continuous flow. The result is a firm, square pack that looks the same from the first shift to the last.",
     ],
     features: [
       "Steady 180 hinge-lid packs per minute",
@@ -244,7 +226,7 @@ const packing: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Hard pack line at 200 packs per minute for higher volumes.",
     metaDescription:
-      "HLP-200 cigarette packing machine in Pakistan — 200 packs per minute hinge-lid hard pack line. Sales, spares and service from Civic Tobacco Machinery.",
+      "HLP-200 cigarette packing machine in Pakistan, 200 packs per minute hinge-lid hard pack line. Sales, spares and service from Civic Tobacco Machinery.",
     keywords: [
       "HLP-200 packing machine",
       "cigarette packing machine 200 ppm",
@@ -278,7 +260,7 @@ const packing: Product[] = [
     condition: "New / Reconditioned",
     tagline: "High-speed hard pack line at 225 packs per minute.",
     metaDescription:
-      "HLP-225 cigarette packing machine in Pakistan — high-speed 225 packs per minute hard pack line. Supplied and supported by Civic Tobacco Machinery.",
+      "HLP-225 cigarette packing machine in Pakistan, high-speed 225 packs per minute hard pack line. Supplied and supported by Civic Tobacco Machinery.",
     keywords: [
       "HLP-225 packing machine",
       "high speed cigarette packing machine",
@@ -286,7 +268,7 @@ const packing: Product[] = [
     ],
     intro: [
       "The HLP-225 is built for factories that run hard packs at scale. At 225 packs a minute it is one of the quicker machines in the HLP family, and it holds that speed while keeping the pack finish tight and even.",
-      "Everything about it is set up for long runs — smooth cigarette transfer, quick fault recovery and easy access for the daily checks that keep a busy line healthy.",
+      "Everything about it is set up for long runs, smooth cigarette transfer, quick fault recovery and easy access for the daily checks that keep a busy line healthy.",
     ],
     features: [
       "High output of 225 packs per minute",
@@ -312,7 +294,7 @@ const packing: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Proven SASIB soft pack line for classic soft cup packs.",
     metaDescription:
-      "SASIB 5000 soft pack cigarette machine in Pakistan — reliable soft cup packing line. Reconditioned units and spares from Civic Tobacco Machinery.",
+      "SASIB 5000 soft pack cigarette machine in Pakistan, reliable soft cup packing line. Reconditioned units and spares from Civic Tobacco Machinery.",
     keywords: [
       "SASIB 5000 soft pack machine",
       "soft pack cigarette machine Pakistan",
@@ -346,7 +328,7 @@ const packing: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Compact SASIB soft pack line for smaller runs.",
     metaDescription:
-      "SASIB 3000 soft pack cigarette machine in Pakistan — compact soft pack line for smaller production. Reconditioned and serviced by Civic Tobacco Machinery.",
+      "SASIB 3000 soft pack cigarette machine in Pakistan, compact soft pack line for smaller production. Reconditioned and serviced by Civic Tobacco Machinery.",
     keywords: [
       "SASIB 3000 soft pack machine",
       "soft pack cigarette machine",
@@ -383,14 +365,14 @@ const wrapping: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Single-pack overwrapper with a clean film seal and tear tape.",
     metaDescription:
-      "Regular Wrapper CP1 in Pakistan — single-pack cellophane overwrapper with tear tape. Supplied and serviced by Civic Tobacco Machinery.",
+      "Regular Wrapper CP1 in Pakistan, single-pack cellophane overwrapper with tear tape. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: [
       "Regular Wrapper CP1",
       "cigarette overwrapper Pakistan",
       "cellophane wrapping machine",
     ],
     intro: [
-      "The CP1 overwrapper puts the finishing film on each pack — the clear cellophane with the little red tear tape that keeps the cigarettes fresh and the pack looking new. It is the standard partner for a hard pack line.",
+      "The CP1 overwrapper puts the finishing film on each pack, the clear cellophane with the little red tear tape that keeps the cigarettes fresh and the pack looking new. It is the standard partner for a hard pack line.",
       "It folds and heat-seals the film neatly around the pack and lays the tear tape straight every time, so packs come off the line looking sharp and shelf-ready.",
     ],
     features: [
@@ -417,7 +399,7 @@ const wrapping: Product[] = [
     condition: "New / Reconditioned",
     tagline: "Overwrapper for a crisp film finish without a printed outer.",
     metaDescription:
-      "Naked Over Wrapper in Pakistan — cigarette pack overwrapping for a clean film finish. Sales and service from Civic Tobacco Machinery.",
+      "Naked Over Wrapper in Pakistan, cigarette pack overwrapping for a clean film finish. Sales and service from Civic Tobacco Machinery.",
     keywords: [
       "naked over wrapper",
       "cigarette pack wrapping machine",
@@ -444,20 +426,20 @@ const wrapping: Product[] = [
   },
   {
     slug: "molins-boxer",
-    name: "Molins Boxer — Box Packing Machine",
+    name: "Molins Boxer, Box Packing Machine",
     category: "wrapping-machines",
     brand: "Molins",
     condition: "New / Reconditioned",
     tagline: "Groups wrapped packs into cartons ready for the case.",
     metaDescription:
-      "Molins Boxer box packing machine in Pakistan — collates cigarette packs into cartons. Reconditioned units and spares from Civic Tobacco Machinery.",
+      "Molins Boxer box packing machine in Pakistan, collates cigarette packs into cartons. Reconditioned units and spares from Civic Tobacco Machinery.",
     keywords: [
       "Molins Boxer",
       "box packing machine Pakistan",
       "cigarette carton machine",
     ],
     intro: [
-      "Once packs are wrapped, they need to go into cartons — and the Molins boxer does exactly that. It collects the finished packs, groups them and forms the carton around them, ready for the outer case.",
+      "Once packs are wrapped, they need to go into cartons, and the Molins boxer does exactly that. It collects the finished packs, groups them and forms the carton around them, ready for the outer case.",
       "It is a solid, well-proven machine that keeps the end of your line moving so packs do not pile up after wrapping. We supply it reconditioned and set to run.",
     ],
     features: [
@@ -477,20 +459,20 @@ const wrapping: Product[] = [
   },
   {
     slug: "sasib-boxer",
-    name: "SASIB Boxer — Box Packing Machine",
+    name: "SASIB Boxer, Box Packing Machine",
     category: "wrapping-machines",
     brand: "SASIB",
     condition: "New / Reconditioned",
     tagline: "SASIB carton boxer for tidy 10-pack cartons.",
     metaDescription:
-      "SASIB Boxer box packing machine in Pakistan — forms cigarette cartons from wrapped packs. Supplied and serviced by Civic Tobacco Machinery.",
+      "SASIB Boxer box packing machine in Pakistan, forms cigarette cartons from wrapped packs. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: [
       "SASIB Boxer",
       "box packing machine",
       "cigarette carton machine Pakistan",
     ],
     intro: [
-      "The SASIB boxer does the same important job at the end of the line — turning loose wrapped packs into neat cartons. It groups the packs and forms the box around them so your cartons come out square and consistent.",
+      "The SASIB boxer does the same important job at the end of the line, turning loose wrapped packs into neat cartons. It groups the packs and forms the box around them so your cartons come out square and consistent.",
       "It is a natural match for a SASIB packing and wrapping line, and it pairs just as well with other brands. Supplied reconditioned and ready for the floor.",
     ],
     features: [
@@ -520,11 +502,11 @@ const making: Product[] = [
     condition: "Used",
     tagline: "The dependable workhorse maker that factories still rely on.",
     metaDescription:
-      "Hauni Mark 8 Post 64 cigarette making machine in Pakistan — reliable rod maker for steady production. Reconditioned and supported by Civic Tobacco Machinery.",
+      "Hauni Mark 8 Post 64 cigarette making machine in Pakistan, reliable rod maker for steady production. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Hauni Mark 8", "Mark 8 Post 64", "cigarette making machine Pakistan"],
     intro: [
       "The Hauni Mark 8 has earned its place as one of the most dependable makers ever built. Decades on, factories still run the Post 64 version because it is simple, tough and easy to keep going with parts that are readily available.",
-      "It lays down an even tobacco rod and cuts clean cigarettes at a steady pace — ideal for a first maker or a reliable backup line that just keeps working.",
+      "It lays down an even tobacco rod and cuts clean cigarettes at a steady pace, ideal for a first maker or a reliable backup line that just keeps working.",
     ],
     features: [
       "Proven, long-life Hauni design",
@@ -550,7 +532,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "Upgraded Mark 8 with the MAX control for smoother running.",
     metaDescription:
-      "Hauni Mark 8D MAX 1-5 cigarette maker in Pakistan — upgraded Mark 8 with MAX control. Reconditioned and serviced by Civic Tobacco Machinery.",
+      "Hauni Mark 8D MAX 1-5 cigarette maker in Pakistan, upgraded Mark 8 with MAX control. Reconditioned and serviced by Civic Tobacco Machinery.",
     keywords: ["Hauni Mark 8D", "Mark 8D MAX", "cigarette maker Pakistan"],
     intro: [
       "The Mark 8D MAX 1-5 takes the trusted Mark 8 platform and adds the MAX control system, which gives operators better feedback and steadier running. You keep the reliability of the original with a more modern feel at the panel.",
@@ -580,7 +562,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "Faster Mark 9 maker for higher-volume production.",
     metaDescription:
-      "Hauni Mark 9 MAX S cigarette making machine in Pakistan — higher-speed maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
+      "Hauni Mark 9 MAX S cigarette making machine in Pakistan, higher-speed maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Hauni Mark 9", "Mark 9 MAX S", "high speed cigarette maker"],
     intro: [
       "The Mark 9 is the faster generation that followed the Mark 8, and the MAX S version brings improved controls to match the higher speed. For factories that need more output from a single maker, this is a strong choice.",
@@ -610,7 +592,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "Mark 9.5 upgraded with Lenze servo drives for precision.",
     metaDescription:
-      "Hauni Mark 9.5 with Lenze servo drives in Pakistan — precise, modern maker upgrade. Reconditioned and supported by Civic Tobacco Machinery.",
+      "Hauni Mark 9.5 with Lenze servo drives in Pakistan, precise, modern maker upgrade. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Hauni Mark 9.5", "Lenze servo drives", "cigarette maker Pakistan"],
     intro: [
       "This Mark 9.5 has been fitted with Lenze servo drives, which brings modern, precise motion control to a proven maker. Servo drives mean smoother acceleration, better accuracy and easier fine-tuning during a run.",
@@ -640,7 +622,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "High-speed Mark 9.5 maker with MAX S control.",
     metaDescription:
-      "Hauni Mark 9.5 MAX S cigarette maker in Pakistan — high-speed rod maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
+      "Hauni Mark 9.5 MAX S cigarette maker in Pakistan, high-speed rod maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Hauni Mark 9.5 MAX S", "high speed cigarette maker", "Hauni maker Pakistan"],
     intro: [
       "The Mark 9.5 MAX S sits near the top of the Mark series for speed and control. It is built for factories that push high volumes and need a maker that holds its quality even when it is running flat out.",
@@ -670,7 +652,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "Protos-series maker known for smooth, quality output.",
     metaDescription:
-      "Hauni Protos 70 cigarette making machine in Pakistan — smooth, high-quality rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+      "Hauni Protos 70 cigarette making machine in Pakistan, smooth, high-quality rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Protos 70", "Hauni Protos maker", "cigarette making machine Pakistan"],
     intro: [
       "The Protos family is known for smooth running and a high-quality rod, and the Protos 70 is a popular choice for factories that care about consistency. It brings a more modern design than the Mark series while keeping the same dependable feel.",
@@ -700,7 +682,7 @@ const making: Product[] = [
     condition: "Used",
     tagline: "Higher-capacity Protos maker for serious output.",
     metaDescription:
-      "Hauni Protos 80 ER cigarette making machine in Pakistan — high-capacity maker for large runs. Supplied and serviced by Civic Tobacco Machinery.",
+      "Hauni Protos 80 ER cigarette making machine in Pakistan, high-capacity maker for large runs. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Protos 80 ER", "Hauni Protos 80", "high speed cigarette maker Pakistan"],
     intro: [
       "The Protos 80 ER steps up the capacity for factories running large volumes. It keeps the smooth Protos character but at a higher output, making it a strong central maker for a busy floor.",
@@ -733,7 +715,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "The classic KDF filter rod maker, simple and reliable.",
     metaDescription:
-      "Hauni KDF-1 filter making machine in Pakistan — reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+      "Hauni KDF-1 filter making machine in Pakistan, reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Hauni KDF-1", "filter making machine Pakistan", "KDF filter maker"],
     intro: [
       "The KDF-1 is the machine that made Hauni the name in filter making. It takes filter tow, forms it into a rod and cuts it to length, cleanly and repeatably. Simple, tough and easy to keep running.",
@@ -763,7 +745,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "Faster KDF filter maker to match higher-speed lines.",
     metaDescription:
-      "Hauni KDF-2 filter making machine in Pakistan — higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
+      "Hauni KDF-2 filter making machine in Pakistan, higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Hauni KDF-2", "filter making machine", "KDF filter maker Pakistan"],
     intro: [
       "The KDF-2 builds on the original with more speed and refinement, so it can keep pace with faster makers like the Mark 9. If your production has grown, this is the filter maker that keeps the line balanced.",
@@ -793,7 +775,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "Molins filter maker, a solid alternative to KDF lines.",
     metaDescription:
-      "Molins PM-5 filter making machine in Pakistan — dependable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+      "Molins PM-5 filter making machine in Pakistan, dependable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Molins PM-5", "filter making machine Pakistan", "Molins filter maker"],
     intro: [
       "The Molins PM-5 is a well-respected filter maker and a natural choice for factories that run Molins equipment elsewhere on the floor. It produces a firm, even filter rod and stands up to long production runs.",
@@ -823,7 +805,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "Makes hollow acetate tubes for speciality filters.",
     metaDescription:
-      "Hollow tube maker in Pakistan — machine for hollow acetate filter tubes and speciality filters. Supplied by Civic Tobacco Machinery.",
+      "Hollow tube maker in Pakistan, machine for hollow acetate filter tubes and speciality filters. Supplied by Civic Tobacco Machinery.",
     keywords: ["hollow tube maker", "hollow acetate tube machine", "speciality filter machine"],
     intro: [
       "For speciality and recessed filters you need hollow tubes, and this machine makes them. It forms a hollow acetate tube to a set diameter and length, ready to be used in multi-segment or recessed filter designs.",
@@ -853,7 +835,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "Protos 70 set up to run in a filter-making line.",
     metaDescription:
-      "Protos 70 filter configuration in Pakistan — Protos line set up for filter production. Supplied and serviced by Civic Tobacco Machinery.",
+      "Protos 70 filter configuration in Pakistan, Protos line set up for filter production. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Protos 70 filter", "Protos filter line", "filter making machine Pakistan"],
     intro: [
       "This Protos 70 is configured for the filter side of the line, bringing the smooth, modern Protos character to filter rod production. It is a strong option for factories standardising on Protos equipment.",
@@ -883,7 +865,7 @@ const filter: Product[] = [
     condition: "Used",
     tagline: "High-capacity Protos 80 ER configured for filters.",
     metaDescription:
-      "Protos 80 ER filter configuration in Pakistan — high-capacity Protos filter line. Supplied and serviced by Civic Tobacco Machinery.",
+      "Protos 80 ER filter configuration in Pakistan, high-capacity Protos filter line. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["Protos 80 ER filter", "high capacity filter maker", "Protos filter Pakistan"],
     intro: [
       "The Protos 80 ER in a filter configuration brings high capacity to the filter side of your line. It is the match for a high-speed maker where you need filter output to keep up without becoming the bottleneck.",
@@ -916,7 +898,7 @@ const tobacco: Product[] = [
     condition: "Used",
     tagline: "Keeps a steady, even flow of tobacco to your makers.",
     metaDescription:
-      "Tobacco feeder in Pakistan — feeds a steady flow of cut tobacco to cigarette makers. Supplied and serviced by Civic Tobacco Machinery.",
+      "Tobacco feeder in Pakistan, feeds a steady flow of cut tobacco to cigarette makers. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["tobacco feeder", "cigarette maker feeder", "tobacco machinery Pakistan"],
     intro: [
       "A maker is only as steady as the tobacco coming into it. The tobacco feeder holds an even, controlled flow of cut tobacco to the maker so the rod stays consistent and the machine does not starve or flood.",
@@ -945,7 +927,7 @@ const tobacco: Product[] = [
     condition: "Used",
     tagline: "Recovers good tobacco from reject cigarettes to cut waste.",
     metaDescription:
-      "Cigarette reclaimer in Pakistan — recovers tobacco from reject cigarettes to reduce waste. Supplied by Civic Tobacco Machinery.",
+      "Cigarette reclaimer in Pakistan, recovers tobacco from reject cigarettes to reduce waste. Supplied by Civic Tobacco Machinery.",
     keywords: ["cigarette reclaimer", "tobacco reclaimer", "tobacco recovery machine"],
     intro: [
       "Every line produces some rejects, and throwing that tobacco away is money lost. The cigarette reclaimer opens up reject cigarettes and separates the good tobacco from the paper so it can go back into production.",
@@ -974,7 +956,7 @@ const tobacco: Product[] = [
     condition: "Used",
     tagline: "A rotating stock of reconditioned packing machines.",
     metaDescription:
-      "Used packing machines in Pakistan — reconditioned hard and soft pack lines in stock. Inspected and serviced by Civic Tobacco Machinery.",
+      "Used packing machines in Pakistan, reconditioned hard and soft pack lines in stock. Inspected and serviced by Civic Tobacco Machinery.",
     keywords: ["used packing machines Pakistan", "second hand cigarette packer", "used HLP SASIB"],
     intro: [
       "We keep a rotating stock of used packing machines that have been inspected and serviced, so if you need to add packing capacity quickly there is often something ready to go.",
@@ -1003,7 +985,7 @@ const tobacco: Product[] = [
     condition: "Used",
     tagline: "Cut tobacco leaf to the right width for a good rod.",
     metaDescription:
-      "Tobacco cutters in Pakistan — cutting machines for tobacco leaf and lamina. Supplied and serviced by Civic Tobacco Machinery.",
+      "Tobacco cutters in Pakistan, cutting machines for tobacco leaf and lamina. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: ["tobacco cutter Pakistan", "tobacco cutting machine", "cut rag machine"],
     intro: [
       "Cut width has a big effect on how a cigarette burns and how the rod holds together, so the cutter matters more than people think. Our tobacco cutters slice leaf and lamina to a set, even width ready for the maker.",
@@ -1032,7 +1014,7 @@ const tobacco: Product[] = [
     condition: "Used",
     tagline: "Flattens stems so more of the leaf can be used.",
     metaDescription:
-      "Tobacco stem flattener in Pakistan — flattens tobacco stems for better yield. Supplied by Civic Tobacco Machinery.",
+      "Tobacco stem flattener in Pakistan, flattens tobacco stems for better yield. Supplied by Civic Tobacco Machinery.",
     keywords: ["tobacco stem flattener", "stem roller", "tobacco machinery Pakistan"],
     intro: [
       "Stems are part of the leaf, and treating them well means better yield and less waste. The stem flattener rolls and flattens tobacco stems so they can be cut and blended in rather than thrown out.",
@@ -1054,163 +1036,6 @@ const tobacco: Product[] = [
   },
 ];
 
-const usedMachinery: Product[] = [
-  {
-    slug: "used-manufacturing-machines",
-    name: "Used Cigarette Manufacturing Machines",
-    category: "used-machinery",
-    condition: "Used",
-    tagline: "Reconditioned Hauni and Molins makers, inspected and tested.",
-    metaDescription:
-      "Used cigarette manufacturing machines in Pakistan — reconditioned Hauni and Molins makers. Inspected, tested and supported by Civic Tobacco Machinery.",
-    keywords: [
-      "Used Cigarette Machines Pakistan",
-      "used cigarette making machine",
-      "reconditioned Hauni maker",
-    ],
-    intro: [
-      "Setting up or expanding cigarette production is a big investment, and good used making machines let you do it for a lot less. We carry reconditioned Hauni and Molins makers — Mark 8, Mark 9 and Protos — each one inspected, serviced and tested before it leaves us.",
-      "You get an honest condition report and our help matching the maker to the rest of your line, so there are no surprises when it reaches your floor.",
-    ],
-    features: [
-      "Reconditioned Hauni and Molins makers",
-      "Mark 8, Mark 9 and Protos options",
-      "Inspected, serviced and tested",
-      "Honest condition reporting",
-      "Installation and support available",
-    ],
-    specs: [
-      { label: "Type", value: "Used cigarette makers" },
-      { label: "Brands", value: "Hauni, Molins, Protos" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Budget-conscious setups", "Capacity expansion"],
-  },
-  {
-    slug: "used-cigarette-filter-machinery",
-    name: "Used Cigarette Filter Machinery",
-    category: "used-machinery",
-    condition: "Used",
-    tagline: "Reconditioned KDF and PM filter makers ready to run.",
-    metaDescription:
-      "Used cigarette filter machinery in Pakistan — reconditioned Hauni KDF and Molins PM filter makers. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: [
-      "used filter making machine Pakistan",
-      "used Hauni KDF",
-      "reconditioned filter maker",
-    ],
-    intro: [
-      "A filter line does not need to be new to do a great job — it needs to be well maintained. Our used filter machinery covers Hauni KDF and Molins PM makers, all reconditioned and tested to turn out a consistent rod.",
-      "We help you match the filter maker to your maker's speed so the two run in balance from day one.",
-    ],
-    features: [
-      "Reconditioned KDF and PM filter makers",
-      "Consistent filter rod output",
-      "Matched to your maker's speed",
-      "Inspected and tested",
-      "Spares and service available",
-    ],
-    specs: [
-      { label: "Type", value: "Used filter makers" },
-      { label: "Brands", value: "Hauni KDF, Molins PM" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Filter production", "Line balancing"],
-  },
-  {
-    slug: "used-packing-machines",
-    name: "Used Cigarette Packing Machines",
-    category: "used-machinery",
-    condition: "Used",
-    tagline: "Reconditioned HLP and SASIB packing lines in stock.",
-    metaDescription:
-      "Used cigarette packing machines in Pakistan — reconditioned HLP hard pack and SASIB soft pack lines. Inspected and serviced by Civic Tobacco Machinery.",
-    keywords: [
-      "used packing machines Pakistan",
-      "used HLP machine",
-      "used SASIB soft pack",
-    ],
-    intro: [
-      "Packing capacity is often the first thing a growing factory runs short of, and a good used packer is the quickest way to fix that. We stock reconditioned HLP hard pack and SASIB soft pack machines, serviced and tested.",
-      "Stock moves quickly, so tell us the format and speed you need and we will let you know what is on the floor right now.",
-    ],
-    features: [
-      "Reconditioned HLP and SASIB packers",
-      "Hard pack and soft pack formats",
-      "Serviced and tested before sale",
-      "Fast way to add capacity",
-      "Honest condition reports",
-    ],
-    specs: [
-      { label: "Type", value: "Used packing machines" },
-      { label: "Brands", value: "HLP, SASIB" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Capacity expansion", "Second line"],
-  },
-  {
-    slug: "used-wrapping-machines",
-    name: "Used Cigarette Wrapping Machines",
-    category: "used-machinery",
-    condition: "Used",
-    tagline: "Reconditioned overwrappers and boxers, tested and ready.",
-    metaDescription:
-      "Used cigarette wrapping machines in Pakistan — reconditioned overwrappers and boxers. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: [
-      "used wrapping machines Pakistan",
-      "used overwrapper",
-      "used cigarette boxer",
-    ],
-    intro: [
-      "The wrapping end of the line is just as important as the rest, and good used overwrappers and boxers give you a clean finish for a fraction of the new price. We supply reconditioned CP overwrappers and Molins and SASIB boxers.",
-      "Each unit is checked, sealed and tested so your packs come off the line looking sharp and shelf-ready.",
-    ],
-    features: [
-      "Reconditioned overwrappers and boxers",
-      "Clean film seal and tear tape",
-      "Molins and SASIB boxing options",
-      "Inspected and tested",
-      "Spares available",
-    ],
-    specs: [
-      { label: "Type", value: "Used wrapping / boxing machines" },
-      { label: "Brands", value: "CP, Molins, SASIB" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Pack wrapping", "Carton boxing"],
-  },
-  {
-    slug: "used-tobacco-machinery",
-    name: "Used Tobacco Machinery",
-    category: "used-machinery",
-    condition: "Used",
-    tagline: "Reconditioned feeders, cutters, reclaimers and more.",
-    metaDescription:
-      "Used tobacco machinery in Pakistan — reconditioned feeders, cutters, reclaimers and stem flatteners. Supplied by Civic Tobacco Machinery.",
-    keywords: [
-      "used tobacco machinery Pakistan",
-      "used tobacco feeder",
-      "used tobacco cutter",
-    ],
-    intro: [
-      "The support machines around your makers and packers can also be bought used and save you a good amount. We carry reconditioned tobacco feeders, cutters, reclaimers and stem flatteners — the machines that keep the floor fed and the waste down.",
-      "Tell us what your line is missing and we will help you fill the gap with a tested, reconditioned unit.",
-    ],
-    features: [
-      "Reconditioned feeders, cutters and reclaimers",
-      "Stem flatteners and support machines",
-      "Keeps the primary and secondary flowing",
-      "Inspected and tested",
-      "Service and spares available",
-    ],
-    specs: [
-      { label: "Type", value: "Used tobacco machinery" },
-      { label: "Includes", value: "Feeders, cutters, reclaimers, flatteners" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Primary and secondary support", "Waste reduction"],
-  },
-];
 
 export const products: Product[] = [
   ...packing,
@@ -1218,7 +1043,6 @@ export const products: Product[] = [
   ...making,
   ...filter,
   ...tobacco,
-  ...usedMachinery,
 ];
 
 /* ------------------------------------------------------------------ */
@@ -1260,7 +1084,6 @@ export const categoryPaths: Record<CategorySlug, string> = {
   "packing-machines": "/cigarette-packing-machines",
   "wrapping-machines": "/cigarette-box-wrapping-machines",
   "manufacturing-machines": "/manufacturing-machines",
-  "used-machinery": "/used-machinery",
 };
 
 // Manufacturing sub-categories are flattened to the site root.
@@ -1277,8 +1100,6 @@ export const subcategoryHref = (s: Subcategory) => subcategoryPaths[s.slug];
 /** Build the canonical path for a product. */
 export const productHref = (p: Product): string => {
   if (p.subcategory) return `${subcategoryPaths[p.subcategory]}/${p.slug}`;
-  // Used machinery products live at the site root.
-  if (p.category === "used-machinery") return `/${p.slug}`;
   return `${categoryPaths[p.category]}/${p.slug}`;
 };
 

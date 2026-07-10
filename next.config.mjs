@@ -72,12 +72,14 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Used-machinery product pages flattened to the site root.
-      {
-        source: "/used-machinery/:slug",
-        destination: "/:slug",
-        permanent: true,
-      },
+      // Retired "used" pages now point to the relevant machine sections.
+      { source: "/used-machinery", destination: "/manufacturing-machines", permanent: true },
+      { source: "/used-machinery/:slug*", destination: "/manufacturing-machines", permanent: true },
+      { source: "/used-manufacturing-machines", destination: "/manufacturing-machines", permanent: true },
+      { source: "/used-cigarette-filter-machinery", destination: "/cigarette-filter-making-machines", permanent: true },
+      { source: "/used-packing-machines", destination: "/cigarette-packing-machines", permanent: true },
+      { source: "/used-wrapping-machines", destination: "/cigarette-box-wrapping-machines", permanent: true },
+      { source: "/used-tobacco-machinery", destination: "/tobacco-machinery", permanent: true },
     ];
   },
   async headers() {

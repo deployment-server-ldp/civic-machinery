@@ -60,7 +60,7 @@ export default function Header() {
       <div className="container mx-auto flex h-[4.5rem] items-center justify-between gap-4 xl:h-[5.25rem]">
         <Logo />
 
-        {/* Desktop nav — single-line glass pill */}
+        {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/90 bg-white/60 px-1.5 py-1.5 shadow-[0_6px_20px_-10px_rgba(28,35,45,0.35)] ring-1 ring-brand-900/[0.06] backdrop-blur-md">
             {mainNav.map((item) => (
@@ -109,7 +109,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
   return (
     <li className="group relative">
-      {/* Parent is a trigger only — it opens the dropdown, it doesn't navigate. */}
+      {/* Parent is a trigger only, it opens the dropdown, it doesn't navigate. */}
       <button type="button" className={linkCls} aria-haspopup="true">
         {item.label}
         <IconChevron className="h-3 w-3 opacity-70 transition-transform group-hover:rotate-180" />
@@ -123,7 +123,11 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
               <li key={child.href}>
                 <Link
                   href={child.href}
-                  className="block rounded-xl px-3 py-2 text-sm text-brand-700 hover:bg-accent-50 hover:text-accent-700"
+                  className={
+                    child.heading
+                      ? "mb-1 block rounded-xl px-3 pb-2 pt-2 text-sm font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4 hover:bg-accent-50 hover:text-accent-700"
+                      : "block rounded-xl px-3 py-2 text-sm text-brand-700 hover:bg-accent-50 hover:text-accent-700"
+                  }
                 >
                   {child.label}
                 </Link>
@@ -254,7 +258,11 @@ function MobileNavItem({
                   <Link
                     href={child.href}
                     onClick={onNavigate}
-                    className="block py-2 text-sm text-brand-600"
+                    className={
+                      child.heading
+                        ? "block py-2 text-sm font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4"
+                        : "block py-2 text-sm text-brand-600"
+                    }
                   >
                     {child.label}
                   </Link>

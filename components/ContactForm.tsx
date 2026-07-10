@@ -5,7 +5,7 @@ import { whatsappLink, siteConfig } from "@/lib/site";
 
 /**
  * Enquiry form. With no backend wired up yet, it composes the enquiry into a
- * pre-filled WhatsApp message (and offers an email fallback) — the fastest way
+ * pre-filled WhatsApp message (and offers an email fallback), the fastest way
  * for a customer here to reach the workshop. Swap in an API route later
  * without changing the UI.
  */
@@ -122,7 +122,7 @@ export default function ContactForm({ machine }: { machine?: string }) {
         </a>
       </div>
       <p className="text-xs text-brand-400">
-        Your details go straight to our team — we usually reply the same working day.
+        Your details go straight to our team, we usually reply the same working day.
       </p>
     </form>
   );

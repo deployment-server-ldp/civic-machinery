@@ -6,9 +6,9 @@ import CtaBand from "@/components/CtaBand";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us — Cigarette & Tobacco Machinery Suppliers in Pakistan",
+  title: "About Us, Cigarette & Tobacco Machinery Manufacturers in Pakistan",
   description:
-    "About Civic Tobacco Machinery — cigarette and tobacco machinery suppliers in Pakistan. Who we are, what we stand for, and how we support your factory with new and used machines.",
+    "About Civic Tobacco Machinery, cigarette and tobacco machinery suppliers in Pakistan. Who we are, what we stand for, and how we support your factory with new and used machines.",
   path: "/about",
   keywords: [
     "about Civic Tobacco Machinery",
@@ -24,7 +24,7 @@ const values = [
   },
   {
     title: "Machines we would run ourselves",
-    text: "We deal in brands and models we trust — the ones with good parts availability and a long working life.",
+    text: "We deal in brands and models we trust, the ones with good parts availability and a long working life.",
   },
   {
     title: "Support that stays",
@@ -58,7 +58,7 @@ export default function AboutPage() {
               Over the years we have worked with everything from small workshops
               taking their first steps into cigarette production to established
               factories adding a second or third line. That experience shapes how
-              we work — we listen first, understand what you actually need, and
+              we work, we listen first, understand what you actually need, and
               then point you to the machine that fits.
             </p>
             <p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <h2 className="text-2xl">How we work</h2>
             <p>
               Buying a machine is only half the story. A maker or packer has to be
-              installed properly, set correctly and kept running — and that is
+              installed properly, set correctly and kept running, and that is
               where a lot of suppliers disappear. We do not. We help you get the
               machine onto your floor and running the way it should, and we stay
               reachable afterwards for parts and service.
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
             <h2 className="text-2xl">The brands we trust</h2>
             <p>
-              We focus on well-proven names — Hauni and Molins for making and
+              We focus on well-proven names, Hauni and Molins for making and
               filter machines, HLP and SASIB for packing and wrapping, and the
               Protos family for higher-speed lines. We choose these not for the
               badge but because their parts and know-how are easy to find, which

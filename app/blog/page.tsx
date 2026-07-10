@@ -7,9 +7,9 @@ import CtaBand from "@/components/CtaBand";
 import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog — Cigarette & Tobacco Machinery Guides",
+  title: "Blog, Cigarette & Tobacco Machinery Guides",
   description:
-    "Practical guides on cigarette and tobacco machinery — choosing packing machines, comparing makers, and buying used machines in Pakistan. From Civic Tobacco Machinery.",
+    "Practical guides on cigarette and tobacco machinery, choosing packing machines, comparing makers, and buying used machines in Pakistan. From Civic Tobacco Machinery.",
   path: "/blog",
   keywords: [
     "cigarette machinery blog",
@@ -33,7 +33,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="Guides & Advice on Cigarette Machinery"
-        intro="Straight-talking articles to help you choose, buy and run cigarette and tobacco machinery — written by people who work with these machines every day."
+        intro="Straight-talking articles to help you choose, buy and run cigarette and tobacco machinery, written by people who work with these machines every day."
         crumbs={[
           { name: "Home", path: "/" },
           { name: "Blog", path: "/blog" },

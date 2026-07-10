@@ -16,7 +16,7 @@ export const siteConfig = {
     ),
   description:
     "Civic Tobacco Machinery supplies cigarette manufacturing, packing and wrapping machines in Pakistan. New and used tobacco machinery, filter making lines, spare parts and full installation support.",
-  tagline: "Cigarette & Tobacco Machinery Suppliers in Pakistan",
+  tagline: "Cigarette & Tobacco Machinery Manufacturers in Pakistan",
   locale: "en_PK",
   phoneDisplay: "+92 301 1111184",
   phone: "+923011111184",

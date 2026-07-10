@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-choose-cigarette-packing-machine-pakistan",
     title: "How to Choose the Right Cigarette Packing Machine for Your Factory",
     description:
-      "A practical guide to choosing a cigarette packing machine in Pakistan — hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
+      "A practical guide to choosing a cigarette packing machine in Pakistan, hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
     excerpt:
       "Hard pack or soft pack? 180 or 225 a minute? New or reconditioned? A plain-English guide to picking a packing machine that fits your factory.",
     date: "2026-01-14",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "1. Start with your pack format",
         paragraphs: [
-          "The first question is always the same — hard pack or soft pack? Hard packs, the hinge-lid boxes, need an HLP-style machine. Soft packs, the ones with the folded foil and printed outer, need a SASIB-style machine. Some factories run both, but most start with one. Choose the format your brands actually sell, not the one that looks fancier.",
+          "The first question is always the same, hard pack or soft pack? Hard packs, the hinge-lid boxes, need an HLP-style machine. Soft packs, the ones with the folded foil and printed outer, need a SASIB-style machine. Some factories run both, but most start with one. Choose the format your brands actually sell, not the one that looks fancier.",
         ],
       },
       {
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "3. New or reconditioned?",
         paragraphs: [
-          "A good reconditioned machine can run for years and costs far less than new. The key word is good — it has to be properly inspected, serviced and tested. That is exactly how we prepare every used machine we sell. If your budget is tight, a reconditioned HLP or SASIB is often the smarter buy.",
+          "A good reconditioned machine can run for years and costs far less than new. The key word is good, it has to be properly inspected, serviced and tested. That is exactly how we prepare every used machine we sell. If your budget is tight, a reconditioned HLP or SASIB is often the smarter buy.",
         ],
       },
       {
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Talk to us before you decide",
         paragraphs: [
-          "Every factory is a little different. Tell us your format, your target output and your budget, and we will point you to the machine that fits — no pressure, just honest advice. Message us on WhatsApp or drop by our workshop in SITE, Pakistan.",
+          "Every factory is a little different. Tell us your format, your target output and your budget, and we will point you to the machine that fits, no pressure, just honest advice. Message us on WhatsApp or drop by our workshop in SITE, Pakistan.",
         ],
       },
     ],
@@ -81,7 +81,7 @@ export const blogPosts: BlogPost[] = [
     slug: "hauni-mark-8-vs-mark-9-cigarette-makers",
     title: "Hauni Mark 8 vs Mark 9: Which Cigarette Maker Suits You?",
     description:
-      "Comparing the Hauni Mark 8 and Mark 9 cigarette making machines — speed, control and cost. Practical advice from Civic Tobacco Machinery in Pakistan.",
+      "Comparing the Hauni Mark 8 and Mark 9 cigarette making machines, speed, control and cost. Practical advice from Civic Tobacco Machinery in Pakistan.",
     excerpt:
       "Both are legends. But which Hauni maker is right for your floor? We compare the Mark 8 and Mark 9 in plain terms.",
     date: "2026-02-03",
@@ -107,14 +107,14 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "The Mark 9: more speed, more control",
         paragraphs: [
-          "The Mark 9 is the faster generation. If your orders have grown and one maker needs to produce more, the Mark 9 — especially the MAX S and Mark 9.5 versions — gives you the output. The trade-off is that it is a more advanced machine, so it rewards a team that keeps up with maintenance.",
+          "The Mark 9 is the faster generation. If your orders have grown and one maker needs to produce more, the Mark 9, especially the MAX S and Mark 9.5 versions, gives you the output. The trade-off is that it is a more advanced machine, so it rewards a team that keeps up with maintenance.",
         ],
       },
       {
         heading: "So which one?",
         paragraphs: [
           "If you are starting out or want maximum reliability for the money, go Mark 8. If you need higher volume from a single machine and have the team to support it, go Mark 9. Either way, we make sure the maker is matched with the right filter maker so the line stays balanced.",
-          "Not sure? Send us your target output and we will recommend the maker — and the supporting equipment — that fits.",
+          "Not sure? Send us your target output and we will recommend the maker, and the supporting equipment, that fits.",
         ],
       },
     ],
@@ -123,9 +123,9 @@ export const blogPosts: BlogPost[] = [
     slug: "buying-used-tobacco-machinery-pakistan-checklist",
     title: "Buying Used Tobacco Machinery in Pakistan: A Buyer's Checklist",
     description:
-      "What to check before buying used cigarette machines in Pakistan — condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
+      "What to check before buying used cigarette machines in Pakistan, condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
     excerpt:
-      "Used machinery can save you a fortune — or cost you one. Here is the checklist we would use before handing over any money.",
+      "Used machinery can save you a fortune, or cost you one. Here is the checklist we would use before handing over any money.",
     date: "2026-03-10",
     author: "Civic Tobacco Machinery",
     readMinutes: 6,
@@ -137,25 +137,25 @@ export const blogPosts: BlogPost[] = [
     body: [
       {
         paragraphs: [
-          "Used cigarette and tobacco machinery is a great way to build or expand a factory without paying new prices. But not every used machine is a good buy. Here is the checklist we would use before purchasing anything — and the standard we hold ourselves to when we sell.",
+          "Used cigarette and tobacco machinery is a great way to build or expand a factory without paying new prices. But not every used machine is a good buy. Here is the checklist we would use before purchasing anything, and the standard we hold ourselves to when we sell.",
         ],
       },
       {
         heading: "1. Has it actually been tested?",
         paragraphs: [
-          "A machine that has been sitting in a warehouse is an unknown until it runs. Ask whether it has been powered up, run and tested — not just cleaned and painted. We test every machine before we sell it, because a fresh coat of paint tells you nothing about the mechanics underneath.",
+          "A machine that has been sitting in a warehouse is an unknown until it runs. Ask whether it has been powered up, run and tested, not just cleaned and painted. We test every machine before we sell it, because a fresh coat of paint tells you nothing about the mechanics underneath.",
         ],
       },
       {
         heading: "2. Is there an honest condition report?",
         paragraphs: [
-          "You should know what has been replaced, what is worn and what to expect. A seller who gives you a straight condition report is a seller you can trust. Be cautious of anyone who insists everything is perfect — every used machine has a history.",
+          "You should know what has been replaced, what is worn and what to expect. A seller who gives you a straight condition report is a seller you can trust. Be cautious of anyone who insists everything is perfect, every used machine has a history.",
         ],
       },
       {
         heading: "3. Can you get spare parts?",
         paragraphs: [
-          "Stick to models with good parts availability — Hauni Mark and Protos makers, KDF filter makers, HLP and SASIB packers. Rare or unusual machines can strand you the first time something wears out.",
+          "Stick to models with good parts availability, Hauni Mark and Protos makers, KDF filter makers, HLP and SASIB packers. Rare or unusual machines can strand you the first time something wears out.",
         ],
       },
       {

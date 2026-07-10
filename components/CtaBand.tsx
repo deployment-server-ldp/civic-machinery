@@ -6,7 +6,7 @@ import { whatsappLink, siteConfig } from "@/lib/site";
  */
 export default function CtaBand({
   title = "Not sure which machine you need?",
-  text = "Tell us your format, target output and budget. We will recommend the right machine — new or reconditioned — and help you get it running.",
+  text = "Tell us your format, target output and budget. We will recommend the right machine, new or reconditioned, and help you get it running.",
   waMessage,
 }: {
   title?: string;

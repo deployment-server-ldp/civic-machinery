@@ -51,7 +51,7 @@ export default function ProductDetail({
               {["Front view", "Detail", "In operation"].map((v) => (
                 <MachineImage
                   key={v}
-                  alt={`${product.name} — ${v}`}
+                  alt={`${product.name}, ${v}`}
                   label={v}
                   aspect="aspect-square"
                 />
@@ -199,5 +199,5 @@ function shortName(name: string) {
   return name
     .replace("Cigarette ", "")
     .replace(" Cigarette Packing Machine", "")
-    .replace(" — Box Packing Machine", "");
+    .replace(", Box Packing Machine", "");
 }

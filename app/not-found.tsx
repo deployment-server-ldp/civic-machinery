@@ -4,7 +4,7 @@ import { categories, categoryHref } from "@/lib/products";
 export default function NotFound() {
   return (
     <section className="container mx-auto flex min-h-[60vh] flex-col items-center justify-center py-20 text-center">
-      <p className="eyebrow">404 — Page not found</p>
+      <p className="eyebrow">404, Page not found</p>
       <h1 className="mt-3 text-3xl sm:text-4xl">This page could not be found</h1>
       <p className="mt-4 max-w-md text-brand-600">
         The page you are looking for may have moved or no longer exists. Try one
