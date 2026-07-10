@@ -13,7 +13,7 @@ export default function ProductCard({
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card transition-shadow hover:shadow-card-hover">
       <MachineImage
-        src={imageSrc}
+        src={imageSrc ?? product.image}
         alt={product.name}
         label={product.name}
         aspect="aspect-[655/330]"

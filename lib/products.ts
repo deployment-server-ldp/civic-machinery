@@ -58,6 +58,13 @@ export interface Product {
   features: string[];
   specs: { label: string; value: string }[];
   applications?: string[];
+  /** Path to the main product photo. Falls back to a placeholder when unset. */
+  image?: string;
+  /**
+   * When set, the "Key features" section renders as a spec-style table and the
+   * separate "Specifications" section is hidden.
+   */
+  featureTable?: { label: string; value: string }[];
 }
 
 /* ------------------------------------------------------------------ */
@@ -510,9 +517,11 @@ const making: Product[] = [
     metaDescription:
       "Molins Mark 8 Post 64 cigarette making machine in Pakistan, reliable rod maker for steady production. Reconditioned and supported by Civic Tobacco Machinery.",
     keywords: ["Molins Mark 8", "Mark 8 Post 64", "cigarette making machine Pakistan"],
+    image: "/images/machines/mark-8-post-64.webp",
     intro: [
-      "The Molins Mark 8 has earned its place as one of the most dependable makers ever built. Decades on, factories still run the Post 64 version because it is simple, tough and easy to keep going with parts that are readily available.",
-      "It lays down an even tobacco rod and cuts clean cigarettes at a steady pace, ideal for a first maker or a reliable backup line that just keeps working.",
+      "The Molins Mark 8 Post 64 is a proven, high-output cigarette maker built for both quality and flexibility. It runs at a steady 1,800 to 2,000 cigarettes per minute and carries a double colour printer, so you can print the paper exactly the way your brand needs without slowing the line down.",
+      "It handles a wide spread of formats, cigarette circumferences from 17mm up to 28.3mm and combined filter-and-tobacco rod lengths from 65mm to 110mm, which covers everything from standard 84mm and 100mm right through to slims, super slims and nano. A Max Multiroll filter attachment keeps the filters going on cleanly at full speed.",
+      "At around 3,500kg it is a heavy, solid machine made to hold its pace through long production runs. That combination of speed, format flexibility and reliability makes the Mark 8 Post 64 a smart pick for factories that want strong output from a single maker.",
     ],
     features: [
       "Proven, long-life Molins design",
@@ -520,6 +529,15 @@ const making: Product[] = [
       "Parts and know-how widely available",
       "Easy for technicians to maintain",
       "Great value as a reconditioned unit",
+    ],
+    featureTable: [
+      { label: "Machine Speed", value: "1,800 – 2,000 cigarettes per minute" },
+      { label: "Cigarette Maker", value: "Molins MK-8 'Post 64' with double colour printer" },
+      { label: "Cigarette Circumference", value: "17mm – 28.3mm" },
+      { label: "Filter + Tobacco Rod Length", value: "65mm – 110mm" },
+      { label: "Filter Attachment", value: "Molins Max Multiroll" },
+      { label: "Default Setup Size", value: "Standard 84mm / 100mm / slims / super slims / nano" },
+      { label: "Weight", value: "3,500 kg (approx.)" },
     ],
     specs: [
       { label: "Type", value: "Cigarette maker (rod maker)" },

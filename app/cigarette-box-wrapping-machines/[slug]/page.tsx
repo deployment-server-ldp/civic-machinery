@@ -29,6 +29,7 @@ export function generateMetadata({
     description: product.metaDescription,
     path: productHref(product),
     keywords: product.keywords,
+    images: product.image ? [product.image] : undefined,
   });
 }
 

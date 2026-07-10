@@ -26,7 +26,7 @@ export default function ProductDetail({
 
   return (
     <>
-      <JsonLd data={productSchema(product, path, "/og-default.svg")} />
+      <JsonLd data={productSchema(product, path, product.image ?? "/og-default.svg")} />
 
       <PageHero
         eyebrow={categoryLabel}
@@ -40,23 +40,26 @@ export default function ProductDetail({
           {/* Image */}
           <div className="lg:sticky lg:top-28">
             <MachineImage
-              src={undefined}
+              src={product.image}
               alt={product.name}
               label={product.name}
-              aspect="aspect-[4/3]"
+              aspect="aspect-[655/330]"
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="mt-4 grid grid-cols-3 gap-3">
-              {["Front view", "Detail", "In operation"].map((v) => (
-                <MachineImage
-                  key={v}
-                  alt={`${product.name}, ${v}`}
-                  label={v}
-                  aspect="aspect-square"
-                />
-              ))}
-            </div>
+            {/* Placeholder thumbnails only until a real photo is added. */}
+            {!product.image && (
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {["Front view", "Detail", "In operation"].map((v) => (
+                  <MachineImage
+                    key={v}
+                    alt={`${product.name}, ${v}`}
+                    label={v}
+                    aspect="aspect-square"
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Info */}
@@ -85,31 +88,14 @@ export default function ProductDetail({
               </a>
             </div>
 
-            {/* Features */}
-            {product.features.length > 0 && (
+            {product.featureTable ? (
+              /* Feature table replaces both the bullet list and the specs table. */
               <div className="mt-10">
                 <h2 className="text-xl">Key features</h2>
-                <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
-                  {product.features.map((f) => (
-                    <li key={f} className="flex gap-2.5 text-sm text-brand-700">
-                      <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 6 8 15l-4-4" />
-                      </svg>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Specs */}
-            {product.specs.length > 0 && (
-              <div className="mt-10">
-                <h2 className="text-xl">Specifications</h2>
                 <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
                   <table className="w-full text-sm">
                     <tbody className="divide-y divide-brand-100">
-                      {product.specs.map((s, i) => (
+                      {product.featureTable.map((s, i) => (
                         <tr key={s.label} className={i % 2 ? "bg-white" : "bg-brand-50"}>
                           <th
                             scope="row"
@@ -123,10 +109,53 @@ export default function ProductDetail({
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-3 text-xs text-brand-400">
-                  Specifications are indicative and may vary by unit. Contact us for exact details on a specific machine.
-                </p>
               </div>
+            ) : (
+              <>
+                {/* Features */}
+                {product.features.length > 0 && (
+                  <div className="mt-10">
+                    <h2 className="text-xl">Key features</h2>
+                    <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+                      {product.features.map((f) => (
+                        <li key={f} className="flex gap-2.5 text-sm text-brand-700">
+                          <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M16 6 8 15l-4-4" />
+                          </svg>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Specs */}
+                {product.specs.length > 0 && (
+                  <div className="mt-10">
+                    <h2 className="text-xl">Specifications</h2>
+                    <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
+                      <table className="w-full text-sm">
+                        <tbody className="divide-y divide-brand-100">
+                          {product.specs.map((s, i) => (
+                            <tr key={s.label} className={i % 2 ? "bg-white" : "bg-brand-50"}>
+                              <th
+                                scope="row"
+                                className="w-2/5 px-4 py-3 text-left font-medium text-brand-600"
+                              >
+                                {s.label}
+                              </th>
+                              <td className="px-4 py-3 text-brand-900">{s.value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="mt-3 text-xs text-brand-400">
+                      Specifications are indicative and may vary by unit. Contact us for exact details on a specific machine.
+                    </p>
+                  </div>
+                )}
+              </>
             )}
 
             {/* Applications */}
