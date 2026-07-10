@@ -16,7 +16,8 @@ export default function ProductCard({
         src={imageSrc}
         alt={product.name}
         label={product.name}
-        aspect="aspect-[16/10]"
+        aspect="aspect-[655/330]"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 655px"
         className="rounded-none"
       />
       <div className="flex flex-1 flex-col p-5">

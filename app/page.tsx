@@ -231,7 +231,7 @@ export default function HomePage() {
               View all machines →
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {featured.map((p) => (
               <ProductCard key={productHref(p)} product={p} />
             ))}
