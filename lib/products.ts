@@ -461,35 +461,33 @@ const wrapping: Product[] = [
   {
     slug: "sasib-boxer",
     name: "SASIB Boxer, Box Packing Machine",
+    h1: "SASIB Boxer, Box Packing Machine",
+    metaTitle: "SASIB Boxer, Cigarette Box Packing Machine",
     category: "wrapping-machines",
     brand: "SASIB",
     condition: "New / Reconditioned",
-    tagline: "SASIB carton boxer for tidy 10-pack cartons.",
+    tagline: "Cigarette box packing machine running up to 25 boxes per minute.",
     metaDescription:
-      "SASIB Boxer box packing machine in Pakistan, forms cigarette cartons from wrapped packs. Supplied and serviced by Civic Tobacco Machinery.",
+      "SASIB Boxer box packing machine in Pakistan, up to 25 boxes per minute for cigarette cartons. Supplied and serviced by Civic Tobacco Machinery.",
     keywords: [
       "SASIB Boxer",
-      "box packing machine",
-      "cigarette carton machine Pakistan",
+      "cigarette box packing machine Pakistan",
+      "cigarette carton machine",
     ],
+    image: "/images/machines/sasib-boxer.webp",
     intro: [
-      "The SASIB boxer does the same important job at the end of the line, turning loose wrapped packs into neat cartons. It groups the packs and forms the box around them so your cartons come out square and consistent.",
-      "It is a natural match for a SASIB packing and wrapping line, and it pairs just as well with other brands. Supplied reconditioned and ready for the floor.",
+      "The SASIB Boxer is an advanced cigarette box packing machine known for its speed and efficiency. Capable of packing up to 25 boxes a minute, it gives a real boost to the throughput of a cigarette manufacturing line in Pakistan.",
+      "It runs on a power requirement of 6 KVA, combining power with performance, and an air pressure need of 0.1 m³/min, keeping a balance between energy use and operational efficiency.",
+      "Designed for highly accurate, consistent packing, the SASIB Boxer minimises downtime and streamlines the process, which makes it a valuable asset for high-volume environments where speed and precision matter for productivity and product quality.",
     ],
-    features: [
-      "Forms tidy 10-pack cartons",
-      "Consistent, square carton finish",
-      "Pairs well with SASIB and other lines",
-      "Reliable, well-supported design",
-      "Reconditioned and tested",
+    features: [],
+    featureTable: [
+      { label: "Speed", value: "Up to 25 bpm" },
+      { label: "Power Requirement", value: "6 KVA" },
+      { label: "Air Pressure", value: "0.1 m³ / min" },
     ],
-    specs: [
-      { label: "Function", value: "Carton / box packing" },
-      { label: "Carton size", value: "10 packs (standard)" },
-      { label: "Feed", value: "From overwrapper" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Carton packing", "End-of-line collation"],
+    specs: [],
+    applications: ["Carton / box packing", "High-volume packing lines"],
   },
 ];
 
