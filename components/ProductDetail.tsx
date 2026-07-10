@@ -1,5 +1,6 @@
 import PageHero from "./PageHero";
 import MachineImage from "./MachineImage";
+import ProductImageZoom from "./ProductImageZoom";
 import ProductCard from "./ProductCard";
 import ContactForm from "./ContactForm";
 import JsonLd from "./JsonLd";
@@ -39,26 +40,34 @@ export default function ProductDetail({
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Image */}
           <div className="lg:sticky lg:top-28">
-            <MachineImage
-              src={product.image}
-              alt={product.name}
-              label={product.name}
-              aspect="aspect-[655/330]"
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            {/* Placeholder thumbnails only until a real photo is added. */}
-            {!product.image && (
-              <div className="mt-4 grid grid-cols-3 gap-3">
-                {["Front view", "Detail", "In operation"].map((v) => (
-                  <MachineImage
-                    key={v}
-                    alt={`${product.name}, ${v}`}
-                    label={v}
-                    aspect="aspect-square"
-                  />
-                ))}
-              </div>
+            {product.image ? (
+              <ProductImageZoom
+                src={product.image}
+                alt={product.name}
+                aspect="aspect-[655/330]"
+              />
+            ) : (
+              <>
+                <MachineImage
+                  src={product.image}
+                  alt={product.name}
+                  label={product.name}
+                  aspect="aspect-[655/330]"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                {/* Placeholder thumbnails only until a real photo is added. */}
+                <div className="mt-4 grid grid-cols-3 gap-3">
+                  {["Front view", "Detail", "In operation"].map((v) => (
+                    <MachineImage
+                      key={v}
+                      alt={`${product.name}, ${v}`}
+                      label={v}
+                      aspect="aspect-square"
+                    />
+                  ))}
+                </div>
+              </>
             )}
           </div>
 
