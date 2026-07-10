@@ -37,6 +37,16 @@ const nextConfig = {
         destination: "/blog/molins-mark-8-vs-mark-9-cigarette-makers",
         permanent: true,
       },
+      {
+        source: "/cigarette-filter-making-machines/hauni-kdf-1",
+        destination: "/cigarette-filter-making-machines/kdf-1",
+        permanent: true,
+      },
+      {
+        source: "/cigarette-filter-making-machines/hauni-kdf-2",
+        destination: "/cigarette-filter-making-machines/kdf-2",
+        permanent: true,
+      },
 
       // Packing / wrapping category slugs → keyword-first slugs.
       {

@@ -8,7 +8,7 @@ import Image from "next/image";
  */
 export default function Logo({
   variant = "dark",
-  className = "h-11 w-auto sm:h-12",
+  className = "h-8 w-auto sm:h-9",
 }: {
   variant?: "dark" | "light";
   className?: string;
@@ -24,8 +24,8 @@ export default function Logo({
       <Image
         src={src}
         alt="Civic Tobacco Machinery"
-        width={900}
-        height={172}
+        width={700}
+        height={92}
         priority
         unoptimized
         className={className}

@@ -733,7 +733,7 @@ const making: Product[] = [
 
 const filter: Product[] = [
   {
-    slug: "hauni-kdf-1",
+    slug: "kdf-1",
     name: "Molins KDF-1 Filter Maker",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
@@ -763,7 +763,7 @@ const filter: Product[] = [
     applications: ["Entry filter production", "Match for Mark 8 makers"],
   },
   {
-    slug: "hauni-kdf-2",
+    slug: "kdf-2",
     name: "Molins KDF-2 Filter Maker",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",

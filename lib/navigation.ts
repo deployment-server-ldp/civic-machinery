@@ -1,13 +1,3 @@
-import {
-  categories,
-  getProductsByCategory,
-  getSubcategoriesFor,
-  getProductsBySubcategory,
-  productHref,
-  categoryHref,
-  subcategoryHref,
-} from "./products";
-
 export interface NavLink {
   label: string;
   href: string;
@@ -30,64 +20,65 @@ export interface NavItem {
   columns?: NavColumn[];
 }
 
-const cat = (slug: string) => categories.find((c) => c.slug === slug)!;
-
-const packingCat = cat("packing-machines");
-const wrappingCat = cat("wrapping-machines");
-
+/**
+ * Top navigation. Category items are dropdown triggers only (href "#");
+ * their machines link straight to the product pages. Blog lives in the footer.
+ */
 export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   {
-    // Top-level items are dropdown triggers only (no own page, use "#").
-    label: "Packing Machines",
+    label: "Cigarette Making",
     href: "#",
     children: [
-      { label: "Cigarette Packing Machines", href: categoryHref(packingCat), heading: true },
-      ...getProductsByCategory("packing-machines").map((p) => ({
-        label: p.name.replace(" Cigarette Packing Machine", "").replace(" Soft Pack Machine", " (Soft Pack)"),
-        href: productHref(p),
-      })),
+      { label: "Mark 8 Post 64", href: "/cigarette-making-machines/mark-8-post-64" },
+      { label: "Mark 8D Max 15", href: "/cigarette-making-machines/mark-8d-max-15" },
+      { label: "Mark 9 Max S", href: "/cigarette-making-machines/mark-9-max-s" },
+      { label: "Mark 9.5 with Lenze Servo Drives", href: "/cigarette-making-machines/mark-9-5-lenze-servo-drives" },
+      { label: "Mark 9.5 Max S", href: "/cigarette-making-machines/mark-9-5-max-s" },
+      { label: "Protos 70", href: "/cigarette-making-machines/protos-70" },
+      { label: "Protos 80 ER", href: "/cigarette-making-machines/protos-80-er" },
     ],
   },
   {
-    label: "Wrapping Machines",
+    label: "Cigarette Packing",
     href: "#",
     children: [
-      { label: "Cigarette Wrapping Machines", href: categoryHref(wrappingCat), heading: true },
-      ...getProductsByCategory("wrapping-machines").map((p) => ({
-        label: p.name.replace(", Box Packing Machine", ""),
-        href: productHref(p),
-      })),
+      { label: "HLP-180", href: "/cigarette-packing-machines/hlp-180" },
+      { label: "HLP-200", href: "/cigarette-packing-machines/hlp-200" },
+      { label: "HLP-225", href: "/cigarette-packing-machines/hlp-225" },
+      { label: "SASIB 3000 (Soft Pack)", href: "/cigarette-packing-machines/ssasib-3000" },
+      { label: "SASIB 5000 (Soft Pack)", href: "/cigarette-packing-machines/ssasib-5000" },
     ],
   },
   {
-    label: "Manufacturing Machines",
-    href: "#",
-    columns: getSubcategoriesFor("manufacturing-machines").map((sub) => ({
-      heading: sub.navLabel,
-      headingHref: subcategoryHref(sub),
-      links: getProductsBySubcategory(sub.slug).map((p) => ({
-        label: p.name
-          .replace("Molins ", "")
-          .replace(" Filter Maker", "")
-          .replace(" (Filter Configuration)", " (Filter)"),
-        href: productHref(p),
-      })),
-    })),
-  },
-  {
-    // We don't keep a separate used inventory, so these point to the
-    // relevant machine sections (our stock is largely reconditioned anyway).
-    label: "Used Machinery",
+    label: "Filter Machines",
     href: "#",
     children: [
-      { label: "Used Manufacturing Machines", href: "/manufacturing-machines" },
-      { label: "Used Cigarette Filter Machinery", href: "/cigarette-filter-making-machines" },
-      { label: "Used Packing Machines", href: "/cigarette-packing-machines" },
-      { label: "Used Wrapping Machines", href: "/cigarette-box-wrapping-machines" },
-      { label: "Used Tobacco Machinery", href: "/tobacco-machinery" },
+      { label: "KDF-1", href: "/cigarette-filter-making-machines/kdf-1" },
+      { label: "KDF-2", href: "/cigarette-filter-making-machines/kdf-2" },
+      { label: "PM-5", href: "/cigarette-filter-making-machines/molins-pm-5" },
+      { label: "Hollow Tube Maker", href: "/cigarette-filter-making-machines/hollow-tube-maker" },
     ],
   },
-  { label: "Blog", href: "/blog" },
+  {
+    label: "Wrappers & Boxers",
+    href: "#",
+    children: [
+      { label: "Regular Wrapper CP1", href: "/cigarette-box-wrapping-machines/regular-wrapper-cp1" },
+      { label: "Naked Over Wrapper", href: "/cigarette-box-wrapping-machines/naked-over-wrapper" },
+      { label: "Molins Boxer", href: "/cigarette-box-wrapping-machines/molins-boxer" },
+      { label: "SASIB Boxer", href: "/cigarette-box-wrapping-machines/sasib-boxer" },
+    ],
+  },
+  {
+    label: "Cutter/Feeder/Reclaimer",
+    href: "#",
+    children: [
+      { label: "Tobacco Feeder", href: "/tobacco-machinery/tobacco-feeder" },
+      { label: "Cigarette Reclaimer", href: "/tobacco-machinery/cigarette-reclaimer" },
+      { label: "Tobacco Cutters", href: "/tobacco-machinery/tobacco-cutters" },
+      { label: "Tobacco Stem Flattener", href: "/tobacco-machinery/tobacco-stem-flattener" },
+    ],
+  },
   { label: "Contact Us", href: "/contact" },
 ];
