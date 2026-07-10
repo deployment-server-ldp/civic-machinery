@@ -127,10 +127,6 @@ export default function HomePage() {
         />
         <div className="container relative z-10 mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-in-up">
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-200 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-400" aria-hidden="true" />
-              New &amp; Reconditioned · Pakistan-wide
-            </p>
             <h1 className="text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
               Looking for Cigarette &amp; Tobacco Machinery in Pakistan?
             </h1>
@@ -153,9 +149,6 @@ export default function HomePage() {
                 WhatsApp {siteConfig.phoneDisplay}
               </a>
             </div>
-            <p className="mt-6 text-sm text-brand-400">
-              New &amp; used · Molins · HLP · SASIB · Protos
-            </p>
           </div>
 
           {/* Category quick links panel */}
@@ -184,8 +177,17 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section className="container mx-auto py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+      <section className="bg-white py-16">
+        <div className="container mx-auto">
+          <div className="relative overflow-hidden rounded-[2rem] border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-accent-50 px-6 py-12 shadow-card sm:px-10 lg:px-14 lg:py-16">
+            {/* Soft brand glow, keeps the panel distinct from the white page */}
+            <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-accent-500/10 blur-3xl" />
+            <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-accent-400/10 blur-3xl" />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-accent-500 to-accent-700"
+            />
+            <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
             <p className="eyebrow">About Us</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">
@@ -236,6 +238,8 @@ export default function HomePage() {
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
+            </div>
+          </div>
             </div>
           </div>
         </div>
