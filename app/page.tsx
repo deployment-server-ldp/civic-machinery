@@ -193,7 +193,12 @@ export default function HomePage() {
             <h2 className="mt-2 text-3xl sm:text-4xl">
               A Family Name Built on Tobacco Machinery
             </h2>
-            <p className="mt-5 leading-relaxed text-brand-600">
+            <p className="mt-5 text-lg font-medium leading-relaxed text-brand-800">
+              A proud father and son business, now into its third generation,
+              with more than 35 years of hands-on experience in the tobacco
+              industry.
+            </p>
+            <p className="mt-4 leading-relaxed text-brand-600">
               For decades our family has worked in one field of tobacco
               machinery. What started as a small trading operation has grown into
               a trusted, multi-generation name that new and established cigarette
