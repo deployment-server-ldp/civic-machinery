@@ -535,7 +535,7 @@ const making: Product[] = [
       { label: "Cigarette Maker", value: "Molins MK-8 'Post 64' with double colour printer" },
       { label: "Cigarette Circumference", value: "17mm – 28.3mm" },
       { label: "Filter + Tobacco Rod Length", value: "65mm – 110mm" },
-      { label: "Filter Attachment", value: "Molins Max Multiroll" },
+      { label: "Filter Attachment", value: "Max Multiroll" },
       { label: "Default Setup Size", value: "Standard 84mm / 100mm / slims / super slims / nano" },
       { label: "Weight", value: "3,500 kg (approx.)" },
     ],
