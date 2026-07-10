@@ -28,7 +28,7 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-brand-100/80 bg-white/85 shadow-[0_1px_2px_rgba(16,23,30,0.04),0_16px_40px_-28px_rgba(16,23,30,0.45)] backdrop-blur-xl">
       {/* Utility bar */}
       <div className="hidden bg-brand-950 text-brand-100 xl:block">
         <div className="container mx-auto flex h-9 items-center justify-between text-xs">
@@ -57,12 +57,12 @@ export default function Header() {
       </div>
 
       {/* Main bar */}
-      <div className="container mx-auto flex h-[4.5rem] items-center justify-between gap-4 xl:h-[5.25rem]">
-        <Logo />
+      <div className="container mx-auto flex h-20 items-center justify-between gap-6 xl:h-24">
+        <Logo className="h-11 w-auto sm:h-12 xl:h-[3.35rem]" />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
-          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/90 bg-white/60 px-1.5 py-1.5 shadow-[0_6px_20px_-10px_rgba(28,35,45,0.35)] ring-1 ring-brand-900/[0.06] backdrop-blur-md">
+          <ul className="flex items-center gap-1 rounded-full border border-brand-200/70 bg-white/70 px-2 py-2 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md">
             {mainNav.map((item) => (
               <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
             ))}
@@ -91,7 +91,7 @@ export default function Header() {
 
 function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
   const hasDropdown = Boolean(item.children || item.columns);
-  const linkCls = `inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-[0.8rem] font-semibold tracking-tight transition-colors ${
+  const linkCls = `inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-[0.8rem] font-semibold tracking-tight transition-colors ${
     active
       ? "bg-accent-500 text-white shadow-sm"
       : "text-brand-700 hover:bg-white/80 hover:text-accent-700"
