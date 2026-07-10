@@ -4,49 +4,111 @@ import { useState } from "react";
 import { whatsappLink, siteConfig } from "@/lib/site";
 
 /**
- * Enquiry form. With no backend wired up yet, it composes the enquiry into a
- * pre-filled WhatsApp message (and offers an email fallback), the fastest way
- * for a customer here to reach the workshop. Swap in an API route later
- * without changing the UI.
+ * Enquiry form. Submissions are POSTed to /sendmail.php (a small PHP handler
+ * that emails the lead to the business inbox). The recipient address lives only
+ * in that server-side file, never in the front-end. If the send fails, we fall
+ * back to a WhatsApp link so the lead is never lost.
  */
 export default function ContactForm({ machine }: { machine?: string }) {
   const [values, setValues] = useState({
     name: "",
+    email: "",
     phone: "",
     interest: machine || "",
     message: "",
+    company: "", // honeypot — real users leave this empty
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle"
+  );
 
   const update =
     (key: keyof typeof values) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setValues((v) => ({ ...v, [key]: e.target.value }));
 
-  const composed = () =>
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (status === "sending") return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/sendmail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          source:
+            typeof window !== "undefined" ? window.location.pathname : "",
+        }),
+      });
+      const data = await res.json().catch(() => ({ ok: false }));
+      if (res.ok && data.ok) {
+        setStatus("success");
+        setValues({
+          name: "",
+          email: "",
+          phone: "",
+          interest: machine || "",
+          message: "",
+          company: "",
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const waFallback = whatsappLink(
     [
-      `Enquiry for ${siteConfig.name}`,
+      "Enquiry for Civic Tobacco Machinery",
       values.name && `Name: ${values.name}`,
       values.phone && `Phone: ${values.phone}`,
       values.interest && `Interested in: ${values.interest}`,
       values.message && `Message: ${values.message}`,
     ]
       .filter(Boolean)
-      .join("\n");
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.open(whatsappLink(composed()), "_blank", "noopener,noreferrer");
-  };
-
-  const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-    "Machine Enquiry"
-  )}&body=${encodeURIComponent(composed())}`;
+      .join("\n")
+  );
 
   const field =
     "w-full rounded-lg border border-brand-200 bg-white px-4 py-3 text-sm text-brand-900 placeholder:text-brand-400 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/30";
 
+  if (status === "success") {
+    return (
+      <div
+        role="status"
+        className="rounded-2xl border border-green-200 bg-green-50 p-6 text-center"
+      >
+        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600">
+          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-semibold text-brand-900">Thank you!</h3>
+        <p className="mt-1 text-sm text-brand-600">
+          Your enquiry has been sent. Our team will get back to you shortly,
+          usually the same working day.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={onSubmit} className="space-y-4" aria-label="Enquiry form">
+      {/* Honeypot: hidden from users, catches bots */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        value={values.company}
+        onChange={update("company")}
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-brand-700">
@@ -83,6 +145,22 @@ export default function ContactForm({ machine }: { machine?: string }) {
       </div>
 
       <div>
+        <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-brand-700">
+          Email <span className="text-brand-400">(optional)</span>
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          value={values.email}
+          onChange={update("email")}
+          className={field}
+          placeholder="you@company.com"
+        />
+      </div>
+
+      <div>
         <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-brand-700">
           Machine you are interested in
         </label>
@@ -113,16 +191,40 @@ export default function ContactForm({ machine }: { machine?: string }) {
         />
       </div>
 
-      <div className="flex flex-col gap-3 pt-1 sm:flex-row">
-        <button type="submit" className="btn-primary sm:flex-1">
-          Send via WhatsApp
-        </button>
-        <a href={mailtoHref} className="btn-secondary sm:flex-1">
-          Send by Email
-        </a>
-      </div>
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70"
+      >
+        {status === "sending" ? "Sending…" : "Send Enquiry"}
+      </button>
+
+      {status === "error" && (
+        <p className="text-sm text-red-600">
+          Sorry, something went wrong sending your message. Please try again, or{" "}
+          <a
+            href={waFallback}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline"
+          >
+            message us on WhatsApp
+          </a>
+          .
+        </p>
+      )}
+
       <p className="text-xs text-brand-400">
-        Your details go straight to our team, we usually reply the same working day.
+        Your details go straight to our team, we usually reply the same working
+        day. Prefer to chat?{" "}
+        <a
+          href={whatsappLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-accent-700 hover:underline"
+        >
+          WhatsApp {siteConfig.phoneDisplay}
+        </a>
       </p>
     </form>
   );
