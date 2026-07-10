@@ -47,6 +47,11 @@ const nextConfig = {
         destination: "/cigarette-filter-making-machines/kdf-2",
         permanent: true,
       },
+      {
+        source: "/cigarette-making-machines/mark-9-5-max-s",
+        destination: "/cigarette-making-machines/mark-9-5-max-s-tray-filler",
+        permanent: true,
+      },
 
       // Packing / wrapping category slugs → keyword-first slugs.
       {
