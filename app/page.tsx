@@ -17,7 +17,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${siteConfig.name}, ${siteConfig.tagline}`,
+  title: "Civic Tobacco Machinery | Cigarette Machinery Pakistan",
   description: siteConfig.description,
   path: "/",
   keywords: [
@@ -40,7 +40,7 @@ const homeFaqs = [
   {
     question: "Which brands of cigarette manufacturing machines do you deal in?",
     answer:
-      "We work mainly with well-supported brands like Hauni and Molins for making and filter machines, and HLP and SASIB for packing and wrapping. These are chosen because parts and trained technicians are easy to find, which keeps your line running for years.",
+      "We work mainly with well-supported brands like Molins for making and filter machines, and HLP and SASIB for packing and wrapping. These are chosen because parts and trained technicians are easy to find, which keeps your line running for years.",
   },
   {
     question: "Do you install the machines and provide spare parts?",
@@ -151,7 +151,7 @@ export default function HomePage() {
               </a>
             </div>
             <p className="mt-6 text-sm text-brand-400">
-              New &amp; used · Hauni · Molins · HLP · SASIB · Protos
+              New &amp; used · Molins · HLP · SASIB · Protos
             </p>
           </div>
 

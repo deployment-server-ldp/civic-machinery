@@ -21,7 +21,7 @@ export function generateMetadata({
   const post = getPost(params.slug);
   if (!post) return {};
   return buildMetadata({
-    title: post.title,
+    title: post.metaTitle ?? post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     keywords: post.keywords,

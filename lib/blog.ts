@@ -6,6 +6,8 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Custom <title> (defaults to `title`). Keep < 60 chars. */
+  metaTitle?: string;
   description: string;
   excerpt: string;
   date: string; // ISO
@@ -21,6 +23,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-choose-cigarette-packing-machine-pakistan",
     title: "How to Choose the Right Cigarette Packing Machine for Your Factory",
+    metaTitle: "How to Choose a Cigarette Packing Machine",
     description:
       "A practical guide to choosing a cigarette packing machine in Pakistan, hard pack vs soft pack, speed, budget and support. Advice from Civic Tobacco Machinery.",
     excerpt:
@@ -78,24 +81,24 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "hauni-mark-8-vs-mark-9-cigarette-makers",
-    title: "Hauni Mark 8 vs Mark 9: Which Cigarette Maker Suits You?",
+    slug: "molins-mark-8-vs-mark-9-cigarette-makers",
+    title: "Molins Mark 8 vs Mark 9: Which Cigarette Maker Suits You?",
     description:
-      "Comparing the Hauni Mark 8 and Mark 9 cigarette making machines, speed, control and cost. Practical advice from Civic Tobacco Machinery in Pakistan.",
+      "Comparing the Molins Mark 8 and Mark 9 cigarette making machines, speed, control and cost. Practical advice from Civic Tobacco Machinery in Pakistan.",
     excerpt:
-      "Both are legends. But which Hauni maker is right for your floor? We compare the Mark 8 and Mark 9 in plain terms.",
+      "Both are legends. But which Molins maker is right for your floor? We compare the Mark 8 and Mark 9 in plain terms.",
     date: "2026-02-03",
     author: "Civic Tobacco Machinery",
     readMinutes: 5,
     keywords: [
-      "Hauni Mark 8",
-      "Hauni Mark 9",
+      "Molins Mark 8",
+      "Molins Mark 9",
       "Cigarette Manufacturing Machines in Pakistan",
     ],
     body: [
       {
         paragraphs: [
-          "The Hauni Mark 8 and Mark 9 are two of the most respected cigarette makers ever built, and both still run in factories around the world. If you are choosing between them, here is how we help customers decide.",
+          "The Molins Mark 8 and Mark 9 are two of the most respected cigarette makers ever built, and both still run in factories around the world. If you are choosing between them, here is how we help customers decide.",
         ],
       },
       {
@@ -122,6 +125,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "buying-used-tobacco-machinery-pakistan-checklist",
     title: "Buying Used Tobacco Machinery in Pakistan: A Buyer's Checklist",
+    metaTitle: "Buying Used Tobacco Machinery in Pakistan",
     description:
       "What to check before buying used cigarette machines in Pakistan, condition, testing, parts and support. A buyer's checklist from Civic Tobacco Machinery.",
     excerpt:
@@ -155,7 +159,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "3. Can you get spare parts?",
         paragraphs: [
-          "Stick to models with good parts availability, Hauni Mark and Protos makers, KDF filter makers, HLP and SASIB packers. Rare or unusual machines can strand you the first time something wears out.",
+          "Stick to models with good parts availability, Molins Mark and Protos makers, KDF filter makers, HLP and SASIB packers. Rare or unusual machines can strand you the first time something wears out.",
         ],
       },
       {

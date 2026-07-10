@@ -32,6 +32,11 @@ const nextConfig = {
         destination: "/blog/buying-used-tobacco-machinery-pakistan-checklist",
         permanent: true,
       },
+      {
+        source: "/blog/hauni-mark-8-vs-mark-9-cigarette-makers",
+        destination: "/blog/molins-mark-8-vs-mark-9-cigarette-makers",
+        permanent: true,
+      },
 
       // Packing / wrapping category slugs → keyword-first slugs.
       {

@@ -30,7 +30,7 @@ export default function ProductDetail({
 
       <PageHero
         eyebrow={categoryLabel}
-        title={product.name}
+        title={product.h1 ?? product.name}
         intro={product.tagline}
         crumbs={crumbs}
       />
@@ -61,18 +61,7 @@ export default function ProductDetail({
 
           {/* Info */}
           <div>
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-700">
-                {product.condition}
-              </span>
-              {product.brand && (
-                <span className="rounded-full bg-brand-100 px-3 py-1 text-xs font-medium text-brand-600">
-                  {product.brand}
-                </span>
-              )}
-            </div>
-
-            <div className="prose-content mt-5 max-w-none">
+            <div className="prose-content max-w-none">
               {product.intro.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}

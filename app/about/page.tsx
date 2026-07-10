@@ -6,7 +6,7 @@ import CtaBand from "@/components/CtaBand";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us, Cigarette & Tobacco Machinery Manufacturers in Pakistan",
+  title: "About Us | Civic Tobacco Machinery",
   description:
     "About Civic Tobacco Machinery, cigarette and tobacco machinery suppliers in Pakistan. Who we are, what we stand for, and how we support your factory with new and used machines.",
   path: "/about",
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
             <h2 className="text-2xl">The brands we trust</h2>
             <p>
-              We focus on well-proven names, Hauni and Molins for making and
+              We focus on well-proven names, Molins for making and
               filter machines, HLP and SASIB for packing and wrapping, and the
               Protos family for higher-speed lines. We choose these not for the
               badge but because their parts and know-how are easy to find, which

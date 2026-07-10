@@ -29,7 +29,7 @@ const display = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
+    default: "Civic Tobacco Machinery | Cigarette Machinery Pakistan",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    title: "Civic Tobacco Machinery | Cigarette Machinery Pakistan",
     description: siteConfig.description,
     images: [{ url: "/og-default.svg", width: 1200, height: 630, alt: siteConfig.name }],
   },

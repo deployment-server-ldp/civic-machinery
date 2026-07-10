@@ -17,6 +17,7 @@ Options -MultiViews
   # Blog: old "karachi" slugs -> "pakistan" slugs
   RewriteRule ^blog/how-to-choose-cigarette-packing-machine-karachi/?$ /blog/how-to-choose-cigarette-packing-machine-pakistan/ [R=301,L]
   RewriteRule ^blog/buying-used-tobacco-machinery-karachi-checklist/?$ /blog/buying-used-tobacco-machinery-pakistan-checklist/ [R=301,L]
+  RewriteRule ^blog/hauni-mark-8-vs-mark-9-cigarette-makers/?$ /blog/molins-mark-8-vs-mark-9-cigarette-makers/ [R=301,L]
 
   # Packing / wrapping category slugs
   RewriteRule ^packing-machines/?$ /cigarette-packing-machines/ [R=301,L]

@@ -20,16 +20,6 @@ export default function ProductCard({
         className="rounded-none"
       />
       <div className="flex flex-1 flex-col p-5">
-        <div className="mb-2 flex items-center gap-2">
-          <span className="rounded-full bg-accent-50 px-2.5 py-0.5 text-xs font-semibold text-accent-700">
-            {product.condition}
-          </span>
-          {product.brand && (
-            <span className="text-xs font-medium text-brand-400">
-              {product.brand}
-            </span>
-          )}
-        </div>
         <h3 className="text-lg font-semibold">
           {/* Stretched link makes the whole card clickable and accessible. */}
           <Link

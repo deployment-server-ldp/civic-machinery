@@ -32,11 +32,11 @@ export function buildMetadata({
     (img) => (img.startsWith("http") ? img : `${siteConfig.url}${img}`)
   );
 
-  const fullTitle =
-    path === "/" ? title : `${title} | ${siteConfig.name}`;
-
+  // The passed `title` is used exactly as the <title> (kept under ~60 chars by
+  // the caller). `absolute` bypasses the root layout title template so the site
+  // name is never appended twice.
   return {
-    title: fullTitle,
+    title: { absolute: title },
     description,
     keywords: keywords?.length ? keywords : undefined,
     alternates: {
@@ -56,7 +56,7 @@ export function buildMetadata({
           },
         },
     openGraph: {
-      title: fullTitle,
+      title,
       description,
       url,
       siteName: siteConfig.name,
@@ -69,7 +69,7 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
+      title,
       description,
       images: ogImages,
     },

@@ -68,7 +68,7 @@ export const mainNav: NavItem[] = [
       headingHref: subcategoryHref(sub),
       links: getProductsBySubcategory(sub.slug).map((p) => ({
         label: p.name
-          .replace("Hauni ", "")
+          .replace("Molins ", "")
           .replace(" Filter Maker", "")
           .replace(" (Filter Configuration)", " (Filter)"),
         href: productHref(p),

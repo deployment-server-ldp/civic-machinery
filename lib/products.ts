@@ -46,6 +46,10 @@ export interface Product {
   condition: "New" | "Used" | "New / Reconditioned";
   /** One-line summary used on cards and as a fallback meta description. */
   tagline: string;
+  /** Custom H1 for the product page (defaults to `name`). */
+  h1?: string;
+  /** Custom <title> for the product page (defaults to `name`). Keep < 60 chars. */
+  metaTitle?: string;
   /** Full meta description. */
   metaDescription: string;
   keywords: string[];
@@ -100,16 +104,16 @@ export const categories: Category[] = [
     navLabel: "Manufacturing Machines",
     title: "Cigarette Manufacturing Machines in Pakistan",
     description:
-      "Cigarette manufacturing machines in Pakistan, Hauni and Molins making machines, filter makers and tobacco machinery. New and reconditioned lines from Civic Tobacco Machinery.",
+      "Cigarette manufacturing machines in Pakistan, Molins making machines, filter makers and tobacco machinery. New and reconditioned lines from Civic Tobacco Machinery.",
     intro: [
       "Making a good cigarette starts long before the pack. It starts with a maker that lays down an even rod, a filter line that cuts clean, and tobacco machinery that keeps the whole floor fed. Civic Tobacco Machinery supplies cigarette manufacturing machines in Pakistan across all three areas.",
-      "We handle Hauni and Molins making machines, KDF and PM filter makers, and the feeders, cutters and reclaimers that support them. Tell us the brands you run and the output you need, and we will help you build a line that holds its speed and quality day after day.",
+      "We handle Molins making machines, KDF and PM filter makers, and the feeders, cutters and reclaimers that support them. Tell us the brands you run and the output you need, and we will help you build a line that holds its speed and quality day after day.",
     ],
     keywords: [
       "Cigarette Manufacturing Machines in Pakistan",
       "Tobacco Manufacturing Machines in Pakistan",
       "cigarette making machine Pakistan",
-      "Hauni Molins machines",
+      "Molins machines",
     ],
     hasSubcategories: true,
   },
@@ -126,15 +130,15 @@ export const subcategories: Subcategory[] = [
     navLabel: "Cigarette Making Machines",
     title: "Cigarette Making Machines in Pakistan",
     description:
-      "Cigarette making machines in Pakistan, Hauni Mark 8 and Mark 9 makers and Protos lines. High-speed rod makers supplied and serviced by Civic Tobacco Machinery.",
+      "Cigarette making machines in Pakistan, Molins Mark 8 and Mark 9 makers and Protos lines. High-speed rod makers supplied and serviced by Civic Tobacco Machinery.",
     intro: [
       "The maker is the heart of any cigarette factory. It takes cut tobacco and paper and turns them into a finished rod, thousands of times a minute, without a break in quality. Civic Tobacco Machinery supplies cigarette making machines in Pakistan that are built to hold that pace.",
-      "Our line-up runs from the trusted Hauni Mark 8 series through the faster Mark 9 makers and the Protos family. Each one can be matched with a suitable filter maker so the two run in step and give you a smooth, balanced line.",
+      "Our line-up runs from the trusted Molins Mark 8 series through the faster Mark 9 makers and the Protos family. Each one can be matched with a suitable filter maker so the two run in step and give you a smooth, balanced line.",
     ],
     keywords: [
       "cigarette making machine Pakistan",
-      "Hauni Mark 8",
-      "Hauni Mark 9",
+      "Molins Mark 8",
+      "Molins Mark 9",
       "Protos maker",
     ],
   },
@@ -144,14 +148,14 @@ export const subcategories: Subcategory[] = [
     navLabel: "Cigarette Filter Making Machines",
     title: "Cigarette Filter Making Machines in Pakistan",
     description:
-      "Cigarette filter making machines in Pakistan, Hauni KDF, Molins PM and hollow tube makers. Filter rod lines supplied and supported by Civic Tobacco Machinery.",
+      "Cigarette filter making machines in Pakistan, Molins KDF, Molins PM and hollow tube makers. Filter rod lines supplied and supported by Civic Tobacco Machinery.",
     intro: [
       "A good filter does more than finish the cigarette, it controls draw, firmness and the whole feel of the smoke. Civic Tobacco Machinery supplies cigarette filter making machines in Pakistan that turn out consistent rods your maker can rely on.",
-      "We stock Hauni KDF and Molins PM filter makers along with hollow tube machines for speciality formats. Whatever filter length or type you produce, we will help you pick a line that matches the speed of your makers.",
+      "We stock Molins KDF and Molins PM filter makers along with hollow tube machines for speciality formats. Whatever filter length or type you produce, we will help you pick a line that matches the speed of your makers.",
     ],
     keywords: [
       "cigarette filter making machine Pakistan",
-      "Hauni KDF",
+      "Molins KDF",
       "Molins PM filter maker",
       "filter rod machine",
     ],
@@ -495,21 +499,23 @@ const wrapping: Product[] = [
 const making: Product[] = [
   {
     slug: "mark-8-post-64",
-    name: "Hauni Mark 8 Post 64",
+    name: "Molins Mark 8 Post 64",
+    h1: "Mark 8 Post 64 – Cigarette Manufacturing Machine in Pakistan",
+    metaTitle: "MK 8 | Mark 8 Post 64 Cigarette Manufacturing Machine",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "The dependable workhorse maker that factories still rely on.",
     metaDescription:
-      "Hauni Mark 8 Post 64 cigarette making machine in Pakistan, reliable rod maker for steady production. Reconditioned and supported by Civic Tobacco Machinery.",
-    keywords: ["Hauni Mark 8", "Mark 8 Post 64", "cigarette making machine Pakistan"],
+      "Molins Mark 8 Post 64 cigarette making machine in Pakistan, reliable rod maker for steady production. Reconditioned and supported by Civic Tobacco Machinery.",
+    keywords: ["Molins Mark 8", "Mark 8 Post 64", "cigarette making machine Pakistan"],
     intro: [
-      "The Hauni Mark 8 has earned its place as one of the most dependable makers ever built. Decades on, factories still run the Post 64 version because it is simple, tough and easy to keep going with parts that are readily available.",
+      "The Molins Mark 8 has earned its place as one of the most dependable makers ever built. Decades on, factories still run the Post 64 version because it is simple, tough and easy to keep going with parts that are readily available.",
       "It lays down an even tobacco rod and cuts clean cigarettes at a steady pace, ideal for a first maker or a reliable backup line that just keeps working.",
     ],
     features: [
-      "Proven, long-life Hauni design",
+      "Proven, long-life Molins design",
       "Even rod and clean cut",
       "Parts and know-how widely available",
       "Easy for technicians to maintain",
@@ -517,7 +523,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Cigarette maker (rod maker)" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Version", value: "Post 64" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -525,17 +531,19 @@ const making: Product[] = [
   },
   {
     slug: "mark-8d-max-15",
-    name: "Hauni Mark 8D MAX 1-5",
+    name: "Molins Mark 8D MAX 15",
+    h1: "Mark 8D MAX 15",
+    metaTitle: "MK 8D | Molins Mark 8D with Max 15 | Civic Tobacco Machinery",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "Upgraded Mark 8 with the MAX control for smoother running.",
     metaDescription:
-      "Hauni Mark 8D MAX 1-5 cigarette maker in Pakistan, upgraded Mark 8 with MAX control. Reconditioned and serviced by Civic Tobacco Machinery.",
-    keywords: ["Hauni Mark 8D", "Mark 8D MAX", "cigarette maker Pakistan"],
+      "Molins Mark 8D MAX 15 cigarette maker in Pakistan, upgraded Mark 8 with MAX control. Reconditioned and serviced by Civic Tobacco Machinery.",
+    keywords: ["Molins Mark 8D", "Mark 8D MAX", "cigarette maker Pakistan"],
     intro: [
-      "The Mark 8D MAX 1-5 takes the trusted Mark 8 platform and adds the MAX control system, which gives operators better feedback and steadier running. You keep the reliability of the original with a more modern feel at the panel.",
+      "The Mark 8D MAX 15 takes the trusted Mark 8 platform and adds the MAX control system, which gives operators better feedback and steadier running. You keep the reliability of the original with a more modern feel at the panel.",
       "It is a good step up for factories that like the Mark 8 but want tighter control over rod weight and fewer surprises during a shift.",
     ],
     features: [
@@ -547,23 +555,23 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Cigarette maker" },
-      { label: "Brand", value: "Hauni" },
-      { label: "Control", value: "MAX 1-5" },
+      { label: "Brand", value: "Molins" },
+      { label: "Control", value: "MAX 15" },
       { label: "Condition", value: "Reconditioned" },
     ],
     applications: ["Upgraded maker line", "Tighter rod control"],
   },
   {
     slug: "mark-9-max-s",
-    name: "Hauni Mark 9 MAX S",
+    name: "Molins Mark 9 MAX S",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "Faster Mark 9 maker for higher-volume production.",
     metaDescription:
-      "Hauni Mark 9 MAX S cigarette making machine in Pakistan, higher-speed maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Hauni Mark 9", "Mark 9 MAX S", "high speed cigarette maker"],
+      "Molins Mark 9 MAX S cigarette making machine in Pakistan, higher-speed maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
+    keywords: ["Molins Mark 9", "Mark 9 MAX S", "high speed cigarette maker"],
     intro: [
       "The Mark 9 is the faster generation that followed the Mark 8, and the MAX S version brings improved controls to match the higher speed. For factories that need more output from a single maker, this is a strong choice.",
       "It holds a consistent rod at pace and works well paired with a KDF filter maker to keep the whole line balanced.",
@@ -577,7 +585,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "High-speed cigarette maker" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Control", value: "MAX S" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -585,18 +593,18 @@ const making: Product[] = [
   },
   {
     slug: "mark-9-5-lenze-servo-drives",
-    name: "Hauni Mark 9.5 with Lenze Servo Drives",
+    name: "Molins Mark 9.5 with Lenze Servo Drives",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "Mark 9.5 upgraded with Lenze servo drives for precision.",
     metaDescription:
-      "Hauni Mark 9.5 with Lenze servo drives in Pakistan, precise, modern maker upgrade. Reconditioned and supported by Civic Tobacco Machinery.",
-    keywords: ["Hauni Mark 9.5", "Lenze servo drives", "cigarette maker Pakistan"],
+      "Molins Mark 9.5 with Lenze servo drives in Pakistan, precise, modern maker upgrade. Reconditioned and supported by Civic Tobacco Machinery.",
+    keywords: ["Molins Mark 9.5", "Lenze servo drives", "cigarette maker Pakistan"],
     intro: [
       "This Mark 9.5 has been fitted with Lenze servo drives, which brings modern, precise motion control to a proven maker. Servo drives mean smoother acceleration, better accuracy and easier fine-tuning during a run.",
-      "It is a good pick for factories that want the reliability of the Hauni platform with an updated drive system that is easier to service and source parts for.",
+      "It is a good pick for factories that want the reliability of the Molins platform with an updated drive system that is easier to service and source parts for.",
     ],
     features: [
       "Modern Lenze servo drive system",
@@ -607,7 +615,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Cigarette maker" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Drives", value: "Lenze servo" },
       { label: "Condition", value: "Reconditioned / upgraded" },
     ],
@@ -615,15 +623,15 @@ const making: Product[] = [
   },
   {
     slug: "mark-9-5-max-s",
-    name: "Hauni Mark 9.5 MAX S",
+    name: "Molins Mark 9.5 MAX S",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "High-speed Mark 9.5 maker with MAX S control.",
     metaDescription:
-      "Hauni Mark 9.5 MAX S cigarette maker in Pakistan, high-speed rod maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Hauni Mark 9.5 MAX S", "high speed cigarette maker", "Hauni maker Pakistan"],
+      "Molins Mark 9.5 MAX S cigarette maker in Pakistan, high-speed rod maker with MAX S control. Supplied and serviced by Civic Tobacco Machinery.",
+    keywords: ["Molins Mark 9.5 MAX S", "high speed cigarette maker", "Molins maker Pakistan"],
     intro: [
       "The Mark 9.5 MAX S sits near the top of the Mark series for speed and control. It is built for factories that push high volumes and need a maker that holds its quality even when it is running flat out.",
       "With the MAX S control system it gives operators clear information and fine control over the rod, so you keep waste down while the numbers stay up.",
@@ -637,7 +645,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "High-speed cigarette maker" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Control", value: "MAX S" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -645,15 +653,15 @@ const making: Product[] = [
   },
   {
     slug: "protos-70",
-    name: "Hauni Protos 70",
+    name: "Molins Protos 70",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni / Protos",
+    brand: "Molins / Protos",
     condition: "Used",
     tagline: "Protos-series maker known for smooth, quality output.",
     metaDescription:
-      "Hauni Protos 70 cigarette making machine in Pakistan, smooth, high-quality rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
-    keywords: ["Protos 70", "Hauni Protos maker", "cigarette making machine Pakistan"],
+      "Molins Protos 70 cigarette making machine in Pakistan, smooth, high-quality rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+    keywords: ["Protos 70", "Molins Protos maker", "cigarette making machine Pakistan"],
     intro: [
       "The Protos family is known for smooth running and a high-quality rod, and the Protos 70 is a popular choice for factories that care about consistency. It brings a more modern design than the Mark series while keeping the same dependable feel.",
       "It works well as a main maker and pairs cleanly with matching filter and packing equipment for a balanced line.",
@@ -667,7 +675,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Cigarette maker" },
-      { label: "Brand", value: "Hauni Protos" },
+      { label: "Brand", value: "Molins Protos" },
       { label: "Series", value: "Protos 70" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -675,15 +683,15 @@ const making: Product[] = [
   },
   {
     slug: "protos-80-er",
-    name: "Hauni Protos 80 ER",
+    name: "Molins Protos 80 ER",
     category: "manufacturing-machines",
     subcategory: "cigarette-making-machines",
-    brand: "Hauni / Protos",
+    brand: "Molins / Protos",
     condition: "Used",
     tagline: "Higher-capacity Protos maker for serious output.",
     metaDescription:
-      "Hauni Protos 80 ER cigarette making machine in Pakistan, high-capacity maker for large runs. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Protos 80 ER", "Hauni Protos 80", "high speed cigarette maker Pakistan"],
+      "Molins Protos 80 ER cigarette making machine in Pakistan, high-capacity maker for large runs. Supplied and serviced by Civic Tobacco Machinery.",
+    keywords: ["Protos 80 ER", "Molins Protos 80", "high speed cigarette maker Pakistan"],
     intro: [
       "The Protos 80 ER steps up the capacity for factories running large volumes. It keeps the smooth Protos character but at a higher output, making it a strong central maker for a busy floor.",
       "It is a machine built to run long and run clean, and it fits neatly into a line with high-speed filter makers and packers.",
@@ -697,7 +705,7 @@ const making: Product[] = [
     ],
     specs: [
       { label: "Type", value: "High-speed cigarette maker" },
-      { label: "Brand", value: "Hauni Protos" },
+      { label: "Brand", value: "Molins Protos" },
       { label: "Series", value: "Protos 80 ER" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -708,17 +716,17 @@ const making: Product[] = [
 const filter: Product[] = [
   {
     slug: "hauni-kdf-1",
-    name: "Hauni KDF-1 Filter Maker",
+    name: "Molins KDF-1 Filter Maker",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "The classic KDF filter rod maker, simple and reliable.",
     metaDescription:
-      "Hauni KDF-1 filter making machine in Pakistan, reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
-    keywords: ["Hauni KDF-1", "filter making machine Pakistan", "KDF filter maker"],
+      "Molins KDF-1 filter making machine in Pakistan, reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+    keywords: ["Molins KDF-1", "filter making machine Pakistan", "KDF filter maker"],
     intro: [
-      "The KDF-1 is the machine that made Hauni the name in filter making. It takes filter tow, forms it into a rod and cuts it to length, cleanly and repeatably. Simple, tough and easy to keep running.",
+      "The KDF-1 is the machine that made Molins the name in filter making. It takes filter tow, forms it into a rod and cuts it to length, cleanly and repeatably. Simple, tough and easy to keep running.",
       "It is a great match for a Mark 8 maker and a good starting point for any factory setting up its own filter production.",
     ],
     features: [
@@ -730,7 +738,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Filter rod maker" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Series", value: "KDF-1" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -738,15 +746,15 @@ const filter: Product[] = [
   },
   {
     slug: "hauni-kdf-2",
-    name: "Hauni KDF-2 Filter Maker",
+    name: "Molins KDF-2 Filter Maker",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Hauni",
+    brand: "Molins",
     condition: "Used",
     tagline: "Faster KDF filter maker to match higher-speed lines.",
     metaDescription:
-      "Hauni KDF-2 filter making machine in Pakistan, higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Hauni KDF-2", "filter making machine", "KDF filter maker Pakistan"],
+      "Molins KDF-2 filter making machine in Pakistan, higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
+    keywords: ["Molins KDF-2", "filter making machine", "KDF filter maker Pakistan"],
     intro: [
       "The KDF-2 builds on the original with more speed and refinement, so it can keep pace with faster makers like the Mark 9. If your production has grown, this is the filter maker that keeps the line balanced.",
       "It holds a consistent rod firmness and length at the higher pace, which matters for a steady draw in the finished cigarette.",
@@ -760,7 +768,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Filter rod maker" },
-      { label: "Brand", value: "Hauni" },
+      { label: "Brand", value: "Molins" },
       { label: "Series", value: "KDF-2" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -779,7 +787,7 @@ const filter: Product[] = [
     keywords: ["Molins PM-5", "filter making machine Pakistan", "Molins filter maker"],
     intro: [
       "The Molins PM-5 is a well-respected filter maker and a natural choice for factories that run Molins equipment elsewhere on the floor. It produces a firm, even filter rod and stands up to long production runs.",
-      "It gives you a dependable second option alongside the Hauni KDF machines, with its own loyal following among technicians.",
+      "It gives you a dependable second option alongside the Molins KDF machines, with its own loyal following among technicians.",
     ],
     features: [
       "Dependable Molins filter maker",
@@ -831,7 +839,7 @@ const filter: Product[] = [
     name: "Protos 70 (Filter Configuration)",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Hauni / Protos",
+    brand: "Molins / Protos",
     condition: "Used",
     tagline: "Protos 70 set up to run in a filter-making line.",
     metaDescription:
@@ -850,7 +858,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Filter line (Protos)" },
-      { label: "Brand", value: "Hauni Protos" },
+      { label: "Brand", value: "Molins Protos" },
       { label: "Series", value: "Protos 70" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -861,7 +869,7 @@ const filter: Product[] = [
     name: "Protos 80 ER (Filter Configuration)",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Hauni / Protos",
+    brand: "Molins / Protos",
     condition: "Used",
     tagline: "High-capacity Protos 80 ER configured for filters.",
     metaDescription:
@@ -880,7 +888,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "High-capacity filter line" },
-      { label: "Brand", value: "Hauni Protos" },
+      { label: "Brand", value: "Molins Protos" },
       { label: "Series", value: "Protos 80 ER" },
       { label: "Condition", value: "Reconditioned" },
     ],

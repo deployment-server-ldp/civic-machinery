@@ -7,7 +7,7 @@ import CtaBand from "@/components/CtaBand";
 import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog, Cigarette & Tobacco Machinery Guides",
+  title: "Blog | Civic Tobacco Machinery",
   description:
     "Practical guides on cigarette and tobacco machinery, choosing packing machines, comparing makers, and buying used machines in Pakistan. From Civic Tobacco Machinery.",
   path: "/blog",

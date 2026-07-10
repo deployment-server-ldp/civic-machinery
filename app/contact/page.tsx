@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us, Cigarette Machinery Manufacturers in Pakistan",
+  title: "Contact Us | Civic Tobacco Machinery",
   description:
     "Contact Civic Tobacco Machinery in Pakistan. Call, WhatsApp or send an enquiry about cigarette manufacturing, packing, wrapping and used machines. Workshop in SITE, Karachi.",
   path: "/contact",

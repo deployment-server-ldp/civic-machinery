@@ -25,7 +25,7 @@ export function generateMetadata({
   const product = getProduct(CATEGORY, params.slug);
   if (!product) return {};
   return buildMetadata({
-    title: product.name,
+    title: product.metaTitle ?? product.name,
     description: product.metaDescription,
     path: productHref(product),
     keywords: product.keywords,
