@@ -3,10 +3,8 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig, whatsappLink } from "@/lib/site";
 import {
-  categories,
   categoryPaths,
   getProduct,
-  categoryHref,
   productHref,
   type Product,
 } from "@/lib/products";
@@ -185,42 +183,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* About */}
       <section className="container mx-auto py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">Our Range</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl">
-            Everything for a Cigarette Line, Under One Roof
-          </h2>
-          <p className="mt-4 text-brand-600">
-            From the maker that forms the rod to the boxer that packs the carton,
-            we supply and support the full range of tobacco machinery in Pakistan.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {categories.map((c) => (
-            <Link
-              key={c.slug}
-              href={categoryHref(c)}
-              className="group flex flex-col justify-between rounded-2xl border border-brand-100 bg-white p-7 shadow-card transition-shadow hover:shadow-card-hover"
-            >
-              <div>
-                <h3 className="text-xl text-brand-900 group-hover:text-accent-700">
-                  {c.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-brand-600">
-                  {c.description}
-                </p>
-              </div>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent-700">
-                Explore {c.navLabel}
-                <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 10h11M11 5l5 5-5 5" />
-                </svg>
-              </span>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <p className="eyebrow">About Us</p>
+            <h2 className="mt-2 text-3xl sm:text-4xl">
+              A Family Name Built on Tobacco Machinery
+            </h2>
+            <p className="mt-5 leading-relaxed text-brand-600">
+              For decades our family has worked in one field: tobacco machinery.
+              What started as a small trading operation has grown into a trusted,
+              multi-generation name that new and established cigarette companies
+              across Pakistan rely on to build and run their lines.
+            </p>
+            <p className="mt-4 leading-relaxed text-brand-600">
+              We are a specialist cigarette machinery supplier offering a complete,
+              one-stop solution. From making and filter machines to packers and
+              wrappers, we help you source the right equipment, see it running
+              before you buy, and get it installed and tuned on your own floor. We
+              also provide free demonstration and training for your technicians, so
+              your team is confident with the machine from day one.
+            </p>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                "Multi-generation family business",
+                "New & reconditioned machines",
+                "Full line, maker to packer",
+                "Demonstration & technician training",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-brand-700">
+                  <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Link href="/about" className="btn-primary mt-8">
+              More About Us
             </Link>
-          ))}
+          </div>
+
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl border border-brand-100 shadow-card">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/legacy.webp"
+                alt="The team behind Civic Tobacco Machinery at an international tobacco machinery exhibition"
+                width={1585}
+                height={992}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
