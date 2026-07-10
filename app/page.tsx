@@ -275,8 +275,8 @@ export default function HomePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/legacy.webp"
-                alt="The team behind Civic Tobacco Machinery at an international tobacco machinery exhibition"
-                width={1585}
+                alt="The family team behind Civic Tobacco Machinery"
+                width={1402}
                 height={992}
                 className="h-full w-full object-cover"
                 loading="lazy"
