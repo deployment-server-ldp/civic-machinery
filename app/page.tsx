@@ -129,13 +129,18 @@ export default function HomePage() {
         />
         <div className="container relative z-10 mx-auto grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
-              Cigarette Manufacturing, Packing &amp; Wrapping Machines in Pakistan
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent-200 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-400" aria-hidden="true" />
+              New &amp; Reconditioned · Pakistan-wide
+            </p>
+            <h1 className="text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
+              Looking for Cigarette &amp; Tobacco Machinery in Pakistan?
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-200">
-              Civic Tobacco Machinery supplies new and reconditioned cigarette
-              making, filter, packing and wrapping machines, with installation,
-              spare parts and service you can count on.
+              You’re in the right place. From the first rod to the finished
+              carton, Civic Tobacco Machinery sets you up with new and
+              reconditioned making, filter, packing and wrapping lines, installed,
+              tuned and backed by the spare parts and service you can count on.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn-primary">
