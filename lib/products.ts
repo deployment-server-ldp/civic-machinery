@@ -734,17 +734,17 @@ const making: Product[] = [
 const filter: Product[] = [
   {
     slug: "kdf-1",
-    name: "Molins KDF-1 Filter Maker",
+    name: "Hauni KDF-1 Cigarette Filter Manufacturing Machine",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Molins",
+    brand: "Hauni",
     condition: "Used",
     tagline: "The classic KDF filter rod maker, simple and reliable.",
     metaDescription:
-      "Molins KDF-1 filter making machine in Pakistan, reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
-    keywords: ["Molins KDF-1", "filter making machine Pakistan", "KDF filter maker"],
+      "Hauni KDF-1 filter making machine in Pakistan, reliable filter rod maker. Reconditioned and supported by Civic Tobacco Machinery.",
+    keywords: ["Hauni KDF-1", "filter making machine Pakistan", "KDF filter maker"],
     intro: [
-      "The KDF-1 is the machine that made Molins the name in filter making. It takes filter tow, forms it into a rod and cuts it to length, cleanly and repeatably. Simple, tough and easy to keep running.",
+      "The KDF-1 is the machine that made Hauni the name in filter making. It takes filter tow, forms it into a rod and cuts it to length, cleanly and repeatably. Simple, tough and easy to keep running.",
       "It is a great match for a Mark 8 maker and a good starting point for any factory setting up its own filter production.",
     ],
     features: [
@@ -756,7 +756,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Filter rod maker" },
-      { label: "Brand", value: "Molins" },
+      { label: "Brand", value: "Hauni" },
       { label: "Series", value: "KDF-1" },
       { label: "Condition", value: "Reconditioned" },
     ],
@@ -764,15 +764,15 @@ const filter: Product[] = [
   },
   {
     slug: "kdf-2",
-    name: "Molins KDF-2 Filter Maker",
+    name: "Hauni KDF-2 Cigarette Filter Manufacturing Machine",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
-    brand: "Molins",
+    brand: "Hauni",
     condition: "Used",
     tagline: "Faster KDF filter maker to match higher-speed lines.",
     metaDescription:
-      "Molins KDF-2 filter making machine in Pakistan, higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Molins KDF-2", "filter making machine", "KDF filter maker Pakistan"],
+      "Hauni KDF-2 filter making machine in Pakistan, higher-speed filter rod maker. Supplied and serviced by Civic Tobacco Machinery.",
+    keywords: ["Hauni KDF-2", "filter making machine", "KDF filter maker Pakistan"],
     intro: [
       "The KDF-2 builds on the original with more speed and refinement, so it can keep pace with faster makers like the Mark 9. If your production has grown, this is the filter maker that keeps the line balanced.",
       "It holds a consistent rod firmness and length at the higher pace, which matters for a steady draw in the finished cigarette.",
@@ -786,7 +786,7 @@ const filter: Product[] = [
     ],
     specs: [
       { label: "Type", value: "Filter rod maker" },
-      { label: "Brand", value: "Molins" },
+      { label: "Brand", value: "Hauni" },
       { label: "Series", value: "KDF-2" },
       { label: "Condition", value: "Reconditioned" },
     ],
