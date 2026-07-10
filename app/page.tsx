@@ -192,14 +192,14 @@ export default function HomePage() {
               A Family Name Built on Tobacco Machinery
             </h2>
             <p className="mt-5 leading-relaxed text-brand-600">
-              For decades our family has worked in one field: tobacco machinery.
-              What started as a small trading operation has grown into a trusted,
-              multi-generation name that new and established cigarette companies
-              across Pakistan rely on to build and run their lines.
+              For decades our family has worked in one field of tobacco
+              machinery. What started as a small trading operation has grown into
+              a trusted, multi-generation name that new and established cigarette
+              companies across Pakistan rely on to build and run their lines.
             </p>
             <p className="mt-4 leading-relaxed text-brand-600">
-              We are a specialist cigarette machinery supplier offering a complete,
-              one-stop solution. From making and filter machines to packers and
+              We are specialist tobacco machinery manufacturers offering a
+              complete, one-stop solution. From making and filter machines to packers and
               wrappers, we help you source the right equipment, see it running
               before you buy, and get it installed and tuned on your own floor. We
               also provide free demonstration and training for your technicians, so
