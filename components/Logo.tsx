@@ -1,19 +1,18 @@
 import Link from "next/link";
-import Image from "next/image";
 
 /**
- * Brand wordmark logo.
- * `variant="light"` swaps to the white version for dark backgrounds (footer, dark hero).
- * To use your own file instead, drop it in /public and update the `src` below.
+ * Brand wordmark, rendered as text in the Poppins logo font so it never
+ * clips and stays crisp at any size.
+ * `variant="light"` is for dark backgrounds (footer, dark hero).
  */
 export default function Logo({
   variant = "dark",
-  className = "h-8 w-auto sm:h-9",
+  className = "text-[1.35rem] sm:text-[1.55rem]",
 }: {
   variant?: "dark" | "light";
   className?: string;
 }) {
-  const src = variant === "light" ? "/logo-light.svg" : "/logo.svg";
+  const color = variant === "light" ? "text-white" : "text-accent-600";
 
   return (
     <Link
@@ -21,15 +20,11 @@ export default function Logo({
       aria-label="Civic Tobacco Machinery — Home"
       className="inline-flex shrink-0 items-center"
     >
-      <Image
-        src={src}
-        alt="Civic Tobacco Machinery"
-        width={700}
-        height={92}
-        priority
-        unoptimized
-        className={className}
-      />
+      <span
+        className={`whitespace-nowrap font-logo font-bold leading-none tracking-tight ${color} ${className}`}
+      >
+        Civic Tobacco Machinery
+      </span>
     </Link>
   );
 }

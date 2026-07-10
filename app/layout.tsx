@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -23,6 +24,13 @@ const display = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-display",
   weight: "100 900",
+  display: "swap",
+});
+// Logo wordmark font.
+const logoFont = Poppins({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-logo",
   display: "swap",
 });
 
@@ -85,7 +93,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+    <html lang="en" className={`${sans.variable} ${display.variable} ${logoFont.variable}`}>
       <body className="min-h-screen bg-white font-sans text-brand-800 antialiased">
         <JsonLd
           data={[organizationSchema(), localBusinessSchema(), websiteSchema()]}

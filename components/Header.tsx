@@ -58,7 +58,7 @@ export default function Header() {
 
       {/* Main bar */}
       <div className="container mx-auto flex h-[4.5rem] items-center justify-between gap-4 xl:h-20">
-        <Logo className="h-7 w-auto sm:h-8" />
+        <Logo className="text-[1.2rem] sm:text-[1.3rem]" />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
@@ -91,7 +91,7 @@ export default function Header() {
 
 function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
   const hasDropdown = Boolean(item.children || item.columns);
-  const linkCls = `inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[0.8rem] font-semibold tracking-tight transition-colors ${
+  const linkCls = `inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[0.78rem] font-semibold tracking-tight transition-colors ${
     active
       ? "bg-accent-500 text-white shadow-sm"
       : "text-brand-700 hover:bg-white/80 hover:text-accent-700"
