@@ -191,7 +191,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">About Us</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">
-              A Family Name Built on Tobacco Machinery
+              Generations of Engineering Excellence in Tobacco Machinery
             </h2>
             <p className="mt-5 text-lg font-medium leading-relaxed text-brand-800">
               A proud father and son business, now into its third generation,
