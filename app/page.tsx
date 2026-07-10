@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { siteConfig, whatsappLink } from "@/lib/site";
 import {
   categories,
+  categoryPaths,
   getProduct,
   categoryHref,
   productHref,
@@ -51,6 +52,15 @@ const homeFaqs = [
     answer:
       "Our workshop is in the SITE industrial estate in Karachi. We serve customers across Pakistan, and we can arrange delivery and installation wherever your factory is.",
   },
+];
+
+// "Browse by machine type" quick links in the hero (Used points to the
+// manufacturing range since our stock is largely reconditioned).
+const browseTypes = [
+  { label: "Cigarette Packing Machines", href: categoryPaths["packing-machines"] },
+  { label: "Cigarette Wrapping Machines", href: categoryPaths["wrapping-machines"] },
+  { label: "Cigarette Manufacturing Machines", href: categoryPaths["manufacturing-machines"] },
+  { label: "Used Cigarette Machinery", href: categoryPaths["manufacturing-machines"] },
 ];
 
 const reasons = [
@@ -150,15 +160,15 @@ export default function HomePage() {
             <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-brand-300">
               Browse by machine type
             </p>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-              {categories.map((c) => (
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {browseTypes.map((t) => (
                 <Link
-                  key={c.slug}
-                  href={categoryHref(c)}
+                  key={t.label}
+                  href={t.href}
                   className="group rounded-xl border border-white/10 bg-brand-900/40 p-4 transition-colors hover:border-accent-500/50 hover:bg-brand-900"
                 >
                   <span className="block text-sm font-semibold text-white group-hover:text-accent-300">
-                    {c.navLabel}
+                    {t.label}
                   </span>
                   <span className="mt-1 block text-xs text-brand-400">
                     View range →
