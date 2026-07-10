@@ -77,3 +77,19 @@
     @apply mb-2 mt-8 text-xl;
   }
 }
+
+/* Countdown bar for the auto-rotating machine carousel tabs. */
+@keyframes carousel-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="carousel-progress"] {
+    animation: none !important;
+  }
+}
