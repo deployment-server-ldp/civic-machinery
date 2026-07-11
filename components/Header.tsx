@@ -58,12 +58,12 @@ export default function Header() {
       </div>
 
       {/* Main bar */}
-      <div className="container mx-auto flex h-[5.75rem] items-center justify-between gap-4 xl:h-[6.5rem]">
-        <Logo className="text-[1.3rem] sm:text-[1.45rem]" tagline="Karachi - Pakistan" />
+      <div className="container mx-auto flex h-[6.6rem] items-center justify-between gap-4 xl:h-[7.5rem]">
+        <Logo className="text-[1.35rem] sm:text-[1.5rem]" tagline="Karachi - Pakistan" />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
-          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/70 bg-white/70 px-1.5 py-1.5 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md">
+          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/70 bg-white/70 px-2 py-2 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md">
             {mainNav.map((item) => (
               <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
             ))}
@@ -92,7 +92,7 @@ export default function Header() {
 
 function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
   const hasDropdown = Boolean(item.children || item.columns);
-  const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-2.5 text-[0.82rem] font-semibold tracking-tight transition-colors ${
+  const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-3 text-[0.82rem] font-semibold tracking-tight transition-colors ${
     active
       ? "bg-accent-500 text-white shadow-sm"
       : "text-brand-700 hover:bg-white/80 hover:text-accent-700"
