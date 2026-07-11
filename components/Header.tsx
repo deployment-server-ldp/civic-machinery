@@ -58,8 +58,8 @@ export default function Header() {
       </div>
 
       {/* Main bar */}
-      <div className="container mx-auto flex h-[4.5rem] items-center justify-between gap-4 xl:h-20">
-        <Logo className="text-[1.2rem] sm:text-[1.3rem]" />
+      <div className="container mx-auto flex h-[5.75rem] items-center justify-between gap-4 xl:h-[6.5rem]">
+        <Logo className="text-[1.3rem] sm:text-[1.45rem]" tagline="Karachi - Pakistan" />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
@@ -92,7 +92,7 @@ export default function Header() {
 
 function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
   const hasDropdown = Boolean(item.children || item.columns);
-  const linkCls = `inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[0.78rem] font-semibold tracking-tight transition-colors ${
+  const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-2.5 text-[0.82rem] font-semibold tracking-tight transition-colors ${
     active
       ? "bg-accent-500 text-white shadow-sm"
       : "text-brand-700 hover:bg-white/80 hover:text-accent-700"
@@ -113,21 +113,21 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
       {/* Parent links to its category page; hovering reveals the dropdown. */}
       <Link href={item.href} className={linkCls} aria-haspopup="true">
         {item.label}
-        <IconChevron className="h-3 w-3 opacity-70 transition-transform group-hover:rotate-180" />
+        <IconChevron className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:rotate-180" />
       </Link>
 
       {/* Simple dropdown */}
       {item.children && (
         <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
-          <ul className="w-72 rounded-2xl border border-brand-100 bg-white/95 p-2 shadow-card backdrop-blur">
+          <ul className="w-80 rounded-2xl border border-brand-100 bg-white/95 p-2.5 shadow-card backdrop-blur">
             {item.children.map((child) => (
               <li key={child.href}>
                 <Link
                   href={child.href}
                   className={
                     child.heading
-                      ? "mb-1 block rounded-xl px-3 pb-2 pt-2 text-sm font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4 hover:bg-accent-50 hover:text-accent-700"
-                      : "block rounded-xl px-3 py-2 text-sm text-brand-700 hover:bg-accent-50 hover:text-accent-700"
+                      ? "mb-1 block rounded-xl px-4 pb-2.5 pt-2.5 text-base font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4 hover:bg-accent-50 hover:text-accent-700"
+                      : "block rounded-xl px-4 py-2.5 text-base text-brand-700 hover:bg-accent-50 hover:text-accent-700"
                   }
                 >
                   {child.label}
