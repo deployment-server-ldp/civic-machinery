@@ -21,6 +21,9 @@ Options -MultiViews
   RewriteRule ^cigarette-filter-making-machines/hauni-kdf-1/?$ /cigarette-filter-making-machines/kdf-1/ [R=301,L]
   RewriteRule ^cigarette-filter-making-machines/hauni-kdf-2/?$ /cigarette-filter-making-machines/kdf-2/ [R=301,L]
   RewriteRule ^cigarette-making-machines/mark-9-5-max-s/?$ /cigarette-making-machines/mark-9-5-max-s-tray-filler/ [R=301,L]
+  RewriteRule ^tobacco-machinery/used-packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
+  RewriteRule ^cigarette-filter-making-machines/protos-70-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
+  RewriteRule ^cigarette-filter-making-machines/protos-80-er-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
 
   # Packing / wrapping category slugs
   RewriteRule ^packing-machines/?$ /cigarette-packing-machines/ [R=301,L]

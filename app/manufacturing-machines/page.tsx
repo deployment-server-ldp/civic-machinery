@@ -22,7 +22,10 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function ManufacturingMachinesPage() {
-  const subs = getSubcategoriesFor("manufacturing-machines");
+  // This page focuses on the cigarette making machines range only.
+  const subs = getSubcategoriesFor("manufacturing-machines").filter(
+    (s) => s.slug === "cigarette-making-machines"
+  );
 
   return (
     <>
@@ -37,31 +40,6 @@ export default function ManufacturingMachinesPage() {
       />
 
       <section className="container mx-auto py-14">
-        <div className="prose-content mb-6 max-w-3xl">
-          {category.intro.slice(1).map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
-
-        {/* Quick jump to sub-categories */}
-        <div className="mb-14 grid gap-4 sm:grid-cols-3">
-          {subs.map((s) => (
-            <Link
-              key={s.slug}
-              href={subcategoryHref(s)}
-              className="group rounded-2xl border border-brand-100 bg-white p-5 shadow-card transition-shadow hover:shadow-card-hover"
-            >
-              <h2 className="text-lg text-brand-900 group-hover:text-accent-700">
-                {s.navLabel}
-              </h2>
-              <p className="mt-2 text-sm text-brand-600">{s.description}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-accent-700">
-                View range →
-              </span>
-            </Link>
-          ))}
-        </div>
-
         {/* Each sub-category with its machines */}
         <div className="space-y-16">
           {subs.map((s) => {

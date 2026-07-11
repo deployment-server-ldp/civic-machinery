@@ -875,66 +875,6 @@ const filter: Product[] = [
     specs: [],
     applications: ["High-volume filter production", "Speciality filter tubes"],
   },
-  {
-    slug: "protos-70-filter",
-    name: "Protos 70 (Filter Configuration)",
-    category: "manufacturing-machines",
-    subcategory: "cigarette-filter-making-machines",
-    brand: "Molins / Protos",
-    condition: "Used",
-    tagline: "Protos 70 set up to run in a filter-making line.",
-    metaDescription:
-      "Protos 70 filter configuration in Pakistan, Protos line set up for filter production. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Protos 70 filter", "Protos filter line", "filter making machine Pakistan"],
-    intro: [
-      "This Protos 70 is configured for the filter side of the line, bringing the smooth, modern Protos character to filter rod production. It is a strong option for factories standardising on Protos equipment.",
-      "Set up and matched correctly, it keeps your filter output in step with a fast maker for a balanced, tidy line.",
-    ],
-    features: [
-      "Protos platform in filter configuration",
-      "Smooth, modern running",
-      "Consistent filter rod",
-      "Standardise on one equipment family",
-      "Reconditioned and tested",
-    ],
-    specs: [
-      { label: "Type", value: "Filter line (Protos)" },
-      { label: "Brand", value: "Molins Protos" },
-      { label: "Series", value: "Protos 70" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Filter production", "Protos-standardised lines"],
-  },
-  {
-    slug: "protos-80-er-filter",
-    name: "Protos 80 ER (Filter Configuration)",
-    category: "manufacturing-machines",
-    subcategory: "cigarette-filter-making-machines",
-    brand: "Molins / Protos",
-    condition: "Used",
-    tagline: "High-capacity Protos 80 ER configured for filters.",
-    metaDescription:
-      "Protos 80 ER filter configuration in Pakistan, high-capacity Protos filter line. Supplied and serviced by Civic Tobacco Machinery.",
-    keywords: ["Protos 80 ER filter", "high capacity filter maker", "Protos filter Pakistan"],
-    intro: [
-      "The Protos 80 ER in a filter configuration brings high capacity to the filter side of your line. It is the match for a high-speed maker where you need filter output to keep up without becoming the bottleneck.",
-      "Built for large runs, it keeps a firm, even rod at pace so the finished cigarette draws exactly as intended.",
-    ],
-    features: [
-      "High-capacity Protos filter line",
-      "Keeps pace with high-speed makers",
-      "Firm, even filter rod at speed",
-      "Built for large runs",
-      "Reconditioned and tested",
-    ],
-    specs: [
-      { label: "Type", value: "High-capacity filter line" },
-      { label: "Brand", value: "Molins Protos" },
-      { label: "Series", value: "Protos 80 ER" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["High-volume filter production", "High-speed lines"],
-  },
 ];
 
 const tobacco: Product[] = [
@@ -997,35 +937,6 @@ const tobacco: Product[] = [
     ],
     specs: [],
     applications: ["Waste reduction", "Tobacco recovery"],
-  },
-  {
-    slug: "used-packing-machines",
-    name: "Used Packing Machines",
-    category: "manufacturing-machines",
-    subcategory: "tobacco-machinery",
-    brand: "Various",
-    condition: "Used",
-    tagline: "A rotating stock of reconditioned packing machines.",
-    metaDescription:
-      "Used packing machines in Pakistan, reconditioned hard and soft pack lines in stock. Inspected and serviced by Civic Tobacco Machinery.",
-    keywords: ["used packing machines Pakistan", "second hand cigarette packer", "used HLP SASIB"],
-    intro: [
-      "We keep a rotating stock of used packing machines that have been inspected and serviced, so if you need to add packing capacity quickly there is often something ready to go.",
-      "Stock changes regularly, so get in touch with the format and speed you are after and we will tell you what is available right now.",
-    ],
-    features: [
-      "Reconditioned hard and soft pack machines",
-      "Inspected and serviced before sale",
-      "Ready to add capacity quickly",
-      "Honest condition reports",
-      "Stock changes regularly",
-    ],
-    specs: [
-      { label: "Type", value: "Used packing machines" },
-      { label: "Formats", value: "Hard and soft pack" },
-      { label: "Condition", value: "Reconditioned" },
-    ],
-    applications: ["Quick capacity add", "Budget-conscious buyers"],
   },
   {
     slug: "tobacco-cutters",

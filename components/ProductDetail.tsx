@@ -1,6 +1,7 @@
 import PageHero from "./PageHero";
 import MachineImage from "./MachineImage";
 import ProductImageZoom from "./ProductImageZoom";
+import WhatsAppIcon from "./WhatsAppIcon";
 import ProductCard from "./ProductCard";
 import ContactForm from "./ContactForm";
 import JsonLd from "./JsonLd";
@@ -37,9 +38,10 @@ export default function ProductDetail({
       />
 
       <section className="container mx-auto py-14">
+        {/* Row 1: image (left) + key features (right) */}
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Image */}
-          <div className="lg:sticky lg:top-28">
+          <div>
             {product.image ? (
               <ProductImageZoom
                 src={product.image}
@@ -71,40 +73,52 @@ export default function ProductDetail({
             )}
           </div>
 
-          {/* Info */}
+          {/* Key features */}
           <div>
-            <div className="prose-content max-w-none">
-              {product.intro.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={wa}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn bg-[#25D366] text-white hover:brightness-105 sm:flex-1"
-              >
-                Enquire on WhatsApp
-              </a>
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="btn-secondary sm:flex-1"
-              >
-                Call {siteConfig.phoneDisplay}
-              </a>
-            </div>
+            <h2 className="text-xl">Key features</h2>
 
             {product.featureTable ? (
               /* Feature table replaces both the bullet list and the specs table. */
-              <div className="mt-10">
-                <h2 className="text-xl">Key features</h2>
+              <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
+                <table className="w-full text-sm">
+                  <tbody className="divide-y divide-brand-100">
+                    {product.featureTable.map((s, i) => (
+                      <tr key={s.label} className={i % 2 ? "bg-white" : "bg-brand-50"}>
+                        <th
+                          scope="row"
+                          className="w-2/5 px-4 py-3 text-left font-medium text-brand-600"
+                        >
+                          {s.label}
+                        </th>
+                        <td className="px-4 py-3 text-brand-900">{s.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : product.features.length > 0 ? (
+              <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+                {product.features.map((f) => (
+                  <li key={f} className="flex gap-2.5 text-sm text-brand-700">
+                    <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 6 8 15l-4-4" />
+                    </svg>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 text-sm text-brand-600">{product.tagline}</p>
+            )}
+
+            {/* Specifications only shown for machines without a feature table. */}
+            {!product.featureTable && product.specs.length > 0 && (
+              <div className="mt-8">
+                <h3 className="text-lg">Specifications</h3>
                 <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
                   <table className="w-full text-sm">
                     <tbody className="divide-y divide-brand-100">
-                      {product.featureTable.map((s, i) => (
+                      {product.specs.map((s, i) => (
                         <tr key={s.label} className={i % 2 ? "bg-white" : "bg-brand-50"}>
                           <th
                             scope="row"
@@ -119,59 +133,13 @@ export default function ProductDetail({
                   </table>
                 </div>
               </div>
-            ) : (
-              <>
-                {/* Features */}
-                {product.features.length > 0 && (
-                  <div className="mt-10">
-                    <h2 className="text-xl">Key features</h2>
-                    <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
-                      {product.features.map((f) => (
-                        <li key={f} className="flex gap-2.5 text-sm text-brand-700">
-                          <svg viewBox="0 0 20 20" className="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M16 6 8 15l-4-4" />
-                          </svg>
-                          <span>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Specs */}
-                {product.specs.length > 0 && (
-                  <div className="mt-10">
-                    <h2 className="text-xl">Specifications</h2>
-                    <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
-                      <table className="w-full text-sm">
-                        <tbody className="divide-y divide-brand-100">
-                          {product.specs.map((s, i) => (
-                            <tr key={s.label} className={i % 2 ? "bg-white" : "bg-brand-50"}>
-                              <th
-                                scope="row"
-                                className="w-2/5 px-4 py-3 text-left font-medium text-brand-600"
-                              >
-                                {s.label}
-                              </th>
-                              <td className="px-4 py-3 text-brand-900">{s.value}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                    <p className="mt-3 text-xs text-brand-400">
-                      Specifications are indicative and may vary by unit. Contact us for exact details on a specific machine.
-                    </p>
-                  </div>
-                )}
-              </>
             )}
 
             {/* Applications */}
             {product.applications && product.applications.length > 0 && (
-              <div className="mt-10">
-                <h2 className="text-xl">Best suited for</h2>
-                <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-8">
+                <h3 className="text-lg">Best suited for</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
                   {product.applications.map((a) => (
                     <span
                       key={a}
@@ -183,6 +151,35 @@ export default function ProductDetail({
                 </div>
               </div>
             )}
+
+            {/* CTAs */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn bg-[#25D366] text-white hover:brightness-105 sm:flex-1"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                {siteConfig.phoneDisplay}
+              </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="btn-secondary sm:flex-1"
+              >
+                Call {siteConfig.phoneDisplay}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 2: full-width description */}
+        <div className="mt-14 border-t border-brand-100 pt-10">
+          <h2 className="text-2xl">Description</h2>
+          <div className="prose-content mt-4 max-w-3xl">
+            {product.intro.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         </div>
       </section>

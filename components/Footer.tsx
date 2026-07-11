@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { siteConfig, whatsappLink, fullAddress } from "@/lib/site";
 import {
   categories,
@@ -11,7 +12,7 @@ import {
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "#" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -36,7 +37,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-white hover:brightness-105"
             >
-              Chat on WhatsApp
+              <WhatsAppIcon className="h-5 w-5" />
+              {siteConfig.phoneDisplay}
             </a>
           </div>
 
@@ -57,7 +59,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="/blog" className="text-brand-300 hover:text-accent-300">
+                <Link href="#" className="text-brand-300 hover:text-accent-300">
                   Our Blog
                 </Link>
               </li>

@@ -52,6 +52,22 @@ const nextConfig = {
         destination: "/cigarette-making-machines/mark-9-5-max-s-tray-filler",
         permanent: true,
       },
+      // Retired product pages now point to their category.
+      {
+        source: "/tobacco-machinery/used-packing-machines",
+        destination: "/cigarette-packing-machines",
+        permanent: true,
+      },
+      {
+        source: "/cigarette-filter-making-machines/protos-70-filter",
+        destination: "/cigarette-filter-making-machines",
+        permanent: true,
+      },
+      {
+        source: "/cigarette-filter-making-machines/protos-80-er-filter",
+        destination: "/cigarette-filter-making-machines",
+        permanent: true,
+      },
 
       // Packing / wrapping category slugs → keyword-first slugs.
       {

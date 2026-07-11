@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { mainNav, type NavItem } from "@/lib/navigation";
 import { siteConfig, whatsappLink } from "@/lib/site";
 
@@ -109,15 +110,15 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
   return (
     <li className="group relative">
-      {/* Parent is a trigger only, it opens the dropdown, it doesn't navigate. */}
-      <button type="button" className={linkCls} aria-haspopup="true">
+      {/* Parent links to its category page; hovering reveals the dropdown. */}
+      <Link href={item.href} className={linkCls} aria-haspopup="true">
         {item.label}
         <IconChevron className="h-3 w-3 opacity-70 transition-transform group-hover:rotate-180" />
-      </button>
+      </Link>
 
       {/* Simple dropdown */}
       {item.children && (
-        <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+        <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
           <ul className="w-72 rounded-2xl border border-brand-100 bg-white/95 p-2 shadow-card backdrop-blur">
             {item.children.map((child) => (
               <li key={child.href}>
@@ -139,7 +140,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
       {/* Mega menu */}
       {item.columns && (
-        <div className="invisible absolute right-0 top-full z-50 w-[min(56rem,calc(100vw-2rem))] pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+        <div className="invisible absolute right-0 top-full z-50 w-[min(56rem,calc(100vw-2rem))] pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
           <div className="rounded-3xl border border-brand-100 bg-white/95 p-6 shadow-card backdrop-blur">
             <div className="grid grid-cols-3 gap-6">
               {item.columns.map((col) => (
@@ -198,7 +199,8 @@ function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
           onClick={onNavigate}
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white"
         >
-          Chat on WhatsApp
+          <WhatsAppIcon className="h-5 w-5" />
+          {siteConfig.phoneDisplay}
         </a>
         <div className="mt-4 flex flex-col gap-1 text-sm text-brand-500">
           <a href={`tel:${siteConfig.phone}`} className="py-1">

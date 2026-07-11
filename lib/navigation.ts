@@ -28,7 +28,7 @@ export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   {
     label: "Cigarette Making",
-    href: "#",
+    href: "/cigarette-making-machines",
     children: [
       { label: "Mark 8 Post 64", href: "/cigarette-making-machines/mark-8-post-64" },
       { label: "Mark 8D Max 15", href: "/cigarette-making-machines/mark-8d-max-15" },
@@ -41,7 +41,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Cigarette Packing",
-    href: "#",
+    href: "/cigarette-packing-machines",
     children: [
       { label: "HLP-180", href: "/cigarette-packing-machines/hlp-180" },
       { label: "HLP-200", href: "/cigarette-packing-machines/hlp-200" },
@@ -52,7 +52,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Filter Machines",
-    href: "#",
+    href: "/cigarette-filter-making-machines",
     children: [
       { label: "KDF-1", href: "/cigarette-filter-making-machines/kdf-1" },
       { label: "KDF-2", href: "/cigarette-filter-making-machines/kdf-2" },
@@ -62,7 +62,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Wrappers & Boxers",
-    href: "#",
+    href: "/cigarette-box-wrapping-machines",
     children: [
       { label: "Regular Wrapper CP1", href: "/cigarette-box-wrapping-machines/regular-wrapper-cp1" },
       { label: "Naked Over Wrapper", href: "/cigarette-box-wrapping-machines/naked-over-wrapper" },
@@ -72,7 +72,7 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Cutter/Feeder/Reclaimer",
-    href: "#",
+    href: "/tobacco-machinery",
     children: [
       { label: "Tobacco Feeder", href: "/tobacco-machinery/tobacco-feeder" },
       { label: "Cigarette Reclaimer", href: "/tobacco-machinery/cigarette-reclaimer" },
