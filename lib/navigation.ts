@@ -76,7 +76,7 @@ export const mainNav: NavItem[] = [
     children: [
       { label: "Tobacco Feeder", href: "/tobacco-machinery/tobacco-feeder" },
       { label: "Cigarette Reclaimer", href: "/tobacco-machinery/cigarette-reclaimer" },
-      { label: "Tobacco Cutters", href: "/tobacco-machinery/tobacco-cutters" },
+      { label: "Tobacco Cutter KT-400", href: "/tobacco-machinery/tobacco-cutters" },
       { label: "Tobacco Stem Flattener", href: "/tobacco-machinery/tobacco-stem-flattener" },
     ],
   },
