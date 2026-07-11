@@ -76,6 +76,7 @@ const galleryImages = [
   { src: "/images/gallery/gallery-3.webp", alt: "Welcoming a visitor to the Civic Tobacco Machinery stand" },
   { src: "/images/gallery/gallery-4.webp", alt: "Discussing tobacco machinery with an international partner" },
   { src: "/images/gallery/gallery-5.webp", alt: "Civic Tobacco Machinery meeting industry customers" },
+  { src: "/images/gallery/gallery-6.jpg", alt: "Civic Tobacco Machinery presenting to visitors at a tobacco expo" },
 ];
 
 const reasons = [
