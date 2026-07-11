@@ -15,6 +15,7 @@ import ProductCard from "@/components/ProductCard";
 import MachineCarousel, {
   type CarouselGroup,
 } from "@/components/MachineCarousel";
+import Gallery from "@/components/Gallery";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
@@ -65,6 +66,16 @@ const browseTypes = [
   { label: "Cigarette Wrapping Machines", href: categoryPaths["wrapping-machines"] },
   { label: "Cigarette Manufacturing Machines", href: categoryPaths["manufacturing-machines"] },
   { label: "Used Cigarette Machinery", href: categoryPaths["manufacturing-machines"] },
+];
+
+// Gallery photos. Add more by dropping files in public/images/gallery and
+// extending this list.
+const galleryImages = [
+  { src: "/images/gallery/gallery-1.webp", alt: "Civic Tobacco Machinery team at an international tobacco exhibition" },
+  { src: "/images/gallery/gallery-2.webp", alt: "Meeting a customer at a tobacco machinery expo" },
+  { src: "/images/gallery/gallery-3.webp", alt: "Welcoming a visitor to the Civic Tobacco Machinery stand" },
+  { src: "/images/gallery/gallery-4.webp", alt: "Discussing tobacco machinery with an international partner" },
+  { src: "/images/gallery/gallery-5.webp", alt: "Civic Tobacco Machinery meeting industry customers" },
 ];
 
 const reasons = [
@@ -336,6 +347,9 @@ export default function HomePage() {
 
       {/* Machine ranges carousel */}
       <MachineCarousel groups={carouselGroups} />
+
+      {/* Gallery */}
+      <Gallery images={galleryImages} />
 
       {/* Local SEO block */}
       <section className="bg-brand-950 py-16 text-white">
