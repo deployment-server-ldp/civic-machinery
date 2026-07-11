@@ -28,15 +28,15 @@ export const mainNav: NavItem[] = [
   { label: "About", href: "/about" },
   {
     label: "Cigarette Making",
-    href: "/cigarette-making-machines",
+    href: "/cigarette-manufacturing-machines",
     children: [
-      { label: "Mark 8 Post 64", href: "/cigarette-making-machines/mark-8-post-64" },
-      { label: "Mark 8D Max 15", href: "/cigarette-making-machines/mark-8d-max-15" },
-      { label: "Mark 9.5 with Lenze Servo Drives", href: "/cigarette-making-machines/mark-9-5-lenze-servo-drives" },
-      { label: "Mark 9.5 with Max S & Tray Filler", href: "/cigarette-making-machines/mark-9-5-max-s-tray-filler" },
-      { label: "MK-9 with Max S", href: "/cigarette-making-machines/mark-9-max-s" },
-      { label: "Protos 70", href: "/cigarette-making-machines/protos-70" },
-      { label: "Protos 80 ER", href: "/cigarette-making-machines/protos-80-er" },
+      { label: "Mark 8 Post 64", href: "/cigarette-manufacturing-machines/mark-8-post-64" },
+      { label: "Mark 8D Max 15", href: "/cigarette-manufacturing-machines/mark-8d-max-15" },
+      { label: "Mark 9.5 with Lenze Servo Drives", href: "/cigarette-manufacturing-machines/mark-9-5-lenze-servo-drives" },
+      { label: "Mark 9.5 with Max S & Tray Filler", href: "/cigarette-manufacturing-machines/mark-9-5-max-s-tray-filler" },
+      { label: "MK-9 with Max S", href: "/cigarette-manufacturing-machines/mark-9-max-s" },
+      { label: "Protos 70", href: "/cigarette-manufacturing-machines/protos-70" },
+      { label: "Protos 80 ER", href: "/cigarette-manufacturing-machines/protos-80-er" },
     ],
   },
   {

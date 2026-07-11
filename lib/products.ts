@@ -1049,7 +1049,7 @@ export const categoryPaths: Record<CategorySlug, string> = {
 
 // Manufacturing sub-categories are flattened to the site root.
 export const subcategoryPaths: Record<string, string> = {
-  "cigarette-making-machines": "/cigarette-making-machines",
+  "cigarette-making-machines": "/cigarette-manufacturing-machines",
   "cigarette-filter-making-machines": "/cigarette-filter-making-machines",
   "tobacco-machinery": "/tobacco-machinery",
 };

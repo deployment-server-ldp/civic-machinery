@@ -49,11 +49,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [
+  const all = [
     ...staticPages,
     ...categoryPages,
     ...subcategoryPages,
     ...productPages,
     ...blogPages,
   ];
+
+  // De-duplicate by URL (some sub-categories now share a category URL).
+  const seen = new Set<string>();
+  return all.filter((entry) => {
+    if (seen.has(entry.url)) return false;
+    seen.add(entry.url);
+    return true;
+  });
 }

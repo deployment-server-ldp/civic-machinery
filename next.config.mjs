@@ -64,6 +64,17 @@ const nextConfig = {
         destination: "/cigarette-manufacturing-machines",
         permanent: true,
       },
+      // Making machines consolidated under the manufacturing URL.
+      {
+        source: "/cigarette-making-machines",
+        destination: "/cigarette-manufacturing-machines",
+        permanent: true,
+      },
+      {
+        source: "/cigarette-making-machines/:slug",
+        destination: "/cigarette-manufacturing-machines/:slug",
+        permanent: true,
+      },
       {
         source: "/cigarette-filter-making-machines/protos-70-filter",
         destination: "/cigarette-filter-making-machines",
