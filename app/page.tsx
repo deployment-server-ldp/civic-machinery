@@ -296,7 +296,7 @@ export default function HomePage() {
               <p className="eyebrow">In Stock &amp; Popular</p>
               <h2 className="mt-2 text-3xl sm:text-4xl">Featured Machines</h2>
             </div>
-            <Link href="/manufacturing-machines" className="link-accent">
+            <Link href="/cigarette-manufacturing-machines" className="link-accent">
               View all machines →
             </Link>
           </div>

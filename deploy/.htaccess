@@ -22,6 +22,7 @@ Options -MultiViews
   RewriteRule ^cigarette-filter-making-machines/hauni-kdf-2/?$ /cigarette-filter-making-machines/kdf-2/ [R=301,L]
   RewriteRule ^cigarette-making-machines/mark-9-5-max-s/?$ /cigarette-making-machines/mark-9-5-max-s-tray-filler/ [R=301,L]
   RewriteRule ^tobacco-machinery/used-packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
+  RewriteRule ^manufacturing-machines/?$ /cigarette-manufacturing-machines/ [R=301,L]
   RewriteRule ^cigarette-filter-making-machines/protos-70-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
   RewriteRule ^cigarette-filter-making-machines/protos-80-er-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
 
@@ -40,8 +41,8 @@ Options -MultiViews
   RewriteRule ^manufacturing-machines/tobacco-machinery/(.+?)/?$ /tobacco-machinery/$1/ [R=301,L]
 
   # Retired "used" pages -> relevant machine sections
-  RewriteRule ^used-machinery(/.*)?$ /manufacturing-machines/ [R=301,L]
-  RewriteRule ^used-manufacturing-machines/?$ /manufacturing-machines/ [R=301,L]
+  RewriteRule ^used-machinery(/.*)?$ /cigarette-manufacturing-machines/ [R=301,L]
+  RewriteRule ^used-manufacturing-machines/?$ /cigarette-manufacturing-machines/ [R=301,L]
   RewriteRule ^used-cigarette-filter-machinery/?$ /cigarette-filter-making-machines/ [R=301,L]
   RewriteRule ^used-packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
   RewriteRule ^used-wrapping-machines/?$ /cigarette-box-wrapping-machines/ [R=301,L]

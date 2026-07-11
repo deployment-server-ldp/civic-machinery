@@ -58,6 +58,12 @@ const nextConfig = {
         destination: "/cigarette-packing-machines",
         permanent: true,
       },
+      // Manufacturing category landing renamed to a keyword-first URL.
+      {
+        source: "/manufacturing-machines",
+        destination: "/cigarette-manufacturing-machines",
+        permanent: true,
+      },
       {
         source: "/cigarette-filter-making-machines/protos-70-filter",
         destination: "/cigarette-filter-making-machines",
@@ -109,9 +115,9 @@ const nextConfig = {
       },
 
       // Retired "used" pages now point to the relevant machine sections.
-      { source: "/used-machinery", destination: "/manufacturing-machines", permanent: true },
-      { source: "/used-machinery/:slug*", destination: "/manufacturing-machines", permanent: true },
-      { source: "/used-manufacturing-machines", destination: "/manufacturing-machines", permanent: true },
+      { source: "/used-machinery", destination: "/cigarette-manufacturing-machines", permanent: true },
+      { source: "/used-machinery/:slug*", destination: "/cigarette-manufacturing-machines", permanent: true },
+      { source: "/used-manufacturing-machines", destination: "/cigarette-manufacturing-machines", permanent: true },
       { source: "/used-cigarette-filter-machinery", destination: "/cigarette-filter-making-machines", permanent: true },
       { source: "/used-packing-machines", destination: "/cigarette-packing-machines", permanent: true },
       { source: "/used-wrapping-machines", destination: "/cigarette-box-wrapping-machines", permanent: true },

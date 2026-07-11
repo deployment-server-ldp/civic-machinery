@@ -170,7 +170,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
               <span className="text-brand-600">
                 Looking for a specific machine or a full line?
               </span>
-              <Link href="/manufacturing-machines" className="link-accent">
+              <Link href="/cigarette-manufacturing-machines" className="link-accent">
                 View all manufacturing machines →
               </Link>
             </div>

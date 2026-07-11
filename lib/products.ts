@@ -1044,7 +1044,7 @@ export const getProduct = (category: string, slug: string, subcategory?: string)
 export const categoryPaths: Record<CategorySlug, string> = {
   "packing-machines": "/cigarette-packing-machines",
   "wrapping-machines": "/cigarette-box-wrapping-machines",
-  "manufacturing-machines": "/manufacturing-machines",
+  "manufacturing-machines": "/cigarette-manufacturing-machines",
 };
 
 // Manufacturing sub-categories are flattened to the site root.

@@ -17,7 +17,7 @@ const category = getCategory("manufacturing-machines")!;
 export const metadata: Metadata = buildMetadata({
   title: category.title,
   description: category.description,
-  path: "/manufacturing-machines",
+  path: "/cigarette-manufacturing-machines",
   keywords: category.keywords,
 });
 
@@ -35,7 +35,7 @@ export default function ManufacturingMachinesPage() {
         intro={category.intro[0]}
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Manufacturing Machines", path: "/manufacturing-machines" },
+          { name: "Manufacturing Machines", path: "/cigarette-manufacturing-machines" },
         ]}
       />
 
