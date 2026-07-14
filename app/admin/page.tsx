@@ -441,6 +441,18 @@ export default function AdminPage() {
               />
             </Field>
 
+            <Field
+              label="Meta title (SEO)"
+              hint="Browser tab & Google title — leave blank to use the H1"
+            >
+              <input
+                value={form.metaTitle}
+                onChange={(e) => set("metaTitle", e.target.value)}
+                placeholder={form.title || "SEO title (≤ 60 chars)"}
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              />
+            </Field>
+
             <Field label="Meta description" hint="For Google (≤ 160 chars)">
               <textarea
                 value={form.description}
