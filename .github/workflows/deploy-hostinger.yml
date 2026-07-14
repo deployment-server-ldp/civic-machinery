@@ -11,9 +11,12 @@ name: Deploy to Hostinger
 #
 # Optional GitHub variables:
 #   SITE_URL       - live domain, defaults to https://civic-tobacco-machinery.com
-#   FTP_SERVER_DIR - target folder, defaults to ./ because this Hostinger FTP
-#                    account already opens inside public_html. Set to
-#                    public_html/ only if your FTP account opens at the home dir.
+#   FTP_SERVER_DIR - target folder, defaults to the absolute path /public_html/.
+#                    This FTP account logs in inside public_html but its
+#                    absolute root (/) is the account home, so an absolute
+#                    server-dir keeps uploads AND deletions pointing at the same
+#                    real web root (a relative ./ made deletions target /_next
+#                    at the home root and fail with 550).
 
 on:
   push:
@@ -56,5 +59,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           local-dir: ./out/
-          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/public_html/' }}
           dangerous-clean-slate: false
