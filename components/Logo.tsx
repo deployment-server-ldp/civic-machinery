@@ -31,7 +31,7 @@ export default function Logo({
       </span>
       {tagline && (
         <span
-          className={`mt-1.5 w-full whitespace-nowrap text-center text-[0.72rem] font-semibold tracking-wide sm:text-[0.8rem] ${tagColor}`}
+          className={`mt-1.5 w-full whitespace-nowrap text-center text-[0.8rem] font-semibold tracking-wide sm:text-[0.9rem] ${tagColor}`}
         >
           {tagline}
         </span>

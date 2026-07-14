@@ -59,11 +59,11 @@ export default function Header() {
 
       {/* Main bar */}
       <div className="container mx-auto flex h-[6.6rem] items-center justify-between gap-4 xl:h-[7.5rem]">
-        <Logo className="text-[1.35rem] sm:text-[1.5rem]" tagline="Karachi - Pakistan" />
+        <Logo className="text-[1.45rem] sm:text-[1.65rem] 2xl:text-[1.95rem]" tagline="Karachi - Pakistan" />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
-          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/70 bg-white/70 px-2 py-2 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md">
+          <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/70 bg-white/70 px-2 py-2 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md 2xl:gap-1 2xl:px-2.5">
             {mainNav.map((item) => (
               <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
             ))}
@@ -92,7 +92,7 @@ export default function Header() {
 
 function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
   const hasDropdown = Boolean(item.children || item.columns);
-  const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-3 text-[0.82rem] font-semibold tracking-tight transition-colors ${
+  const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-3 text-[0.82rem] font-semibold tracking-tight transition-colors 2xl:px-2.5 2xl:text-[0.95rem] ${
     active
       ? "bg-accent-500 text-white shadow-sm"
       : "text-brand-700 hover:bg-white/80 hover:text-accent-700"
@@ -113,7 +113,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
       {/* Parent links to its category page; hovering reveals the dropdown. */}
       <Link href={item.href} className={linkCls} aria-haspopup="true">
         {item.label}
-        <IconChevron className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:rotate-180" />
+        <IconChevron className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:rotate-180 2xl:h-4 2xl:w-4" />
       </Link>
 
       {/* Simple dropdown */}
@@ -126,8 +126,8 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
                   href={child.href}
                   className={
                     child.heading
-                      ? "mb-1 block rounded-xl px-4 pb-2.5 pt-2.5 text-base font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4 hover:bg-accent-50 hover:text-accent-700"
-                      : "block rounded-xl px-4 py-2.5 text-base text-brand-700 hover:bg-accent-50 hover:text-accent-700"
+                      ? "mb-1 block rounded-xl px-4 pb-2.5 pt-2.5 text-[1.05rem] font-semibold text-brand-900 underline decoration-accent-500/40 decoration-2 underline-offset-4 hover:bg-accent-50 hover:text-accent-700"
+                      : "block rounded-xl px-4 py-2.5 text-[1.05rem] text-brand-700 hover:bg-accent-50 hover:text-accent-700"
                   }
                 >
                   {child.label}
@@ -147,7 +147,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
                 <div key={col.heading}>
                   <Link
                     href={col.headingHref || item.href}
-                    className="mb-3 block border-b border-brand-100 pb-2 text-sm font-semibold text-brand-900 hover:text-accent-700"
+                    className="mb-3 block border-b border-brand-100 pb-2 text-[0.95rem] font-semibold text-brand-900 hover:text-accent-700"
                   >
                     {col.heading}
                   </Link>
@@ -156,7 +156,7 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="block rounded-md px-2 py-1.5 text-sm text-brand-600 hover:bg-accent-50 hover:text-accent-700"
+                          className="block rounded-md px-2 py-1.5 text-[0.95rem] text-brand-600 hover:bg-accent-50 hover:text-accent-700"
                         >
                           {link.label}
                         </Link>
