@@ -41,10 +41,26 @@ export const siteConfig = {
     closes: "18:00",
   },
   social: {
-    facebook: "https://www.facebook.com/",
-    linkedin: "https://www.linkedin.com/",
-    youtube: "https://www.youtube.com/",
+    facebook: "https://www.facebook.com/civic.tobacco.machinery",
+    instagram: "https://www.instagram.com/civic.tobacco.machinery/",
+    linkedin: "https://www.linkedin.com/civictobaccomachinery",
+    tiktok: "https://www.tiktok.com/civic.tobacco.machinery",
   },
+  // Countries/regions the business serves — used for Organization areaServed.
+  serviceAreas: [
+    "Pakistan",
+    "Bangladesh",
+    "Bulgaria",
+    "Poland",
+    "Russia",
+    "Indonesia",
+    "Turkey",
+    "Syria",
+    "Europe",
+    "North America",
+    "South America",
+    "Australia",
+  ],
   foundingYear: "1998",
 } as const;
 

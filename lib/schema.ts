@@ -19,6 +19,21 @@ const postalAddress = () => ({
   addressCountry: siteConfig.address.country,
 });
 
+// Continents/regions are described as Place; everything else as a Country.
+const REGIONS = new Set(["Europe", "North America", "South America"]);
+const areaServed = () =>
+  siteConfig.serviceAreas.map((name) => ({
+    "@type": REGIONS.has(name) ? "Place" : "Country",
+    name,
+  }));
+
+const socialProfiles = () => [
+  siteConfig.social.facebook,
+  siteConfig.social.instagram,
+  siteConfig.social.linkedin,
+  siteConfig.social.tiktok,
+];
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -34,11 +49,16 @@ export function organizationSchema() {
     email: siteConfig.email,
     foundingDate: siteConfig.foundingYear,
     address: postalAddress(),
-    sameAs: [
-      siteConfig.social.facebook,
-      siteConfig.social.linkedin,
-      siteConfig.social.youtube,
-    ],
+    areaServed: areaServed(),
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: siteConfig.phone,
+      email: siteConfig.email,
+      areaServed: siteConfig.serviceAreas,
+      availableLanguage: ["en", "ur"],
+    },
+    sameAs: socialProfiles(),
   };
 }
 
@@ -73,11 +93,7 @@ export function localBusinessSchema() {
         closes: siteConfig.hours.closes,
       },
     ],
-    sameAs: [
-      siteConfig.social.facebook,
-      siteConfig.social.linkedin,
-      siteConfig.social.youtube,
-    ],
+    sameAs: socialProfiles(),
   };
 }
 
@@ -91,14 +107,6 @@ export function websiteSchema() {
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "en",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -131,18 +139,18 @@ export function productSchema(product: Product, path: string, image: string) {
       product.condition === "New"
         ? "https://schema.org/NewCondition"
         : "https://schema.org/UsedCondition",
+    // Price on request (B2B machinery, no public price). We deliberately omit
+    // a numeric price rather than publish a misleading 0.
     offers: {
       "@type": "Offer",
       url: abs(path),
-      priceCurrency: "PKR",
-      price: "0",
       availability: "https://schema.org/InStock",
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
       itemCondition:
         product.condition === "New"
           ? "https://schema.org/NewCondition"
           : "https://schema.org/UsedCondition",
       seller: { "@id": `${siteConfig.url}/#organization` },
-      priceValidUntil: `${new Date().getFullYear() + 1}-12-31`,
     },
   };
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import WhatsAppIcon from "./WhatsAppIcon";
+import SocialLinks from "./SocialLinks";
 import { siteConfig, whatsappLink, fullAddress } from "@/lib/site";
 import {
   categories,
@@ -40,6 +41,7 @@ export default function Footer() {
               <WhatsAppIcon className="h-5 w-5" />
               {siteConfig.phoneDisplay}
             </a>
+            <SocialLinks className="mt-5" />
           </div>
 
           {/* Machines */}
