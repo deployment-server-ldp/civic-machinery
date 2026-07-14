@@ -12,7 +12,7 @@ import {
 const companyLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Blog", href: "#" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -59,7 +59,7 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <Link href="#" className="text-brand-300 hover:text-accent-300">
+                <Link href="/blog" className="text-brand-300 hover:text-accent-300">
                   Our Blog
                 </Link>
               </li>
