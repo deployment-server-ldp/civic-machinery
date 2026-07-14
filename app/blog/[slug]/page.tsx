@@ -10,8 +10,15 @@ import Markdown from "@/components/Markdown";
 import { articleSchema } from "@/lib/schema";
 import { blogPosts, getPost } from "@/lib/blog";
 
+// Only the posts we generate are valid; anything else 404s.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
+  const params = blogPosts.map((p) => ({ slug: p.slug }));
+  // `output: export` needs at least one param for a dynamic route. When the
+  // blog is empty (all posts deleted in the CMS), emit a throwaway slug whose
+  // page 404s, so the build still succeeds.
+  return params.length ? params : [{ slug: "__none__" }];
 }
 
 export function generateMetadata({
