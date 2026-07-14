@@ -54,6 +54,9 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # Encrypted FTP (explicit FTPS over port 21) so credentials and
+          # files are not sent in plaintext. Hostinger supports this.
+          protocol: ftps
           local-dir: ./out/
           server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
           # Keep files the deploy manages in sync; don't touch anything you
