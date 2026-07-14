@@ -48,6 +48,7 @@ export default function BlogPage() {
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
             >
               <MachineImage
+                src={post.featuredImage}
                 alt={post.title}
                 label="Article"
                 aspect="aspect-[16/9]"
