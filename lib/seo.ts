@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./site";
+import { metaOverrides } from "./seo-overrides";
 
 /**
  * Build a Metadata object with sensible SEO defaults:
@@ -32,12 +33,17 @@ export function buildMetadata({
     (img) => (img.startsWith("http") ? img : `${siteConfig.url}${img}`)
   );
 
-  // The passed `title` is used exactly as the <title> (kept under ~60 chars by
-  // the caller). `absolute` bypasses the root layout title template so the site
-  // name is never appended twice.
+  // Per-page SEO overrides from the master sheet (title/description only).
+  // These affect meta tags only — the visible <h1> is unaffected.
+  const override = metaOverrides[path];
+  const metaTitle = override?.title ?? title;
+  const metaDescription = override?.description ?? description;
+
+  // `absolute` bypasses the root layout title template so the site name is
+  // never appended twice.
   return {
-    title: { absolute: title },
-    description,
+    title: { absolute: metaTitle },
+    description: metaDescription,
     keywords: keywords?.length ? keywords : undefined,
     alternates: {
       canonical: url,
@@ -56,21 +62,21 @@ export function buildMetadata({
           },
         },
     openGraph: {
-      title,
-      description,
+      title: metaTitle,
+      description: metaDescription,
       url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type,
-      images: ogImages.map((u) => ({ url: u, width: 1200, height: 630, alt: title })),
+      images: ogImages.map((u) => ({ url: u, width: 1200, height: 630, alt: metaTitle })),
       ...(type === "article"
         ? { publishedTime, modifiedTime }
         : {}),
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: metaTitle,
+      description: metaDescription,
       images: ogImages,
     },
   };
