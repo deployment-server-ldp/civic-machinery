@@ -86,6 +86,17 @@ const nextConfig = {
         permanent: true,
       },
 
+      // SASIB slug typo fix (ssasib → sasib).
+      {
+        source: "/cigarette-packing-machines/ssasib-3000",
+        destination: "/cigarette-packing-machines/sasib-3000",
+        permanent: true,
+      },
+      {
+        source: "/cigarette-packing-machines/ssasib-5000",
+        destination: "/cigarette-packing-machines/sasib-5000",
+        permanent: true,
+      },
       // Packing / wrapping category slugs → keyword-first slugs.
       {
         source: "/packing-machines",

@@ -28,6 +28,10 @@ Options -MultiViews
   RewriteRule ^cigarette-filter-making-machines/protos-70-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
   RewriteRule ^cigarette-filter-making-machines/protos-80-er-filter/?$ /cigarette-filter-making-machines/ [R=301,L]
 
+  # SASIB slug typo fix (ssasib -> sasib)
+  RewriteRule ^cigarette-packing-machines/ssasib-3000/?$ /cigarette-packing-machines/sasib-3000/ [R=301,L]
+  RewriteRule ^cigarette-packing-machines/ssasib-5000/?$ /cigarette-packing-machines/sasib-5000/ [R=301,L]
+
   # Packing / wrapping category slugs
   RewriteRule ^packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
   RewriteRule ^packing-machines/(.+?)/?$ /cigarette-packing-machines/$1/ [R=301,L]

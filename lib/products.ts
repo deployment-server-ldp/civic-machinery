@@ -301,7 +301,7 @@ const packing: Product[] = [
     applications: ["High-volume hard pack production", "Large-scale packing lines"],
   },
   {
-    slug: "ssasib-5000",
+    slug: "sasib-5000",
     name: "SASIB 5000 Soft Pack Machine",
     h1: "SASIB 5000 Soft Pack Machine",
     metaTitle: "SASIB 5000 Soft Pack Cigarette Machine",
@@ -333,7 +333,7 @@ const packing: Product[] = [
     applications: ["Soft pack production", "100mm formats"],
   },
   {
-    slug: "ssasib-3000",
+    slug: "sasib-3000",
     name: "SASIB 3000 Soft Pack Machine",
     h1: "SASIB 3000 Soft Pack Machine",
     metaTitle: "SASIB 3000 Soft Pack Cigarette Machine",

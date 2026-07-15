@@ -46,8 +46,8 @@ export const mainNav: NavItem[] = [
       { label: "HLP-180", href: "/cigarette-packing-machines/hlp-180" },
       { label: "HLP-200", href: "/cigarette-packing-machines/hlp-200" },
       { label: "HLP-225", href: "/cigarette-packing-machines/hlp-225" },
-      { label: "SASIB 3000 (Soft Pack)", href: "/cigarette-packing-machines/ssasib-3000" },
-      { label: "SASIB 5000 (Soft Pack)", href: "/cigarette-packing-machines/ssasib-5000" },
+      { label: "SASIB 3000 (Soft Pack)", href: "/cigarette-packing-machines/sasib-3000" },
+      { label: "SASIB 5000 (Soft Pack)", href: "/cigarette-packing-machines/sasib-5000" },
     ],
   },
   {
