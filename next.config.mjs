@@ -132,7 +132,19 @@ const nextConfig = {
       },
       {
         source: "/manufacturing-machines/tobacco-machinery/:path*",
-        destination: "/tobacco-machinery/:path*",
+        destination: "/cutter-feeder-reclaimer/:path*",
+        permanent: true,
+      },
+
+      // Category renamed: tobacco-machinery → cutter-feeder-reclaimer.
+      {
+        source: "/tobacco-machinery",
+        destination: "/cutter-feeder-reclaimer",
+        permanent: true,
+      },
+      {
+        source: "/tobacco-machinery/:slug",
+        destination: "/cutter-feeder-reclaimer/:slug",
         permanent: true,
       },
 
@@ -143,7 +155,7 @@ const nextConfig = {
       { source: "/used-cigarette-filter-machinery", destination: "/cigarette-filter-making-machines", permanent: true },
       { source: "/used-packing-machines", destination: "/cigarette-packing-machines", permanent: true },
       { source: "/used-wrapping-machines", destination: "/cigarette-box-wrapping-machines", permanent: true },
-      { source: "/used-tobacco-machinery", destination: "/tobacco-machinery", permanent: true },
+      { source: "/used-tobacco-machinery", destination: "/cutter-feeder-reclaimer", permanent: true },
     ];
   },
   async headers() {

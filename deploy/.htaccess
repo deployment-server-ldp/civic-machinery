@@ -49,8 +49,13 @@ Options -MultiViews
   RewriteRule ^manufacturing-machines/cigarette-making-machines/(.+?)/?$ /cigarette-making-machines/$1/ [R=301,L]
   RewriteRule ^manufacturing-machines/cigarette-filter-making-machines/?$ /cigarette-filter-making-machines/ [R=301,L]
   RewriteRule ^manufacturing-machines/cigarette-filter-making-machines/(.+?)/?$ /cigarette-filter-making-machines/$1/ [R=301,L]
-  RewriteRule ^manufacturing-machines/tobacco-machinery/?$ /tobacco-machinery/ [R=301,L]
-  RewriteRule ^manufacturing-machines/tobacco-machinery/(.+?)/?$ /tobacco-machinery/$1/ [R=301,L]
+  RewriteRule ^manufacturing-machines/tobacco-machinery/?$ /cutter-feeder-reclaimer/ [R=301,L]
+  RewriteRule ^manufacturing-machines/tobacco-machinery/(.+?)/?$ /cutter-feeder-reclaimer/$1/ [R=301,L]
+
+  # Category renamed: tobacco-machinery -> cutter-feeder-reclaimer.
+  # (The specific /tobacco-machinery/used-packing-machines rule above wins first.)
+  RewriteRule ^tobacco-machinery/?$ /cutter-feeder-reclaimer/ [R=301,L]
+  RewriteRule ^tobacco-machinery/(.+?)/?$ /cutter-feeder-reclaimer/$1/ [R=301,L]
 
   # Retired "used" pages -> relevant machine sections
   RewriteRule ^used-machinery(/.*)?$ /cigarette-manufacturing-machines/ [R=301,L]
@@ -58,7 +63,7 @@ Options -MultiViews
   RewriteRule ^used-cigarette-filter-machinery/?$ /cigarette-filter-making-machines/ [R=301,L]
   RewriteRule ^used-packing-machines/?$ /cigarette-packing-machines/ [R=301,L]
   RewriteRule ^used-wrapping-machines/?$ /cigarette-box-wrapping-machines/ [R=301,L]
-  RewriteRule ^used-tobacco-machinery/?$ /tobacco-machinery/ [R=301,L]
+  RewriteRule ^used-tobacco-machinery/?$ /cutter-feeder-reclaimer/ [R=301,L]
 </IfModule>
 
 <IfModule mod_headers.c>

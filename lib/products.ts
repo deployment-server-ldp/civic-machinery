@@ -1051,7 +1051,7 @@ export const categoryPaths: Record<CategorySlug, string> = {
 export const subcategoryPaths: Record<string, string> = {
   "cigarette-making-machines": "/cigarette-manufacturing-machines",
   "cigarette-filter-making-machines": "/cigarette-filter-making-machines",
-  "tobacco-machinery": "/tobacco-machinery",
+  "tobacco-machinery": "/cutter-feeder-reclaimer",
 };
 
 export const categoryHref = (c: Category) => categoryPaths[c.slug];

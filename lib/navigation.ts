@@ -72,12 +72,12 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "Cutter/Feeder/Reclaimer",
-    href: "/tobacco-machinery",
+    href: "/cutter-feeder-reclaimer",
     children: [
-      { label: "Tobacco Feeder", href: "/tobacco-machinery/tobacco-feeder" },
-      { label: "Cigarette Reclaimer", href: "/tobacco-machinery/cigarette-reclaimer" },
-      { label: "Tobacco Cutter KT-400", href: "/tobacco-machinery/tobacco-cutters" },
-      { label: "Tobacco Stem Flattener", href: "/tobacco-machinery/tobacco-stem-flattener" },
+      { label: "Tobacco Feeder", href: "/cutter-feeder-reclaimer/tobacco-feeder" },
+      { label: "Cigarette Reclaimer", href: "/cutter-feeder-reclaimer/cigarette-reclaimer" },
+      { label: "Tobacco Cutter KT-400", href: "/cutter-feeder-reclaimer/tobacco-cutters" },
+      { label: "Tobacco Stem Flattener", href: "/cutter-feeder-reclaimer/tobacco-stem-flattener" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
