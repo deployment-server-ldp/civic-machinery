@@ -18,6 +18,9 @@ const ICONS: Record<string, React.ReactNode> = {
   TikTok: (
     <path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.3v13.3a2.55 2.55 0 0 1-2.55 2.45 2.55 2.55 0 0 1-2.55-2.55 2.55 2.55 0 0 1 3.3-2.44V10.4a5.9 5.9 0 0 0-.75-.05 5.86 5.86 0 1 0 5.86 5.86V9.01a7.5 7.5 0 0 0 4.4 1.42V7.13a4.28 4.28 0 0 1-3.35-1.31z" />
   ),
+  YouTube: (
+    <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z" />
+  ),
 };
 
 const LINKS: { label: string; href: string }[] = [
@@ -25,6 +28,7 @@ const LINKS: { label: string; href: string }[] = [
   { label: "Instagram", href: siteConfig.social.instagram },
   { label: "LinkedIn", href: siteConfig.social.linkedin },
   { label: "TikTok", href: siteConfig.social.tiktok },
+  { label: "YouTube", href: siteConfig.social.youtube },
 ];
 
 export default function SocialLinks({ className = "" }: { className?: string }) {

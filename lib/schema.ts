@@ -32,6 +32,7 @@ const socialProfiles = () => [
   siteConfig.social.instagram,
   siteConfig.social.linkedin,
   siteConfig.social.tiktok,
+  siteConfig.social.youtube,
 ];
 
 export function organizationSchema() {
