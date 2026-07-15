@@ -24,7 +24,7 @@ export default function TobaccoMachineryPage() {
   return (
     <CategoryListing
       eyebrow="Manufacturing Machines"
-      title={sub.title}
+      title={sub.h1 ?? sub.title}
       intro={sub.intro}
       crumbs={[
         { name: "Home", path: "/" },

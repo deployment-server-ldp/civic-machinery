@@ -31,6 +31,8 @@ export interface Subcategory {
   category: CategorySlug;
   navLabel: string;
   title: string;
+  /** Visible <h1>. Defaults to `title` when not set (kept separate for SEO). */
+  h1?: string;
   description: string;
   intro: string[];
   keywords: string[];
@@ -172,6 +174,7 @@ export const subcategories: Subcategory[] = [
     category: "manufacturing-machines",
     navLabel: "Tobacco Machinery",
     title: "Tobacco Machinery in Pakistan",
+    h1: "Tobacco Cutter, Feeder & Reclaimer Machines in Pakistan",
     description:
       "Tobacco machinery in Pakistan, feeders, cutters, reclaimers and stem flatteners that keep your primary and secondary floors running. Supplied by Civic Tobacco Machinery.",
     intro: [
