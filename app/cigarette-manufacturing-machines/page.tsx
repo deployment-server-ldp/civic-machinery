@@ -4,6 +4,9 @@ import { buildMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import ProductCard from "@/components/ProductCard";
 import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import JsonLd from "@/components/JsonLd";
+import { faqSchema } from "@/lib/schema";
 import {
   getCategory,
   getSubcategoriesFor,
@@ -74,6 +77,18 @@ export default function ManufacturingMachinesPage() {
           })}
         </div>
       </section>
+
+      {category.faqs && category.faqs.length > 0 && (
+        <section className="container mx-auto pb-14">
+          <JsonLd data={faqSchema(category.faqs)} />
+          <h2 className="text-center text-2xl sm:text-3xl">
+            Frequently asked questions
+          </h2>
+          <div className="mt-8">
+            <Faq items={category.faqs} />
+          </div>
+        </section>
+      )}
 
       <CtaBand />
     </>

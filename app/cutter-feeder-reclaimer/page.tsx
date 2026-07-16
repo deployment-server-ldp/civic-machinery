@@ -32,6 +32,7 @@ export default function TobaccoMachineryPage() {
         { name: sub.navLabel, path: subcategoryHref(sub) },
       ]}
       products={getProductsBySubcategory(SUB)}
+      faqs={sub.faqs}
     />
   );
 }

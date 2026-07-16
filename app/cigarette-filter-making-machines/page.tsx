@@ -32,6 +32,7 @@ export default function CigaretteFilterMakingMachinesPage() {
         { name: sub.navLabel, path: subcategoryHref(sub) },
       ]}
       products={getProductsBySubcategory(SUB)}
+      faqs={sub.faqs}
     />
   );
 }

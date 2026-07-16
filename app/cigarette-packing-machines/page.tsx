@@ -23,6 +23,7 @@ export default function PackingMachinesPage() {
         { name: category.navLabel, path: categoryHref(category) },
       ]}
       products={getProductsByCategory("packing-machines")}
+      faqs={category.faqs}
     />
   );
 }

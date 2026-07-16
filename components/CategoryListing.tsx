@@ -1,8 +1,11 @@
 import PageHero from "./PageHero";
 import ProductCard from "./ProductCard";
 import CtaBand from "./CtaBand";
+import Faq from "./Faq";
+import JsonLd from "./JsonLd";
 import type { Crumb } from "./Breadcrumbs";
-import { type Product, productHref } from "@/lib/products";
+import { faqSchema } from "@/lib/schema";
+import { type Product, type Faq as FaqType, productHref } from "@/lib/products";
 
 /**
  * Generic listing page: hero intro, a grid of machine cards and a CTA.
@@ -15,6 +18,7 @@ export default function CategoryListing({
   crumbs,
   products,
   emptyNote,
+  faqs,
 }: {
   eyebrow?: string;
   title: string;
@@ -22,6 +26,7 @@ export default function CategoryListing({
   crumbs: Crumb[];
   products: Product[];
   emptyNote?: string;
+  faqs?: FaqType[];
 }) {
   return (
     <>
@@ -53,6 +58,18 @@ export default function CategoryListing({
           </p>
         )}
       </section>
+
+      {faqs && faqs.length > 0 && (
+        <section className="container mx-auto pb-14">
+          <JsonLd data={faqSchema(faqs)} />
+          <h2 className="text-center text-2xl sm:text-3xl">
+            Frequently asked questions
+          </h2>
+          <div className="mt-8">
+            <Faq items={faqs} />
+          </div>
+        </section>
+      )}
 
       <CtaBand />
     </>

@@ -11,6 +11,12 @@ export type CategorySlug =
   | "wrapping-machines"
   | "manufacturing-machines";
 
+/** A single FAQ entry (rendered as an accordion + FAQPage schema). */
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
 export interface Category {
   slug: CategorySlug;
   /** Nav label used in the menu. */
@@ -22,6 +28,8 @@ export interface Category {
   /** Intro paragraphs shown on the category page. */
   intro: string[];
   keywords: string[];
+  /** Optional FAQ block (adds content depth + FAQ rich results). */
+  faqs?: Faq[];
   /** Manufacturing Machines uses sub-categories (the mega menu). */
   hasSubcategories?: boolean;
 }
@@ -36,6 +44,8 @@ export interface Subcategory {
   description: string;
   intro: string[];
   keywords: string[];
+  /** Optional FAQ block (adds content depth + FAQ rich results). */
+  faqs?: Faq[];
 }
 
 export interface Product {
@@ -90,6 +100,29 @@ export const categories: Category[] = [
       "hard pack machine",
       "soft pack machine",
     ],
+    faqs: [
+      {
+        question:
+          "What is the difference between hard pack and soft pack machines?",
+        answer:
+          "Hard packs (hinge-lid boxes) run on HLP-style machines, while soft packs (folded foil and printed outer) run on SASIB-style machines. We supply both and help you match the machine to the pack format your brands actually sell.",
+      },
+      {
+        question: "What packing speeds do you offer?",
+        answer:
+          "Our cigarette packing machines run from around 180 up to 225 packs per minute. Pick a speed that matches your real shift demand with some room to grow, rather than paying for capacity that sits idle.",
+      },
+      {
+        question: "Do you sell new or reconditioned packing machines?",
+        answer:
+          "Both. Every used HLP or SASIB packer is inspected, serviced and tested before sale, so a good reconditioned machine can run for years at a fraction of the new price.",
+      },
+      {
+        question: "Do you install the machine and supply spare parts?",
+        answer:
+          "Yes. We install and set up the machine, and support HLP and SASIB with widely available spares and service. Message us on WhatsApp at +92 301 1111184 for price and current availability.",
+      },
+    ],
   },
   {
     slug: "wrapping-machines",
@@ -107,6 +140,28 @@ export const categories: Category[] = [
       "cellophane wrapping machine",
       "box packing machine",
     ],
+    faqs: [
+      {
+        question: "What is the difference between an over-wrapper and a boxer?",
+        answer:
+          "An over-wrapper seals each pack in cellophane film with a tear tape, while a boxer (cartoning machine) groups finished packs into cartons or boxes. Most lines use both, one after the other.",
+      },
+      {
+        question: "Which wrapping and boxing machines do you supply?",
+        answer:
+          "We supply Molins and SASIB over-wrappers and boxers, including the CP1 pack wrapper, the naked over-wrapper and Molins and SASIB boxers, for both hard-pack and soft-pack lines.",
+      },
+      {
+        question: "Do you offer new or reconditioned wrapping machines?",
+        answer:
+          "Both new and carefully reconditioned units are available. Every used machine is checked, set up and handed over ready to run.",
+      },
+      {
+        question: "Do you provide installation and spares?",
+        answer:
+          "Yes, installation, setup, spares and service are all part of what we do. Contact us on WhatsApp at +92 301 1111184 for a quotation.",
+      },
+    ],
   },
   {
     slug: "manufacturing-machines",
@@ -123,6 +178,28 @@ export const categories: Category[] = [
       "Tobacco Manufacturing Machines in Pakistan",
       "cigarette making machine Pakistan",
       "Molins machines",
+    ],
+    faqs: [
+      {
+        question: "What cigarette manufacturing machines do you supply?",
+        answer:
+          "We supply the full making line: Molins Mark 8, Mark 9 and Mark 9.5 makers and Hauni Protos makers, plus KDF and Molins filter makers and the tobacco feeders, cutters and reclaimers that support them.",
+      },
+      {
+        question: "How many cigarettes per minute do the makers produce?",
+        answer:
+          "Depending on the model, our makers run from around 3,000 up to 8,000 cigarettes per minute, so you can match the machine to your target output.",
+      },
+      {
+        question: "Do you supply new or reconditioned machines?",
+        answer:
+          "Both. Reconditioned Molins and Hauni machines are fully inspected, serviced and tested before sale, offering strong value for growing factories.",
+      },
+      {
+        question: "Do you help match the maker with the right filter line?",
+        answer:
+          "Yes. We make sure the maker and filter maker run in step so the whole line stays balanced. Tell us your brands and target output and we will recommend a setup.",
+      },
     ],
     hasSubcategories: true,
   },
@@ -168,6 +245,28 @@ export const subcategories: Subcategory[] = [
       "Molins PM filter maker",
       "filter rod machine",
     ],
+    faqs: [
+      {
+        question: "Which filter making machines do you supply?",
+        answer:
+          "We supply Hauni KDF-1 and KDF-2 filter makers, Molins PM filter makers and hollow tube machines for speciality formats, for factories running filter rod production.",
+      },
+      {
+        question: "Can the filter maker match my cigarette maker's speed?",
+        answer:
+          "Yes. We help you pick a filter line that matches the speed of your makers so the two run in step and the line stays balanced.",
+      },
+      {
+        question: "Do you offer new and reconditioned filter makers?",
+        answer:
+          "Both. Every reconditioned KDF or PM machine is inspected, serviced and tested before sale.",
+      },
+      {
+        question: "Do you install and support filter making machines?",
+        answer:
+          "Yes, installation, spares and service are included. Message us on WhatsApp at +92 301 1111184 for price and availability.",
+      },
+    ],
   },
   {
     slug: "tobacco-machinery",
@@ -186,6 +285,29 @@ export const subcategories: Subcategory[] = [
       "Tobacco Packing Machines in Pakistan",
       "tobacco feeder",
       "tobacco cutter Pakistan",
+    ],
+    faqs: [
+      {
+        question: "What do tobacco feeders, cutters and reclaimers do?",
+        answer:
+          "Feeders keep the makers supplied with tobacco, cutters cut leaf to size for production, and reclaimers recover tobacco from rejected cigarettes so it can be reused, keeping the primary and secondary floors running smoothly.",
+      },
+      {
+        question: "Can this equipment reduce tobacco waste?",
+        answer:
+          "Yes. A reclaimer recovers usable tobacco from rejected sticks, which cuts waste and lowers running costs over time.",
+      },
+      {
+        question: "Which brands do you supply?",
+        answer:
+          "We supply well-supported machines such as the Hauni KT-400 tobacco cutter, along with tobacco feeders, cigarette reclaimers and stem flatteners.",
+      },
+      {
+        question:
+          "Are the machines new or reconditioned, and do you support them?",
+        answer:
+          "Both new and reconditioned units are available, all tested before sale, with installation, spares and service. Contact us on WhatsApp at +92 301 1111184.",
+      },
     ],
   },
 ];
