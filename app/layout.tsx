@@ -10,7 +10,6 @@ import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/lib/site";
 import {
   organizationSchema,
-  localBusinessSchema,
   websiteSchema,
 } from "@/lib/schema";
 
@@ -96,7 +95,7 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${display.variable} ${logoFont.variable}`}>
       <body className="min-h-screen bg-white font-sans text-brand-800 antialiased">
         <JsonLd
-          data={[organizationSchema(), localBusinessSchema(), websiteSchema()]}
+          data={[organizationSchema(), websiteSchema()]}
         />
         <a
           href="#main"

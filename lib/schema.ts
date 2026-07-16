@@ -63,41 +63,6 @@ export function organizationSchema() {
   };
 }
 
-export function localBusinessSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "@id": `${siteConfig.url}/#localbusiness`,
-    name: siteConfig.name,
-    url: siteConfig.url,
-    image: abs("/og-default.svg"),
-    logo: abs("/logo.svg"),
-    description: siteConfig.description,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    priceRange: "$$$",
-    address: postalAddress(),
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: siteConfig.geo.latitude,
-      longitude: siteConfig.geo.longitude,
-    },
-    areaServed: [
-      { "@type": "City", name: "Karachi" },
-      { "@type": "Country", name: "Pakistan" },
-    ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: siteConfig.hours.days,
-        opens: siteConfig.hours.opens,
-        closes: siteConfig.hours.closes,
-      },
-    ],
-    sameAs: socialProfiles(),
-  };
-}
-
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
@@ -140,19 +105,10 @@ export function productSchema(product: Product, path: string, image: string) {
       product.condition === "New"
         ? "https://schema.org/NewCondition"
         : "https://schema.org/UsedCondition",
-    // Price on request (B2B machinery, no public price). We deliberately omit
-    // a numeric price rather than publish a misleading 0.
-    offers: {
-      "@type": "Offer",
-      url: abs(path),
-      availability: "https://schema.org/InStock",
-      businessFunction: "http://purl.org/goodrelations/v1#Sell",
-      itemCondition:
-        product.condition === "New"
-          ? "https://schema.org/NewCondition"
-          : "https://schema.org/UsedCondition",
-      seller: { "@id": `${siteConfig.url}/#organization` },
-    },
+    url: abs(path),
+    // No `offers` block: this is a price-on-request B2B catalogue, and Google
+    // requires a price inside offers. Omitting offers keeps the Product valid
+    // (it just isn't eligible for the price/merchant rich result).
   };
 }
 
