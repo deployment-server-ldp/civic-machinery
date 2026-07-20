@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Markdown from "@/components/Markdown";
 import {
   CMS,
   CATEGORY_PRESETS,
@@ -99,6 +100,7 @@ export default function AdminPage() {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string>("");
   const [status, setStatus] = useState<Status>({ kind: "idle" });
+  const [preview, setPreview] = useState(false);
 
   const contentRef = useRef<HTMLTextAreaElement>(null);
 
@@ -224,6 +226,23 @@ export default function AdminPage() {
       el.selectionStart = start + before.length;
       el.selectionEnd = start + before.length + sel.length;
     });
+  }
+
+  // Insert a link the friendly way: ask for the visible text and the URL,
+  // instead of leaving raw [text](url) markdown for the user to fill in.
+  function insertLink() {
+    const el = contentRef.current;
+    const start = el?.selectionStart ?? form.content.length;
+    const end = el?.selectionEnd ?? form.content.length;
+    const selected = form.content.slice(start, end);
+    const text =
+      selected || window.prompt("Link text (the words readers will click):", "")?.trim();
+    if (!text) return;
+    let url = window.prompt("Link URL:", "https://")?.trim();
+    if (!url || url === "https://") return;
+    if (!/^https?:\/\//i.test(url)) url = "https://" + url;
+    const md = `[${text}](${url})`;
+    set("content", form.content.slice(0, start) + md + form.content.slice(end));
   }
 
   async function publish() {
@@ -413,23 +432,52 @@ export default function AdminPage() {
               />
             </Field>
 
-            <Field label="Content" hint="Markdown supported">
-              <div className="mb-2 flex flex-wrap gap-1.5">
-                <ToolBtn onClick={() => insert("## ", "", "Heading")}>H2</ToolBtn>
-                <ToolBtn onClick={() => insert("### ", "", "Subheading")}>H3</ToolBtn>
-                <ToolBtn onClick={() => insert("**", "**", "bold")}>Bold</ToolBtn>
-                <ToolBtn onClick={() => insert("*", "*", "italic")}>Italic</ToolBtn>
-                <ToolBtn onClick={() => insert("- ", "", "list item")}>List</ToolBtn>
-                <ToolBtn onClick={() => insert("[", "](https://)", "link text")}>Link</ToolBtn>
+            <Field label="Content" hint="Write, then check Preview to see the result">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <div className={`flex flex-wrap gap-1.5 ${preview ? "invisible" : ""}`}>
+                  <ToolBtn onClick={() => insert("## ", "", "Heading")}>H2</ToolBtn>
+                  <ToolBtn onClick={() => insert("### ", "", "Subheading")}>H3</ToolBtn>
+                  <ToolBtn onClick={() => insert("**", "**", "bold")}>Bold</ToolBtn>
+                  <ToolBtn onClick={() => insert("*", "*", "italic")}>Italic</ToolBtn>
+                  <ToolBtn onClick={() => insert("- ", "", "list item")}>List</ToolBtn>
+                  <ToolBtn onClick={insertLink}>🔗 Link</ToolBtn>
+                </div>
+                <div className="flex shrink-0 rounded-lg border border-brand-200 bg-brand-50 p-0.5 text-xs font-semibold">
+                  <button
+                    type="button"
+                    onClick={() => setPreview(false)}
+                    className={`rounded-md px-3 py-1 ${!preview ? "bg-white text-brand-900 shadow-sm" : "text-brand-500"}`}
+                  >
+                    Write
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPreview(true)}
+                    className={`rounded-md px-3 py-1 ${preview ? "bg-white text-brand-900 shadow-sm" : "text-brand-500"}`}
+                  >
+                    Preview
+                  </button>
+                </div>
               </div>
-              <textarea
-                ref={contentRef}
-                value={form.content}
-                onChange={(e) => set("content", e.target.value)}
-                rows={18}
-                placeholder="Write your article here. Use ## for section headings."
-                className="w-full rounded-lg border border-brand-200 px-3 py-2 font-mono text-sm leading-relaxed"
-              />
+
+              {preview ? (
+                <div className="prose-content min-h-[26rem] max-w-none rounded-lg border border-brand-200 bg-white px-5 py-4">
+                  {form.content.trim() ? (
+                    <Markdown>{form.content}</Markdown>
+                  ) : (
+                    <p className="text-brand-400">Nothing to preview yet — switch to Write and start typing.</p>
+                  )}
+                </div>
+              ) : (
+                <textarea
+                  ref={contentRef}
+                  value={form.content}
+                  onChange={(e) => set("content", e.target.value)}
+                  rows={18}
+                  placeholder="Write your article here. Use the buttons above for headings, bold and links, then click Preview to see how it will look."
+                  className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm leading-relaxed"
+                />
+              )}
             </Field>
 
             <Field label="Excerpt" hint="Short summary shown on the blog list">

@@ -76,6 +76,25 @@
   .prose-content h3 {
     @apply mb-2 mt-8 text-xl;
   }
+  /* Links must be clearly visible so readers see which words are linked. */
+  .prose-content a {
+    @apply font-medium text-accent-700 underline decoration-accent-400 decoration-2 underline-offset-2 hover:text-accent-800;
+  }
+  .prose-content strong {
+    @apply font-semibold text-brand-900;
+  }
+  .prose-content ul {
+    @apply mb-5 list-disc space-y-1.5 pl-6;
+  }
+  .prose-content ol {
+    @apply mb-5 list-decimal space-y-1.5 pl-6;
+  }
+  .prose-content li {
+    @apply pl-1;
+  }
+  .prose-content blockquote {
+    @apply my-5 border-l-4 border-accent-200 pl-4 italic text-brand-600;
+  }
 }
 
 /* Countdown bar for the auto-rotating machine carousel tabs. */
