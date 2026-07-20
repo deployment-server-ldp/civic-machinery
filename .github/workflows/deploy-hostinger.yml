@@ -51,18 +51,27 @@ jobs:
       - name: Copy .htaccess into the export
         run: cp deploy/.htaccess out/.htaccess
 
-      - name: Deploy to Hostinger via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./out/
-          server-dir: ${{ vars.FTP_SERVER_DIR || '/public_html/' }}
-          # Upload a fresh copy every time. Next.js changes its _next build-id
-          # folder on every build, and the incremental sync would try to delete
-          # the previous one — which intermittently fails with FTP 550 (folder
-          # already gone) and aborts the whole deploy. Clean-slate lists the
-          # real server files and re-uploads, so it never depends on stale state.
-          dangerous-clean-slate: true
+      - name: Deploy to Hostinger via lftp (FTPS)
+        # lftp mirror is far more reliable over FTP than the previous action:
+        # it creates/updates/removes files in one robust pass with retries, and
+        # never wipes the server first — so a failed run leaves the live site
+        # intact instead of half-deleted. This fixes the recurring "550 _next"
+        # errors from the Next.js build-id folders.
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_DIR: ${{ vars.FTP_SERVER_DIR || '/public_html/' }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y lftp
+          lftp -u "$FTP_USERNAME" --env-password "$FTP_SERVER" -e "
+            set cmd:fail-exit true;
+            set ftp:ssl-force true;
+            set ftp:ssl-protect-data true;
+            set ssl:verify-certificate no;
+            set net:max-retries 3;
+            set net:timeout 30;
+            set net:persist-retries 3;
+            mirror --reverse --delete --parallel=3 --verbose ./out/ '$FTP_DIR';
+            bye
+          "
