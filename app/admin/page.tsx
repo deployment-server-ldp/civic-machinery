@@ -245,6 +245,37 @@ export default function AdminPage() {
     set("content", form.content.slice(0, start) + md + form.content.slice(end));
   }
 
+  // Insert a ready-to-edit comparison table (renders via HTML support).
+  function insertTable() {
+    const el = contentRef.current;
+    const at = el?.selectionStart ?? form.content.length;
+    const tpl = `\n<table>\n  <thead>\n    <tr><th>Feature</th><th>Option A</th><th>Option B</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Row 1</td><td>—</td><td>—</td></tr>\n    <tr><td>Row 2</td><td>—</td><td>—</td></tr>\n  </tbody>\n</table>\n\n`;
+    set("content", form.content.slice(0, at) + tpl + form.content.slice(at));
+  }
+
+  // Keep pasted formatting: if the clipboard has HTML (a table copied from
+  // Excel/Word/a web page, headings, bold…), clean the Office junk and insert
+  // it as-is so it renders. Plain text still pastes normally.
+  function onPasteContent(e: React.ClipboardEvent<HTMLTextAreaElement>) {
+    const html = e.clipboardData?.getData("text/html");
+    if (!html || !/<(table|thead|tbody|tr|th|td|h[1-6]|strong|b|em|ul|ol|li)\b/i.test(html)) {
+      return; // let the normal plain-text paste happen
+    }
+    e.preventDefault();
+    const cleaned = html
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/<\/?(o:p|xml|meta|link|style|script|head|html|body|font|span|div)[^>]*>/gi, "")
+      .replace(/<!\[if[\s\S]*?\[endif\]>/gi, "")
+      .replace(/ (class|style|lang|align|valign|width|height|border|cellpadding|cellspacing|dir|role|data-[\w-]+)="[^"]*"/gi, "")
+      .replace(/[ \t]+/g, " ")
+      .replace(/>\s+</g, ">\n<")
+      .trim();
+    const el = e.currentTarget;
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    set("content", form.content.slice(0, start) + cleaned + form.content.slice(end));
+  }
+
   async function publish() {
     if (!form.title.trim()) return setStatus({ kind: "error", msg: "Title is required." });
     if (!form.content.trim()) return setStatus({ kind: "error", msg: "Content is required." });
@@ -441,6 +472,7 @@ export default function AdminPage() {
                   <ToolBtn onClick={() => insert("*", "*", "italic")}>Italic</ToolBtn>
                   <ToolBtn onClick={() => insert("- ", "", "list item")}>List</ToolBtn>
                   <ToolBtn onClick={insertLink}>🔗 Link</ToolBtn>
+                  <ToolBtn onClick={insertTable}>▦ Table</ToolBtn>
                 </div>
                 <div className="flex shrink-0 rounded-lg border border-brand-200 bg-brand-50 p-0.5 text-xs font-semibold">
                   <button
@@ -473,8 +505,9 @@ export default function AdminPage() {
                   ref={contentRef}
                   value={form.content}
                   onChange={(e) => set("content", e.target.value)}
+                  onPaste={onPasteContent}
                   rows={18}
-                  placeholder="Write your article here. Use the buttons above for headings, bold and links, then click Preview to see how it will look."
+                  placeholder="Write your article, or paste content (tables, formatting) straight from Word/Excel/a web page — it comes in as-is. Use the buttons above for headings, bold, links and tables, then click Preview."
                   className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm leading-relaxed"
                 />
               )}

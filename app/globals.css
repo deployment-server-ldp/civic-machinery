@@ -95,6 +95,26 @@
   .prose-content blockquote {
     @apply my-5 border-l-4 border-accent-200 pl-4 italic text-brand-600;
   }
+  /* Comparison tables (Markdown or pasted HTML). */
+  .prose-table-wrap {
+    @apply my-6 overflow-x-auto rounded-xl border border-brand-100;
+  }
+  .prose-content table {
+    @apply w-full border-collapse text-sm;
+  }
+  .prose-content th,
+  .prose-content td {
+    @apply border border-brand-100 px-4 py-2.5 text-left align-top;
+  }
+  .prose-content thead th {
+    @apply bg-brand-50 font-semibold text-brand-900;
+  }
+  .prose-content tbody tr:nth-child(even) {
+    @apply bg-brand-50/40;
+  }
+  .prose-content img {
+    @apply my-6 rounded-xl;
+  }
 }
 
 /* Countdown bar for the auto-rotating machine carousel tabs. */
