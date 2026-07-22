@@ -47,11 +47,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   manifest: "/manifest.webmanifest",
   icons: {
+    // ?v=2 busts the browser's very sticky favicon cache after the icon change.
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
     ],
-    apple: [{ url: "/icon.svg" }],
+    apple: [{ url: "/icon.svg?v=2" }],
   },
   openGraph: {
     type: "website",
