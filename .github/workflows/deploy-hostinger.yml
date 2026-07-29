@@ -52,11 +52,11 @@ jobs:
         run: cp deploy/.htaccess out/.htaccess
 
       - name: Deploy to Hostinger via lftp (FTPS)
-        # lftp mirror is far more reliable over FTP than the previous action:
-        # it creates/updates/removes files in one robust pass with retries, and
-        # never wipes the server first — so a failed run leaves the live site
-        # intact instead of half-deleted. This fixes the recurring "550 _next"
-        # errors from the Next.js build-id folders.
+        # lftp mirror uploads/updates the site's files. It deliberately does
+        # NOT use --delete: public_html may also hold other apps the owner
+        # uploaded manually (e.g. an HRM tool), and a delete-mirror would wipe
+        # anything not in this repo. Without --delete the deploy only adds and
+        # updates the website's own files and never removes unrelated content.
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -72,6 +72,6 @@ jobs:
             set net:max-retries 3;
             set net:timeout 30;
             set net:persist-retries 3;
-            mirror --reverse --delete --parallel=3 --verbose ./out/ '$FTP_DIR';
+            mirror --reverse --parallel=3 --verbose ./out/ '$FTP_DIR';
             bye
           "
