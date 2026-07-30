@@ -1,5 +1,4 @@
 import { siteConfig } from "./site";
-import type { Product } from "./products";
 import type { BlogPost } from "./blog";
 
 /**
@@ -86,29 +85,6 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
       name: item.name,
       item: abs(item.path),
     })),
-  };
-}
-
-export function productSchema(product: Product, path: string, image: string) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    image: abs(image),
-    description: product.metaDescription,
-    sku: product.slug.toUpperCase(),
-    category: product.category,
-    ...(product.brand
-      ? { brand: { "@type": "Brand", name: product.brand } }
-      : {}),
-    itemCondition:
-      product.condition === "New"
-        ? "https://schema.org/NewCondition"
-        : "https://schema.org/UsedCondition",
-    url: abs(path),
-    // No `offers` block: this is a price-on-request B2B catalogue, and Google
-    // requires a price inside offers. Omitting offers keeps the Product valid
-    // (it just isn't eligible for the price/merchant rich result).
   };
 }
 

@@ -4,9 +4,7 @@ import ProductImageZoom from "./ProductImageZoom";
 import WhatsAppIcon from "./WhatsAppIcon";
 import ProductCard from "./ProductCard";
 import ContactForm from "./ContactForm";
-import JsonLd from "./JsonLd";
 import type { Crumb } from "./Breadcrumbs";
-import { productSchema } from "@/lib/schema";
 import { whatsappLink, siteConfig } from "@/lib/site";
 import { type Product, productHref } from "@/lib/products";
 
@@ -21,15 +19,12 @@ export default function ProductDetail({
   related: Product[];
   categoryLabel: string;
 }) {
-  const path = productHref(product);
   const wa = whatsappLink(
     `Hello, I am interested in the ${product.name}. Please share price and availability.`
   );
 
   return (
     <>
-      <JsonLd data={productSchema(product, path, product.image ?? "/og-default.svg")} />
-
       <PageHero
         eyebrow={categoryLabel}
         title={product.h1 ?? product.name}
