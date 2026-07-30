@@ -15,9 +15,6 @@ const ICONS: Record<string, React.ReactNode> = {
   LinkedIn: (
     <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
   ),
-  TikTok: (
-    <path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.3v13.3a2.55 2.55 0 0 1-2.55 2.45 2.55 2.55 0 0 1-2.55-2.55 2.55 2.55 0 0 1 3.3-2.44V10.4a5.9 5.9 0 0 0-.75-.05 5.86 5.86 0 1 0 5.86 5.86V9.01a7.5 7.5 0 0 0 4.4 1.42V7.13a4.28 4.28 0 0 1-3.35-1.31z" />
-  ),
   YouTube: (
     <path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53a3 3 0 0 0 2.11-2.12A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z" />
   ),
@@ -27,7 +24,6 @@ const LINKS: { label: string; href: string }[] = [
   { label: "Facebook", href: siteConfig.social.facebook },
   { label: "Instagram", href: siteConfig.social.instagram },
   { label: "LinkedIn", href: siteConfig.social.linkedin },
-  { label: "TikTok", href: siteConfig.social.tiktok },
   { label: "YouTube", href: siteConfig.social.youtube },
 ];
 

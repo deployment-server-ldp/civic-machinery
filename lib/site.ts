@@ -44,7 +44,6 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/civic.tobacco.machinery",
     instagram: "https://www.instagram.com/civic.tobacco.machinery/",
     linkedin: "https://www.linkedin.com/company/civic-tobacco-machinery",
-    tiktok: "https://www.tiktok.com/@civic.tobacco.machinery",
     youtube: "https://www.youtube.com/@civictobaccomachinery",
   },
   // Countries/regions the business serves — used for Organization areaServed.
