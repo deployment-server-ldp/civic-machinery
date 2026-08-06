@@ -85,6 +85,66 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Benefit: "Vorteil",
     Automation: "Automatisierung",
   },
+  it: {
+    "Machine Speed": "Velocità macchina",
+    "Filter + Tobacco Rod Length": "Lunghezza baco filtro + tabacco",
+    "Cigarette Circumference": "Circonferenza sigaretta",
+    Type: "Tipo",
+    "Production Capacity": "Capacità produttiva",
+    "Total Weight": "Peso totale",
+    Power: "Potenza",
+    "PLC Control System": "Sistema di controllo PLC",
+    "Machine Unit": "Unità macchina",
+    Weight: "Peso",
+    Speed: "Velocità",
+    "Cigarette Sizes": "Formati sigaretta",
+    "Air Pressure": "Pressione aria",
+    "Weight Control": "Controllo peso",
+    "Servo System": "Sistema servo",
+    "Power Requirement": "Fabbisogno di potenza",
+    "Packet Set-up Available": "Formati pacchetto disponibili",
+    Model: "Modello",
+    "Machine Model": "Modello macchina",
+    Function: "Funzione",
+    "Filter Attachment": "Applicazione filtro",
+    "Electrical System": "Impianto elettrico",
+    "Default Setup Size": "Formato predefinito",
+    "Cigarette Maker": "Macchina per sigarette",
+    "Wrapping Method": "Metodo di incarto",
+    "Total Power": "Potenza totale",
+    "Pack Quality": "Qualità del pacchetto",
+    "Filter Length": "Lunghezza filtro",
+    "Filter Circumference": "Circonferenza filtro",
+    Capacity: "Capacità",
+    Voltage: "Tensione",
+    Version: "Versione",
+    Utilisation: "Utilizzo",
+    Separation: "Separazione",
+    "Rod Speed Range": "Intervallo velocità baco",
+    "Recovery Rate": "Tasso di recupero",
+    Preparation: "Preparazione",
+    "Plug Assembler Weight": "Peso plug assembler",
+    Outcome: "Risultato",
+    Operation: "Funzionamento",
+    "Number of Knives": "Numero di lame",
+    "Maximum Capacity": "Capacità massima",
+    Manufacturer: "Produttore",
+    "Maker Weight": "Peso macchina di produzione",
+    Integration: "Integrazione",
+    "Filter Rod Length": "Lunghezza bacchetta filtro",
+    "Filter Rod Diameter": "Diametro bacchetta filtro",
+    Efficiency: "Efficienza",
+    Drive: "Azionamento",
+    Cylinders: "Cilindri",
+    "Cut-off Speed": "Velocità di taglio",
+    Control: "Controllo",
+    Consistency: "Uniformità",
+    Condition: "Condizione",
+    "Circumference Control": "Controllo circonferenza",
+    Brand: "Marca",
+    Benefit: "Vantaggio",
+    Automation: "Automazione",
+  },
 };
 
 /** Translate a single spec/feature label (identity for English / unknowns). */
@@ -413,8 +473,328 @@ const de: Record<string, ProductContent> = {
   },
 };
 
+const it: Record<string, ProductContent> = {
+  "hlp-180": {
+    h1: "Impacchettatrice per sigarette HLP-180",
+    metaTitle: "Impacchettatrice HLP-180, 180 pacch./min",
+    tagline: "Linea per pacchetti rigidi ad alta velocità a 180 pacchetti al minuto.",
+    metaDescription:
+      "Impacchettatrice per sigarette HLP-180 in Pakistan: 180 pacchetti al minuto dai formati King a Nano con controllo PLC. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La HLP-180 è una macchina potente di nuova generazione costruita per l'impacchettamento di sigarette ad alta velocità. Nota per prestazioni costanti e produzione affidabile, l'impacchettatrice HLP-180 è adatta ai produttori che vogliono snellire il processo di impacchettamento senza rinunciare a qualità o precisione.",
+      "Con una produzione di 180 pacchetti al minuto, esegue cicli di impacchettamento efficienti e regolari grazie al suo meccanismo a singolo pistone, mantenendo allineamento, incarto e sigillatura perfetti su ogni pacchetto. Questo permette alle fabbriche in Pakistan di soddisfare una domanda elevata mantenendo una finitura pulita e ripetibile.",
+      "È progettata per gestire un'ampia gamma di formati di sigaretta, tra cui King Size, Demi, Slims, Super Slims e Nano. Questa versatilità significa che puoi servire preferenze diverse dei consumatori nei mercati locali ed esteri, dai formati tradizionali ai prodotti di nicchia, tutto sulla stessa macchina.",
+      "Un sistema di controllo PLC mantiene il funzionamento preciso e completamente automatizzato, così ogni pacchetto esce uniforme, ben incartato e pronto per la vendita. L'interfaccia intuitiva dà all'operatore pieno controllo su velocità, rilevamento errori e monitoraggio della produzione, riducendo i tempi di fermo e aumentando l'efficienza complessiva.",
+      "Ciò che distingue davvero la HLP-180 è la sua flessibilità nelle forme del pacchetto. Supporta formati con angoli arrotondati, bordo smussato, tipo D e quadrati, così i marchi possono differenziare la loro confezione, distinguersi sullo scaffale e stare al passo con le tendenze del mercato. Costruita per la produzione continua su larga scala, è una scelta solida sia che tu stia ampliando una linea o sostituendo attrezzature più vecchie.",
+    ],
+    applications: ["Produzione di pacchetti rigidi in grandi volumi", "Mercati locali ed esteri"],
+  },
+  "hlp-200": {
+    h1: "Impacchettatrice per sigarette HLP-200",
+    metaTitle: "Impacchettatrice HLP-200, 200 pacch./min",
+    tagline: "Linea per pacchetti rigidi a doppio pistone a 200 pacchetti al minuto.",
+    metaDescription:
+      "Impacchettatrice per sigarette HLP-200 in Pakistan: linea a doppio pistone da 200 pacchetti al minuto dai formati King a Nano. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La HLP-200 è un'impacchettatrice a tramoggia con doppio pistone costruita per la produzione da piccola a media e in grandi volumi. È una scelta popolare tra i produttori in Pakistan perché utilizza il materiale con attenzione e aiuta a contenere i costi di gestione, mantenendo al contempo un ritmo rapido e regolare.",
+      "Funzionando a 200 pacchetti al minuto con una portata massima di circa 12.000 sigarette, si colloca al centro della linea di impacchettamento come prima unità critica, formando e completando il pacchetto prima che passi all'incarto e all'inscatolamento. Supporta tutti i formati comuni di pacchetto di sigarette, quindi si inserisce facilmente nella maggior parte delle configurazioni produttive.",
+      "La macchina gestisce un'ampia gamma di formati di sigaretta, tra cui King Size, Demi, Slims, Super Slims e Nano, e il suo sistema a doppio pistone mantiene il ciclo di impacchettamento efficiente e la finitura uniforme. Un sistema di controllo PLC mantiene il funzionamento preciso e completamente automatizzato, dando all'operatore un controllo chiaro su velocità, rilevamento errori e monitoraggio.",
+      "Per la presentazione del pacchetto offre formati con angoli arrotondati, bordo smussato, tipo D e quadrati, così i marchi possono modellare la confezione per distinguersi sullo scaffale. Alimentata a 220V/380V e costruita per una produzione continua e affidabile, la HLP-200 è una solida unità centrale per qualsiasi linea di impacchettamento integrata.",
+    ],
+    applications: ["Produzione di pacchetti rigidi in grandi volumi", "Cuore di una linea di impacchettamento integrata"],
+  },
+  "hlp-225": {
+    h1: "Impacchettatrice per sigarette HLP-225",
+    metaTitle: "Impacchettatrice HLP-225, 225 pacch./min",
+    tagline: "Linea per pacchetti rigidi a doppio pistone ad alta velocità a 225 pacchetti al minuto.",
+    metaDescription:
+      "Impacchettatrice per sigarette HLP-225 in Pakistan: linea a doppio pistone ad alta velocità da 225 pacchetti al minuto con controllo PLC. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La linea di impacchettamento HLP-225 è un vero passo avanti nell'impacchettamento delle sigarette. Funzionando a 225 pacchetti al minuto, questa macchina a doppio pistone offre elevata efficienza e portata alle fabbriche che devono impacchettare su larga scala.",
+      "È progettata per gestire un'ampia gamma di formati di sigaretta, tra cui King, Demi, Slims, Super Slims e Nano, così i produttori in Pakistan ottengono la flessibilità di soddisfare diverse esigenze di mercato con un'unica macchina.",
+      "Un moderno sistema di controllo PLC migliora la precisione e automatizza il processo di impacchettamento, riducendo l'intervento manuale e gli errori. La HLP-225 supporta inoltre più formati di pacchetto, tra cui angoli arrotondati, bordo smussato, tipo D e quadrati, che permettono ai marchi di adattare la confezione a diverse preferenze ed esigenze dei consumatori.",
+      "Costruita per la produzione su larga scala, la HLP-225 unisce funzioni avanzate a una struttura robusta per prestazioni affidabili e costanti. La sua capacità di impacchettare ad alta velocità senza rinunciare alla qualità la rende una risorsa preziosa per qualsiasi operazione che voglia aumentare la produzione e restare competitiva.",
+    ],
+    applications: ["Produzione di pacchetti rigidi in grandi volumi", "Linee di impacchettamento su larga scala"],
+  },
+  "sasib-5000": {
+    h1: "Macchina per pacchetti morbidi SASIB 5000",
+    metaTitle: "Macchina per pacchetti morbidi SASIB 5000",
+    tagline: "Impacchettatrice morbida SASIB per pacchetti da 100 mm con angoli squadrati.",
+    metaDescription:
+      "Macchina per pacchetti morbidi SASIB 5000 in Pakistan: pacchetti morbidi da 100 mm con incarto in foglio di alluminio ed etichetta. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La SASIB 5000 è una macchina versatile costruita per produrre pacchetti morbidi di sigarette da 100 mm. Utilizzando l'incarto in foglio di alluminio ed etichetta eseguito attorno a un mandrino, offre pacchetti perfetti e uniformi con angoli ben squadrati.",
+      "Questo metodo di incarto non è solo estetico: protegge le sigarette e mantiene ogni pacchetto integro, aumentando al contempo l'attrattiva visiva del prodotto finito. Per i produttori in Pakistan che desiderano una finitura premium del pacchetto morbido, è una scelta affidabile e di alta qualità.",
+      "Ben collaudata e semplice da usare, la SASIB 5000 viene fornita controllata e predisposta pronta per il reparto, così puoi aggiungere con fiducia una capacità affidabile di pacchetti morbidi.",
+    ],
+    applications: ["Produzione di pacchetti morbidi", "Formati da 100 mm"],
+  },
+  "sasib-3000": {
+    h1: "Macchina per pacchetti morbidi SASIB 3000",
+    metaTitle: "Macchina per pacchetti morbidi SASIB 3000",
+    tagline: "Impacchettatrice morbida SASIB per pacchetti da 84 mm e 100 mm con angoli squadrati.",
+    metaDescription:
+      "Macchina per pacchetti morbidi SASIB 3000 in Pakistan: gestisce pacchetti da 84 mm e 100 mm con incarto in foglio di alluminio ed etichetta. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La SASIB 3000 aggiunge ulteriore versatilità alla linea SASIB per pacchetti morbidi grazie alla capacità di gestire pacchetti di sigarette sia da 84 mm che da 100 mm. Utilizzando l'incarto in foglio di alluminio ed etichetta eseguito attorno a un mandrino, mantiene la caratteristica finitura SASIB: pacchetti perfetti e uniformi con angoli ben squadrati.",
+      "Questa capacità doppio formato rende la SASIB 3000 una risorsa preziosa per i produttori in Pakistan che hanno bisogno di flessibilità nella produzione mantenendo ogni pacchetto a un elevato standard di presentazione e protezione.",
+      "I suoi sistemi di controllo rendono semplici regolazioni e manutenzione, il che aiuta a ridurre i tempi di fermo e a mantenere alta la produttività complessiva. Fornita controllata e predisposta pronta all'uso, è una linea affidabile per pacchetti morbidi per le fabbriche che desiderano sia qualità che flessibilità di formato.",
+    ],
+    applications: ["Produzione di pacchetti morbidi", "Formati da 84 mm e 100 mm"],
+  },
+
+  "regular-wrapper-cp1": {
+    tagline: "Sovraincartatrice per pacchetti di sigarette ad alta velocità fino a 250 pacchetti al minuto.",
+    metaTitle: "Sovraincartatrice CP-1 per pacchetti, 250 pacch./min",
+    metaDescription:
+      "Sovraincartatrice CP-1 per pacchetti di sigarette in Pakistan: fino a 250 pacchetti al minuto. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La CP-1 è una sovraincartatrice per pacchetti di sigarette ad alte prestazioni, costruita per gestire con facilità esigenze produttive impegnative. Con una velocità di incarto fino a 250 pacchetti al minuto, aumenta l'efficienza e la portata della linea di impacchettamento per le fabbriche in Pakistan.",
+      "Funziona con un modesto fabbisogno di potenza di 6 kVA e una richiesta di pressione dell'aria di 0,05 m³/min, offrendo prestazioni elevate mantenendo l'efficienza energetica. La CP-1 è progettata per un incarto preciso e uniforme che riduce gli sprechi di materiale e mantiene ogni pacchetto entro uno standard di qualità rigoroso.",
+      "La sua struttura robusta e il funzionamento affidabile la rendono una risorsa sicura per le linee ad alto volume, mantenendo il processo scorrevole e la produzione pulita. Si integra inoltre in modo pulito nelle linee esistenti, il che la rende un'aggiunta pratica e preziosa per qualsiasi stabilimento che voglia aumentare la produttività senza perdere qualità.",
+    ],
+    applications: ["Sovraincarto dei pacchetti", "Linee di impacchettamento ad alto volume"],
+  },
+  "naked-over-wrapper": {
+    tagline: "Sovraincartatrice per pacchetti esterni a 25 pacchetti esterni al minuto.",
+    metaTitle: "Naked Over Wrapper, sovraincartatrice esterna per sigarette",
+    metaDescription:
+      "Naked Over Wrapper in Pakistan: sovraincartatrice per pacchetti esterni di sigarette a 25 pacchetti esterni al minuto. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "Il Naked Over Wrapper è una macchina ben progettata per incartare i pacchetti esterni di sigarette con precisione e velocità. Incarta 25 pacchetti esterni al minuto, mantenendo un elevato livello di efficienza sulla linea per le fabbriche in Pakistan.",
+      "Funziona con un fabbisogno energetico di 6 kVA e una pressione dell'aria di 0,05 m³/min, offrendo prestazioni di lavoro affidabili senza un elevato assorbimento di potenza. Robusto ed efficiente, è un'aggiunta valida a una linea di produzione di sigarette, migliorando la qualità della confezione nella fase finale.",
+    ],
+    applications: ["Sovraincarto dei pacchetti esterni", "Sigillatura a fine linea"],
+  },
+  "molins-boxer": {
+    tagline: "Inscatolatrice per sigarette fino a 20 scatole al minuto.",
+    metaTitle: "Molins Boxer, inscatolatrice per sigarette",
+    metaDescription:
+      "Inscatolatrice Molins Boxer in Pakistan: fino a 20 scatole al minuto per stecche di sigarette. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins Boxer è un'affidabile inscatolatrice per sigarette nota per il funzionamento efficiente e la solida portata. Con una velocità di inscatolamento fino a 20 scatole al minuto, aumenta la produttività delle linee di confezionamento delle sigarette in Pakistan.",
+      "Funziona con una pressione dell'aria di 0,05 m³/min, bilanciando il consumo energetico con un funzionamento costante. Progettata per l'affidabilità, la Molins Boxer mantiene l'inscatolamento uniforme e preciso, riducendo i tempi di fermo e mantenendo alta la qualità del prodotto.",
+      "Questo la rende una parte fondamentale di qualsiasi configurazione produttiva orientata all'efficienza e alla produzione costante: prende i pacchetti incartati e li forma in stecche ordinate a fine linea.",
+    ],
+    applications: ["Inscatolamento in stecche/scatole", "Raccolta a fine linea"],
+  },
+  "sasib-boxer": {
+    tagline: "Inscatolatrice per sigarette fino a 25 scatole al minuto.",
+    metaTitle: "SASIB Boxer, inscatolatrice per sigarette",
+    metaDescription:
+      "Inscatolatrice SASIB Boxer in Pakistan: fino a 25 scatole al minuto per stecche di sigarette. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La SASIB Boxer è un'inscatolatrice per sigarette avanzata, nota per velocità ed efficienza. In grado di inscatolare fino a 25 scatole al minuto, dà un vero impulso alla portata di una linea di produzione di sigarette in Pakistan.",
+      "Funziona con un fabbisogno di potenza di 6 kVA, unendo potenza e prestazioni, e una richiesta di pressione dell'aria di 0,1 m³/min, mantenendo l'equilibrio tra consumo energetico ed efficienza operativa.",
+      "Progettata per un inscatolamento estremamente preciso e uniforme, la SASIB Boxer riduce al minimo i tempi di fermo e snellisce il processo, il che la rende una risorsa preziosa per ambienti ad alto volume in cui velocità e precisione contano per produttività e qualità del prodotto.",
+    ],
+    applications: ["Inscatolamento in stecche/scatole", "Linee di impacchettamento ad alto volume"],
+  },
+
+  "mark-8-post-64": {
+    h1: "Mark 8 Post 64 – Macchina di produzione per sigarette in Pakistan",
+    metaTitle: "MK 8 | Macchina di produzione Mark 8 Post 64",
+    tagline: "L'affidabile macchina da lavoro su cui le fabbriche contano ancora.",
+    metaDescription:
+      "Macchina per sigarette Molins Mark 8 Post 64 in Pakistan: macchina affidabile per una produzione costante. Ricondizionata e supportata da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins Mark 8 Post 64 è una collaudata macchina per sigarette ad alta produzione, costruita per qualità e flessibilità. Funziona in modo costante da 1.800 a 2.000 sigarette al minuto e monta una stampante a due colori, così puoi stampare la carta esattamente come richiede il tuo marchio senza rallentare la linea.",
+      "Gestisce un'ampia gamma di formati: circonferenze delle sigarette da 17 mm fino a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, coprendo tutto dai formati standard 84 mm e 100 mm fino a slims, super slims e nano. Un'applicazione filtro Max Multiroll monta i filtri in modo pulito a piena velocità.",
+      "Con circa 3.500 kg è una macchina pesante e solida, fatta per mantenere il ritmo durante lunghe produzioni. Questa combinazione di velocità, flessibilità di formato e affidabilità rende la Mark 8 Post 64 una scelta intelligente per le fabbriche che vogliono una produzione elevata da un'unica macchina.",
+    ],
+    features: [
+      "Progetto Molins collaudato e di lunga durata",
+      "Baco uniforme e taglio pulito",
+      "Ricambi e know-how ampiamente disponibili",
+      "Facile da manutenere per i tecnici",
+      "Ottimo valore come unità ricondizionata",
+    ],
+    applications: ["Linea di produzione d'ingresso", "Macchina di riserva affidabile"],
+  },
+  "mark-8d-max-15": {
+    h1: "Mark 8D MAX 15",
+    metaTitle: "MK 8D | Molins Mark 8D con macchina MAX-15",
+    tagline: "Macchina Mark 8D ad alta velocità con sistema di controllo MAX-15.",
+    metaDescription:
+      "Macchina per sigarette Molins Mark 8D con MAX-15 in Pakistan: 3.000 al minuto dai formati King a Nano. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins Mark 8D con MAX-15 è una macchina per sigarette robusta e flessibile, costruita per le esigenze di una moderna fabbrica di tabacco. Appartiene alla nota famiglia Mark 8 e offre ai produttori pakistani un modo affidabile per aumentare la produzione senza rinunciare alla qualità.",
+      "Funziona fino a 3.000 sigarette al minuto, mantenendo comodamente il ritmo su una linea di produzione impegnata. Altrettanto importante, gestisce un'ampia gamma di formati. Che tu produca King size, Demi, Slims, Super Slims o Nano, la stessa macchina può produrli tutti, il che la rende una scelta pratica per una fabbrica che serve più segmenti contemporaneamente.",
+      "La macchina accetta circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, così mantieni il pieno controllo sui formati e resti uniforme da una produzione all'altra.",
+      "La configurazione abbina la macchina MK-8D al sistema MAX-15 e alla sua unità di alimentazione 1117. Insieme portano il processo in modo pulito dall'alimentazione del tabacco fino al baco finito, mantenendo la linea stabile, riducendo i fermi e preservando la qualità durante il turno. Con un assorbimento totale di 17 kW, bilancia una reale velocità di produzione con costi di gestione ragionevoli.",
+      "Nonostante tutto ciò che fa, la macchina resta compatta. Con circa 5.000 kg è solida e resistente, ma si inserisce in un reparto esistente senza grandi ristrutturazioni e la sua struttura regge lunghe produzioni continue. Ogni giorno produce sigarette uniformi con pochi scarti e una manutenzione contenuta, esattamente ciò di cui una fabbrica ha bisogno quando cerca di lavorare in modo snello e soddisfare comunque la domanda su formati diversi.",
+      "In breve, la Mark 8D con MAX-15 si guadagna il suo posto grazie ad affidabilità comprovata, supporto flessibile dei formati da slims a nano, produzione ad alta velocità che resta precisa, funzionamento efficiente dal punto di vista energetico e facile inserimento in una linea automatizzata. Che tu stia sostituendo attrezzature più vecchie o aggiungendo capacità, è una macchina pronta per il futuro che mette l'ingegneria classica al servizio della produzione moderna.",
+    ],
+    applications: ["Produzione in grandi volumi", "Fabbriche multiformato"],
+  },
+  "mark-9-5-lenze-servo-drives": {
+    tagline: "Linea di produzione Mark 9.5 ad alta velocità con azionamenti servo Lenze.",
+    metaDescription:
+      "Molins Mark 9.5 con azionamenti servo Lenze in Pakistan: fino a 3.500 al minuto con PLC Siemens e controllo peso a microonde. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins Mark 9.5 con azionamenti servo Lenze è costruita per i produttori che vogliono una produzione elevata senza perdere flessibilità. Produce fino a 3.500 sigarette al minuto sui diametri regolari e 3.200 al minuto sui formati slim e super slim, così un'unica linea può coprire un'ampia gamma di prodotti a una reale velocità di produzione.",
+      "Lavora su circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, il che ti dà lo spazio per cambiare formato mantenendo un baco uniforme da una produzione all'altra.",
+      "La linea riunisce tre unità: la macchina MK-9.5, l'assemblatore di filtri MAX-S e la riempitrice automatica di vassoi HCF80, con un assorbimento rispettivamente di 35 kW, 20 kW e 15 kW. Insieme portano il processo dalla produzione fino ai vassoi riempiti con pochissima movimentazione manuale nel mezzo.",
+      "Controllo e precisione sono al centro di questa macchina. Un PLC Siemens gestisce la sequenza in modo fluido, un sistema a microonde mantiene uno stretto controllo sul peso del baco e gli azionamenti servo Lenze offrono il movimento preciso e costante che mantiene alta la qualità anche a piena velocità.",
+      "Con un peso totale di circa 8.600 kg è una linea pesante e solida, fatta per la produzione su larga scala. Per una fabbrica che ha bisogno di una produzione affidabile in grandi volumi con controlli moderni e facile manutenzione, la Mark 9.5 con azionamenti servo Lenze è una scelta forte e pronta per il futuro.",
+    ],
+    applications: ["Produzione in grandi volumi", "Fabbriche multiformato"],
+  },
+  "mark-9-5-max-s-tray-filler": {
+    tagline: "Macchina Mark 9.5 ad alta velocità con Max S e riempitrice di vassoi a flusso di massa.",
+    metaDescription:
+      "Molins Mark 9.5 con Max S e riempitrice di vassoi in Pakistan: da 4.500 a 5.000 sigarette al minuto. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins Mark 9.5 con Max S e riempitrice di vassoi è una scelta di alto livello per i produttori che hanno bisogno di produzione ad alta velocità, integrazione ordinata dei filtri e capacità produttiva affidabile in un'unica linea. Progettata per il volume, produce da 4.500 a 5.000 sigarette al minuto, il che la colloca tra i sistemi più efficienti per le grandi fabbriche in Pakistan.",
+      "Al centro della configurazione c'è la macchina MK-9.5, un'evoluzione della collaudata serie Mark 9 che mantiene una produzione elevata con alta precisione e uniformità. Supporta circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, così puoi passare tra King size, Slims, Demi e altri formati senza perdere qualità del baco.",
+      "La macchina è abbinata all'assemblatore di filtri Max-S, che applica il filtro al baco di tabacco in modo preciso e ripetibile. Lavorando attraverso una riempitrice di vassoi a flusso di massa, aumenta la portata mantenendo bassi gli scarti di materiale e i disallineamenti, così l'integrità del filtro resta uniforme in ogni ciclo produttivo.",
+      "Un formato predefinito di 84 mm mantiene la macchina in linea con le dimensioni delle sigarette accettate a livello mondiale, il che la rende adatta sia alla fornitura locale che alla produzione per l'esportazione. Che tu gestisca il tuo marchio o soddisfi grandi contratti, passa in modo fluido tra i lotti e si adatta facilmente a ordini variabili.",
+      "Con circa 7.800 kg è una linea pesante e stabile, costruita per il funzionamento continuo e una lunga vita utile. Per una fabbrica che vuole crescere proteggendo la qualità e mantenendo bassi i tempi di fermo, la Mark 9.5 con Max S e riempitrice di vassoi unisce velocità, flessibilità e affidabilità di cui il reparto ha bisogno: dalla produzione collaudata all'applicazione precisa del filtro, fino a un'alimentazione snella a flusso di massa e un telaio robusto per impieghi gravosi.",
+    ],
+    applications: ["Produzione in grandi volumi", "Produzione pronta per l'esportazione"],
+  },
+  "mark-9-max-s": {
+    tagline: "Macchina MK-9 ad alta velocità con Max S e riempitrice di vassoi a flusso di massa.",
+    metaDescription:
+      "Molins MK-9 con Max S in Pakistan: da 4.500 a 5.000 sigarette al minuto con riempitrice di vassoi a flusso di massa. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins MK-9 con Max S è un'altra macchina per sigarette ad alta efficienza costruita per una produzione impegnativa, con una portata tra 4.500 e 5.000 sigarette al minuto. È una scelta affidabile per le fabbriche in Pakistan che vogliono una produzione forte e costante da un'unica linea.",
+      "La macchina MK-9 al suo centro mantiene la produzione precisa e uniforme turno dopo turno. Lavora su circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, così ottieni una reale flessibilità nel passare tra i formati senza perdere qualità del baco.",
+      "È dotata dell'assemblatore di filtri Max-S e di una riempitrice di vassoi a flusso di massa, che rendono la fase di applicazione del filtro più rapida e affidabile mantenendo bassi scarti e disallineamenti. Un formato predefinito di 84 mm la mantiene in linea con le dimensioni delle sigarette ampiamente accettate, così si inserisce con facilità nella maggior parte dei piani produttivi.",
+      "Con circa 7.800 kg la MK-9 è una macchina pesante e stabile fatta per il funzionamento continuo e una lunga vita utile. Per una fabbrica che aumenta la produzione su larga scala proteggendo la qualità, è un'aggiunta solida e affidabile al reparto.",
+    ],
+    applications: ["Produzione in grandi volumi", "Linea di produzione principale"],
+  },
+  "protos-70": {
+    tagline: "Linea Protos 70 ad alta velocità fino a 7.000 sigarette al minuto.",
+    metaDescription:
+      "Macchina per sigarette Hauni Protos 70 in Pakistan: fino a 7.000 al minuto con controllo IPC Siemens o Beckhoff. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La Hauni Protos 70 è una macchina per sigarette avanzata, costruita per soddisfare i più alti standard di efficienza e precisione produttiva. Produce ben 7.000 sigarette al minuto sui diametri regolari e 6.000 al minuto sui formati slim e super slim, il che dà alle fabbriche in Pakistan reale velocità e flessibilità da un'unica linea.",
+      "Gestisce circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, così puoi passare tra i formati mantenendo un baco uniforme da una produzione all'altra.",
+      "Un sistema di controllo IPC Siemens o IPC Beckhoff mantiene la sequenza automatizzata, fluida e affidabile, mentre un sistema di controllo del peso a microonde mantiene ogni sigaretta a un peso preciso per un'uniformità costante del prodotto. La linea riunisce la macchina S7000, l'applicazione del filtro M8000 e la riempitrice automatica di vassoi F80, ciascuna gestendo in modo pulito la propria fase del processo.",
+      "Con una potenza di 50 kW per la S7000, 20 kW per la M8000 e 15 kW per la F80, la Protos 70 è una linea potente e capace. Con un peso totale di circa 10.800 kg è pesante e stabile, costruita per il funzionamento continuo e una lunga vita utile, il che la rende una scelta ideale per la produzione di sigarette su larga scala.",
+    ],
+    applications: ["Produzione in grandi volumi", "Produzione su larga scala"],
+  },
+  "protos-80-er": {
+    tagline: "Linea Protos 80 ER ad alta velocità fino a 8.000 sigarette al minuto.",
+    metaDescription:
+      "Macchina per sigarette Hauni Protos 80 ER in Pakistan: fino a 8.000 al minuto con controllo IPC Siemens o Beckhoff. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La Protos 80 ER è una macchina per sigarette ad alte prestazioni, progettata per i produttori che vogliono massima efficienza, precisione e produzione. Costruita da Hauni, la serie Protos 80 è nota per affidabilità e automazione avanzata, e sia che tu produca sigarette regolari o slim, offre forte uniformità e produttività, il che la rende una scelta affidabile per le linee ad alto volume in Pakistan.",
+      "È nella capacità che questa macchina spicca davvero. Produce fino a 8.000 sigarette al minuto sui diametri regolari e 7.000 al minuto sui formati slim e super slim. Accetta circonferenze delle sigarette da 17 mm a 28,3 mm e lunghezze combinate del baco filtro e tabacco da 65 mm a 110 mm, così resta flessibile tra tipi di sigaretta ed esigenze di mercato. Dai formati king size agli slim fino a quelli di nicchia, la Protos 80 ER si adatta al tuo modo di produrre.",
+      "Per precisione e continuità funziona con un sistema di controllo PLC di alto livello su un IPC Siemens o un IPC Beckhoff, mantenendo l'intero ciclo fluido e automatizzato. Il monitoraggio in tempo reale e la rapida risposta del sistema riducono l'errore umano e mantengono la linea in funzione, mentre un sistema integrato di controllo del peso a microonde mantiene un peso uniforme della sigaretta su ogni unità per uno stretto controllo qualità.",
+      "La linea è composta da tre potenti unità che lavorano insieme: la macchina S7000 a 50 kW, l'applicazione del filtro M8000 a 20 kW e la riempitrice automatica di vassoi F80 a 15 kW. Nota per l'affidabilità e utilizzata nelle fabbriche di sigarette in tutto il mondo, la Protos 80 unisce un uso efficiente dell'energia, bassi scarti e un'ingegneria precisa per mantenere bassi i costi di gestione e alti gli standard di prodotto. Con un peso totale di circa 10.800 kg è una linea pesante e stabile costruita per la produzione continua su larga scala.",
+    ],
+    applications: ["Produzione in grandi volumi", "Produzione su larga scala"],
+  },
+
+  "kdf-1": {
+    h1: "Macchina per filtri per sigarette Hauni KDF-1",
+    metaTitle: "Macchina per filtri Hauni KDF-1",
+    tagline: "Linea per filtri Hauni KDF-1 con controllo laser della circonferenza.",
+    metaDescription:
+      "Macchina per filtri Hauni KDF-1 in Pakistan: filtri da 120 mm con PLC Siemens/Beckhoff e controllo laser della circonferenza. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La Hauni KDF-1 è una collaudata e potente linea per filtri con una solida reputazione di prestazioni, precisione e durata nella produzione di sigarette. Costruita per le esigenze della produzione ad alto volume, la KDF-1 è adatta ai produttori in Pakistan che mettono al primo posto uniformità, velocità e qualità.",
+      "Pensata per un funzionamento ad alta produzione, offre una robusta capacità produttiva per filtri da 120 mm, adatta sia a formati di sigaretta standard che personalizzati. Supporta circonferenze del filtro da 16,8 mm a 28,1 mm e lunghezze del filtro da 64 mm a 150 mm, così puoi produrre un'ampia gamma di dimensioni e tipi di filtro senza continui cambi macchina. Dai filtri King Size agli Slims fino ai design speciali, la KDF-1 li gestisce tutti in modo efficiente.",
+      "Funziona con un sistema di controllo PLC avanzato disponibile nelle configurazioni Siemens o Beckhoff, che offre controllo intuitivo, diagnostica in tempo reale e un'automazione affidabile che mantiene stabile la qualità del filtro per tutta la produzione. I sistemi servo Lenze o Beckhoff aumentano la stabilità e mantengono il movimento fluido e preciso.",
+      "Una caratteristica di spicco è il sistema di controllo della circonferenza basato su laser, che misura la circonferenza di ogni filtro con alta precisione, riducendo gli scostamenti e mantenendo ogni lotto uniforme. Questo livello di precisione è importante per rispettare gli standard qualitativi del marchio sui prodotti premium.",
+      "Con tutta la sua produzione, la KDF-1 mantiene un profilo energetico bilanciato a un totale di 40 kW, il che la rende efficiente da gestire nel lungo periodo. La sua struttura robusta e ben progettata offre una lunga vita utile, e il design modulare e la compatibilità con diversi tipi di sigaretta la rendono adatta sia alla produzione di filtri su piccola che su grande scala, che tu stia ampliando la capacità o sostituendo macchinari più vecchi.",
+    ],
+    applications: ["Produzione di filtri in grandi volumi", "Filtri standard e speciali"],
+  },
+  "kdf-2": {
+    h1: "Macchina per filtri per sigarette Hauni KDF-2",
+    metaTitle: "Macchina per filtri ad alta velocità Hauni KDF-2",
+    tagline: "Linea per filtri Hauni KDF-2 ad alta velocità a 400 metri al minuto.",
+    metaDescription:
+      "Macchina per filtri Hauni KDF-2 in Pakistan: 400 metri di fascia di acetato al minuto con PLC Siemens/Beckhoff. Fornita da Civic Tobacco Machinery.",
+    intro: [
+      "La Hauni KDF-2 è una macchina per filtri di livello mondiale costruita per una produzione di filtri per sigarette ad alta efficienza e ad alta produzione. Nota per la qualità costruttiva e l'automazione avanzata, la KDF-2 è una scelta affidabile per i grandi produttori in Pakistan che hanno bisogno sia di precisione che di produttività.",
+      "Funziona a un ritmo impressionante, lavorando 400 metri di fascia di acetato al minuto, il che la rende adatta alle esigenze delle moderne linee di produzione. Questa velocità è accompagnata da reale versatilità: supporta circonferenze del filtro da 16,8 mm a 28,1 mm e lunghezze del filtro da 64 mm a 150 mm, coprendo tutto dai filtri King Size standard ai formati più speciali con uniformità, qualità e minimi tempi di fermo.",
+      "Ciò che distingue la KDF-2 è la sua automazione. Un sistema di controllo PLC, disponibile nelle configurazioni Siemens o Beckhoff, offre pieno controllo e monitoraggio in tempo reale, mentre un sistema servo Lenze o Beckhoff ad alte prestazioni mantiene i movimenti precisi e il funzionamento affidabile. Questo riduce il margine di errore e mantiene uniforme la qualità del filtro, così la macchina si integra in modo fluido come una spina dorsale affidabile per la produzione continua su larga scala.",
+      "Costruita per la durata, la KDF-2 si abbina a un apri-fascia e alla riempitrice automatica di vassoi HCF80 per snellire il flusso di lavoro e ridurre la movimentazione manuale. Assorbe 40 kW per l'unità principale KDF-2 e 15 kW per la riempitrice HCF80, unendo efficienza energetica e prestazioni elevate.",
+      "Pur con tutte le sue capacità, la KDF-2 mantiene un ingombro gestibile di circa 6.500 kg, e la sua struttura solida offre durata nel lungo periodo sotto programmi produttivi impegnativi. Che tu stia allestendo un nuovo stabilimento o sostituendo macchinari esistenti, è un investimento intelligente che si inserisce in modo pulito nei moderni sistemi produttivi offrendo un'eccellente qualità del filtro.",
+    ],
+    applications: ["Produzione di filtri in grandi volumi", "Produzione su larga scala"],
+  },
+  "molins-pm-5": {
+    tagline: "Macchina per filtri Molins ad alta capacità a 4.000 filtri al minuto.",
+    metaDescription:
+      "Macchina per filtri Molins PM-5 in Pakistan: macchina ad alta capacità a 4.000 filtri al minuto. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La Molins PM-5 è una macchina per filtri per sigarette ad alta capacità costruita per le esigenze della produzione su larga scala. Con una capacità di 4.000 filtri al minuto, è un forte esempio di efficienza e precisione nella produzione di filtri e si adatta in modo affidabile alle fabbriche impegnate in Pakistan.",
+      "Offre un'utile flessibilità sul dimensionamento del filtro, con un diametro della bacchetta filtro da 7,5 a 7,8 mm e lunghezze della bacchetta filtro da 108 a 126 mm, così può accogliere senza difficoltà diverse specifiche di filtro.",
+      "Con circa 2.000 kg la PM-5 ha una struttura robusta che offre durata e funzionamento stabile per lunghi periodi. Costruita da Molins, un nome noto del settore, unisce ingegneria collaudata e produzione ad alta velocità, il che la rende una risorsa essenziale per i produttori che vogliono filtri di qualità massimizzando la portata.",
+    ],
+    applications: ["Produzione di filtri in grandi volumi", "Linee basate su Molins"],
+  },
+  "hollow-tube-maker": {
+    tagline: "Macchina per tubi cavi ad alta velocità a 2.100 sigarette al minuto.",
+    metaTitle: "Macchina per tubi cavi, macchina per filtri per sigarette",
+    metaDescription:
+      "Macchina per tubi cavi in Pakistan: 2.100 al minuto con plug assembler per tubi filtro speciali. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La macchina per tubi cavi spicca per capacità produttiva e funzionamento ad alta velocità. In grado di produrre 2.100 sigarette al minuto, offre forte efficienza e produzione uniforme. Un intervallo di velocità del baco da 140 a 175 metri al minuto, insieme a una velocità di taglio fino a 2.500 bacchette al minuto, sottolinea quanto sia adatta alla produzione ad alto volume per le fabbriche in Pakistan.",
+      "Con 3.050 kg la macchina ha una struttura robusta per durata e affidabilità nel lungo periodo. Il plug assembler aggiunge altri 1.800 kg e lavora in sincronia con la macchina per una produzione di tubi precisa ed efficiente. L'assorbimento totale di potenza è di 14 kW, suddiviso tra 6,5 kW per la macchina e 7,5 kW per il plug assembler, il che bilancia bene prestazioni e consumo energetico.",
+      "Progettata per la produzione su larga scala, la macchina per tubi cavi utilizza tecnologia aggiornata per produrre tubi di alta qualità. La sua capacità ad alta velocità e la solida ingegneria la rendono una risorsa preziosa per i produttori che devono soddisfare una forte domanda mantenendo eccellenti standard produttivi.",
+    ],
+    applications: ["Produzione di filtri in grandi volumi", "Tubi filtro speciali"],
+  },
+
+  "tobacco-feeder": {
+    tagline: "Alimenta un flusso costante e uniforme di tabacco alle macchine Mark 8 e Mark 9.",
+    metaTitle: "Alimentatore di tabacco per macchine per sigarette",
+    metaDescription:
+      "Alimentatore di tabacco in Pakistan: flusso di tabacco costante e uniforme per le macchine per sigarette Mark 8 e Mark 9. Fornito e assistito da Civic Tobacco Machinery.",
+    intro: [
+      "L'alimentatore di tabacco è una macchina di ingresso fondamentale per una fabbrica di sigarette. Alimenta il tabacco in modo continuo e uniforme nelle macchine di produzione, stratificandolo con cura affinché sia preparato esattamente come serve per la produzione.",
+      "È compatibile con le macchine Mark 8 e Mark 9, quindi si inserisce con facilità in una configurazione esistente. Le sue impostazioni di volume regolabili permettono di controllare con precisione il flusso di tabacco, aumentando l'efficienza produttiva, e la sua automazione riduce la movimentazione manuale, snellisce il funzionamento e mantiene alta la produttività.",
+    ],
+    applications: ["Alimentazione della macchina di produzione", "Produzione uniforme del baco"],
+  },
+  "cigarette-reclaimer": {
+    tagline: "Recupera tabacco dagli scarti a 120 kg/ora con il 99,8% di efficienza.",
+    metaTitle: "Recuperatore di sigarette, macchina di recupero del tabacco",
+    metaDescription:
+      "Recuperatore di sigarette in Pakistan: recupera tabacco dagli scarti di produzione a 120 kg/ora con il 99,8% di efficienza. Fornito da Civic Tobacco Machinery.",
+    intro: [
+      "Il recuperatore di sigarette è un'eccellente macchina di recupero del tabacco dagli scarti di produzione di sigarette. Separa il tabacco riutilizzabile dai materiali di scarto con perdite molto ridotte, così il tabacco che altrimenti getteresti torna in produzione.",
+      "Alla massima capacità recupera 120 kg all'ora e lavora con un'impressionante efficienza del 99,8%, offrendoti il massimo utilizzo possibile. Con un tasso di recupero del 90%, offre un vero vantaggio nel ridurre gli scarti e aumentare l'efficienza produttiva complessiva.",
+      "È intuitivo e facile da integrare nella tua linea di produzione, il che lo rende un'aggiunta pratica e conveniente per le fabbriche in Pakistan che vogliono ottenere il massimo da ogni lotto.",
+    ],
+    applications: ["Riduzione degli scarti", "Recupero del tabacco"],
+  },
+  "tobacco-cutters": {
+    tagline: "Taglierina per tabacco Hauni KT-400 con cinque lame e controllo PLC della dimensione di taglio.",
+    metaTitle: "Taglierina per tabacco Hauni KT-400",
+    metaDescription:
+      "Taglierina per tabacco Hauni KT-400 in Pakistan: taglierina a cinque lame con dimensione di taglio regolata da PLC. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La taglierina per tabacco Hauni KT-400 è una macchina di precisione che svolge un ruolo cruciale nel mantenere uniforme la qualità del taglio nella lavorazione del tabacco. Monta cinque lame, che offrono tagli uniformi e migliorano la qualità complessiva della miscela di tabacco, e cilindri pneumatici azionano la ganascia per un taglio scorrevole ed efficiente con meno fermi e manutenzione.",
+      "La KT-400 funziona inoltre con un avanzato sistema di azionamento PLC su una stecca ricurva in ottone, che regola con precisione la dimensione di taglio. Questo mantiene ogni lotto uniforme e ti permette di adattare la dimensione di taglio a esigenze specifiche, aggiungendo reale versatilità. Con la sua precisione e affidabilità, la KT-400 è una risorsa importante per qualsiasi stabilimento di produzione del tabacco in Pakistan che punta a massima qualità ed efficienza.",
+    ],
+    applications: ["Lavorazione primaria", "Preparazione del trinciato"],
+  },
+  "tobacco-stem-flattener": {
+    tagline: "Schiaccia le nervature del tabacco per una miscela uniforme e meno scarti di foglia.",
+    metaTitle: "Schiaccianervature del tabacco, macchina per la lavorazione primaria",
+    metaDescription:
+      "Schiaccianervature del tabacco in Pakistan: schiaccia le nervature per una miscela uniforme e ridotti scarti di foglia. Fornita e assistita da Civic Tobacco Machinery.",
+    intro: [
+      "La schiaccianervature del tabacco svolge un ruolo chiave nell'ottimizzare il flusso di lavorazione del tabacco. Schiacciando le nervature del tabacco, le prepara per una miscela uniforme con le foglie, il che migliora la facilità di lavorazione e riduce la probabilità di disuniformità nel prodotto finale.",
+      "Schiacciando le nervature in modo efficiente, riduce inoltre al minimo gli scarti di foglia, rendendo l'intero processo più economico e sostenibile. Il risultato è un prodotto uniforme e di alta qualità che rispetta rigorosi standard di settore, il che rende la schiaccianervature una risorsa preziosa per qualsiasi operazione di lavorazione del tabacco in Pakistan.",
+    ],
+    applications: ["Lavorazione primaria", "Miglioramento della resa"],
+  },
+};
+
 const productContent: Partial<Record<LocaleCode, Record<string, ProductContent>>> = {
   de,
+  it,
 };
 
 /** German (or other-locale) content for a product slug, if translated. */
