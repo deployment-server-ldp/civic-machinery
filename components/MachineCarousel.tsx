@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import MachineImage from "./MachineImage";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 export interface CarouselItem {
   name: string;
@@ -29,10 +31,17 @@ const AUTO_ROTATE_MS = 4000;
  * section. The prev/next arrows sit beside the machine track and scroll the
  * cards for the active tab.
  */
-export default function MachineCarousel({ groups }: { groups: CarouselGroup[] }) {
+export default function MachineCarousel({
+  groups,
+  locale = defaultLocale,
+}: {
+  groups: CarouselGroup[];
+  locale?: LocaleCode;
+}) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
+  const t = getDict(locale).home.carousel;
 
   const group = groups[active];
 
@@ -66,8 +75,8 @@ export default function MachineCarousel({ groups }: { groups: CarouselGroup[] })
     >
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">Our Stock</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl">Cigarette Machinery for Sale</h2>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl">{t.heading}</h2>
         </div>
 
         {/* Tabs (auto-rotating) */}
@@ -157,7 +166,9 @@ export default function MachineCarousel({ groups }: { groups: CarouselGroup[] })
 
         <div className="mt-6 text-center">
           <Link href={group.href} className="link-accent">
-            View all {group.label} →
+            {t.viewAllPrefix}
+            {group.label}
+            {t.viewAllSuffix}
           </Link>
         </div>
       </div>

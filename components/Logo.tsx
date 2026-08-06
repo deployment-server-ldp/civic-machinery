@@ -10,17 +10,19 @@ export default function Logo({
   variant = "dark",
   className = "text-[1.35rem] sm:text-[1.55rem]",
   tagline,
+  href = "/",
 }: {
   variant?: "dark" | "light";
   className?: string;
   tagline?: string;
+  href?: string;
 }) {
   const color = variant === "light" ? "text-white" : "text-accent-600";
   const tagColor = variant === "light" ? "text-brand-300" : "text-brand-500";
 
   return (
     <Link
-      href="/"
+      href={href}
       aria-label="Civic Tobacco Machinery — Home"
       className="inline-flex shrink-0 flex-col items-start justify-center leading-none"
     >

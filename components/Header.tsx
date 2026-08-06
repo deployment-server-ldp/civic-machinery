@@ -5,12 +5,47 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import WhatsAppIcon from "./WhatsAppIcon";
+import LangSwitcher from "./LangSwitcher";
 import { mainNav, type NavItem } from "@/lib/navigation";
 import { siteConfig, whatsappLink } from "@/lib/site";
+import { useLocale } from "@/lib/use-locale";
+import { getDict } from "@/lib/dictionaries";
+import { localeHref } from "@/lib/i18n";
+
+// Maps each top-level nav href to its dictionary label key.
+const NAV_LABEL_KEY: Record<
+  string,
+  "about" | "making" | "packing" | "filter" | "wrappers" | "cutter" | "contact"
+> = {
+  "/about": "about",
+  "/cigarette-manufacturing-machines": "making",
+  "/cigarette-packing-machines": "packing",
+  "/cigarette-filter-making-machines": "filter",
+  "/cigarette-box-wrapping-machines": "wrappers",
+  "/cutter-feeder-reclaimer": "cutter",
+  "/contact": "contact",
+};
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
+  const dict = getDict(locale);
+
+  // Localize labels + prefix hrefs for the active locale. Product-page children
+  // keep their English URLs (proper-noun names, not yet translated).
+  const nav: NavItem[] = mainNav.map((item) => {
+    const key = NAV_LABEL_KEY[item.href];
+    return {
+      ...item,
+      label: key ? dict.nav[key] : item.label,
+      href: localeHref(locale, item.href),
+      children: item.children?.map((c) => ({
+        ...c,
+        href: localeHref(locale, c.href),
+      })),
+    };
+  });
 
   // Close the mobile menu whenever the route changes.
   useEffect(() => {
@@ -33,10 +68,10 @@ export default function Header() {
       {/* Utility bar */}
       <div className="hidden bg-brand-950 text-brand-100 xl:block">
         <div className="mx-auto flex h-9 w-full max-w-[1600px] items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
-          <p>{siteConfig.tagline}</p>
+          <p>{dict.header.tagline}</p>
           <div className="flex items-center gap-5">
             <a href={`tel:${siteConfig.phone}`} className="hover:text-accent-300">
-              Call: {siteConfig.phoneDisplay}
+              {dict.header.call}: {siteConfig.phoneDisplay}
             </a>
             <span aria-hidden="true" className="text-brand-700">
               |
@@ -47,25 +82,25 @@ export default function Header() {
               rel="noopener noreferrer"
               className="hover:text-accent-300"
             >
-              WhatsApp
+              {dict.header.whatsapp}
             </a>
             <span aria-hidden="true" className="text-brand-700">
               |
             </span>
-            <span>Pakistan</span>
+            <LangSwitcher />
           </div>
         </div>
       </div>
 
       {/* Main bar */}
       <div className="mx-auto flex h-[6.6rem] w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:h-[7.5rem]">
-        <Logo className="text-[1.45rem] sm:text-[1.65rem] 2xl:text-[1.95rem]" tagline="Karachi - Pakistan" />
+        <Logo className="text-[1.45rem] sm:text-[1.65rem] 2xl:text-[1.95rem]" tagline="Karachi - Pakistan" href={localeHref(locale, "/")} />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-0.5 rounded-full border border-brand-200/70 bg-white/70 px-2 py-2 shadow-[0_10px_30px_-14px_rgba(28,35,45,0.4)] ring-1 ring-brand-900/[0.05] backdrop-blur-md 2xl:gap-1 2xl:px-2.5">
-            {mainNav.map((item) => (
-              <DesktopNavItem key={item.label} item={item} active={isActive(item.href)} />
+            {nav.map((item) => (
+              <DesktopNavItem key={item.href} item={item} active={isActive(item.href)} dict={dict} />
             ))}
           </ul>
         </nav>
@@ -83,14 +118,24 @@ export default function Header() {
         </button>
       </div>
 
-      {mobileOpen && <MobileMenu onNavigate={() => setMobileOpen(false)} />}
+      {mobileOpen && (
+        <MobileMenu nav={nav} onNavigate={() => setMobileOpen(false)} />
+      )}
     </header>
   );
 }
 
 /* ----------------------------- Desktop ----------------------------- */
 
-function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
+function DesktopNavItem({
+  item,
+  active,
+  dict,
+}: {
+  item: NavItem;
+  active: boolean;
+  dict: ReturnType<typeof getDict>;
+}) {
   const hasDropdown = Boolean(item.children || item.columns);
   const linkCls = `inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-3 text-[0.82rem] font-semibold tracking-tight transition-colors 2xl:px-2.5 2xl:text-[0.95rem] ${
     active
@@ -167,11 +212,9 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
               ))}
             </div>
             <div className="mt-5 flex items-center justify-between rounded-2xl bg-accent-50 px-4 py-3 text-sm">
-              <span className="text-brand-600">
-                Looking for a specific machine or a full line?
-              </span>
-              <Link href="/cigarette-manufacturing-machines" className="link-accent">
-                View all manufacturing machines →
+              <span className="text-brand-600">{dict.megaMenu.prompt}</span>
+              <Link href={item.href} className="link-accent">
+                {dict.megaMenu.viewAll}
               </Link>
             </div>
           </div>
@@ -183,15 +226,24 @@ function DesktopNavItem({ item, active }: { item: NavItem; active: boolean }) {
 
 /* ----------------------------- Mobile ------------------------------ */
 
-function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
+function MobileMenu({
+  nav,
+  onNavigate,
+}: {
+  nav: NavItem[];
+  onNavigate: () => void;
+}) {
   return (
     <div id="mobile-menu" className="xl:hidden">
       <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-brand-100 bg-white/95 px-4 pb-8 pt-2 backdrop-blur">
         <ul className="divide-y divide-brand-100">
-          {mainNav.map((item) => (
-            <MobileNavItem key={item.label} item={item} onNavigate={onNavigate} />
+          {nav.map((item) => (
+            <MobileNavItem key={item.href} item={item} onNavigate={onNavigate} />
           ))}
         </ul>
+        <div className="mt-4 border-t border-brand-100 pt-4">
+          <LangSwitcher className="rounded-lg bg-brand-950 px-3 py-2" />
+        </div>
         <a
           href={whatsappLink()}
           target="_blank"

@@ -37,8 +37,16 @@ export const locales: Record<LocaleCode, Locale> = {
 
 export const localeCodes = Object.keys(locales) as LocaleCode[];
 
-/** Locales that get a URL folder prefix (everyone except the default). */
-export const prefixedLocales = localeCodes.filter((c) => c !== defaultLocale);
+/**
+ * Locales that are actually built and live right now. The `locales` registry
+ * above lists every *planned* language, but only these have dictionaries and
+ * pages — so only these drive static generation, hreflang and the switcher.
+ * Promote a language here (after adding its dictionary) to take it live.
+ */
+export const liveLocaleCodes: LocaleCode[] = ["en", "de"];
+
+/** Live locales that get a URL folder prefix (everyone except the default). */
+export const prefixedLocales = liveLocaleCodes.filter((c) => c !== defaultLocale);
 
 export const isLocale = (v: string): v is LocaleCode =>
   (localeCodes as string[]).includes(v);
@@ -56,18 +64,65 @@ export function localePath(code: LocaleCode, path: string): string {
 }
 
 /**
- * hreflang alternates for a page: every live locale + x-default (English).
- * `path` is the English/root-relative path (e.g. "/cigarette-packing-machines").
- * Returns absolute-path hrefs (prefix the site URL where rendered).
+ * Canonical English paths that currently have translated counterparts.
+ * Only these advertise hreflang alternates + appear in the /[locale] tree.
+ * Grow this set as more pages/waves are translated. This is the single
+ * source of truth shared by buildMetadata, the sitemap and the switcher.
+ */
+export const translatedPaths: readonly string[] = [
+  "/",
+  "/about",
+  "/contact",
+  "/cigarette-manufacturing-machines",
+  "/cigarette-packing-machines",
+  "/cigarette-box-wrapping-machines",
+  "/cigarette-filter-making-machines",
+  "/cutter-feeder-reclaimer",
+];
+
+/** Live locales a given English path is translated into (always includes en). */
+export function localesForPath(path: string): LocaleCode[] {
+  return translatedPaths.includes(path) ? liveLocaleCodes : [defaultLocale];
+}
+
+/**
+ * Locale-safe href: prefixes the path with the locale folder ONLY if that path
+ * has a translated counterpart; otherwise returns the English path. Prevents
+ * localized chrome (nav, footer) from linking to pages that don't exist yet.
+ */
+export function localeHref(code: LocaleCode, path: string): string {
+  return translatedPaths.includes(path) ? localePath(code, path) : path;
+}
+
+/** Strip a leading locale folder from a path, returning the canonical English path. */
+export function stripLocale(path: string): { locale: LocaleCode; path: string } {
+  const parts = path.split("/");
+  const seg = parts[1];
+  if (seg && isLocale(seg) && seg !== defaultLocale) {
+    const rest = "/" + parts.slice(2).join("/");
+    return { locale: seg, path: rest === "/" ? "/" : rest.replace(/\/$/, "") || "/" };
+  }
+  return { locale: defaultLocale, path: path === "/" ? "/" : path.replace(/\/$/, "") || "/" };
+}
+
+/**
+ * hreflang alternates for a page. If the path has translated counterparts,
+ * every live locale + x-default (English) is returned; otherwise just the
+ * single English self-reference. `path` is the English/root-relative path
+ * (e.g. "/cigarette-packing-machines"). Returns root-relative hrefs
+ * (prefix the site URL where rendered).
  */
 export function hreflangAlternates(
   path: string,
 ): { hreflang: string; path: string }[] {
-  const alts = localeCodes.map((code) => ({
+  const codes = localesForPath(path);
+  const alts = codes.map((code) => ({
     hreflang: locales[code].hreflang,
     path: localePath(code, path),
   }));
-  // x-default points at the English (root) version.
-  alts.push({ hreflang: "x-default", path });
+  if (codes.length > 1) {
+    // x-default points at the English (root) version.
+    alts.push({ hreflang: "x-default", path });
+  }
   return alts;
 }

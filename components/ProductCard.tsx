@@ -1,15 +1,20 @@
 import Link from "next/link";
 import MachineImage from "./MachineImage";
 import { type Product, productHref } from "@/lib/products";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 export default function ProductCard({
   product,
   imageSrc,
+  locale = defaultLocale,
 }: {
   product: Product;
   imageSrc?: string;
+  locale?: LocaleCode;
 }) {
   const href = productHref(product);
+  const dict = getDict(locale);
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card transition-shadow hover:shadow-card-hover">
       <MachineImage
@@ -59,7 +64,7 @@ export default function ProductCard({
         )}
 
         <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-700">
-          View details
+          {dict.productCard.viewDetails}
           <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 10h11M11 5l5 5-5 5" />
           </svg>

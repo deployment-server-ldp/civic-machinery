@@ -7,6 +7,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import HtmlLangSync from "@/components/HtmlLangSync";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig } from "@/lib/site";
 import {
@@ -96,6 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${display.variable} ${logoFont.variable}`}>
       <body className="min-h-screen bg-white font-sans text-brand-800 antialiased">
+        <HtmlLangSync />
         <JsonLd
           data={[organizationSchema(), websiteSchema()]}
         />

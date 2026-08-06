@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { whatsappLink, siteConfig } from "@/lib/site";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 /**
  * Enquiry form. Submissions are POSTed to /sendmail.php (a small PHP handler
@@ -9,7 +11,14 @@ import { whatsappLink, siteConfig } from "@/lib/site";
  * in that server-side file, never in the front-end. If the send fails, we fall
  * back to a WhatsApp link so the lead is never lost.
  */
-export default function ContactForm({ machine }: { machine?: string }) {
+export default function ContactForm({
+  machine,
+  locale = defaultLocale,
+}: {
+  machine?: string;
+  locale?: LocaleCode;
+}) {
+  const t = getDict(locale).contact.form;
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -86,11 +95,8 @@ export default function ContactForm({ machine }: { machine?: string }) {
             <path d="M20 6 9 17l-5-5" />
           </svg>
         </div>
-        <h3 className="text-lg font-semibold text-brand-900">Thank you!</h3>
-        <p className="mt-1 text-sm text-brand-600">
-          Your enquiry has been sent. Our team will get back to you shortly,
-          usually the same working day.
-        </p>
+        <h3 className="text-lg font-semibold text-brand-900">{t.successTitle}</h3>
+        <p className="mt-1 text-sm text-brand-600">{t.successText}</p>
       </div>
     );
   }
@@ -112,7 +118,7 @@ export default function ContactForm({ machine }: { machine?: string }) {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-brand-700">
-            Your name
+            {t.name}
           </label>
           <input
             id="name"
@@ -123,12 +129,12 @@ export default function ContactForm({ machine }: { machine?: string }) {
             value={values.name}
             onChange={update("name")}
             className={field}
-            placeholder="e.g. Ahmed Khan"
+            placeholder={t.namePlaceholder}
           />
         </div>
         <div>
           <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-brand-700">
-            Phone / WhatsApp
+            {t.phone}
           </label>
           <input
             id="phone"
@@ -139,14 +145,14 @@ export default function ContactForm({ machine }: { machine?: string }) {
             value={values.phone}
             onChange={update("phone")}
             className={field}
-            placeholder="e.g. 0300 1234567"
+            placeholder={t.phonePlaceholder}
           />
         </div>
       </div>
 
       <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-brand-700">
-          Email <span className="text-brand-400">(optional)</span>
+          {t.email} <span className="text-brand-400">{t.emailOptional}</span>
         </label>
         <input
           id="email"
@@ -156,13 +162,13 @@ export default function ContactForm({ machine }: { machine?: string }) {
           value={values.email}
           onChange={update("email")}
           className={field}
-          placeholder="you@company.com"
+          placeholder={t.emailPlaceholder}
         />
       </div>
 
       <div>
         <label htmlFor="interest" className="mb-1.5 block text-sm font-medium text-brand-700">
-          Machine you are interested in
+          {t.interest}
         </label>
         <input
           id="interest"
@@ -171,13 +177,13 @@ export default function ContactForm({ machine }: { machine?: string }) {
           value={values.interest}
           onChange={update("interest")}
           className={field}
-          placeholder="e.g. HLP-200 packing machine"
+          placeholder={t.interestPlaceholder}
         />
       </div>
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-brand-700">
-          Your message
+          {t.message}
         </label>
         <textarea
           id="message"
@@ -187,7 +193,7 @@ export default function ContactForm({ machine }: { machine?: string }) {
           value={values.message}
           onChange={update("message")}
           className={field}
-          placeholder="Tell us your format, target output and any details."
+          placeholder={t.messagePlaceholder}
         />
       </div>
 
@@ -196,34 +202,33 @@ export default function ContactForm({ machine }: { machine?: string }) {
         disabled={status === "sending"}
         className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {status === "sending" ? "Sending…" : "Send Enquiry"}
+        {status === "sending" ? t.sending : t.submit}
       </button>
 
       {status === "error" && (
         <p className="text-sm text-red-600">
-          Sorry, something went wrong sending your message. Please try again, or{" "}
+          {t.errorText}{" "}
           <a
             href={waFallback}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold underline"
           >
-            message us on WhatsApp
+            {t.errorWhatsApp}
           </a>
           .
         </p>
       )}
 
       <p className="text-xs text-brand-400">
-        Your details go straight to our team, we usually reply the same working
-        day. Prefer to chat?{" "}
+        {t.footnote}{" "}
         <a
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
           className="font-medium text-accent-700 hover:underline"
         >
-          WhatsApp {siteConfig.phoneDisplay}
+          {t.footnoteChat} {siteConfig.phoneDisplay}
         </a>
       </p>
     </form>

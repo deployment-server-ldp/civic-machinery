@@ -9,10 +9,22 @@ import {
   productHref,
 } from "@/lib/products";
 import { blogPosts } from "@/lib/blog";
+import { translatedPaths, hreflangAlternates } from "@/lib/i18n";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();
+  const abs = (path: string) => `${base}${path === "/" ? "" : path}`;
+
+  // hreflang alternates block for a translated path (en + de + x-default),
+  // or undefined for pages that exist only in English.
+  const langs = (path: string) => {
+    const alts = hreflangAlternates(path);
+    if (alts.length <= 1) return undefined;
+    return {
+      languages: Object.fromEntries(alts.map((a) => [a.hreflang, abs(a.path)])),
+    };
+  };
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
@@ -49,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  const all = [
+  const english = [
     ...staticPages,
     ...categoryPages,
     ...subcategoryPages,
@@ -59,9 +71,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // De-duplicate by URL (some sub-categories now share a category URL).
   const seen = new Set<string>();
-  return all.filter((entry) => {
+  const dedupedEnglish = english.filter((entry) => {
     if (seen.has(entry.url)) return false;
     seen.add(entry.url);
     return true;
   });
+
+  // Attach hreflang alternates to the English entries that are translated.
+  const withAlternates = dedupedEnglish.map((entry) => {
+    const path = entry.url === base || entry.url === `${base}/` ? "/" : entry.url.slice(base.length);
+    const alternates = translatedPaths.includes(path) ? langs(path) : undefined;
+    return alternates ? { ...entry, alternates } : entry;
+  });
+
+  // Add a localized entry for every translated path × prefixed locale.
+  const localizedPages: MetadataRoute.Sitemap = translatedPaths.flatMap((path) => {
+    const alts = hreflangAlternates(path).filter(
+      (a) => a.hreflang !== "x-default" && a.path !== path,
+    );
+    return alts.map((a) => ({
+      url: abs(a.path),
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: path === "/" ? 0.9 : 0.7,
+      alternates: langs(path),
+    }));
+  });
+
+  return [...withAlternates, ...localizedPages];
 }

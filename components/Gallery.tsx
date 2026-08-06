@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 export interface GalleryImage {
   src: string;
@@ -12,9 +14,16 @@ export interface GalleryImage {
  * lightbox (previous/next navigation, keyboard and swipe friendly).
  * Add more images by extending the `images` array passed in.
  */
-export default function Gallery({ images }: { images: GalleryImage[] }) {
+export default function Gallery({
+  images,
+  locale = defaultLocale,
+}: {
+  images: GalleryImage[];
+  locale?: LocaleCode;
+}) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+  const t = getDict(locale).home.gallery;
 
   const show = (i: number) => {
     setIndex(i);
@@ -50,12 +59,9 @@ export default function Gallery({ images }: { images: GalleryImage[] }) {
   return (
     <section className="container mx-auto py-16">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="eyebrow">Gallery</p>
-        <h2 className="mt-2 text-3xl sm:text-4xl">Civic Tobacco Machinery in Pictures</h2>
-        <p className="mt-4 text-brand-600">
-          Moments from international tobacco exhibitions and meetings with our
-          partners and customers around the world.
-        </p>
+        <p className="eyebrow">{t.eyebrow}</p>
+        <h2 className="mt-2 text-3xl sm:text-4xl">{t.heading}</h2>
+        <p className="mt-4 text-brand-600">{t.text}</p>
       </div>
 
       <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:gap-5">

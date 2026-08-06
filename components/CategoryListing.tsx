@@ -6,6 +6,8 @@ import JsonLd from "./JsonLd";
 import type { Crumb } from "./Breadcrumbs";
 import { faqSchema } from "@/lib/schema";
 import { type Product, type Faq as FaqType, productHref } from "@/lib/products";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 /**
  * Generic listing page: hero intro, a grid of machine cards and a CTA.
@@ -19,6 +21,7 @@ export default function CategoryListing({
   products,
   emptyNote,
   faqs,
+  locale = defaultLocale,
 }: {
   eyebrow?: string;
   title: string;
@@ -27,7 +30,9 @@ export default function CategoryListing({
   products: Product[];
   emptyNote?: string;
   faqs?: FaqType[];
+  locale?: LocaleCode;
 }) {
+  const dict = getDict(locale);
   return (
     <>
       <PageHero
@@ -49,12 +54,12 @@ export default function CategoryListing({
         {products.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
-              <ProductCard key={productHref(p)} product={p} />
+              <ProductCard key={productHref(p)} product={p} locale={locale} />
             ))}
           </div>
         ) : (
           <p className="rounded-xl border border-brand-100 bg-brand-50 p-6 text-brand-600">
-            {emptyNote || "Machines in this range are added regularly. Contact us for current stock."}
+            {emptyNote || dict.emptyNote}
           </p>
         )}
       </section>
@@ -62,16 +67,14 @@ export default function CategoryListing({
       {faqs && faqs.length > 0 && (
         <section className="container mx-auto pb-14">
           <JsonLd data={faqSchema(faqs)} />
-          <h2 className="text-center text-2xl sm:text-3xl">
-            Frequently asked questions
-          </h2>
+          <h2 className="text-center text-2xl sm:text-3xl">{dict.faqHeading}</h2>
           <div className="mt-8">
             <Faq items={faqs} />
           </div>
         </section>
       )}
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }
