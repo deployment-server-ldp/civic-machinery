@@ -1185,7 +1185,491 @@ const de: Dictionary = {
   },
 };
 
-const dictionaries: Partial<Record<LocaleCode, Dictionary>> = { en, de };
+/* ---------------------------------------------------------------------------
+ * Italian (it-IT) — first-pass professional translation, native review pending.
+ * ------------------------------------------------------------------------- */
+
+const it: Dictionary = {
+  nav: {
+    about: "Chi siamo",
+    making: "Produzione sigarette",
+    packing: "Impacchettamento",
+    filter: "Macchine per filtri",
+    wrappers: "Incartatrici e inscatolatrici",
+    cutter: "Taglierina/Alimentatore/Recuperatore",
+    contact: "Contatti",
+  },
+  header: {
+    tagline: "Produttori di macchine per sigarette e tabacco in Pakistan",
+    call: "Chiama",
+    whatsapp: "WhatsApp",
+    region: "Pakistan",
+  },
+  megaMenu: {
+    prompt: "Cerchi una macchina specifica o una linea completa?",
+    viewAll: "Vedi tutte le macchine di produzione →",
+  },
+  productCard: { viewDetails: "Vedi dettagli" },
+  breadcrumbHome: "Home",
+  faqHeading: "Domande frequenti",
+  emptyNote:
+    "Le macchine di questa gamma vengono aggiunte regolarmente. Contattaci per la disponibilità attuale.",
+  cta: {
+    title: "Non sei sicuro di quale macchina ti serva?",
+    text: "Indicaci il formato, la produzione target e il budget. Ti consiglieremo la macchina giusta, nuova o ricondizionata, e ti aiuteremo a metterla in funzione.",
+    whatsapp: "WhatsApp",
+    enquiry: "Invia una richiesta",
+  },
+  footer: {
+    blurb:
+      "Fornitori di macchine nuove e usate per la produzione, l'impacchettamento e l'incarto di sigarette in Pakistan, con installazione, ricambi e assistenza su cui puoi contare.",
+    machines: "Macchine",
+    manufacturing: "Produzione",
+    reachUs: "Contatti",
+    ourBlog: "Il nostro blog",
+    hours: "Lun–Sab, 09:00–18:00",
+    rights: "Tutti i diritti riservati.",
+    links: { home: "Home", about: "Chi siamo", blog: "Blog", contact: "Contatti" },
+    labels: {
+      "/cigarette-packing-machines": "Macchine impacchettatrici",
+      "/cigarette-box-wrapping-machines": "Macchine incartatrici",
+      "/cigarette-manufacturing-machines": "Macchine di produzione",
+      "/cigarette-making-machines": "Macchine per sigarette",
+      "/cigarette-filter-making-machines": "Macchine per filtri per sigarette",
+      "/cutter-feeder-reclaimer": "Macchine per il tabacco",
+    },
+  },
+  switcher: { label: "Lingua" },
+
+  home: {
+    metaTitle: "Civic Tobacco Machinery | Macchine per sigarette dal Pakistan",
+    metaDescription:
+      "Civic Tobacco Machinery fornisce macchine per la produzione, l'impacchettamento e l'incarto di sigarette in Pakistan. Macchine per tabacco nuove e usate, linee per filtri, ricambi e supporto completo all'installazione.",
+    hero: {
+      h1: "Cerchi macchine per sigarette e tabacco dal Pakistan?",
+      lead: "Sei nel posto giusto. Dal primo baco alla stecca finita, Civic Tobacco Machinery ti mette a disposizione linee di produzione, filtri, impacchettamento e incarto nuove e ricondizionate, installate, messe a punto e supportate dai ricambi e dall'assistenza su cui puoi contare.",
+      getQuote: "Richiedi un preventivo",
+      whatsapp: "WhatsApp",
+    },
+    browseHeading: "Sfoglia per tipo di macchina",
+    browse: {
+      packing: "Macchine impacchettatrici per sigarette",
+      wrapping: "Macchine incartatrici per sigarette",
+      making: "Macchine di produzione per sigarette",
+      used: "Macchine per sigarette usate",
+    },
+    viewRange: "Vedi la gamma →",
+    about: {
+      eyebrow: "Chi siamo",
+      h2: "Generazioni di eccellenza ingegneristica nelle macchine per il tabacco",
+      lead: "Un'orgogliosa impresa di padre e figlio, ormai alla terza generazione, con oltre 35 anni di esperienza pratica nell'industria del tabacco.",
+      p1: "Da decenni la nostra famiglia lavora in un unico settore delle macchine per il tabacco. Ciò che è iniziato come una piccola attività commerciale è cresciuto fino a diventare un nome affidabile su più generazioni, su cui aziende del tabacco nuove e affermate in tutto il Pakistan fanno affidamento per costruire e far funzionare le loro linee.",
+      p2: "Siamo produttori specializzati di macchine per il tabacco e offriamo una soluzione completa a 360 gradi. Dalle macchine di produzione e per filtri agli impacchettatori e incartatori, ti aiutiamo a reperire l'attrezzatura giusta, a vederla in funzione prima dell'acquisto e a installarla e metterla a punto nel tuo stabilimento. Offriamo inoltre dimostrazioni e formazione gratuite per i tuoi tecnici, così il tuo team è sicuro con la macchina fin dal primo giorno.",
+      bullets: [
+        "Impresa familiare su più generazioni",
+        "Macchine nuove e ricondizionate",
+        "Linea completa, dalla produzione all'impacchettamento",
+        "Dimostrazione e formazione dei tecnici",
+      ],
+      more: "Scopri di più su di noi",
+    },
+    featured: {
+      eyebrow: "Disponibili e richieste",
+      h2: "Macchine in evidenza",
+      viewAll: "Vedi tutte le macchine →",
+    },
+    why: {
+      eyebrow: "Perché Civic Tobacco Machinery",
+      h2: "La macchina giusta, predisposta per durare",
+      reasons: [
+        {
+          title: "Macchine che continuano a funzionare",
+          text: "Puntiamo su marchi collaudati con buona disponibilità di ricambi, così la tua linea resta produttiva turno dopo turno.",
+        },
+        {
+          title: "Rapporti onesti sulle condizioni",
+          text: "Ogni macchina usata è ispezionata, revisionata e collaudata. Ricevi un resoconto chiaro delle sue condizioni, senza sorprese.",
+        },
+        {
+          title: "Supporto per l'intera linea",
+          text: "Dalla produzione all'impacchettamento, ti aiutiamo ad abbinare le macchine in modo che nulla diventi un collo di bottiglia, e le installiamo e le assistiamo.",
+        },
+        {
+          title: "Aiuto locale, sul posto",
+          text: "Abbiamo sede proprio qui in Pakistan. Quando ti servono ricambi o un tecnico, l'aiuto è vicino, non dall'altra parte del mondo.",
+        },
+      ],
+    },
+    ranges: {
+      making: "Macchine per sigarette",
+      packing: "Macchine impacchettatrici per sigarette",
+      filter: "Macchine per filtri per sigarette",
+      wrapping: "Macchine incartatrici per sigarette",
+    },
+    carousel: {
+      eyebrow: "Il nostro stock",
+      heading: "Macchine per sigarette in vendita",
+      viewAllPrefix: "Vedi tutte le ",
+      viewAllSuffix: " →",
+    },
+    gallery: {
+      eyebrow: "Galleria",
+      heading: "Civic Tobacco Machinery in immagini",
+      text: "Momenti da fiere internazionali del tabacco e incontri con i nostri partner e clienti in tutto il mondo.",
+    },
+    local: {
+      eyebrow: "Al servizio di tutto il Pakistan",
+      h2: "Il tuo partner per le macchine per il tabacco in Pakistan",
+      text: "Avere sede nella zona industriale SITE significa essere vicini alle fabbriche che serviamo. Quando ti serve un ricambio, un tecnico o un consiglio onesto su una macchina, hai a che fare con persone dall'altra parte della città, non con un fornitore in un altro continente.",
+      bullets: [
+        "Supporto locale rapido e ricambi",
+        "Installazione e messa a punto nel tuo stabilimento",
+        "Macchine nuove e ricondizionate per ogni budget",
+      ],
+      visitHeading: "Vieni a trovarci o chiamaci",
+      directions: "Indicazioni e contatti",
+    },
+    faqHeading: {
+      eyebrow: "Domande comuni",
+      h2: "Domande frequenti",
+    },
+    faqs: [
+      {
+        question: "Vendete macchine per sigarette sia nuove che usate in Pakistan?",
+        answer:
+          "Sì. Forniamo macchine nuove così come macchine per sigarette e tabacco usate accuratamente ricondizionate. Ogni macchina usata è ispezionata, revisionata e collaudata prima della vendita e viene consegnata con un rapporto onesto sulle condizioni, così sai esattamente cosa stai acquistando.",
+      },
+      {
+        question: "Quali marchi di macchine di produzione per sigarette trattate?",
+        answer:
+          "Lavoriamo principalmente con marchi ben supportati come Molins per le macchine di produzione e per filtri, e HLP e SASIB per impacchettamento e incarto. Li scegliamo perché ricambi e tecnici qualificati sono facili da reperire, il che mantiene la tua linea in funzione per anni.",
+      },
+      {
+        question: "Installate le macchine e fornite i ricambi?",
+        answer:
+          "Sì. Aiutiamo nell'installazione e nella corretta messa a punto della macchina nel tuo stabilimento e ti supportiamo in seguito con ricambi e assistenza. Mettere in funzione una macchina di produzione o un impacchettatore non è un'operazione plug-and-play, quindi restiamo coinvolti finché non funziona come deve.",
+      },
+      {
+        question: "Dove vi trovate e consegnate in tutto il Pakistan?",
+        answer:
+          "La nostra officina si trova nella zona industriale SITE di Karachi. Serviamo clienti in tutto il Pakistan e possiamo organizzare consegna e installazione ovunque si trovi la tua fabbrica.",
+      },
+    ],
+  },
+
+  about: {
+    metaTitle: "Chi siamo | Civic Tobacco Machinery",
+    metaDescription:
+      "Chi è Civic Tobacco Machinery, fornitore di macchine per sigarette e tabacco in Pakistan. Chi siamo, in cosa crediamo e come supportiamo la tua fabbrica con macchine nuove e usate.",
+    hero: {
+      eyebrow: "Chi siamo",
+      title: "Macchine per sigarette e tabacco, supportate da chi le conosce",
+      intro:
+        "Civic Tobacco Machinery da anni aiuta le fabbriche di tutto il Pakistan a costruire, ampliare e mantenere le loro linee per sigarette.",
+    },
+    whoHeading: "Chi siamo",
+    who: [
+      "Siamo un fornitore con sede in Pakistan di macchine per sigarette e tabacco. Nel corso degli anni abbiamo lavorato con tutto, da piccole officine ai primi passi nella produzione di sigarette a fabbriche affermate che aggiungono una seconda o terza linea. Questa esperienza plasma il nostro modo di lavorare: prima ascoltiamo, capiamo di cosa hai davvero bisogno e poi ti indichiamo la macchina adatta.",
+      "La nostra gamma copre l'intera linea: macchine di produzione che formano il baco, macchine per filtri, impacchettatrici per pacchetti rigidi e morbidi, macchine incartatrici e inscatolatrici e le macchine per il tabacco che alimentano il reparto. Trattiamo attrezzature sia nuove che accuratamente ricondizionate, così c'è un'opzione sensata qualunque sia il tuo budget.",
+    ],
+    howHeading: "Come lavoriamo",
+    how: [
+      "Acquistare una macchina è solo metà della storia. Una macchina di produzione o un impacchettatore va installato correttamente, regolato bene e mantenuto in funzione, ed è qui che molti fornitori spariscono. Noi no. Ti aiutiamo a portare la macchina nel tuo stabilimento e a farla funzionare come deve, e restiamo raggiungibili in seguito per ricambi e assistenza.",
+      "Poiché abbiamo sede proprio qui nella zona industriale SITE, quel supporto è davvero locale. Quando qualcosa richiede attenzione, parli con persone dall'altra parte della città, non aspetti un fornitore in un altro paese e in un altro fuso orario.",
+    ],
+    brandsHeading: "I marchi di cui ci fidiamo",
+    brands:
+      "Ci concentriamo su nomi collaudati: Molins per le macchine di produzione e per filtri, HLP e SASIB per impacchettamento e incarto, e la famiglia Protos per le linee ad alta velocità. Li scegliamo non per il marchio, ma perché i loro ricambi e il know-how sono facili da reperire, il che è esattamente ciò che mantiene una macchina redditizia per anni.",
+    glance: {
+      heading: "In sintesi",
+      basedIn: "Sede a",
+      basedInValue: "SITE, Karachi, Pakistan",
+      supply: "Forniamo",
+      supplyValue: "Macchine per il tabacco nuove e usate",
+      serve: "Serviamo",
+      serveValue: "Tutto il Pakistan",
+      call: "Chiamata / WhatsApp",
+      talk: "Parla con noi",
+    },
+    valuesEyebrow: "In cosa crediamo",
+    valuesHeading: "Il nostro modo di fare affari",
+    values: [
+      {
+        title: "Prima l'onestà",
+        text: "Ti diciamo le reali condizioni di una macchina e cosa può fare. Una vendita che ti lascia insoddisfatto non è affatto una vendita.",
+      },
+      {
+        title: "Macchine che useremmo noi stessi",
+        text: "Trattiamo marchi e modelli di cui ci fidiamo, quelli con buona disponibilità di ricambi e lunga vita utile.",
+      },
+      {
+        title: "Un supporto che resta",
+        text: "Il nostro compito non finisce alla consegna. Aiutiamo con installazione, messa a punto, ricambi e assistenza nel lungo periodo.",
+      },
+      {
+        title: "Giusto valore",
+        text: "Nuova o ricondizionata, ti aiutiamo a ottenere la macchina giusta per il tuo budget senza tagliare gli angoli che contano.",
+      },
+    ],
+    ctaTitle: "Parliamo della tua linea",
+    ctaText:
+      "Che tu stia iniziando o ampliando, dicci cosa vuoi produrre e ti aiuteremo ad arrivarci.",
+  },
+
+  contact: {
+    metaTitle: "Contatti | Civic Tobacco Machinery",
+    metaDescription:
+      "Contatta Civic Tobacco Machinery in Pakistan. Chiama, scrivi su WhatsApp o invia una richiesta su macchine per produzione, impacchettamento, incarto di sigarette e macchine usate. Officina a SITE, Karachi.",
+    hero: {
+      eyebrow: "Contatti",
+      title: "Mettiti in contatto con Civic Tobacco Machinery",
+      intro:
+        "Dicci cosa cerchi e ti risponderemo entro la stessa giornata lavorativa. Chiama, scrivi su WhatsApp o via e-mail, oppure invia il modulo qui sotto.",
+    },
+    directHeading: "Contattaci direttamente",
+    directText:
+      "Il modo più rapido per ottenere una risposta chiara su una macchina, le sue condizioni, il prezzo o la disponibilità è scriverci su WhatsApp o chiamarci.",
+    rows: {
+      visit: "Vieni nella nostra officina",
+      call: "Chiamaci",
+      whatsapp: "WhatsApp",
+      whatsappValue: "Scrivici al",
+      email: "E-mail",
+      hours: "Orari di apertura",
+      hoursValue: "Lunedì – Sabato, 09:00 – 18:00",
+      hoursClosed: "Chiuso la domenica",
+    },
+    openInMaps: "Apri in Google Maps",
+    formHeading: "Invia una richiesta",
+    formIntro:
+      "Compila questo modulo e ti risponderemo rapidamente. I campi contrassegnati come obbligatori ci aiutano a darti una risposta accurata.",
+    form: {
+      name: "Il tuo nome",
+      namePlaceholder: "es. Ahmed Khan",
+      phone: "Telefono / WhatsApp",
+      phonePlaceholder: "es. 0300 1234567",
+      email: "E-mail",
+      emailOptional: "(facoltativo)",
+      emailPlaceholder: "tu@azienda.com",
+      interest: "Macchina che ti interessa",
+      interestPlaceholder: "es. impacchettatrice HLP-200",
+      message: "Il tuo messaggio",
+      messagePlaceholder: "Indicaci formato, produzione target e altri dettagli.",
+      submit: "Invia richiesta",
+      sending: "Invio in corso…",
+      successTitle: "Grazie!",
+      successText:
+        "La tua richiesta è stata inviata. Il nostro team ti risponderà a breve, di solito entro la stessa giornata lavorativa.",
+      errorText:
+        "Spiacenti, qualcosa è andato storto durante l'invio del messaggio. Riprova oppure",
+      errorWhatsApp: "scrivici su WhatsApp",
+      footnote:
+        "I tuoi dati vanno direttamente al nostro team; di solito rispondiamo entro la stessa giornata lavorativa. Preferisci chattare?",
+      footnoteChat: "WhatsApp",
+    },
+  },
+
+  categories: {
+    "/cigarette-manufacturing-machines": {
+      eyebrow: "Macchine di produzione",
+      title: "Macchine di produzione per sigarette in Pakistan",
+      description:
+        "Macchine di produzione per sigarette in Pakistan: macchine Molins, macchine per filtri e macchine per il tabacco. Linee nuove e ricondizionate da Civic Tobacco Machinery.",
+      intro: [
+        "Una buona sigaretta nasce molto prima del pacchetto. Nasce con una macchina che posa un baco uniforme, una linea per filtri che taglia in modo pulito e macchine per il tabacco che alimentano tutto il reparto. Civic Tobacco Machinery fornisce macchine di produzione per sigarette in Pakistan per tutte e tre le aree.",
+        "Trattiamo macchine di produzione Molins, macchine per filtri KDF e PM e gli alimentatori, le taglierine e i recuperatori che le supportano. Dicci i marchi che utilizzi e la produzione di cui hai bisogno, e ti aiuteremo a costruire una linea che mantiene velocità e qualità giorno dopo giorno.",
+      ],
+      faqs: [
+        {
+          question: "Quali macchine di produzione per sigarette fornite?",
+          answer:
+            "Forniamo l'intera linea di produzione: macchine Molins Mark 8, Mark 9 e Mark 9.5 e macchine Hauni Protos, oltre a macchine per filtri KDF e Molins e agli alimentatori, taglierine e recuperatori di tabacco che le supportano.",
+        },
+        {
+          question: "Quante sigarette al minuto producono le macchine?",
+          answer:
+            "A seconda del modello, le nostre macchine producono da circa 3.000 fino a 8.000 sigarette al minuto, così puoi abbinare la macchina alla tua produzione target.",
+        },
+        {
+          question: "Fornite macchine nuove o ricondizionate?",
+          answer:
+            "Entrambe. Le macchine Molins e Hauni ricondizionate sono completamente ispezionate, revisionate e collaudate prima della vendita, offrendo un ottimo valore alle fabbriche in crescita.",
+        },
+        {
+          question: "Aiutate ad abbinare la macchina di produzione alla giusta linea per filtri?",
+          answer:
+            "Sì. Ci assicuriamo che la macchina di produzione e quella per filtri lavorino in sincronia, così l'intera linea resta bilanciata. Dicci i tuoi marchi e la produzione target e ti consiglieremo una configurazione.",
+        },
+      ],
+    },
+    "/cigarette-packing-machines": {
+      eyebrow: "Macchine impacchettatrici",
+      title: "Macchine impacchettatrici per sigarette in Pakistan",
+      description:
+        "Macchine impacchettatrici per sigarette in Pakistan: linee HLP e SASIB per pacchetti rigidi e morbidi da 180 a 225 pacchetti al minuto. Fornite, installate e supportate da Civic Tobacco Machinery.",
+      intro: [
+        "La linea di impacchettamento è dove il tuo prodotto prende finalmente forma, quindi deve essere stabile, pulita e facile da usare turno dopo turno. In Civic Tobacco Machinery forniamo macchine impacchettatrici per sigarette in Pakistan scelte proprio per questo: produzione affidabile e pacchetti identici ogni volta.",
+        "La nostra gamma copre i formati a pacchetto rigido e morbido, da 180 fino a 225 pacchetti al minuto, con opzioni sia nuove che accuratamente ricondizionate. Che tu stia allestendo una nuova linea o aggiungendo capacità a una esistente, ti aiutiamo ad abbinare la macchina giusta al tuo volume, al tuo budget e ai marchi che produci.",
+      ],
+      faqs: [
+        {
+          question: "Qual è la differenza tra macchine per pacchetti rigidi e morbidi?",
+          answer:
+            "I pacchetti rigidi (con coperchio a cerniera) girano su macchine tipo HLP, mentre i pacchetti morbidi (foglio ripiegato e involucro stampato) girano su macchine tipo SASIB. Forniamo entrambe e ti aiutiamo ad abbinare la macchina al formato di pacchetto che i tuoi marchi vendono davvero.",
+        },
+        {
+          question: "Quali velocità di impacchettamento offrite?",
+          answer:
+            "Le nostre macchine impacchettatrici per sigarette vanno da circa 180 fino a 225 pacchetti al minuto. Scegli una velocità che corrisponda alla tua reale domanda per turno con un po' di margine di crescita, invece di pagare per una capacità inutilizzata.",
+        },
+        {
+          question: "Vendete macchine impacchettatrici nuove o ricondizionate?",
+          answer:
+            "Entrambe. Ogni impacchettatrice HLP o SASIB usata è ispezionata, revisionata e collaudata prima della vendita, così una buona macchina ricondizionata può funzionare per anni a una frazione del prezzo del nuovo.",
+        },
+        {
+          question: "Installate la macchina e fornite i ricambi?",
+          answer:
+            "Sì. Installiamo e mettiamo a punto la macchina e supportiamo HLP e SASIB con ricambi ampiamente disponibili e assistenza. Scrivici su WhatsApp al +92 301 1111184 per prezzo e disponibilità attuale.",
+        },
+      ],
+    },
+    "/cigarette-box-wrapping-machines": {
+      eyebrow: "Macchine incartatrici",
+      title: "Macchine incartatrici per sigarette in Pakistan",
+      description:
+        "Macchine incartatrici per sigarette in Pakistan: sovraincartatrici, inscatolatrici e macchine per l'incarto in cellophane che sigillano i pacchetti in modo pulito. Vendita, ricambi e assistenza da Civic Tobacco Machinery.",
+      intro: [
+        "L'incarto è l'ultima cosa che il tuo cliente vede prima di aprire il pacchetto, ecco perché una sigillatura pulita e aderente conta così tanto. Civic Tobacco Machinery fornisce macchine incartatrici per sigarette in Pakistan che offrono una finitura pulita del film, un nastro di apertura dritto e pacchetti che restano freschi sullo scaffale.",
+        "Dalle sovraincartatrici per singolo pacchetto all'incarto delle scatole e alle inscatolatrici per stecche, copriamo l'intera gamma. Ogni macchina che vendiamo è controllata, messa a punto e consegnata pronta all'uso, con ricambi e assistenza a cui puoi ricorrere quando ti servono.",
+      ],
+      faqs: [
+        {
+          question: "Qual è la differenza tra una sovraincartatrice e un'inscatolatrice?",
+          answer:
+            "Una sovraincartatrice sigilla ogni pacchetto in film di cellophane con un nastro di apertura, mentre un'inscatolatrice (cartonatrice) raggruppa i pacchetti finiti in stecche o scatole. La maggior parte delle linee usa entrambe, una dopo l'altra.",
+        },
+        {
+          question: "Quali macchine incartatrici e inscatolatrici fornite?",
+          answer:
+            "Forniamo sovraincartatrici e inscatolatrici Molins e SASIB, tra cui l'incartatrice per pacchetti CP1, la sovraincartatrice \"naked\" e le inscatolatrici Molins e SASIB, per linee a pacchetto rigido e morbido.",
+        },
+        {
+          question: "Offrite macchine incartatrici nuove o ricondizionate?",
+          answer:
+            "Sono disponibili sia unità nuove che accuratamente ricondizionate. Ogni macchina usata è controllata, messa a punto e consegnata pronta all'uso.",
+        },
+        {
+          question: "Fornite installazione e ricambi?",
+          answer:
+            "Sì, installazione, messa a punto, ricambi e assistenza fanno tutti parte del nostro servizio. Contattaci su WhatsApp al +92 301 1111184 per un preventivo.",
+        },
+      ],
+    },
+    "/cigarette-filter-making-machines": {
+      eyebrow: "Macchine di produzione",
+      title: "Macchine per filtri per sigarette in Pakistan",
+      description:
+        "Macchine per filtri per sigarette in Pakistan: Molins KDF, Molins PM e macchine per tubi cavi. Linee per bacchette filtro fornite e supportate da Civic Tobacco Machinery.",
+      intro: [
+        "Un buon filtro fa più che completare la sigaretta: controlla il tiraggio, la consistenza e l'intera sensazione del fumo. Civic Tobacco Machinery fornisce macchine per filtri per sigarette in Pakistan che producono bacchette uniformi su cui la tua macchina di produzione può contare.",
+        "Abbiamo a magazzino macchine per filtri Molins KDF e Molins PM oltre a macchine per tubi cavi per formati speciali. Qualunque lunghezza o tipo di filtro tu produca, ti aiuteremo a scegliere una linea che corrisponda alla velocità delle tue macchine di produzione.",
+      ],
+      faqs: [
+        {
+          question: "Quali macchine per filtri fornite?",
+          answer:
+            "Forniamo macchine per filtri Hauni KDF-1 e KDF-2, macchine per filtri Molins PM e macchine per tubi cavi per formati speciali, per fabbriche con produzione di bacchette filtro.",
+        },
+        {
+          question: "La macchina per filtri può raggiungere la velocità della mia macchina di produzione?",
+          answer:
+            "Sì. Ti aiutiamo a scegliere una linea per filtri che corrisponda alla velocità delle tue macchine di produzione, così le due lavorano in sincronia e la linea resta bilanciata.",
+        },
+        {
+          question: "Offrite macchine per filtri nuove e ricondizionate?",
+          answer:
+            "Entrambe. Ogni macchina KDF o PM ricondizionata è ispezionata, revisionata e collaudata prima della vendita.",
+        },
+        {
+          question: "Installate e supportate le macchine per filtri?",
+          answer:
+            "Sì, installazione, ricambi e assistenza sono inclusi. Scrivici su WhatsApp al +92 301 1111184 per prezzo e disponibilità.",
+        },
+      ],
+    },
+    "/cutter-feeder-reclaimer": {
+      eyebrow: "Macchine di produzione",
+      title: "Taglierine, alimentatori e recuperatori per tabacco in Pakistan",
+      description:
+        "Macchine per il tabacco in Pakistan: alimentatori, taglierine, recuperatori e schiaccianervature che mantengono in funzione i reparti primario e secondario. Fornite da Civic Tobacco Machinery.",
+      intro: [
+        "Dietro ogni macchina di produzione e impacchettatrice c'è una serie di macchine più silenziose che fanno il lavoro pesante: alimentare il tabacco, tagliarlo, recuperare ciò che altrimenti andrebbe perso. Civic Tobacco Machinery fornisce macchine per il tabacco in Pakistan che mantengono in movimento questo lato del reparto.",
+        "Alimentatori, taglierine, recuperatori e schiaccianervature lavorano insieme per garantire un rifornimento costante alla tua linea e ridurre gli scarti. Ti aiutiamo a inserire le unità giuste attorno alle macchine di produzione e impacchettatrici che già utilizzi.",
+      ],
+      faqs: [
+        {
+          question: "Cosa fanno alimentatori, taglierine e recuperatori di tabacco?",
+          answer:
+            "Gli alimentatori riforniscono di tabacco le macchine di produzione, le taglierine tagliano la foglia alla dimensione di produzione e i recuperatori recuperano il tabacco dalle sigarette scartate perché possa essere riutilizzato, mantenendo scorrevoli i reparti primario e secondario.",
+        },
+        {
+          question: "Questa attrezzatura può ridurre gli scarti di tabacco?",
+          answer:
+            "Sì. Un recuperatore recupera tabacco utilizzabile dalle sigarette scartate, riducendo gli scarti e abbassando i costi di gestione nel tempo.",
+        },
+        {
+          question: "Quali marchi fornite?",
+          answer:
+            "Forniamo macchine ben supportate come la taglierina per tabacco Hauni KT-400, oltre ad alimentatori di tabacco, recuperatori di sigarette e schiaccianervature.",
+        },
+        {
+          question: "Le macchine sono nuove o ricondizionate e le supportate?",
+          answer:
+            "Sono disponibili sia unità nuove che ricondizionate, tutte collaudate prima della vendita, con installazione, ricambi e assistenza. Contattaci su WhatsApp al +92 301 1111184.",
+        },
+      ],
+    },
+  },
+  manufacturingSection: {
+    title: "Macchine per sigarette in Pakistan",
+    intro:
+      "La macchina di produzione è il cuore di ogni fabbrica di sigarette. Trasforma tabacco tagliato e carta in un baco finito, migliaia di volte al minuto, senza interruzioni nella qualità.",
+    seeAll: "Vedi tutte →",
+  },
+  blog: {
+    eyebrow: "Blog",
+    indexTitle: "Guide e consigli sulle macchine per sigarette",
+    indexIntro:
+      "Articoli chiari e concreti per aiutarti a scegliere, acquistare e far funzionare macchine per sigarette e tabacco, scritti da chi lavora con queste macchine ogni giorno.",
+    metaTitle: "Blog | Civic Tobacco Machinery",
+    metaDescription:
+      "Guide pratiche su macchine per sigarette e tabacco: scegliere le impacchettatrici, confrontare le macchine di produzione e acquistare macchine usate in Pakistan. Da Civic Tobacco Machinery.",
+    readArticle: "Leggi l'articolo →",
+    minRead: "min di lettura",
+    tags: "Tag:",
+    backToAll: "← Torna a tutti gli articoli",
+    keepReading: "Continua a leggere",
+    dateLocale: "it-IT",
+  },
+  product: {
+    keyFeatures: "Caratteristiche principali",
+    specifications: "Specifiche tecniche",
+    description: "Descrizione",
+    bestSuitedFor: "Ideale per",
+    call: "Chiama",
+    interested: "Ti interessa questa macchina?",
+    askAbout: "Richiedi informazioni su",
+    enquiryText:
+      "Inviaci un breve messaggio per prezzo, disponibilità attuale e condizioni. Ti segnaleremo anche le macchine abbinabili per completare la tua linea.",
+    related: "Macchine correlate",
+    thumbs: { front: "Vista frontale", detail: "Dettaglio", operation: "In funzione" },
+    waMessage: (name) =>
+      `Salve, sono interessato alla ${name}. Vi prego di inviarmi prezzo e disponibilità.`,
+  },
+};
+
+const dictionaries: Partial<Record<LocaleCode, Dictionary>> = { en, de, it };
 
 /** Get the dictionary for a locale, falling back to English if not translated. */
 export function getDict(locale: LocaleCode): Dictionary {
