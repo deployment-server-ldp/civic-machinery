@@ -185,6 +185,21 @@ export interface Dictionary {
 
   /** The "Cigarette Making Machines" section shown on the manufacturing page. */
   manufacturingSection: { title: string; intro: string; seeAll: string };
+
+  /** Chrome strings for the product detail page. */
+  product: {
+    keyFeatures: string;
+    specifications: string;
+    description: string;
+    bestSuitedFor: string;
+    call: string;
+    interested: string;
+    askAbout: string;
+    enquiryText: string;
+    related: string;
+    thumbs: { front: string; detail: string; operation: string };
+    waMessage: (name: string) => string;
+  };
 }
 
 /* ---------------------------------------------------------------------------
@@ -639,6 +654,21 @@ const en: Dictionary = {
       "The maker is the heart of any cigarette factory. It takes cut tobacco and paper and turns them into a finished rod, thousands of times a minute, without a break in quality.",
     seeAll: "See all →",
   },
+  product: {
+    keyFeatures: "Key features",
+    specifications: "Specifications",
+    description: "Description",
+    bestSuitedFor: "Best suited for",
+    call: "Call",
+    interested: "Interested in this machine?",
+    askAbout: "Ask About the",
+    enquiryText:
+      "Send us a quick message for price, current availability and condition. We will also let you know about matching machines to complete your line.",
+    related: "Related machines",
+    thumbs: { front: "Front view", detail: "Detail", operation: "In operation" },
+    waMessage: (name) =>
+      `Hello, I am interested in the ${name}. Please share price and availability.`,
+  },
 };
 
 /* ---------------------------------------------------------------------------
@@ -1092,6 +1122,21 @@ const de: Dictionary = {
     intro:
       "Die Herstellmaschine ist das Herz jeder Zigarettenfabrik. Sie verwandelt geschnittenen Tabak und Papier tausendfach pro Minute in einen fertigen Strang – ohne Qualitätseinbußen.",
     seeAll: "Alle ansehen →",
+  },
+  product: {
+    keyFeatures: "Wichtigste Merkmale",
+    specifications: "Technische Daten",
+    description: "Beschreibung",
+    bestSuitedFor: "Am besten geeignet für",
+    call: "Anrufen",
+    interested: "Interesse an dieser Maschine?",
+    askAbout: "Anfrage zu",
+    enquiryText:
+      "Senden Sie uns eine kurze Nachricht für Preis, aktuelle Verfügbarkeit und Zustand. Wir informieren Sie außerdem über passende Maschinen, um Ihre Linie zu vervollständigen.",
+    related: "Ähnliche Maschinen",
+    thumbs: { front: "Vorderansicht", detail: "Detail", operation: "Im Betrieb" },
+    waMessage: (name) =>
+      `Hallo, ich interessiere mich für die ${name}. Bitte senden Sie mir Preis und Verfügbarkeit.`,
   },
 };
 

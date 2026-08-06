@@ -7,21 +7,24 @@ import ContactForm from "./ContactForm";
 import type { Crumb } from "./Breadcrumbs";
 import { whatsappLink, siteConfig } from "@/lib/site";
 import { type Product, productHref } from "@/lib/products";
+import { getDict } from "@/lib/dictionaries";
+import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
 export default function ProductDetail({
   product,
   crumbs,
   related,
   categoryLabel,
+  locale = defaultLocale,
 }: {
   product: Product;
   crumbs: Crumb[];
   related: Product[];
   categoryLabel: string;
+  locale?: LocaleCode;
 }) {
-  const wa = whatsappLink(
-    `Hello, I am interested in the ${product.name}. Please share price and availability.`
-  );
+  const t = getDict(locale).product;
+  const wa = whatsappLink(t.waMessage(product.name));
 
   return (
     <>
@@ -55,7 +58,7 @@ export default function ProductDetail({
                 />
                 {/* Placeholder thumbnails only until a real photo is added. */}
                 <div className="mt-4 grid grid-cols-3 gap-3">
-                  {["Front view", "Detail", "In operation"].map((v) => (
+                  {[t.thumbs.front, t.thumbs.detail, t.thumbs.operation].map((v) => (
                     <MachineImage
                       key={v}
                       alt={`${product.name}, ${v}`}
@@ -70,7 +73,7 @@ export default function ProductDetail({
 
           {/* Key features */}
           <div>
-            <h2 className="text-xl">Key features</h2>
+            <h2 className="text-xl">{t.keyFeatures}</h2>
 
             {product.featureTable ? (
               /* Feature table replaces both the bullet list and the specs table. */
@@ -109,7 +112,7 @@ export default function ProductDetail({
             {/* Specifications only shown for machines without a feature table. */}
             {!product.featureTable && product.specs.length > 0 && (
               <div className="mt-8">
-                <h3 className="text-lg">Specifications</h3>
+                <h3 className="text-lg">{t.specifications}</h3>
                 <div className="mt-4 overflow-hidden rounded-xl border border-brand-100">
                   <table className="w-full text-sm">
                     <tbody className="divide-y divide-brand-100">
@@ -133,7 +136,7 @@ export default function ProductDetail({
             {/* Applications */}
             {product.applications && product.applications.length > 0 && (
               <div className="mt-8">
-                <h3 className="text-lg">Best suited for</h3>
+                <h3 className="text-lg">{t.bestSuitedFor}</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {product.applications.map((a) => (
                     <span
@@ -162,7 +165,7 @@ export default function ProductDetail({
                 href={`tel:${siteConfig.phone}`}
                 className="btn-secondary sm:flex-1"
               >
-                Call {siteConfig.phoneDisplay}
+                {t.call} {siteConfig.phoneDisplay}
               </a>
             </div>
           </div>
@@ -170,7 +173,7 @@ export default function ProductDetail({
 
         {/* Row 2: full-width description */}
         <div className="mt-14 border-t border-brand-100 pt-10">
-          <h2 className="text-2xl">Description</h2>
+          <h2 className="text-2xl">{t.description}</h2>
           <div className="prose-content mt-4 max-w-3xl">
             {product.intro.map((p, i) => (
               <p key={i}>{p}</p>
@@ -183,16 +186,14 @@ export default function ProductDetail({
       <section className="bg-brand-50 py-14">
         <div className="container mx-auto grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="eyebrow">Interested in this machine?</p>
-            <h2 className="mt-2 text-3xl">Ask About the {shortName(product.name)}</h2>
-            <p className="mt-4 text-brand-600">
-              Send us a quick message for price, current availability and
-              condition. We will also let you know about matching machines to
-              complete your line.
-            </p>
+            <p className="eyebrow">{t.interested}</p>
+            <h2 className="mt-2 text-3xl">
+              {t.askAbout} {shortName(product.name)}
+            </h2>
+            <p className="mt-4 text-brand-600">{t.enquiryText}</p>
           </div>
           <div className="rounded-2xl border border-brand-100 bg-white p-6 shadow-card sm:p-8">
-            <ContactForm machine={product.name} />
+            <ContactForm machine={product.name} locale={locale} />
           </div>
         </div>
       </section>
@@ -201,11 +202,11 @@ export default function ProductDetail({
       {related.length > 0 && (
         <section className="container mx-auto py-14">
           <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-2xl">Related machines</h2>
+            <h2 className="text-2xl">{t.related}</h2>
           </div>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.slice(0, 3).map((p) => (
-              <ProductCard key={productHref(p)} product={p} />
+              <ProductCard key={productHref(p)} product={p} locale={locale} />
             ))}
           </div>
         </section>

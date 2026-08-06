@@ -8,6 +8,8 @@
  * alternates. Adding a language = adding one entry here (plus its content).
  */
 
+import { translatedProductPaths } from "./i18n-products";
+
 export type LocaleCode = "en" | "de" | "ar" | "ru" | "it" | "pl";
 
 export interface Locale {
@@ -69,7 +71,7 @@ export function localePath(code: LocaleCode, path: string): string {
  * Grow this set as more pages/waves are translated. This is the single
  * source of truth shared by buildMetadata, the sitemap and the switcher.
  */
-export const translatedPaths: readonly string[] = [
+const staticTranslatedPaths = [
   "/",
   "/about",
   "/contact",
@@ -78,6 +80,11 @@ export const translatedPaths: readonly string[] = [
   "/cigarette-box-wrapping-machines",
   "/cigarette-filter-making-machines",
   "/cutter-feeder-reclaimer",
+];
+
+export const translatedPaths: readonly string[] = [
+  ...staticTranslatedPaths,
+  ...translatedProductPaths,
 ];
 
 /** Live locales a given English path is translated into (always includes en). */
