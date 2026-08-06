@@ -311,6 +311,106 @@ const de: Record<string, ProductContent> = {
     ],
     applications: ["Großserienproduktion", "Großserienfertigung"],
   },
+
+  "kdf-1": {
+    h1: "Hauni KDF-1 Zigarettenfilter-Herstellungsmaschine",
+    metaTitle: "Hauni KDF-1 Filtermaschine",
+    tagline: "Hauni-KDF-1-Filterlinie mit laserbasierter Umfangskontrolle.",
+    metaDescription:
+      "Hauni KDF-1 Filtermaschine in Pakistan – 120-mm-Filter mit Siemens-/Beckhoff-SPS und laserbasierter Umfangskontrolle. Geliefert von Civic Tobacco Machinery.",
+    intro: [
+      "Die Hauni KDF-1 ist eine bewährte, leistungsstarke Filterlinie mit einem starken Ruf für Leistung, Präzision und Langlebigkeit in der Zigarettenfertigung. Für die Anforderungen der Großserienproduktion gebaut, eignet sich die KDF-1 für Hersteller in Pakistan, die Gleichmäßigkeit, Tempo und Qualität an erste Stelle setzen.",
+      "Für den Betrieb mit hoher Ausbringung gemacht, bietet sie eine robuste Produktionskapazität für 120-mm-Filter, die sich sowohl für Standard- als auch für kundenspezifische Zigarettenformate gut eignet. Sie unterstützt Filterumfänge von 16,8 mm bis 28,1 mm und Filterlängen von 64 mm bis 150 mm, sodass Sie ein breites Spektrum an Filtergrößen und -typen ohne ständige Umbauten produzieren können. Von King-Size-Filtern über Slims bis zu Spezialdesigns bewältigt die KDF-1 sie alle effizient.",
+      "Sie läuft mit einer fortschrittlichen SPS-Steuerung, verfügbar in Siemens- oder Beckhoff-Konfiguration, die intuitive Bedienung, Echtzeitdiagnose und zuverlässige Automatisierung bietet und die Filterqualität über den gesamten Lauf gleichmäßig hält. Lenze- oder Beckhoff-Servosysteme erhöhen die Stabilität und halten die Bewegung ruhig und genau.",
+      "Ein herausragendes Merkmal ist das laserbasierte Umfangskontrollsystem, das den Umfang jedes Filters hochpräzise misst, Abweichungen reduziert und jede Charge gleichmäßig hält. Diese Genauigkeit ist entscheidend, um die Markenqualitätsstandards bei Premiumprodukten zu halten.",
+      "Bei all ihrer Ausbringung hält die KDF-1 mit insgesamt 40 kW ein ausgewogenes Energieprofil, was sie langfristig wirtschaftlich macht. Ihre robuste, gut konstruierte Bauweise gibt lange Lebensdauer, und ihr modularer Aufbau sowie ihre Kompatibilität mit verschiedenen Zigarettentypen machen sie sowohl für die kleinere als auch für die große Filterproduktion zur starken Wahl – ob Sie Kapazität erweitern oder ältere Maschinen ersetzen.",
+    ],
+    applications: ["Großserien-Filterproduktion", "Standard- und Spezialfilter"],
+  },
+  "kdf-2": {
+    h1: "Hauni KDF-2 Zigarettenfilter-Herstellungsmaschine",
+    metaTitle: "Hauni KDF-2 Hochgeschwindigkeits-Filtermaschine",
+    tagline: "Hochgeschwindigkeits-Hauni-KDF-2-Filterlinie mit 400 Metern pro Minute.",
+    metaDescription:
+      "Hauni KDF-2 Filtermaschine in Pakistan – 400 Meter Acetat-Kabel pro Minute mit Siemens-/Beckhoff-SPS. Geliefert von Civic Tobacco Machinery.",
+    intro: [
+      "Die Hauni KDF-2 ist eine Weltklasse-Filtermaschine für die hocheffiziente Zigarettenfilterproduktion mit hoher Ausbringung. Bekannt für ihre Konstruktionsqualität und fortschrittliche Automatisierung, ist die KDF-2 eine vertraute Wahl für Großhersteller in Pakistan, die sowohl Präzision als auch Produktivität brauchen.",
+      "Sie läuft in einem beeindruckenden Tempo und verarbeitet 400 Meter Acetat-Kabel pro Minute, was sie den Anforderungen moderner Produktionslinien gut anpasst. Dieses Tempo geht mit echter Vielseitigkeit einher: Sie unterstützt Filterumfänge von 16,8 mm bis 28,1 mm und Filterlängen von 64 mm bis 150 mm und deckt so alles von Standard-King-Size-Filtern bis zu spezielleren Formaten mit Gleichmäßigkeit, Qualität und minimalen Stillständen ab.",
+      "Was die KDF-2 auszeichnet, ist ihre Automatisierung. Eine SPS-Steuerung, verfügbar in Siemens- oder Beckhoff-Konfiguration, bietet volle Kontrolle und Echtzeitüberwachung, während ein leistungsstarkes Lenze- oder Beckhoff-Servosystem die Bewegungen genau und den Betrieb zuverlässig hält. Das verringert die Fehlerspanne und hält die Filterqualität gleichmäßig, sodass sich die Maschine reibungslos als zuverlässiges Rückgrat der kontinuierlichen Großserienfertigung einfügt.",
+      "Auf Langlebigkeit gebaut, arbeitet die KDF-2 mit einem Kabelöffner und dem automatischen HCF80-Tray-Filler zusammen, um den Arbeitsablauf zu straffen und Handarbeit zu reduzieren. Sie nimmt 40 kW für die KDF-2-Haupteinheit und 15 kW für den HCF80-Filler auf und verbindet so Energieeffizienz mit starker Leistung.",
+      "Trotz all ihrer Leistungsfähigkeit behält die KDF-2 mit rund 6.500 kg einen überschaubaren Platzbedarf, und ihre solide Konstruktion gibt langfristige Haltbarkeit unter anspruchsvollen Produktionsplänen. Ob Sie eine neue Anlage aufbauen oder bestehende Maschinen ersetzen – sie ist eine kluge Investition, die sich sauber in moderne Produktionssysteme einfügt und dabei ausgezeichnete Filterqualität liefert.",
+    ],
+    applications: ["Großserien-Filterproduktion", "Großserienfertigung"],
+  },
+  "molins-pm-5": {
+    tagline: "Molins-Filtermaschine mit hoher Kapazität und 4.000 Filtern pro Minute.",
+    metaDescription:
+      "Molins PM-5 Filtermaschine in Pakistan – Maschine mit hoher Kapazität und 4.000 Filtern pro Minute. Geliefert und betreut von Civic Tobacco Machinery.",
+    intro: [
+      "Die Molins PM-5 ist eine Filtermaschine mit hoher Kapazität für die Anforderungen der Großserienproduktion. Mit einer Kapazität von 4.000 Filtern pro Minute ist sie ein starkes Beispiel für Effizienz und Präzision in der Filterfertigung und passt zuverlässig zu stark ausgelasteten Fabriken in Pakistan.",
+      "Sie bietet nützliche Flexibilität bei der Filterdimensionierung, mit einem Filterstrangdurchmesser von 7,5 bis 7,8 mm und Filterstranglängen von 108 bis 126 mm, sodass sie unterschiedliche Filterspezifikationen problemlos aufnehmen kann.",
+      "Mit rund 2.000 kg hat die PM-5 eine robuste Bauweise, die Haltbarkeit und stabilen Lauf über lange Zeiträume gibt. Von Molins gebaut, einem bekannten Namen der Branche, verbindet sie bewährte Technik mit hoher Ausbringung, was sie zu einem unverzichtbaren Baustein für Hersteller macht, die Qualitätsfilter bei maximalem Durchsatz wünschen.",
+    ],
+    applications: ["Großserien-Filterproduktion", "Molins-basierte Linien"],
+  },
+  "hollow-tube-maker": {
+    tagline: "Hochgeschwindigkeits-Hohlrohrmaschine mit 2.100 Zigaretten pro Minute.",
+    metaTitle: "Hohlrohrmaschine, Zigarettenfiltermaschine",
+    metaDescription:
+      "Hohlrohrmaschine in Pakistan – 2.100 pro Minute mit Plug-Assembler für Spezialfilterrohre. Geliefert und betreut von Civic Tobacco Machinery.",
+    intro: [
+      "Die Hohlrohrmaschine sticht durch ihre Produktionskapazität und ihren Hochgeschwindigkeitslauf hervor. Fähig, 2.100 Zigaretten pro Minute zu produzieren, liefert sie starke Effizienz und gleichmäßige Ausbringung. Ein Stranggeschwindigkeitsbereich von 140 bis 175 Metern pro Minute sowie eine Abschneidgeschwindigkeit von bis zu 2.500 Strängen pro Minute unterstreichen, wie gut sie sich für die Großserienproduktion in Fabriken in Pakistan eignet.",
+      "Mit 3.050 kg hat die Maschine eine robuste Bauweise für Haltbarkeit und langfristige Zuverlässigkeit. Der Plug-Assembler fügt weitere 1.800 kg hinzu und arbeitet im Takt mit der Maschine für eine präzise, effiziente Rohrproduktion. Die Gesamtleistungsaufnahme beträgt 14 kW, aufgeteilt in 6,5 kW für die Maschine und 7,5 kW für den Plug-Assembler, was Leistung und Energieverbrauch gut ausbalanciert.",
+      "Für die Großserienfertigung ausgelegt, nutzt die Hohlrohrmaschine aktuelle Technik, um hochwertige Rohre herzustellen. Ihre Hochgeschwindigkeitsfähigkeit und ihre solide Technik machen sie zu einem wertvollen Baustein für Produzenten, die eine hohe Nachfrage erfüllen und dabei exzellente Produktionsstandards halten müssen.",
+    ],
+    applications: ["Großserien-Filterproduktion", "Spezialfilterrohre"],
+  },
+
+  "tobacco-feeder": {
+    tagline: "Führt Mark-8- und Mark-9-Strangmaschinen einen gleichmäßigen Tabakstrom zu.",
+    metaTitle: "Tabakbeschicker für Zigarettenstrangmaschinen",
+    metaDescription:
+      "Tabakbeschicker in Pakistan – gleichmäßiger Tabakstrom für Mark-8- und Mark-9-Strangmaschinen. Geliefert und betreut von Civic Tobacco Machinery.",
+    intro: [
+      "Der Tabakbeschicker ist eine entscheidende Zuführmaschine für eine Zigarettenfabrik. Er führt den Herstellmaschinen kontinuierlich und gleichmäßig Tabak zu und schichtet ihn ordentlich, sodass er genau richtig für die Produktion vorbereitet ist.",
+      "Er ist mit Mark-8- und Mark-9-Maschinen kompatibel und fügt sich mühelos in eine bestehende Anlage ein. Seine einstellbaren Mengenwerte lassen Sie den Tabakstrom präzise steuern, was die Produktionseffizienz steigert, und seine Automatisierung reduziert Handarbeit, strafft den Betrieb und hält die Produktivität hoch.",
+    ],
+    applications: ["Beschickung der Strangmaschine", "Gleichmäßige Strangproduktion"],
+  },
+  "cigarette-reclaimer": {
+    tagline: "Gewinnt Tabak aus Abfall mit 120 kg/Stunde und 99,8 % Effizienz zurück.",
+    metaTitle: "Zigarettenrückgewinner, Tabakrückgewinnungsmaschine",
+    metaDescription:
+      "Zigarettenrückgewinner in Pakistan – gewinnt Tabak aus Produktionsabfall mit 120 kg/Stunde und 99,8 % Effizienz zurück. Geliefert von Civic Tobacco Machinery.",
+    intro: [
+      "Der Zigarettenrückgewinner ist eine ausgezeichnete Tabakrückgewinnungsmaschine für Abfall aus der Zigarettenfertigung. Er trennt wiederverwendbaren Tabak mit sehr geringen Verlusten von Abfallstoffen, sodass der Tabak, den Sie sonst wegwerfen würden, zurück in die Produktion geht.",
+      "Bei maximaler Kapazität gewinnt er 120 kg pro Stunde zurück und arbeitet mit beeindruckenden 99,8 % Effizienz, was Ihnen die höchstmögliche Auslastung gibt. Mit einer Rückgewinnungsrate von 90 % bietet er einen echten Vorteil bei der Abfallreduzierung und der Steigerung der Gesamtproduktionseffizienz.",
+      "Er ist benutzerfreundlich und einfach in Ihre Produktionslinie zu integrieren, was ihn zu einer praktischen, kostensparenden Ergänzung für Fabriken in Pakistan macht, die das Meiste aus jeder Charge herausholen wollen.",
+    ],
+    applications: ["Abfallreduzierung", "Tabakrückgewinnung"],
+  },
+  "tobacco-cutters": {
+    tagline: "Hauni-KT-400-Tabakschneider mit fünf Messern und SPS-Schnittgrößensteuerung.",
+    metaTitle: "Hauni Tabakschneider KT-400",
+    metaDescription:
+      "Hauni Tabakschneider KT-400 in Pakistan – Fünf-Messer-Schneider mit SPS-geregelter Schnittgröße. Geliefert und betreut von Civic Tobacco Machinery.",
+    intro: [
+      "Der Hauni Tabakschneider KT-400 ist eine präzisionsgefertigte Maschine, die eine entscheidende Rolle dabei spielt, die Schnittqualität in der Tabakverarbeitung gleichmäßig zu halten. Er trägt fünf Messer, die gleichmäßige Schnitte liefern und die Gesamtqualität der Tabakmischung verbessern, und pneumatische Zylinder betätigen die Klemmbacke für glattes, effizientes Schneiden mit weniger Stillstand und Wartung.",
+      "Der KT-400 läuft außerdem mit einem fortschrittlichen SPS-Antriebssystem auf einer Messing-Biegelatte, das die Schnittgröße präzise regelt. Das hält jede Charge gleichmäßig und lässt Sie die Schnittgröße auf spezifische Anforderungen abstimmen, was echte Vielseitigkeit hinzufügt. Mit seiner Präzision und Zuverlässigkeit ist der KT-400 ein wichtiger Baustein für jeden Tabakproduktionsbetrieb in Pakistan, der auf Spitzenqualität und Effizienz zielt.",
+    ],
+    applications: ["Primärverarbeitung", "Aufbereitung von Schnitttabak"],
+  },
+  "tobacco-stem-flattener": {
+    tagline: "Walzt Tabakrippen für gleichmäßige Mischung und weniger Blattabfall.",
+    metaTitle: "Rippenwalze, Maschine für die Primärverarbeitung",
+    metaDescription:
+      "Rippenwalze in Pakistan – walzt Rippen für gleichmäßige Mischung und reduzierten Blattabfall. Geliefert und betreut von Civic Tobacco Machinery.",
+    intro: [
+      "Die Rippenwalze spielt eine Schlüsselrolle bei der Optimierung des Tabakverarbeitungsablaufs. Durch das Walzen der Tabakrippen bereitet sie diese für die gleichmäßige Mischung mit den Blättern vor, was die Verarbeitung erleichtert und die Wahrscheinlichkeit von Ungleichmäßigkeiten im Endprodukt verringert.",
+      "Durch das effiziente Walzen der Rippen minimiert sie außerdem den Blattabfall und macht den gesamten Prozess wirtschaftlicher und nachhaltiger. Das Ergebnis ist ein gleichmäßiges, hochwertiges Produkt, das strenge Branchenstandards erfüllt, was die Rippenwalze zu einem wertvollen Baustein für jeden Tabakverarbeitungsbetrieb in Pakistan macht.",
+    ],
+    applications: ["Primärverarbeitung", "Ausbeuteverbesserung"],
+  },
 };
 
 const productContent: Partial<Record<LocaleCode, Record<string, ProductContent>>> = {
