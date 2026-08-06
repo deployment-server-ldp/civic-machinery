@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import WhatsAppIcon from "./WhatsAppIcon";
-import LangSwitcher from "./LangSwitcher";
+import CountrySwitcher from "./CountrySwitcher";
 import { mainNav, type NavItem } from "@/lib/navigation";
 import { siteConfig, whatsappLink } from "@/lib/site";
 import { useLocale } from "@/lib/use-locale";
@@ -87,7 +87,7 @@ export default function Header() {
             <span aria-hidden="true" className="text-brand-700">
               |
             </span>
-            <LangSwitcher />
+            <CountrySwitcher />
           </div>
         </div>
       </div>
@@ -242,7 +242,7 @@ function MobileMenu({
           ))}
         </ul>
         <div className="mt-4 border-t border-brand-100 pt-4">
-          <LangSwitcher className="rounded-lg bg-brand-950 px-3 py-2" />
+          <CountrySwitcher variant="mobile" />
         </div>
         <a
           href={whatsappLink()}
