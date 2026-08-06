@@ -186,6 +186,21 @@ export interface Dictionary {
   /** The "Cigarette Making Machines" section shown on the manufacturing page. */
   manufacturingSection: { title: string; intro: string; seeAll: string };
 
+  /** Chrome strings for the blog index + post pages. */
+  blog: {
+    eyebrow: string;
+    indexTitle: string;
+    indexIntro: string;
+    metaTitle: string;
+    metaDescription: string;
+    readArticle: string;
+    minRead: string;
+    tags: string;
+    backToAll: string;
+    keepReading: string;
+    dateLocale: string;
+  };
+
   /** Chrome strings for the product detail page. */
   product: {
     keyFeatures: string;
@@ -653,6 +668,21 @@ const en: Dictionary = {
     intro:
       "The maker is the heart of any cigarette factory. It takes cut tobacco and paper and turns them into a finished rod, thousands of times a minute, without a break in quality.",
     seeAll: "See all →",
+  },
+  blog: {
+    eyebrow: "Blog",
+    indexTitle: "Guides & Advice on Cigarette Machinery",
+    indexIntro:
+      "Straight-talking articles to help you choose, buy and run cigarette and tobacco machinery, written by people who work with these machines every day.",
+    metaTitle: "Blog | Civic Tobacco Machinery",
+    metaDescription:
+      "Practical guides on cigarette and tobacco machinery, choosing packing machines, comparing makers, and buying used machines in Pakistan. From Civic Tobacco Machinery.",
+    readArticle: "Read article →",
+    minRead: "min read",
+    tags: "Tags:",
+    backToAll: "← Back to all articles",
+    keepReading: "Keep reading",
+    dateLocale: "en-GB",
   },
   product: {
     keyFeatures: "Key features",
@@ -1122,6 +1152,21 @@ const de: Dictionary = {
     intro:
       "Die Herstellmaschine ist das Herz jeder Zigarettenfabrik. Sie verwandelt geschnittenen Tabak und Papier tausendfach pro Minute in einen fertigen Strang – ohne Qualitätseinbußen.",
     seeAll: "Alle ansehen →",
+  },
+  blog: {
+    eyebrow: "Blog",
+    indexTitle: "Ratgeber & Tipps zu Zigarettenmaschinen",
+    indexIntro:
+      "Klare, praxisnahe Artikel, die Ihnen helfen, Zigaretten- und Tabakmaschinen auszuwählen, zu kaufen und zu betreiben – geschrieben von Menschen, die täglich mit diesen Maschinen arbeiten.",
+    metaTitle: "Blog | Civic Tobacco Machinery",
+    metaDescription:
+      "Praxisnahe Ratgeber zu Zigaretten- und Tabakmaschinen – Verpackungsmaschinen auswählen, Strangmaschinen vergleichen und Gebrauchtmaschinen in Pakistan kaufen. Von Civic Tobacco Machinery.",
+    readArticle: "Artikel lesen →",
+    minRead: "Min. Lesezeit",
+    tags: "Themen:",
+    backToAll: "← Zurück zu allen Artikeln",
+    keepReading: "Weiterlesen",
+    dateLocale: "de-DE",
   },
   product: {
     keyFeatures: "Wichtigste Merkmale",

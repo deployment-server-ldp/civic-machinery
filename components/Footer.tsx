@@ -69,7 +69,10 @@ export default function Footer() {
                 );
               })}
               <li>
-                <Link href="/blog" className="text-brand-300 hover:text-accent-300">
+                <Link
+                  href={localeHref(locale, "/blog")}
+                  className="text-brand-300 hover:text-accent-300"
+                >
                   {dict.footer.ourBlog}
                 </Link>
               </li>

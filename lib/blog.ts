@@ -37,6 +37,10 @@ export interface BlogPost {
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
+/** Directory for a locale's posts. English lives at the root; others nest. */
+const localeDir = (locale: string) =>
+  locale === "en" ? BLOG_DIR : path.join(BLOG_DIR, locale);
+
 const asStringArray = (value: unknown): string[] =>
   Array.isArray(value)
     ? value.map((v) => String(v)).filter(Boolean)
@@ -51,9 +55,9 @@ const asStringArray = (value: unknown): string[] =>
 const estimateReadMinutes = (content: string): number =>
   Math.max(1, Math.round(content.trim().split(/\s+/).length / 200));
 
-function readPost(fileName: string): BlogPost {
+function readPost(dir: string, fileName: string): BlogPost {
   const slug = fileName.replace(/\.md$/, "");
-  const raw = fs.readFileSync(path.join(BLOG_DIR, fileName), "utf8");
+  const raw = fs.readFileSync(path.join(dir, fileName), "utf8");
   const { data, content } = matter(raw);
 
   return {
@@ -81,16 +85,36 @@ function readPost(fileName: string): BlogPost {
   };
 }
 
-function loadPosts(): BlogPost[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
+function loadPosts(dir: string): BlogPost[] {
+  if (!fs.existsSync(dir)) return [];
   return fs
-    .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map(readPost)
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isFile() && e.name.endsWith(".md"))
+    .map((e) => readPost(dir, e.name))
     .sort((a, b) => (a.date < b.date ? 1 : -1)); // newest first
 }
 
-export const blogPosts: BlogPost[] = loadPosts();
+/** Posts for a locale (English at the root, others from content/blog/<locale>). */
+export const getPostsForLocale = (locale: string): BlogPost[] =>
+  loadPosts(localeDir(locale));
+
+export const getPostForLocale = (locale: string, slug: string) =>
+  getPostsForLocale(locale).find((p) => p.slug === slug);
+
+/** English posts (default) — kept as the original exports. */
+export const blogPosts: BlogPost[] = getPostsForLocale("en");
 
 export const getPost = (slug: string) =>
   blogPosts.find((p) => p.slug === slug);
+
+/**
+ * Blog paths that have a German translation — "/blog" plus each translated
+ * post. Server-only (reads the filesystem); consumed by the sitemap. The
+ * client-facing translated-path set in i18n.ts hardcodes these so chrome
+ * links + hreflang stay consistent without pulling `fs` into the client.
+ */
+export const translatedBlogPaths: string[] = (() => {
+  const de = getPostsForLocale("de");
+  if (de.length === 0) return [];
+  return ["/blog", ...de.map((p) => `/blog/${p.slug}`)];
+})();

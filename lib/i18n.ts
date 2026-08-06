@@ -80,6 +80,14 @@ const staticTranslatedPaths = [
   "/cigarette-box-wrapping-machines",
   "/cigarette-filter-making-machines",
   "/cutter-feeder-reclaimer",
+  // Blog: the index + the translated posts (kept in sync with content/blog/de).
+  // Hardcoded here so client chrome + hreflang work without importing the
+  // fs-backed blog loader into client code.
+  "/blog",
+  "/blog/how-to-choose-the-right-cigarette-making-machine",
+  "/blog/molins-mark-8-post-64-vs-mark-8d-max-15",
+  "/blog/regular-wrapper-cp1-vs-naked-over-wrapper",
+  "/blog/what-does-a-hollow-tube-maker-do",
 ];
 
 export const translatedPaths: readonly string[] = [
