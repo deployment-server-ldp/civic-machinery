@@ -2638,7 +2638,491 @@ const ar: Dictionary = {
   },
 };
 
-const dictionaries: Partial<Record<LocaleCode, Dictionary>> = { en, de, it, ru, ar };
+/* ---------------------------------------------------------------------------
+ * Polish (pl-PL) — first-pass professional translation, native review pending.
+ * ------------------------------------------------------------------------- */
+
+const pl: Dictionary = {
+  nav: {
+    about: "O nas",
+    making: "Produkcja papierosów",
+    packing: "Pakowanie",
+    filter: "Maszyny do filtrów",
+    wrappers: "Owijarki i pakowaczki",
+    cutter: "Krajanie/podawanie/odzysk",
+    contact: "Kontakt",
+  },
+  header: {
+    tagline: "Producenci maszyn do papierosów i tytoniu w Pakistanie",
+    call: "Zadzwoń",
+    whatsapp: "WhatsApp",
+    region: "Pakistan",
+  },
+  megaMenu: {
+    prompt: "Szukasz konkretnej maszyny lub całej linii?",
+    viewAll: "Zobacz wszystkie maszyny produkcyjne →",
+  },
+  productCard: { viewDetails: "Zobacz szczegóły" },
+  breadcrumbHome: "Strona główna",
+  faqHeading: "Najczęściej zadawane pytania",
+  emptyNote:
+    "Maszyny z tej kategorii są dodawane regularnie. Skontaktuj się z nami, aby poznać aktualną dostępność.",
+  cta: {
+    title: "Nie wiesz, jakiej maszyny potrzebujesz?",
+    text: "Podaj nam format, docelową wydajność i budżet. Polecimy odpowiednią maszynę — nową lub regenerowaną — i pomożemy ją uruchomić.",
+    whatsapp: "WhatsApp",
+    enquiry: "Wyślij zapytanie",
+  },
+  footer: {
+    blurb:
+      "Dostawcy nowych i używanych maszyn do produkcji, pakowania i owijania papierosów w Pakistanie, z montażem, częściami zamiennymi i serwisem, na których możesz polegać.",
+    machines: "Maszyny",
+    manufacturing: "Produkcja",
+    reachUs: "Kontakt",
+    ourBlog: "Nasz blog",
+    hours: "Pon–Sob, 09:00–18:00",
+    rights: "Wszelkie prawa zastrzeżone.",
+    links: { home: "Strona główna", about: "O nas", blog: "Blog", contact: "Kontakt" },
+    labels: {
+      "/cigarette-packing-machines": "Maszyny pakujące",
+      "/cigarette-box-wrapping-machines": "Maszyny owijające",
+      "/cigarette-manufacturing-machines": "Maszyny produkcyjne",
+      "/cigarette-making-machines": "Maszyny do papierosów",
+      "/cigarette-filter-making-machines": "Maszyny do produkcji filtrów",
+      "/cutter-feeder-reclaimer": "Maszyny do tytoniu",
+    },
+  },
+  switcher: { label: "Język" },
+
+  home: {
+    metaTitle: "Civic Tobacco Machinery | Maszyny do papierosów z Pakistanu",
+    metaDescription:
+      "Civic Tobacco Machinery dostarcza maszyny do produkcji, pakowania i owijania papierosów w Pakistanie. Nowe i używane maszyny tytoniowe, linie do filtrów, części zamienne i pełne wsparcie przy montażu.",
+    hero: {
+      h1: "Szukasz maszyn do papierosów i tytoniu z Pakistanu?",
+      lead: "Jesteś we właściwym miejscu. Od pierwszego wałka po gotowy karton, Civic Tobacco Machinery wyposaży Cię w nowe i regenerowane linie produkcyjne, filtrowe, pakujące i owijające — zamontowane, wyregulowane i wsparte częściami zamiennymi oraz serwisem, na których możesz polegać.",
+      getQuote: "Poproś o wycenę",
+      whatsapp: "WhatsApp",
+    },
+    browseHeading: "Przeglądaj według typu maszyny",
+    browse: {
+      packing: "Maszyny pakujące do papierosów",
+      wrapping: "Maszyny owijające do papierosów",
+      making: "Maszyny produkcyjne do papierosów",
+      used: "Używane maszyny do papierosów",
+    },
+    viewRange: "Zobacz ofertę →",
+    about: {
+      eyebrow: "O nas",
+      h2: "Pokolenia inżynierskiej doskonałości w maszynach tytoniowych",
+      lead: "Dumny rodzinny biznes ojca i syna, obecnie w trzecim pokoleniu, z ponad 35-letnim praktycznym doświadczeniem w branży tytoniowej.",
+      p1: "Od dziesięcioleci nasza rodzina działa w jednej dziedzinie — maszyn tytoniowych. To, co zaczęło się jako niewielka działalność handlowa, wyrosło na zaufaną, wielopokoleniową markę, na której nowe i uznane firmy papierosowe w całym Pakistanie polegają przy budowie i eksploatacji swoich linii.",
+      p2: "Jesteśmy wyspecjalizowanymi producentami maszyn tytoniowych i oferujemy kompletne rozwiązanie z jednego źródła. Od maszyn produkcyjnych i filtrowych po pakowaczki i owijarki, pomagamy dobrać właściwy sprzęt, zobaczyć go w pracy przed zakupem oraz zamontować i wyregulować go w Twoim zakładzie. Zapewniamy też bezpłatne pokazy i szkolenia dla Twoich techników, aby Twój zespół czuł się pewnie przy maszynie od pierwszego dnia.",
+      bullets: [
+        "Rodzinny biznes od wielu pokoleń",
+        "Maszyny nowe i regenerowane",
+        "Pełna linia, od produkcji po pakowanie",
+        "Pokazy i szkolenia techników",
+      ],
+      more: "Więcej o nas",
+    },
+    featured: {
+      eyebrow: "Dostępne i popularne",
+      h2: "Wybrane maszyny",
+      viewAll: "Zobacz wszystkie maszyny →",
+    },
+    why: {
+      eyebrow: "Dlaczego Civic Tobacco Machinery",
+      h2: "Właściwa maszyna, przygotowana na lata",
+      reasons: [
+        {
+          title: "Maszyny, które nie zawodzą",
+          text: "Stawiamy na sprawdzone marki z łatwą dostępnością części, aby Twoja linia pozostała wydajna zmiana po zmianie.",
+        },
+        {
+          title: "Uczciwe raporty o stanie",
+          text: "Każda używana maszyna jest sprawdzana, serwisowana i testowana. Otrzymujesz rzetelny opis jej stanu, bez niespodzianek.",
+        },
+        {
+          title: "Wsparcie dla całej linii",
+          text: "Od produkcji po pakowanie pomagamy dobrać maszyny tak, aby nic nie stało się wąskim gardłem, a także montujemy je i serwisujemy.",
+        },
+        {
+          title: "Lokalna pomoc na miejscu",
+          text: "Mamy siedzibę tutaj, w Pakistanie. Gdy potrzebujesz części lub technika, pomoc jest blisko, a nie na innym kontynencie.",
+        },
+      ],
+    },
+    ranges: {
+      making: "Maszyny do papierosów",
+      packing: "Maszyny pakujące do papierosów",
+      filter: "Maszyny do produkcji filtrów papierosowych",
+      wrapping: "Maszyny owijające do papierosów",
+    },
+    carousel: {
+      eyebrow: "Nasz asortyment",
+      heading: "Maszyny do papierosów na sprzedaż",
+      viewAllPrefix: "Zobacz wszystkie: ",
+      viewAllSuffix: " →",
+    },
+    gallery: {
+      eyebrow: "Galeria",
+      heading: "Civic Tobacco Machinery w obrazach",
+      text: "Chwile z międzynarodowych targów tytoniowych oraz spotkań z naszymi partnerami i klientami na całym świecie.",
+    },
+    local: {
+      eyebrow: "Obsługujemy cały Pakistan",
+      h2: "Twój partner w zakresie maszyn tytoniowych w Pakistanie",
+      text: "Siedziba w strefie przemysłowej SITE oznacza, że jesteśmy blisko fabryk, które obsługujemy. Gdy potrzebujesz części, technika lub uczciwej porady dotyczącej maszyny, masz do czynienia z ludźmi z tego samego miasta, a nie z dostawcą z innego kontynentu.",
+      bullets: [
+        "Szybkie lokalne wsparcie i części zamienne",
+        "Montaż i uruchomienie w Twojej fabryce",
+        "Maszyny nowe i regenerowane na każdy budżet",
+      ],
+      visitHeading: "Odwiedź nas lub zadzwoń",
+      directions: "Dojazd i kontakt",
+    },
+    faqHeading: {
+      eyebrow: "Częste pytania",
+      h2: "Najczęściej zadawane pytania",
+    },
+    faqs: [
+      {
+        question: "Czy sprzedajecie w Pakistanie zarówno nowe, jak i używane maszyny do papierosów?",
+        answer:
+          "Tak. Dostarczamy maszyny nowe oraz starannie regenerowane używane maszyny do papierosów i tytoniu. Każda używana maszyna jest przed sprzedażą sprawdzana, serwisowana i testowana oraz dostarczana z uczciwym raportem o stanie, abyś dokładnie wiedział, co kupujesz.",
+      },
+      {
+        question: "Jakimi markami maszyn produkcyjnych do papierosów się zajmujecie?",
+        answer:
+          "Pracujemy głównie z dobrze wspieranymi markami, takimi jak Molins do maszyn produkcyjnych i filtrowych oraz HLP i SASIB do pakowania i owijania. Wybieramy je, ponieważ części i przeszkoleni technicy są łatwo dostępni, co utrzymuje Twoją linię w ruchu przez lata.",
+      },
+      {
+        question: "Czy montujecie maszyny i dostarczacie części zamienne?",
+        answer:
+          "Tak. Pomagamy w montażu i prawidłowym ustawieniu maszyny w Twoim zakładzie, a następnie wspieramy Cię częściami zamiennymi i serwisem. Uruchomienie maszyny produkcyjnej lub pakującej nie jest zadaniem typu „podłącz i działaj”, dlatego pozostajemy zaangażowani, aż zacznie działać tak, jak powinna.",
+      },
+      {
+        question: "Gdzie się znajdujecie i czy dostarczacie na terenie całego Pakistanu?",
+        answer:
+          "Nasz warsztat znajduje się w strefie przemysłowej SITE w Karaczi. Obsługujemy klientów w całym Pakistanie i możemy zorganizować dostawę oraz montaż wszędzie tam, gdzie znajduje się Twoja fabryka.",
+      },
+    ],
+  },
+
+  about: {
+    metaTitle: "O nas | Civic Tobacco Machinery",
+    metaDescription:
+      "O Civic Tobacco Machinery, dostawcy maszyn do papierosów i tytoniu w Pakistanie. Kim jesteśmy, co jest dla nas ważne i jak wspieramy Twoją fabrykę nowymi i używanymi maszynami.",
+    hero: {
+      eyebrow: "O nas",
+      title: "Maszyny do papierosów i tytoniu, wsparte przez ludzi, którzy je znają",
+      intro:
+        "Civic Tobacco Machinery od lat pomaga fabrykom w całym Pakistanie budować, rozwijać i utrzymywać ich linie papierosowe.",
+    },
+    whoHeading: "Kim jesteśmy",
+    who: [
+      "Jesteśmy dostawcą maszyn do papierosów i tytoniu z siedzibą w Pakistanie. Przez lata pracowaliśmy ze wszystkim — od małych warsztatów stawiających pierwsze kroki w produkcji papierosów po uznane fabryki dodające drugą lub trzecią linię. To doświadczenie kształtuje nasz sposób pracy: najpierw słuchamy, rozumiemy, czego naprawdę potrzebujesz, a następnie wskazujemy pasującą maszynę.",
+      "Nasza oferta obejmuje całą linię: maszyny produkcyjne formujące wałek, maszyny filtrowe, maszyny pakujące do opakowań twardych i miękkich, maszyny owijające i pakujące w kartony oraz maszyny tytoniowe zasilające produkcję. Zajmujemy się zarówno nowym, jak i starannie regenerowanym sprzętem, więc znajdzie się rozsądna opcja niezależnie od budżetu.",
+    ],
+    howHeading: "Jak pracujemy",
+    how: [
+      "Zakup maszyny to tylko połowa historii. Maszynę produkcyjną lub pakującą trzeba prawidłowo zamontować, właściwie ustawić i utrzymać w ruchu, i właśnie tutaj wielu dostawców znika. My nie. Pomagamy wprowadzić maszynę do Twojego zakładu i uruchomić ją tak, jak należy, a potem pozostajemy dostępni w kwestii części i serwisu.",
+      "Ponieważ mamy siedzibę tutaj, w strefie przemysłowej SITE, to wsparcie jest naprawdę lokalne. Gdy coś wymaga uwagi, rozmawiasz z ludźmi z tego samego miasta, a nie czekasz na dostawcę w innym kraju i innej strefie czasowej.",
+    ],
+    brandsHeading: "Marki, którym ufamy",
+    brands:
+      "Skupiamy się na sprawdzonych nazwach: Molins do maszyn produkcyjnych i filtrowych, HLP i SASIB do pakowania i owijania oraz rodzina Protos do linii o wyższej prędkości. Wybieramy je nie ze względu na markę, lecz dlatego, że ich części i wiedza są łatwo dostępne — a to właśnie sprawia, że maszyna zarabia na siebie przez lata.",
+    glance: {
+      heading: "W skrócie",
+      basedIn: "Siedziba w",
+      basedInValue: "SITE, Karaczi, Pakistan",
+      supply: "Dostarczamy",
+      supplyValue: "Nowe i używane maszyny tytoniowe",
+      serve: "Obsługujemy",
+      serveValue: "Cały Pakistan",
+      call: "Telefon / WhatsApp",
+      talk: "Porozmawiaj z nami",
+    },
+    valuesEyebrow: "Co jest dla nas ważne",
+    valuesHeading: "Nasz sposób prowadzenia interesów",
+    values: [
+      {
+        title: "Uczciwość przede wszystkim",
+        text: "Mówimy Ci o rzeczywistym stanie maszyny i o tym, co potrafi. Sprzedaż, która pozostawia Cię niezadowolonym, to w ogóle nie sprzedaż.",
+      },
+      {
+        title: "Maszyny, które sami byśmy eksploatowali",
+        text: "Zajmujemy się markami i modelami, którym ufamy — tymi o dobrej dostępności części i długiej żywotności.",
+      },
+      {
+        title: "Wsparcie, które zostaje",
+        text: "Nasza praca nie kończy się na dostawie. Pomagamy przy montażu, ustawieniu, częściach i serwisie w długiej perspektywie.",
+      },
+      {
+        title: "Uczciwa wartość",
+        text: "Nowa czy regenerowana — pomagamy zdobyć właściwą maszynę w ramach Twojego budżetu, bez oszczędzania na tym, co się liczy.",
+      },
+    ],
+    ctaTitle: "Porozmawiajmy o Twojej linii",
+    ctaText:
+      "Czy zaczynasz, czy się rozwijasz — powiedz nam, co chcesz produkować, a pomożemy Ci to osiągnąć.",
+  },
+
+  contact: {
+    metaTitle: "Kontakt | Civic Tobacco Machinery",
+    metaDescription:
+      "Skontaktuj się z Civic Tobacco Machinery w Pakistanie. Zadzwoń, napisz na WhatsApp lub wyślij zapytanie o maszyny do produkcji, pakowania, owijania papierosów oraz maszyny używane. Warsztat w SITE, Karaczi.",
+    hero: {
+      eyebrow: "Kontakt",
+      title: "Skontaktuj się z Civic Tobacco Machinery",
+      intro:
+        "Powiedz nam, czego szukasz, a odpowiemy tego samego dnia roboczego. Zadzwoń, napisz na WhatsApp lub e-mail albo wyślij formularz poniżej.",
+    },
+    directHeading: "Skontaktuj się z nami bezpośrednio",
+    directText:
+      "Najszybszym sposobem na uzyskanie jasnej odpowiedzi o maszynie, jej stanie, cenie lub dostępności jest napisanie do nas na WhatsApp lub telefon.",
+    rows: {
+      visit: "Odwiedź nasz warsztat",
+      call: "Zadzwoń do nas",
+      whatsapp: "WhatsApp",
+      whatsappValue: "Napisz do nas pod",
+      email: "E-mail",
+      hours: "Godziny otwarcia",
+      hoursValue: "Poniedziałek – sobota, 09:00 – 18:00",
+      hoursClosed: "Niedziela nieczynne",
+    },
+    openInMaps: "Otwórz w Mapach Google",
+    formHeading: "Wyślij zapytanie",
+    formIntro:
+      "Wypełnij to, a szybko się odezwiemy. Pola oznaczone jako wymagane pomagają nam udzielić dokładnej odpowiedzi.",
+    form: {
+      name: "Twoje imię i nazwisko",
+      namePlaceholder: "np. Ahmed Khan",
+      phone: "Telefon / WhatsApp",
+      phonePlaceholder: "np. 0300 1234567",
+      email: "E-mail",
+      emailOptional: "(opcjonalnie)",
+      emailPlaceholder: "ty@firma.com",
+      interest: "Maszyna, która Cię interesuje",
+      interestPlaceholder: "np. maszyna pakująca HLP-200",
+      message: "Twoja wiadomość",
+      messagePlaceholder: "Podaj format, docelową wydajność i wszelkie szczegóły.",
+      submit: "Wyślij zapytanie",
+      sending: "Wysyłanie…",
+      successTitle: "Dziękujemy!",
+      successText:
+        "Twoje zapytanie zostało wysłane. Nasz zespół wkrótce się odezwie, zwykle tego samego dnia roboczego.",
+      errorText:
+        "Przepraszamy, coś poszło nie tak przy wysyłaniu wiadomości. Spróbuj ponownie lub",
+      errorWhatsApp: "napisz do nas na WhatsApp",
+      footnote:
+        "Twoje dane trafiają bezpośrednio do naszego zespołu — odpowiadamy zwykle tego samego dnia roboczego. Wolisz czat?",
+      footnoteChat: "WhatsApp",
+    },
+  },
+
+  categories: {
+    "/cigarette-manufacturing-machines": {
+      eyebrow: "Maszyny produkcyjne",
+      title: "Maszyny produkcyjne do papierosów w Pakistanie",
+      description:
+        "Maszyny produkcyjne do papierosów w Pakistanie: maszyny produkcyjne Molins, maszyny filtrowe i maszyny tytoniowe. Nowe i regenerowane linie od Civic Tobacco Machinery.",
+      intro: [
+        "Dobry papieros powstaje na długo przed opakowaniem. Zaczyna się od maszyny układającej równy wałek, linii filtrowej tnącej czysto oraz maszyn tytoniowych zasilających całą produkcję. Civic Tobacco Machinery dostarcza maszyny produkcyjne do papierosów w Pakistanie we wszystkich trzech obszarach.",
+        "Zajmujemy się maszynami produkcyjnymi Molins, maszynami filtrowymi KDF i PM oraz podajnikami, krajalnicami i regeneratorami, które je wspierają. Powiedz nam, jakich marek używasz i jakiej wydajności potrzebujesz, a pomożemy zbudować linię, która utrzymuje prędkość i jakość dzień po dniu.",
+      ],
+      faqs: [
+        {
+          question: "Jakie maszyny produkcyjne do papierosów dostarczacie?",
+          answer:
+            "Dostarczamy pełną linię produkcyjną: maszyny Molins Mark 8, Mark 9 i Mark 9.5 oraz maszyny Hauni Protos, a także maszyny filtrowe KDF i Molins oraz podajniki, krajalnice i regeneratory tytoniu, które je wspierają.",
+        },
+        {
+          question: "Ile papierosów na minutę produkują maszyny?",
+          answer:
+            "W zależności od modelu nasze maszyny pracują od około 3 000 do 8 000 papierosów na minutę, więc możesz dopasować maszynę do docelowej wydajności.",
+        },
+        {
+          question: "Dostarczacie maszyny nowe czy regenerowane?",
+          answer:
+            "Oba rodzaje. Regenerowane maszyny Molins i Hauni są przed sprzedażą w pełni sprawdzane, serwisowane i testowane, oferując dużą wartość rozwijającym się fabrykom.",
+        },
+        {
+          question: "Czy pomagacie dopasować maszynę produkcyjną do właściwej linii filtrowej?",
+          answer:
+            "Tak. Dbamy o to, aby maszyna produkcyjna i filtrowa pracowały zgodnie, dzięki czemu cała linia pozostaje zrównoważona. Podaj nam swoje marki i docelową wydajność, a polecimy konfigurację.",
+        },
+      ],
+    },
+    "/cigarette-packing-machines": {
+      eyebrow: "Maszyny pakujące",
+      title: "Maszyny pakujące do papierosów w Pakistanie",
+      description:
+        "Maszyny pakujące do papierosów w Pakistanie: linie HLP i SASIB do opakowań twardych i miękkich od 180 do 225 paczek na minutę. Dostarczane, montowane i wspierane przez Civic Tobacco Machinery.",
+      intro: [
+        "Linia pakująca to miejsce, w którym Twój produkt nabiera ostatecznego kształtu, więc musi być stabilna, czysta i łatwa w obsłudze zmiana po zmianie. W Civic Tobacco Machinery dostarczamy maszyny pakujące do papierosów w Pakistanie wybrane właśnie pod tym kątem: niezawodna wydajność i paczki wyglądające tak samo za każdym razem.",
+        "Nasza oferta obejmuje formaty opakowań twardych i miękkich, od 180 do 225 paczek na minutę, z opcjami nowymi i starannie regenerowanymi. Niezależnie od tego, czy tworzysz nową linię, czy zwiększasz moce istniejącej, pomagamy dobrać właściwą maszynę do Twojej wielkości produkcji, budżetu i produkowanych marek.",
+      ],
+      faqs: [
+        {
+          question: "Jaka jest różnica między maszynami do opakowań twardych i miękkich?",
+          answer:
+            "Opakowania twarde (pudełka z uchylnym wieczkiem) pracują na maszynach typu HLP, a opakowania miękkie (składana folia i nadrukowane opakowanie zewnętrzne) na maszynach typu SASIB. Dostarczamy oba rodzaje i pomagamy dopasować maszynę do formatu opakowania, który faktycznie sprzedają Twoje marki.",
+        },
+        {
+          question: "Jakie prędkości pakowania oferujecie?",
+          answer:
+            "Nasze maszyny pakujące do papierosów pracują od około 180 do 225 paczek na minutę. Wybierz prędkość odpowiadającą Twojemu realnemu zapotrzebowaniu na zmianę z pewnym zapasem na wzrost, zamiast płacić za nieużywaną moc.",
+        },
+        {
+          question: "Sprzedajecie maszyny pakujące nowe czy regenerowane?",
+          answer:
+            "Oba rodzaje. Każda używana pakowaczka HLP lub SASIB jest przed sprzedażą sprawdzana, serwisowana i testowana, więc dobra regenerowana maszyna może pracować latami za ułamek ceny nowej.",
+        },
+        {
+          question: "Czy montujecie maszynę i dostarczacie części zamienne?",
+          answer:
+            "Tak. Montujemy i ustawiamy maszynę oraz wspieramy HLP i SASIB szeroko dostępnymi częściami i serwisem. Napisz do nas na WhatsApp pod +92 301 1111184 w sprawie ceny i aktualnej dostępności.",
+        },
+      ],
+    },
+    "/cigarette-box-wrapping-machines": {
+      eyebrow: "Maszyny owijające",
+      title: "Maszyny owijające do papierosów w Pakistanie",
+      description:
+        "Maszyny owijające do papierosów w Pakistanie: owijarki zewnętrzne, pakowaczki kartonowe i owijarki celofanowe, które czysto zamykają Twoje paczki. Sprzedaż, części i serwis od Civic Tobacco Machinery.",
+      intro: [
+        "Owijka to ostatnia rzecz, jaką widzi Twój klient przed otwarciem paczki, dlatego czyste, szczelne zamknięcie ma tak duże znaczenie. Civic Tobacco Machinery dostarcza maszyny owijające do papierosów w Pakistanie, które zapewniają schludne wykończenie folii, prostą taśmę do otwierania i paczki pozostające świeże na półce.",
+        "Od owijarek pojedynczych paczek po owijanie kartonów i pakowaczki kartonowe, obejmujemy pełen zakres. Każda sprzedawana przez nas maszyna jest sprawdzana, ustawiana i przekazywana gotowa do pracy, z częściami i serwisem, po które możesz sięgnąć, gdy ich potrzebujesz.",
+      ],
+      faqs: [
+        {
+          question: "Jaka jest różnica między owijarką a pakowaczką kartonową?",
+          answer:
+            "Owijarka zamyka każdą paczkę w folii celofanowej z taśmą do otwierania, a pakowaczka kartonowa grupuje gotowe paczki w kartony lub pudełka. Większość linii używa obu, jedna po drugiej.",
+        },
+        {
+          question: "Jakie maszyny owijające i pakujące dostarczacie?",
+          answer:
+            "Dostarczamy owijarki i pakowaczki Molins i SASIB, w tym owijarkę paczek CP1, owijarkę „Naked” oraz pakowaczki Molins i SASIB, do linii z opakowaniami twardymi i miękkimi.",
+        },
+        {
+          question: "Oferujecie maszyny owijające nowe czy regenerowane?",
+          answer:
+            "Dostępne są zarówno nowe, jak i starannie regenerowane jednostki. Każda używana maszyna jest sprawdzana, ustawiana i przekazywana gotowa do pracy.",
+        },
+        {
+          question: "Czy zapewniacie montaż i części zamienne?",
+          answer:
+            "Tak, montaż, ustawienie, części zamienne i serwis to wszystko część naszej pracy. Skontaktuj się z nami na WhatsApp pod +92 301 1111184, aby otrzymać wycenę.",
+        },
+      ],
+    },
+    "/cigarette-filter-making-machines": {
+      eyebrow: "Maszyny produkcyjne",
+      title: "Maszyny do produkcji filtrów papierosowych w Pakistanie",
+      description:
+        "Maszyny do produkcji filtrów papierosowych w Pakistanie: Molins KDF, Molins PM i maszyny do rurek. Linie do wałków filtrowych dostarczane i wspierane przez Civic Tobacco Machinery.",
+      intro: [
+        "Dobry filtr robi więcej niż tylko wykańcza papierosa — kontroluje zaciąg, twardość i całe odczucie palenia. Civic Tobacco Machinery dostarcza maszyny do produkcji filtrów papierosowych w Pakistanie, które wytwarzają równe wałki, na których może polegać Twoja maszyna produkcyjna.",
+        "Mamy na stanie maszyny filtrowe Molins KDF i Molins PM oraz maszyny do rurek do formatów specjalnych. Niezależnie od długości czy rodzaju produkowanego filtra, pomożemy wybrać linię dopasowaną do prędkości Twoich maszyn produkcyjnych.",
+      ],
+      faqs: [
+        {
+          question: "Jakie maszyny do produkcji filtrów dostarczacie?",
+          answer:
+            "Dostarczamy maszyny filtrowe Hauni KDF-1 i KDF-2, maszyny filtrowe Molins PM oraz maszyny do rurek do formatów specjalnych, dla fabryk prowadzących produkcję wałków filtrowych.",
+        },
+        {
+          question: "Czy maszyna filtrowa może dorównać prędkości mojej maszyny produkcyjnej?",
+          answer:
+            "Tak. Pomagamy wybrać linię filtrową dopasowaną do prędkości Twoich maszyn produkcyjnych, aby obie pracowały zgodnie, a linia pozostała zrównoważona.",
+        },
+        {
+          question: "Oferujecie maszyny filtrowe nowe i regenerowane?",
+          answer:
+            "Oba rodzaje. Każda regenerowana maszyna KDF lub PM jest przed sprzedażą sprawdzana, serwisowana i testowana.",
+        },
+        {
+          question: "Czy montujecie i wspieracie maszyny do filtrów?",
+          answer:
+            "Tak, montaż, części zamienne i serwis są wliczone. Napisz do nas na WhatsApp pod +92 301 1111184 w sprawie ceny i dostępności.",
+        },
+      ],
+    },
+    "/cutter-feeder-reclaimer": {
+      eyebrow: "Maszyny produkcyjne",
+      title: "Krajalnice, podajniki i regeneratory tytoniu w Pakistanie",
+      description:
+        "Maszyny tytoniowe w Pakistanie: podajniki, krajalnice, regeneratory i spłaszczarki żył, które utrzymują w ruchu produkcję pierwotną i wtórną. Dostarczane przez Civic Tobacco Machinery.",
+      intro: [
+        "Za każdą maszyną produkcyjną i pakującą stoi zestaw cichszych maszyn wykonujących ciężką pracę: podawanie tytoniu, jego cięcie, ratowanie tego, co inaczej zostałoby zmarnowane. Civic Tobacco Machinery dostarcza maszyny tytoniowe w Pakistanie, które utrzymują tę stronę produkcji w ruchu.",
+        "Podajniki, krajalnice, regeneratory i spłaszczarki żył współpracują, aby zapewnić stałe zasilanie Twojej linii i ograniczyć odpady. Pomagamy dobrać właściwe jednostki wokół maszyn produkcyjnych i pakujących, które już eksploatujesz.",
+      ],
+      faqs: [
+        {
+          question: "Co robią podajniki, krajalnice i regeneratory tytoniu?",
+          answer:
+            "Podajniki zasilają maszyny produkcyjne tytoniem, krajalnice tną liść na rozmiar produkcyjny, a regeneratory odzyskują tytoń z odrzuconych papierosów, aby można go było ponownie wykorzystać, utrzymując płynny ruch produkcji pierwotnej i wtórnej.",
+        },
+        {
+          question: "Czy ten sprzęt może ograniczyć odpady tytoniu?",
+          answer:
+            "Tak. Regenerator odzyskuje nadający się do użytku tytoń z odrzuconych papierosów, co ogranicza odpady i z czasem obniża koszty eksploatacji.",
+        },
+        {
+          question: "Jakie marki dostarczacie?",
+          answer:
+            "Dostarczamy dobrze wspierane maszyny, takie jak krajalnica tytoniu Hauni KT-400, a także podajniki tytoniu, regeneratory papierosów i spłaszczarki żył.",
+        },
+        {
+          question: "Czy maszyny są nowe czy regenerowane i czy je wspieracie?",
+          answer:
+            "Dostępne są zarówno nowe, jak i regenerowane jednostki, wszystkie testowane przed sprzedażą, z montażem, częściami i serwisem. Skontaktuj się z nami na WhatsApp pod +92 301 1111184.",
+        },
+      ],
+    },
+  },
+  manufacturingSection: {
+    title: "Maszyny do papierosów w Pakistanie",
+    intro:
+      "Maszyna produkcyjna to serce każdej fabryki papierosów. Zamienia cięty tytoń i papier w gotowy wałek, tysiące razy na minutę, bez przerwy w jakości.",
+    seeAll: "Zobacz wszystkie →",
+  },
+  blog: {
+    eyebrow: "Blog",
+    indexTitle: "Poradniki i wskazówki dotyczące maszyn do papierosów",
+    indexIntro:
+      "Konkretne, rzeczowe artykuły, które pomogą Ci wybrać, kupić i eksploatować maszyny do papierosów i tytoniu, napisane przez ludzi pracujących z tymi maszynami każdego dnia.",
+    metaTitle: "Blog | Civic Tobacco Machinery",
+    metaDescription:
+      "Praktyczne poradniki dotyczące maszyn do papierosów i tytoniu: wybór maszyn pakujących, porównywanie maszyn produkcyjnych i kupowanie maszyn używanych w Pakistanie. Od Civic Tobacco Machinery.",
+    readArticle: "Czytaj artykuł →",
+    minRead: "min czytania",
+    tags: "Tagi:",
+    backToAll: "← Powrót do wszystkich artykułów",
+    keepReading: "Czytaj dalej",
+    dateLocale: "pl-PL",
+  },
+  product: {
+    keyFeatures: "Najważniejsze cechy",
+    specifications: "Dane techniczne",
+    description: "Opis",
+    bestSuitedFor: "Najlepsze do",
+    call: "Zadzwoń",
+    interested: "Zainteresowany tą maszyną?",
+    askAbout: "Zapytaj o",
+    enquiryText:
+      "Wyślij nam krótką wiadomość w sprawie ceny, aktualnej dostępności i stanu. Poinformujemy Cię też o pasujących maszynach uzupełniających Twoją linię.",
+    related: "Podobne maszyny",
+    thumbs: { front: "Widok z przodu", detail: "Szczegół", operation: "W trakcie pracy" },
+    waMessage: (name) =>
+      `Dzień dobry, jestem zainteresowany maszyną ${name}. Proszę o podanie ceny i dostępności.`,
+  },
+};
+
+const dictionaries: Partial<Record<LocaleCode, Dictionary>> = { en, de, it, ru, ar, pl };
 
 /** Get the dictionary for a locale, falling back to English if not translated. */
 export function getDict(locale: LocaleCode): Dictionary {
