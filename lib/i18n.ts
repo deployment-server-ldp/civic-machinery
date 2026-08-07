@@ -45,7 +45,7 @@ export const localeCodes = Object.keys(locales) as LocaleCode[];
  * pages — so only these drive static generation, hreflang and the switcher.
  * Promote a language here (after adding its dictionary) to take it live.
  */
-export const liveLocaleCodes: LocaleCode[] = ["en", "de", "it", "ru"];
+export const liveLocaleCodes: LocaleCode[] = ["en", "de", "it", "ru", "ar"];
 
 /** Live locales that get a URL folder prefix (everyone except the default). */
 export const prefixedLocales = liveLocaleCodes.filter((c) => c !== defaultLocale);
