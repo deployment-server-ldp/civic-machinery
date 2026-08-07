@@ -81,12 +81,12 @@ export default function CountrySwitcher({
       </button>
 
       {open && variant === "bar" && (
-        <div className="absolute right-0 top-full z-[60] mt-2 w-[min(44rem,calc(100vw-2rem))] rounded-2xl border border-brand-100 bg-white p-4 shadow-card">
-          <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
+        <div className="absolute right-0 top-full z-[60] mt-2 w-64 rounded-2xl border border-brand-100 bg-white p-3 shadow-card">
+          <p className="mb-2 px-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
             Select your country / region
           </p>
-          {/* All countries A→Z on a single horizontally-scrolling row. */}
-          <ul className="flex gap-1 overflow-x-auto pb-1.5">
+          {/* All countries A→Z in a single vertically-scrolling column. */}
+          <ul className="flex max-h-80 flex-col gap-0.5 overflow-y-auto pr-1">
             {countriesAZ.map((c) => {
               const loc = servedLocale(c);
               const isActive = c.code === current.code;
