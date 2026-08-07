@@ -12,6 +12,10 @@ import {
   defaultLocale,
 } from "@/lib/i18n";
 import { useLocale } from "@/lib/use-locale";
+import FlagIcon from "./FlagIcon";
+
+/** Countries A→Z by name (used for the desktop single-row selector). */
+const countriesAZ = [...countries].sort((a, b) => a.name.localeCompare(b.name));
 
 /** The language a country is actually served in right now (falls back to en). */
 const servedLocale = (c: Country) =>
@@ -65,24 +69,61 @@ export default function CountrySwitcher({
         className={buttonCls}
       >
         <GlobeIcon />
-        <span>
-          {current.flag} {current.name}
+        <span className="flex items-center gap-1.5">
+          {variant === "bar" ? (
+            <FlagIcon code={current.code} className="h-3.5 w-5" />
+          ) : (
+            <span aria-hidden="true">{current.flag}</span>
+          )}
+          {current.name}
         </span>
         <ChevronIcon open={open} />
       </button>
 
-      {open && (
-        <div
-          className={
-            variant === "mobile"
-              ? "mt-2 rounded-2xl border border-brand-100 bg-white p-3 shadow-card"
-              : "absolute right-0 top-full z-[60] mt-2 w-[min(46rem,calc(100vw-2rem))] rounded-2xl border border-brand-100 bg-white p-4 shadow-card"
-          }
-        >
+      {open && variant === "bar" && (
+        <div className="absolute right-0 top-full z-[60] mt-2 w-[min(44rem,calc(100vw-2rem))] rounded-2xl border border-brand-100 bg-white p-4 shadow-card">
           <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
             Select your country / region
           </p>
-          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-5">
+          {/* All countries A→Z on a single horizontally-scrolling row. */}
+          <ul className="flex gap-1 overflow-x-auto pb-1.5">
+            {countriesAZ.map((c) => {
+              const loc = servedLocale(c);
+              const isActive = c.code === current.code;
+              const localized = loc !== defaultLocale; // has a translated version
+              return (
+                <li key={c.code} className="shrink-0">
+                  <Link
+                    href={localeHref(loc, path)}
+                    hrefLang={locales[loc].hreflang}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`flex items-center gap-1.5 whitespace-nowrap rounded-lg px-2.5 py-2 text-sm transition-colors ${
+                      isActive
+                        ? "bg-accent-50 font-semibold text-accent-700"
+                        : "text-brand-700 hover:bg-brand-50 hover:text-accent-700"
+                    }`}
+                  >
+                    <FlagIcon code={c.code} className="h-3.5 w-5" />
+                    <span>{c.name}</span>
+                    {localized && (
+                      <span className="shrink-0 rounded bg-accent-100 px-1 text-[0.6rem] font-bold uppercase text-accent-700">
+                        {c.locale}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
+      {open && variant === "mobile" && (
+        <div className="mt-2 rounded-2xl border border-brand-100 bg-white p-3 shadow-card">
+          <p className="mb-3 px-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
+            Select your country / region
+          </p>
+          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
             {countries.map((c) => {
               const loc = servedLocale(c);
               const isActive = c.code === current.code;
