@@ -111,7 +111,13 @@ export function articleSchema(post: BlogPost, path: string, image: string) {
     image: abs(image),
     datePublished: post.date,
     dateModified: post.updated || post.date,
-    author: { "@type": "Organization", name: post.author },
+    author: {
+      "@type": "Person",
+      name: post.author,
+      ...(post.authorTitle ? { jobTitle: post.authorTitle } : {}),
+      ...(post.authorBio ? { description: post.authorBio } : {}),
+      worksFor: { "@type": "Organization", name: siteConfig.name },
+    },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,

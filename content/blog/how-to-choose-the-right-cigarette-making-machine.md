@@ -5,8 +5,8 @@ description: "Choosing a cigarette making machine involves more than speed. Comp
 excerpt: ""
 date: "2026-07-20"
 author: "Saad Ali"
-authorTitle: "Tobacco Machinery Specialists, Karachi"
-authorBio: "Civic Tobacco Machinery supplies new and reconditioned cigarette manufacturing, packing, wrapping and used tobacco machinery across Pakistan."
+authorTitle: "Cigarette Making Machinery Specialist, Civic Tobacco Machinery"
+authorBio: "Saad specifies and services Molins and Hauni cigarette making machines for factories across Pakistan, and spends most of his time matching machine speed and format range to what a production line actually needs."
 featuredImage: "/images/blog/how-to-choose-the-right-cigarette-making-machine.webp"
 categories: ["Guides & Advice"]
 tags: []

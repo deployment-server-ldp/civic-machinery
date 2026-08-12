@@ -5,8 +5,8 @@ description: "Comparing the Regular Wrapper CP1 and Naked Over Wrapper cigarette
 excerpt: ""
 date: "2026-07-29"
 author: "Mustafa Qureshi"
-authorTitle: "Tobacco Machinery Specialists, Karachi"
-authorBio: "Civic Tobacco Machinery supplies new and reconditioned cigarette manufacturing, packing, wrapping and used tobacco machinery across Pakistan."
+authorTitle: "Packing & Wrapping Machinery Specialist, Civic Tobacco Machinery"
+authorBio: "Mustafa works on packing and wrapping lines, HLP and SASIB pack formats, and box-wrapping setups, and writes about the tradeoffs factories weigh when choosing between machine formats."
 featuredImage: "/images/blog/regular-wrapper-cp1-vs-naked-over-wrapper.webp"
 categories: []
 tags: []

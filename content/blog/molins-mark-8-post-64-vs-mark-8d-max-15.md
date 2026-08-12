@@ -5,8 +5,8 @@ description: "Comparing the Molins Mark 8 Post 64 and Mark 8D MAX 15 cigarette m
 excerpt: ""
 date: "2026-07-24"
 author: "Saad Ali"
-authorTitle: "Tobacco Machinery Specialists, Karachi"
-authorBio: "Civic Tobacco Machinery supplies new and reconditioned cigarette manufacturing, packing, wrapping and used tobacco machinery across Pakistan."
+authorTitle: "Cigarette Making Machinery Specialist, Civic Tobacco Machinery"
+authorBio: "Saad specifies and services Molins and Hauni cigarette making machines for factories across Pakistan, and spends most of his time matching machine speed and format range to what a production line actually needs."
 featuredImage: "/images/blog/molins-mark-8-post-64-vs-mark-8d-max-15.png"
 categories: []
 tags: []

@@ -5,8 +5,8 @@ description: "A hollow tube maker produces the plug wrap tubes used in filter as
 excerpt: ""
 date: "2026-08-04"
 author: "Ahmed Khan"
-authorTitle: "Tobacco Machinery Specialists, Karachi"
-authorBio: "Civic Tobacco Machinery supplies new and reconditioned cigarette manufacturing, packing, wrapping and used tobacco machinery across Pakistan."
+authorTitle: "Filter & Tobacco Machinery Specialist, Civic Tobacco Machinery"
+authorBio: "Ahmed works on filter-making and the supporting tobacco machinery around it, from KDF filter makers to feeders and reclaimers, and writes about keeping the less-visible parts of a line running reliably."
 featuredImage: "/images/blog/what-does-a-hollow-tube-maker-do.webp"
 categories: []
 tags: []
