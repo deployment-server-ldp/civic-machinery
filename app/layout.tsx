@@ -97,11 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${display.variable} ${logoFont.variable}`}>
       <body className="min-h-screen bg-white font-sans text-brand-800 antialiased">
-        {/* Set text direction before paint so RTL locales (/ar) don't flash LTR. */}
+        {/* Set text direction before paint so RTL locales (/ar, /fa) don't flash LTR. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{var s=location.pathname.split('/')[1];document.documentElement.dir=(s==='ar')?'rtl':'ltr';}catch(e){}",
+              "try{var s=location.pathname.split('/')[1];document.documentElement.dir=(s==='ar'||s==='fa')?'rtl':'ltr';}catch(e){}",
           }}
         />
         <HtmlLangSync />

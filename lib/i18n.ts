@@ -10,7 +10,21 @@
 
 import { translatedProductPaths } from "./i18n-products";
 
-export type LocaleCode = "en" | "de" | "ar" | "ru" | "it" | "pl";
+export type LocaleCode =
+  | "en"
+  | "de"
+  | "ar"
+  | "ru"
+  | "it"
+  | "pl"
+  | "bg"
+  | "zh"
+  | "id"
+  | "fa"
+  | "tr"
+  | "vi"
+  | "za"
+  | "zw";
 
 export interface Locale {
   /** Short code used in the URL folder (except the default, which is root). */
@@ -35,6 +49,14 @@ export const locales: Record<LocaleCode, Locale> = {
   ru: { code: "ru", hreflang: "ru-RU", name: "Русский", englishName: "Russian", dir: "ltr" },
   it: { code: "it", hreflang: "it-IT", name: "Italiano", englishName: "Italian", dir: "ltr" },
   pl: { code: "pl", hreflang: "pl-PL", name: "Polski", englishName: "Polish", dir: "ltr" },
+  bg: { code: "bg", hreflang: "bg-BG", name: "Български", englishName: "Bulgarian", dir: "ltr" },
+  zh: { code: "zh", hreflang: "zh-CN", name: "中文", englishName: "Chinese", dir: "ltr" },
+  id: { code: "id", hreflang: "id-ID", name: "Bahasa Indonesia", englishName: "Indonesian", dir: "ltr" },
+  fa: { code: "fa", hreflang: "fa-IR", name: "فارسی", englishName: "Persian", dir: "rtl" },
+  tr: { code: "tr", hreflang: "tr-TR", name: "Türkçe", englishName: "Turkish", dir: "ltr" },
+  vi: { code: "vi", hreflang: "vi-VN", name: "Tiếng Việt", englishName: "Vietnamese", dir: "ltr" },
+  za: { code: "za", hreflang: "en-ZA", name: "English (South Africa)", englishName: "English (South Africa)", dir: "ltr" },
+  zw: { code: "zw", hreflang: "en-ZW", name: "English (Zimbabwe)", englishName: "English (Zimbabwe)", dir: "ltr" },
 };
 
 export const localeCodes = Object.keys(locales) as LocaleCode[];
@@ -45,7 +67,22 @@ export const localeCodes = Object.keys(locales) as LocaleCode[];
  * pages — so only these drive static generation, hreflang and the switcher.
  * Promote a language here (after adding its dictionary) to take it live.
  */
-export const liveLocaleCodes: LocaleCode[] = ["en", "de", "it", "ru", "ar"];
+export const liveLocaleCodes: LocaleCode[] = [
+  "en",
+  "de",
+  "it",
+  "ru",
+  "ar",
+  "pl",
+  "bg",
+  "zh",
+  "id",
+  "fa",
+  "tr",
+  "vi",
+  "za",
+  "zw",
+];
 
 /** Live locales that get a URL folder prefix (everyone except the default). */
 export const prefixedLocales = liveLocaleCodes.filter((c) => c !== defaultLocale);
