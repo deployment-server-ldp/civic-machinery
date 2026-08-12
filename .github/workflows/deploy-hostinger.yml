@@ -69,9 +69,11 @@ jobs:
             set ftp:ssl-force true;
             set ftp:ssl-protect-data true;
             set ssl:verify-certificate no;
-            set net:max-retries 3;
-            set net:timeout 30;
-            set net:persist-retries 3;
-            mirror --reverse --parallel=3 --verbose ./out/ '$FTP_DIR';
+            set net:max-retries 6;
+            set net:timeout 60;
+            set net:persist-retries 6;
+            set net:reconnect-interval-base 5;
+            set net:reconnect-interval-multiplier 1.5;
+            mirror --reverse --parallel=2 --use-pget-n=1 --verbose ./out/ '$FTP_DIR';
             bye
           "
