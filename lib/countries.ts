@@ -31,12 +31,8 @@ export const countries: Country[] = [
   { code: "IR", name: "Iran", flag: "🇮🇷", locale: "fa" },
   { code: "BG", name: "Bulgaria", flag: "🇧🇬", locale: "bg" },
   { code: "CN", name: "China", flag: "🇨🇳", locale: "zh" },
-  { code: "IN", name: "India", flag: "🇮🇳", locale: "en" },
   { code: "ID", name: "Indonesia", flag: "🇮🇩", locale: "id" },
-  { code: "SG", name: "Singapore", flag: "🇸🇬", locale: "en" },
   { code: "VN", name: "Vietnam", flag: "🇻🇳", locale: "vi" },
   { code: "ZW", name: "Zimbabwe", flag: "🇿🇼", locale: "zw" },
   { code: "ZA", name: "South Africa", flag: "🇿🇦", locale: "za" },
-  { code: "CA", name: "Canada", flag: "🇨🇦", locale: "en" },
-  { code: "US", name: "USA", flag: "🇺🇸", locale: "en" },
 ];
