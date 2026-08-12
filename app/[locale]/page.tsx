@@ -15,6 +15,7 @@ import ProductCard from "@/components/ProductCard";
 import MachineCarousel, {
   type CarouselGroup,
 } from "@/components/MachineCarousel";
+import { localizedProduct } from "@/lib/i18n-products";
 import Gallery from "@/components/Gallery";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
@@ -66,15 +67,20 @@ export default function LocaleHomePage({
     getProduct("manufacturing-machines", "mark-8d-max-15", "cigarette-making-machines"),
     getProduct("packing-machines", "hlp-200"),
     getProduct("packing-machines", "hlp-225"),
-  ].filter(Boolean) as Product[];
+  ]
+    .filter(Boolean)
+    .map((p) => localizedProduct(locale, p as Product));
 
   const toItems = (list: Product[]) =>
-    list.map((p) => ({
-      name: p.name,
-      href: localeHref(locale, productHref(p)),
-      tagline: p.tagline,
-      image: p.image,
-    }));
+    list.map((p) => {
+      const lp = localizedProduct(locale, p);
+      return {
+        name: lp.name,
+        href: localeHref(locale, productHref(p)),
+        tagline: lp.tagline,
+        image: lp.image,
+      };
+    });
 
   const carouselGroups: CarouselGroup[] = [
     {

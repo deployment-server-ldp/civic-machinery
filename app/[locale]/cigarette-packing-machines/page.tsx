@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
 import { getProductsByCategory } from "@/lib/products";
+import { localizedProduct } from "@/lib/i18n-products";
 import { getDict } from "@/lib/dictionaries";
 import { localeHref, type LocaleCode } from "@/lib/i18n";
 import { generateLocaleParams } from "@/lib/locale-static-params";
@@ -43,7 +44,7 @@ export default function LocalePackingPage({
         { name: dict.breadcrumbHome, path: localeHref(locale, "/") },
         { name: dict.footer.labels[PATH], path: localeHref(locale, PATH) },
       ]}
-      products={getProductsByCategory("packing-machines")}
+      products={getProductsByCategory("packing-machines").map((p) => localizedProduct(locale, p))}
       faqs={c.faqs}
       locale={locale}
     />

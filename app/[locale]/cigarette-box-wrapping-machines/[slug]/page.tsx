@@ -53,7 +53,9 @@ export default function LocaleWrappingProductPage({
 
   const product = localizedProduct(locale, base);
   const dict = getDict(locale);
-  const related = getProductsByCategory(CATEGORY).filter((p) => p.slug !== base.slug);
+  const related = getProductsByCategory(CATEGORY)
+    .filter((p) => p.slug !== base.slug)
+    .map((p) => localizedProduct(locale, p));
 
   return (
     <ProductDetail

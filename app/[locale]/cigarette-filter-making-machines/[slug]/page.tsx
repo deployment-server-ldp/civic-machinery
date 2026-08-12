@@ -54,7 +54,9 @@ export default function LocaleFilterProductPage({
 
   const product = localizedProduct(locale, base);
   const dict = getDict(locale);
-  const related = getProductsBySubcategory(SUB).filter((p) => p.slug !== base.slug);
+  const related = getProductsBySubcategory(SUB)
+    .filter((p) => p.slug !== base.slug)
+    .map((p) => localizedProduct(locale, p));
 
   return (
     <ProductDetail

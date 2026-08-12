@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import { getProductsBySubcategory, productHref } from "@/lib/products";
+import { localizedProduct } from "@/lib/i18n-products";
 import { getDict } from "@/lib/dictionaries";
 import { localeHref, type LocaleCode } from "@/lib/i18n";
 import { generateLocaleParams } from "@/lib/locale-static-params";
@@ -41,7 +42,9 @@ export default function LocaleManufacturingPage({
   const dict = getDict(locale);
   const c = dict.categories[PATH];
   const section = dict.manufacturingSection;
-  const products = getProductsBySubcategory("cigarette-making-machines");
+  const products = getProductsBySubcategory("cigarette-making-machines").map((p) =>
+    localizedProduct(locale, p),
+  );
 
   return (
     <>

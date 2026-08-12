@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
 import { getProductsBySubcategory } from "@/lib/products";
+import { localizedProduct } from "@/lib/i18n-products";
 import { getDict } from "@/lib/dictionaries";
 import { localeHref, type LocaleCode } from "@/lib/i18n";
 import { generateLocaleParams } from "@/lib/locale-static-params";
@@ -45,7 +46,7 @@ export default function LocaleCutterPage({
         { name: dict.footer.labels[PARENT], path: localeHref(locale, PARENT) },
         { name: dict.footer.labels[PATH], path: localeHref(locale, PATH) },
       ]}
-      products={getProductsBySubcategory("tobacco-machinery")}
+      products={getProductsBySubcategory("tobacco-machinery").map((p) => localizedProduct(locale, p))}
       faqs={c.faqs}
       locale={locale}
     />
