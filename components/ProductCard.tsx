@@ -2,7 +2,7 @@ import Link from "next/link";
 import MachineImage from "./MachineImage";
 import { type Product, productHref } from "@/lib/products";
 import { getDict } from "@/lib/dictionaries";
-import { defaultLocale, type LocaleCode } from "@/lib/i18n";
+import { defaultLocale, localeHref, type LocaleCode } from "@/lib/i18n";
 
 export default function ProductCard({
   product,
@@ -13,7 +13,7 @@ export default function ProductCard({
   imageSrc?: string;
   locale?: LocaleCode;
 }) {
-  const href = productHref(product);
+  const href = localeHref(locale, productHref(product));
   const dict = getDict(locale);
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card transition-shadow hover:shadow-card-hover">

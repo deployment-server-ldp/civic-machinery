@@ -71,7 +71,7 @@ export default function LocaleHomePage({
   const toItems = (list: Product[]) =>
     list.map((p) => ({
       name: p.name,
-      href: productHref(p),
+      href: localeHref(locale, productHref(p)),
       tagline: p.tagline,
       image: p.image,
     }));
