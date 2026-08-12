@@ -87,6 +87,20 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
+/** Generic ItemList schema for a set of linked items (countries, machines). */
+export function itemListSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: abs(item.path),
+    })),
+  };
+}
+
 export function faqSchema(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

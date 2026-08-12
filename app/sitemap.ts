@@ -10,6 +10,7 @@ import {
 } from "@/lib/products";
 import { blogPosts } from "@/lib/blog";
 import { translatedPaths, hreflangAlternates } from "@/lib/i18n";
+import { exportCountries } from "@/lib/export-countries";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -66,12 +67,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  // /export-to/ hub + one entry per country. English-only (not part of the
+  // i18n locale tree), so no hreflang alternates are attached to these.
+  const exportPages: MetadataRoute.Sitemap = [
+    { url: abs("/export-to"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    ...exportCountries.map((c) => ({
+      url: abs(`/export-to/${c.slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
   const english = [
     ...staticPages,
     ...categoryPages,
     ...subcategoryPages,
     ...productPages,
     ...blogPages,
+    ...exportPages,
   ];
 
   // De-duplicate by URL (some sub-categories now share a category URL).
