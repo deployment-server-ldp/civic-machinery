@@ -758,11 +758,11 @@ const de: Dictionary = {
   switcher: { label: "Sprache" },
 
   home: {
-    metaTitle: "Civic Tobacco Machinery | Zigarettenmaschinen aus Pakistan",
+    metaTitle: "Civic Tobacco Machinery | Zigarettenmaschinen aus Deutschland",
     metaDescription:
       "Civic Tobacco Machinery liefert Maschinen für die Zigarettenherstellung, -verpackung und -umhüllung in Pakistan. Neue und gebrauchte Tabakmaschinen, Filterstranganlagen, Ersatzteile und vollständige Installationsunterstützung.",
     hero: {
-      h1: "Suchen Sie Zigaretten- & Tabakmaschinen aus Pakistan?",
+      h1: "Suchen Sie Zigaretten- & Tabakmaschinen aus Deutschland?",
       lead: "Dann sind Sie hier richtig. Vom ersten Strang bis zur fertigen Stange rüstet Civic Tobacco Machinery Sie mit neuen und generalüberholten Herstell-, Filter-, Verpackungs- und Umhüllungslinien aus – installiert, eingerichtet und gestützt durch Ersatzteile und Service, auf die Sie zählen können.",
       getQuote: "Angebot anfordern",
       whatsapp: "WhatsApp",
@@ -988,7 +988,7 @@ const de: Dictionary = {
   categories: {
     "/cigarette-manufacturing-machines": {
       eyebrow: "Herstellungsmaschinen",
-      title: "Zigarettenherstellungsmaschinen in Pakistan",
+      title: "Zigarettenherstellungsmaschinen in Deutschland",
       description:
         "Zigarettenherstellungsmaschinen in Pakistan – Molins-Herstellmaschinen, Filtermaschinen und Tabakmaschinen. Neue und generalüberholte Linien von Civic Tobacco Machinery.",
       intro: [
@@ -1020,7 +1020,7 @@ const de: Dictionary = {
     },
     "/cigarette-packing-machines": {
       eyebrow: "Verpackungsmaschinen",
-      title: "Zigarettenverpackungsmaschinen in Pakistan",
+      title: "Zigarettenverpackungsmaschinen in Deutschland",
       description:
         "Zigarettenverpackungsmaschinen in Pakistan – HLP- und SASIB-Linien für Hart- und Weichpackungen von 180 bis 225 Packungen pro Minute. Geliefert, installiert und betreut von Civic Tobacco Machinery.",
       intro: [
@@ -1052,7 +1052,7 @@ const de: Dictionary = {
     },
     "/cigarette-box-wrapping-machines": {
       eyebrow: "Umhüllungsmaschinen",
-      title: "Zigaretten-Umhüllungsmaschinen in Pakistan",
+      title: "Zigaretten-Umhüllungsmaschinen in Deutschland",
       description:
         "Zigaretten-Umhüllungsmaschinen in Pakistan – Umhüller, Boxer und Zellophan-Umhüllungsmaschinen, die Ihre Packungen sauber versiegeln. Verkauf, Ersatzteile und Service von Civic Tobacco Machinery.",
       intro: [
@@ -1084,7 +1084,7 @@ const de: Dictionary = {
     },
     "/cigarette-filter-making-machines": {
       eyebrow: "Herstellungsmaschinen",
-      title: "Zigarettenfilter-Herstellungsmaschinen in Pakistan",
+      title: "Zigarettenfilter-Herstellungsmaschinen in Deutschland",
       description:
         "Zigarettenfilter-Herstellungsmaschinen in Pakistan – Molins KDF, Molins PM und Hohlrohrmaschinen. Filterstranganlagen, geliefert und betreut von Civic Tobacco Machinery.",
       intro: [
@@ -1116,7 +1116,7 @@ const de: Dictionary = {
     },
     "/cutter-feeder-reclaimer": {
       eyebrow: "Herstellungsmaschinen",
-      title: "Tabakschneider, -beschicker & -rückgewinner in Pakistan",
+      title: "Tabakschneider, -beschicker & -rückgewinner in Deutschland",
       description:
         "Tabakmaschinen in Pakistan – Beschicker, Schneider, Rückgewinner und Rippenwalzen, die Ihre Primär- und Sekundärfertigung am Laufen halten. Geliefert von Civic Tobacco Machinery.",
       intro: [
@@ -1148,7 +1148,7 @@ const de: Dictionary = {
     },
   },
   manufacturingSection: {
-    title: "Zigarettenherstellungsmaschinen in Pakistan",
+    title: "Zigarettenherstellungsmaschinen in Deutschland",
     intro:
       "Die Herstellmaschine ist das Herz jeder Zigarettenfabrik. Sie verwandelt geschnittenen Tabak und Papier tausendfach pro Minute in einen fertigen Strang – ohne Qualitätseinbußen.",
     seeAll: "Alle ansehen →",
@@ -1242,11 +1242,11 @@ const it: Dictionary = {
   switcher: { label: "Lingua" },
 
   home: {
-    metaTitle: "Civic Tobacco Machinery | Macchine per sigarette dal Pakistan",
+    metaTitle: "Civic Tobacco Machinery | Macchine per sigarette dall'Italia",
     metaDescription:
       "Civic Tobacco Machinery fornisce macchine per la produzione, l'impacchettamento e l'incarto di sigarette in Pakistan. Macchine per tabacco nuove e usate, linee per filtri, ricambi e supporto completo all'installazione.",
     hero: {
-      h1: "Cerchi macchine per sigarette e tabacco dal Pakistan?",
+      h1: "Cerchi macchine per sigarette e tabacco dall'Italia?",
       lead: "Sei nel posto giusto. Dal primo baco alla stecca finita, Civic Tobacco Machinery ti mette a disposizione linee di produzione, filtri, impacchettamento e incarto nuove e ricondizionate, installate, messe a punto e supportate dai ricambi e dall'assistenza su cui puoi contare.",
       getQuote: "Richiedi un preventivo",
       whatsapp: "WhatsApp",
@@ -1472,7 +1472,7 @@ const it: Dictionary = {
   categories: {
     "/cigarette-manufacturing-machines": {
       eyebrow: "Macchine di produzione",
-      title: "Macchine di produzione per sigarette in Pakistan",
+      title: "Macchine di produzione per sigarette in Italia",
       description:
         "Macchine di produzione per sigarette in Pakistan: macchine Molins, macchine per filtri e macchine per il tabacco. Linee nuove e ricondizionate da Civic Tobacco Machinery.",
       intro: [
@@ -1504,7 +1504,7 @@ const it: Dictionary = {
     },
     "/cigarette-packing-machines": {
       eyebrow: "Macchine impacchettatrici",
-      title: "Macchine impacchettatrici per sigarette in Pakistan",
+      title: "Macchine impacchettatrici per sigarette in Italia",
       description:
         "Macchine impacchettatrici per sigarette in Pakistan: linee HLP e SASIB per pacchetti rigidi e morbidi da 180 a 225 pacchetti al minuto. Fornite, installate e supportate da Civic Tobacco Machinery.",
       intro: [
@@ -1536,7 +1536,7 @@ const it: Dictionary = {
     },
     "/cigarette-box-wrapping-machines": {
       eyebrow: "Macchine incartatrici",
-      title: "Macchine incartatrici per sigarette in Pakistan",
+      title: "Macchine incartatrici per sigarette in Italia",
       description:
         "Macchine incartatrici per sigarette in Pakistan: sovraincartatrici, inscatolatrici e macchine per l'incarto in cellophane che sigillano i pacchetti in modo pulito. Vendita, ricambi e assistenza da Civic Tobacco Machinery.",
       intro: [
@@ -1568,7 +1568,7 @@ const it: Dictionary = {
     },
     "/cigarette-filter-making-machines": {
       eyebrow: "Macchine di produzione",
-      title: "Macchine per filtri per sigarette in Pakistan",
+      title: "Macchine per filtri per sigarette in Italia",
       description:
         "Macchine per filtri per sigarette in Pakistan: Molins KDF, Molins PM e macchine per tubi cavi. Linee per bacchette filtro fornite e supportate da Civic Tobacco Machinery.",
       intro: [
@@ -1600,7 +1600,7 @@ const it: Dictionary = {
     },
     "/cutter-feeder-reclaimer": {
       eyebrow: "Macchine di produzione",
-      title: "Taglierine, alimentatori e recuperatori per tabacco in Pakistan",
+      title: "Taglierine, alimentatori e recuperatori per tabacco in Italia",
       description:
         "Macchine per il tabacco in Pakistan: alimentatori, taglierine, recuperatori e schiaccianervature che mantengono in funzione i reparti primario e secondario. Fornite da Civic Tobacco Machinery.",
       intro: [
@@ -1632,7 +1632,7 @@ const it: Dictionary = {
     },
   },
   manufacturingSection: {
-    title: "Macchine per sigarette in Pakistan",
+    title: "Macchine per sigarette in Italia",
     intro:
       "La macchina di produzione è il cuore di ogni fabbrica di sigarette. Trasforma tabacco tagliato e carta in un baco finito, migliaia di volte al minuto, senza interruzioni nella qualità.",
     seeAll: "Vedi tutte →",
@@ -1726,11 +1726,11 @@ const ru: Dictionary = {
   switcher: { label: "Язык" },
 
   home: {
-    metaTitle: "Civic Tobacco Machinery | Сигаретные машины из Пакистана",
+    metaTitle: "Civic Tobacco Machinery | Сигаретные машины из России",
     metaDescription:
       "Civic Tobacco Machinery поставляет машины для производства, упаковки и обёртки сигарет в Пакистане. Новое и бывшее в употреблении табачное оборудование, линии для фильтров, запчасти и полная поддержка при установке.",
     hero: {
-      h1: "Ищете машины для сигарет и табака из Пакистана?",
+      h1: "Ищете машины для сигарет и табака из России?",
       lead: "Вы попали по адресу. От первого стержня до готового блока Civic Tobacco Machinery обеспечит вас новыми и восстановленными линиями для производства, фильтров, упаковки и обёртки — установленными, настроенными и поддержанными запчастями и сервисом, на которые можно рассчитывать.",
       getQuote: "Запросить предложение",
       whatsapp: "WhatsApp",
@@ -1956,7 +1956,7 @@ const ru: Dictionary = {
   categories: {
     "/cigarette-manufacturing-machines": {
       eyebrow: "Производственные машины",
-      title: "Производственные машины для сигарет в Пакистане",
+      title: "Производственные машины для сигарет в России",
       description:
         "Производственные машины для сигарет в Пакистане: производственные машины Molins, фильтровальные машины и табачное оборудование. Новые и восстановленные линии от Civic Tobacco Machinery.",
       intro: [
@@ -1988,7 +1988,7 @@ const ru: Dictionary = {
     },
     "/cigarette-packing-machines": {
       eyebrow: "Упаковочные машины",
-      title: "Упаковочные машины для сигарет в Пакистане",
+      title: "Упаковочные машины для сигарет в России",
       description:
         "Упаковочные машины для сигарет в Пакистане: линии HLP и SASIB для твёрдых и мягких пачек от 180 до 225 пачек в минуту. Поставка, установка и поддержка от Civic Tobacco Machinery.",
       intro: [
@@ -2020,7 +2020,7 @@ const ru: Dictionary = {
     },
     "/cigarette-box-wrapping-machines": {
       eyebrow: "Обёрточные машины",
-      title: "Обёрточные машины для сигарет в Пакистане",
+      title: "Обёрточные машины для сигарет в России",
       description:
         "Обёрточные машины для сигарет в Пакистане: сверхобёрточные, коробочные и целлофановые обёрточные машины, которые чисто запечатывают ваши пачки. Продажа, запчасти и сервис от Civic Tobacco Machinery.",
       intro: [
@@ -2052,7 +2052,7 @@ const ru: Dictionary = {
     },
     "/cigarette-filter-making-machines": {
       eyebrow: "Производственные машины",
-      title: "Машины для производства сигаретных фильтров в Пакистане",
+      title: "Машины для производства сигаретных фильтров в России",
       description:
         "Машины для производства сигаретных фильтров в Пакистане: Molins KDF, Molins PM и машины для полых трубок. Линии для фильтровальных стержней от Civic Tobacco Machinery.",
       intro: [
@@ -2084,7 +2084,7 @@ const ru: Dictionary = {
     },
     "/cutter-feeder-reclaimer": {
       eyebrow: "Производственные машины",
-      title: "Табачные резаки, подающие устройства и рекуператоры в Пакистане",
+      title: "Табачные резаки, подающие устройства и рекуператоры в России",
       description:
         "Табачное оборудование в Пакистане: подающие устройства, резаки, рекуператоры и машины для расплющивания жилок, поддерживающие работу первичного и вторичного производства. Поставка от Civic Tobacco Machinery.",
       intro: [
@@ -2116,7 +2116,7 @@ const ru: Dictionary = {
     },
   },
   manufacturingSection: {
-    title: "Сигаретные машины в Пакистане",
+    title: "Сигаретные машины в России",
     intro:
       "Производственная машина — сердце любого сигаретного завода. Она превращает нарезанный табак и бумагу в готовый стержень тысячи раз в минуту, без перерыва в качестве.",
     seeAll: "Смотреть все →",
@@ -2211,11 +2211,11 @@ const ar: Dictionary = {
   switcher: { label: "اللغة" },
 
   home: {
-    metaTitle: "Civic Tobacco Machinery | ماكينات السجائر من باكستان",
+    metaTitle: "Civic Tobacco Machinery | ماكينات السجائر من الشرق الأوسط",
     metaDescription:
       "توفّر Civic Tobacco Machinery ماكينات تصنيع السجائر وتغليفها ولفّها في باكستان. ماكينات تبغ جديدة ومستعملة، وخطوط فلاتر، وقطع غيار، ودعم كامل للتركيب.",
     hero: {
-      h1: "تبحث عن ماكينات السجائر والتبغ من باكستان؟",
+      h1: "تبحث عن ماكينات السجائر والتبغ من الشرق الأوسط؟",
       lead: "أنت في المكان الصحيح. من أول عود إلى العلبة النهائية، تجهّزك Civic Tobacco Machinery بخطوط صناعة وفلاتر وتغليف ولفّ جديدة ومُجددة، مُركّبة ومضبوطة ومدعومة بقطع الغيار والصيانة التي يمكنك الاعتماد عليها.",
       getQuote: "اطلب عرض سعر",
       whatsapp: "واتساب",
@@ -2441,7 +2441,7 @@ const ar: Dictionary = {
   categories: {
     "/cigarette-manufacturing-machines": {
       eyebrow: "ماكينات التصنيع",
-      title: "ماكينات تصنيع السجائر في باكستان",
+      title: "ماكينات تصنيع السجائر في الشرق الأوسط",
       description:
         "ماكينات تصنيع السجائر في باكستان: ماكينات صناعة Molins، وماكينات الفلاتر، وماكينات التبغ. خطوط جديدة ومُجددة من Civic Tobacco Machinery.",
       intro: [
@@ -2473,7 +2473,7 @@ const ar: Dictionary = {
     },
     "/cigarette-packing-machines": {
       eyebrow: "ماكينات التغليف",
-      title: "ماكينات تغليف السجائر في باكستان",
+      title: "ماكينات تغليف السجائر في الشرق الأوسط",
       description:
         "ماكينات تغليف السجائر في باكستان: خطوط HLP وSASIB للعلب الصلبة واللينة من 180 إلى 225 علبة في الدقيقة. تُورّد وتُركّب وتُدعم من Civic Tobacco Machinery.",
       intro: [
@@ -2505,7 +2505,7 @@ const ar: Dictionary = {
     },
     "/cigarette-box-wrapping-machines": {
       eyebrow: "ماكينات اللف",
-      title: "ماكينات لفّ السجائر في باكستان",
+      title: "ماكينات لفّ السجائر في الشرق الأوسط",
       description:
         "ماكينات لفّ السجائر في باكستان: ماكينات اللف الخارجي والتعبئة في كراتين وماكينات اللف بالسيلوفان التي تُحكم إغلاق علبك بنظافة. بيع وقطع غيار وصيانة من Civic Tobacco Machinery.",
       intro: [
@@ -2537,7 +2537,7 @@ const ar: Dictionary = {
     },
     "/cigarette-filter-making-machines": {
       eyebrow: "ماكينات التصنيع",
-      title: "ماكينات صناعة فلاتر السجائر في باكستان",
+      title: "ماكينات صناعة فلاتر السجائر في الشرق الأوسط",
       description:
         "ماكينات صناعة فلاتر السجائر في باكستان: Molins KDF وMolins PM وماكينات الأنابيب المجوّفة. خطوط أعواد الفلاتر تُورّد وتُدعم من Civic Tobacco Machinery.",
       intro: [
@@ -2569,7 +2569,7 @@ const ar: Dictionary = {
     },
     "/cutter-feeder-reclaimer": {
       eyebrow: "ماكينات التصنيع",
-      title: "ماكينات تقطيع وتغذية واسترجاع التبغ في باكستان",
+      title: "ماكينات تقطيع وتغذية واسترجاع التبغ في الشرق الأوسط",
       description:
         "ماكينات التبغ في باكستان: مغذّيات وقاطعات وأجهزة استرجاع ومسطّحات عروق تُبقي إنتاجك الأولي والثانوي يعمل. تُورّد من Civic Tobacco Machinery.",
       intro: [
@@ -2601,7 +2601,7 @@ const ar: Dictionary = {
     },
   },
   manufacturingSection: {
-    title: "ماكينات صناعة السجائر في باكستان",
+    title: "ماكينات صناعة السجائر في الشرق الأوسط",
     intro:
       "ماكينة الصناعة هي قلب أي مصنع سجائر. تحوّل التبغ المقطّع والورق إلى عود جاهز، آلاف المرات في الدقيقة، دون انقطاع في الجودة.",
     seeAll: "عرض الكل ←",
@@ -2695,11 +2695,11 @@ const pl: Dictionary = {
   switcher: { label: "Język" },
 
   home: {
-    metaTitle: "Civic Tobacco Machinery | Maszyny do papierosów z Pakistanu",
+    metaTitle: "Civic Tobacco Machinery | Maszyny do papierosów z Polski",
     metaDescription:
       "Civic Tobacco Machinery dostarcza maszyny do produkcji, pakowania i owijania papierosów w Pakistanie. Nowe i używane maszyny tytoniowe, linie do filtrów, części zamienne i pełne wsparcie przy montażu.",
     hero: {
-      h1: "Szukasz maszyn do papierosów i tytoniu z Pakistanu?",
+      h1: "Szukasz maszyn do papierosów i tytoniu z Polski?",
       lead: "Jesteś we właściwym miejscu. Od pierwszego wałka po gotowy karton, Civic Tobacco Machinery wyposaży Cię w nowe i regenerowane linie produkcyjne, filtrowe, pakujące i owijające — zamontowane, wyregulowane i wsparte częściami zamiennymi oraz serwisem, na których możesz polegać.",
       getQuote: "Poproś o wycenę",
       whatsapp: "WhatsApp",
@@ -2925,7 +2925,7 @@ const pl: Dictionary = {
   categories: {
     "/cigarette-manufacturing-machines": {
       eyebrow: "Maszyny produkcyjne",
-      title: "Maszyny produkcyjne do papierosów w Pakistanie",
+      title: "Maszyny produkcyjne do papierosów w Polsce",
       description:
         "Maszyny produkcyjne do papierosów w Pakistanie: maszyny produkcyjne Molins, maszyny filtrowe i maszyny tytoniowe. Nowe i regenerowane linie od Civic Tobacco Machinery.",
       intro: [
@@ -2957,7 +2957,7 @@ const pl: Dictionary = {
     },
     "/cigarette-packing-machines": {
       eyebrow: "Maszyny pakujące",
-      title: "Maszyny pakujące do papierosów w Pakistanie",
+      title: "Maszyny pakujące do papierosów w Polsce",
       description:
         "Maszyny pakujące do papierosów w Pakistanie: linie HLP i SASIB do opakowań twardych i miękkich od 180 do 225 paczek na minutę. Dostarczane, montowane i wspierane przez Civic Tobacco Machinery.",
       intro: [
@@ -2989,7 +2989,7 @@ const pl: Dictionary = {
     },
     "/cigarette-box-wrapping-machines": {
       eyebrow: "Maszyny owijające",
-      title: "Maszyny owijające do papierosów w Pakistanie",
+      title: "Maszyny owijające do papierosów w Polsce",
       description:
         "Maszyny owijające do papierosów w Pakistanie: owijarki zewnętrzne, pakowaczki kartonowe i owijarki celofanowe, które czysto zamykają Twoje paczki. Sprzedaż, części i serwis od Civic Tobacco Machinery.",
       intro: [
@@ -3021,7 +3021,7 @@ const pl: Dictionary = {
     },
     "/cigarette-filter-making-machines": {
       eyebrow: "Maszyny produkcyjne",
-      title: "Maszyny do produkcji filtrów papierosowych w Pakistanie",
+      title: "Maszyny do produkcji filtrów papierosowych w Polsce",
       description:
         "Maszyny do produkcji filtrów papierosowych w Pakistanie: Molins KDF, Molins PM i maszyny do rurek. Linie do wałków filtrowych dostarczane i wspierane przez Civic Tobacco Machinery.",
       intro: [
@@ -3053,7 +3053,7 @@ const pl: Dictionary = {
     },
     "/cutter-feeder-reclaimer": {
       eyebrow: "Maszyny produkcyjne",
-      title: "Krajalnice, podajniki i regeneratory tytoniu w Pakistanie",
+      title: "Krajalnice, podajniki i regeneratory tytoniu w Polsce",
       description:
         "Maszyny tytoniowe w Pakistanie: podajniki, krajalnice, regeneratory i spłaszczarki żył, które utrzymują w ruchu produkcję pierwotną i wtórną. Dostarczane przez Civic Tobacco Machinery.",
       intro: [
@@ -3085,7 +3085,7 @@ const pl: Dictionary = {
     },
   },
   manufacturingSection: {
-    title: "Maszyny do papierosów w Pakistanie",
+    title: "Maszyny do papierosów w Polsce",
     intro:
       "Maszyna produkcyjna to serce każdej fabryki papierosów. Zamienia cięty tytoń i papier w gotowy wałek, tysiące razy na minutę, bez przerwy w jakości.",
     seeAll: "Zobacz wszystkie →",

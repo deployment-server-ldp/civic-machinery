@@ -394,7 +394,7 @@ const de: Record<string, ProductContent> = {
   },
 
   "mark-8-post-64": {
-    h1: "Mark 8 Post 64 – Zigarettenherstellungsmaschine in Pakistan",
+    h1: "Mark 8 Post 64 – Zigarettenherstellungsmaschine in Deutschland",
     metaTitle: "MK 8 | Mark 8 Post 64 Zigarettenherstellungsmaschine",
     tagline: "Die zuverlässige Arbeitspferd-Strangmaschine, auf die Fabriken bis heute setzen.",
     metaDescription:
@@ -713,7 +713,7 @@ const it: Record<string, ProductContent> = {
   },
 
   "mark-8-post-64": {
-    h1: "Mark 8 Post 64 – Macchina di produzione per sigarette in Pakistan",
+    h1: "Mark 8 Post 64 – Macchina di produzione per sigarette in Italia",
     metaTitle: "MK 8 | Macchina di produzione Mark 8 Post 64",
     tagline: "L'affidabile macchina da lavoro su cui le fabbriche contano ancora.",
     metaDescription:
@@ -1032,7 +1032,7 @@ const ru: Record<string, ProductContent> = {
   },
 
   "mark-8-post-64": {
-    h1: "Mark 8 Post 64 – Производственная машина для сигарет в Пакистане",
+    h1: "Mark 8 Post 64 – Производственная машина для сигарет в России",
     metaTitle: "MK 8 | Производственная машина Mark 8 Post 64",
     tagline: "Надёжная рабочая лошадка, на которую заводы полагаются до сих пор.",
     metaDescription:
@@ -1351,7 +1351,7 @@ const ar: Record<string, ProductContent> = {
   },
 
   "mark-8-post-64": {
-    h1: "Mark 8 Post 64 – ماكينة تصنيع السجائر في باكستان",
+    h1: "Mark 8 Post 64 – ماكينة تصنيع السجائر في الشرق الأوسط",
     metaTitle: "MK 8 | ماكينة تصنيع السجائر Mark 8 Post 64",
     tagline: "ماكينة الصناعة الموثوقة التي لا تزال المصانع تعتمد عليها.",
     metaDescription:
