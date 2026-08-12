@@ -46,6 +46,13 @@ export default function Footer() {
               <WhatsAppIcon className="h-5 w-5" />
               {siteConfig.phoneDisplay}
             </a>
+            <Link
+              href="/export-to"
+              className="mt-3 inline-flex items-center gap-2 rounded-md border border-brand-700 px-4 py-2.5 text-sm font-semibold text-brand-100 hover:border-accent-400 hover:text-accent-300"
+            >
+              <GlobeIcon className="h-4 w-4" />
+              Global Export
+            </Link>
             <SocialLinks className="mt-5" />
           </div>
 
@@ -147,5 +154,14 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function GlobeIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+    </svg>
   );
 }
