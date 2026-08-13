@@ -26,9 +26,13 @@ This creates an **`out/`** folder containing the whole website.
    `public_html`, then **Extract** if you uploaded a ZIP.
    - `index.html` must end up at `public_html/index.html` — **not** inside a
      sub-folder.
-   - Make sure the hidden **`.htaccess`** file is at `public_html/.htaccess`
-     (enable "show hidden files" in File Manager). It handles the old→new URL
-     redirects and security headers.
+   - The hidden **`.htaccess`** file is generated into `out/` automatically
+     (it lives in `public/.htaccess`), so it uploads with everything else.
+     Enable "show hidden files" in File Manager to confirm it landed at
+     `public_html/.htaccess`. It handles the old→new URL redirects, security
+     headers, and — importantly — forces `sitemap.xml` to be served as XML so
+     browsers and crawlers see a real XML document instead of stripped plain
+     text.
 
 ### 3. Domain + HTTPS
 1. Point **civic-tobacco-machinery.com** to Hostinger (hPanel → Domains, or set

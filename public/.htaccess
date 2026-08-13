@@ -13,17 +13,19 @@ Options -MultiViews
   AddType text/plain .txt
 </IfModule>
 
-# Belt-and-suspenders for sitemap.xml specifically: force both the MIME type
-# and the response header directly, since AddType alone isn't honoured on
-# every shared-hosting config.
-<Files "sitemap.xml">
+# Belt-and-suspenders: force the XML content type for every .xml file (the
+# sitemap especially). Some shared hosts ignore AddType, so we also ForceType
+# and set the response header directly. FilesMatch covers sitemap.xml and any
+# other .xml the site may serve. "always" makes the header stick on every
+# response, not just the default 2xx path.
+<FilesMatch "\.xml$">
   <IfModule mod_mime.c>
     ForceType application/xml
   </IfModule>
   <IfModule mod_headers.c>
-    Header set Content-Type "application/xml; charset=UTF-8"
+    Header always set Content-Type "application/xml; charset=UTF-8"
   </IfModule>
-</Files>
+</FilesMatch>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
