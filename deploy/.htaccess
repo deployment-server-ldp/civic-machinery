@@ -13,6 +13,18 @@ Options -MultiViews
   AddType text/plain .txt
 </IfModule>
 
+# Belt-and-suspenders for sitemap.xml specifically: force both the MIME type
+# and the response header directly, since AddType alone isn't honoured on
+# every shared-hosting config.
+<Files "sitemap.xml">
+  <IfModule mod_mime.c>
+    ForceType application/xml
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/xml; charset=UTF-8"
+  </IfModule>
+</Files>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
