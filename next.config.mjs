@@ -1,6 +1,7 @@
 // Set EXPORT_STATIC=1 to build a static site (out/) for shared hosting such
 // as Hostinger. In that mode Next can't run a server, so image optimisation,
-// redirects and headers are handled at the host level (see deploy/.htaccess).
+// redirects and headers are handled at the host level (see public/.htaccess,
+// which `next build` copies into out/ for the static upload).
 const isExport = process.env.EXPORT_STATIC === "1";
 
 /** @type {import('next').NextConfig} */
@@ -18,7 +19,7 @@ const nextConfig = {
         // remotePatterns: [{ protocol: "https", hostname: "images.civic-tobacco-machinery.com" }],
       },
   async redirects() {
-    if (isExport) return []; // handled by deploy/.htaccess on static hosting
+    if (isExport) return []; // handled by public/.htaccess on static hosting
     // Permanent (308) redirects from old URLs to the new clean structure.
     return [
       // Blog: old "karachi" URLs → "pakistan" URLs.
@@ -159,7 +160,7 @@ const nextConfig = {
     ];
   },
   async headers() {
-    if (isExport) return []; // headers come from deploy/.htaccess on static hosting
+    if (isExport) return []; // headers come from public/.htaccess on static hosting
     return [
       {
         source: "/:path*",

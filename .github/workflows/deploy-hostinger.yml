@@ -48,8 +48,8 @@ jobs:
           NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://civic-tobacco-machinery.com' }}
         run: npm run build
 
-      - name: Copy .htaccess into the export
-        run: cp deploy/.htaccess out/.htaccess
+      # .htaccess lives in public/ so `next build` copies it into out/
+      # automatically — no separate copy step needed.
 
       - name: Deploy to Hostinger via lftp (FTPS)
         # lftp mirror uploads/updates the site's files. It deliberately does
