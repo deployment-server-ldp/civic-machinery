@@ -5,6 +5,14 @@
 
 Options -MultiViews
 
+# Explicit MIME types. Some shared-hosting Apache/LiteSpeed configs don't
+# reliably serve .xml as XML by default, which makes browsers render the
+# sitemap as plain text with the tags stripped instead of an XML document.
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType text/plain .txt
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
