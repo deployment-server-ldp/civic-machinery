@@ -82,6 +82,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: "vrKd16J8Dgqwtk21Q7bmY64BLkvdwwllM4XaATUu-04",
+  },
   category: "Industrial Machinery",
 };
 
