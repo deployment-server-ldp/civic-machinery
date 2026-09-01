@@ -57,6 +57,12 @@ jobs:
         # uploaded manually (e.g. an HRM tool), and a delete-mirror would wipe
         # anything not in this repo. Without --delete the deploy only adds and
         # updates the website's own files and never removes unrelated content.
+        #
+        # The `debug 3; pwd; debug off;` probe forces the login to happen
+        # up front with the raw FTP/TLS dialogue visible (password masked),
+        # so a connection/login failure shows its real cause in the log
+        # instead of mirror silently retrying for ~13 minutes and failing
+        # with only "max-retries exceeded" and no other information.
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -74,6 +80,9 @@ jobs:
             set net:persist-retries 6;
             set net:reconnect-interval-base 5;
             set net:reconnect-interval-multiplier 1.5;
+            debug 3;
+            pwd;
+            debug off;
             mirror --reverse --parallel=2 --use-pget-n=1 --verbose ./out/ '$FTP_DIR';
             bye
           "
