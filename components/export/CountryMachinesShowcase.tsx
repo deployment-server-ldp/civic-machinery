@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import MachineImage from "@/components/MachineImage";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { whatsappLink, siteConfig } from "@/lib/site";
 import type { Product } from "@/lib/products";
 
 export interface MachineShowcaseSection {
@@ -118,6 +121,9 @@ function MachineModal({
   if (!product) return null;
 
   const specRows = product.featureTable ?? product.specs;
+  const wa = whatsappLink(
+    `Hi, I'm interested in the ${product.name}. Could you share more details, pricing and availability?`,
+  );
 
   return (
     <div
@@ -132,32 +138,34 @@ function MachineModal({
         aria-modal="true"
         aria-labelledby="machine-modal-title"
         tabIndex={-1}
-        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white shadow-xl outline-none"
+        className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-xl outline-none"
       >
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute right-3 top-3 z-10 shrink-0 rounded-full bg-white/90 p-1.5 text-brand-500 shadow-sm backdrop-blur hover:bg-white hover:text-brand-900 sm:right-4 sm:top-4"
+        >
+          <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <path d="M5 5l10 10M15 5 5 15" />
+          </svg>
+        </button>
+
         <div className="grid gap-0 sm:grid-cols-2">
-          <MachineImage
-            src={product.image}
-            alt={product.name}
-            label={product.name}
-            aspect="aspect-[4/3] sm:aspect-auto sm:h-full"
-            className="rounded-none sm:rounded-l-2xl"
-          />
+          <div className="relative border-b border-brand-100 bg-brand-50 sm:border-b-0 sm:border-r">
+            <MachineImage
+              src={product.image}
+              alt={product.name}
+              label={product.name}
+              aspect="aspect-[4/3] sm:aspect-auto sm:h-full sm:min-h-[320px]"
+              fit="contain"
+              className="rounded-none bg-brand-50 p-4"
+            />
+          </div>
           <div className="flex flex-col p-5 sm:p-6">
-            <div className="flex items-start justify-between gap-3">
-              <h3 id="machine-modal-title" className="text-xl font-semibold text-brand-900">
-                {product.name}
-              </h3>
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label="Close"
-                className="shrink-0 rounded-full p-1.5 text-brand-400 hover:bg-brand-50 hover:text-brand-700"
-              >
-                <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <path d="M5 5l10 10M15 5 5 15" />
-                </svg>
-              </button>
-            </div>
+            <h3 id="machine-modal-title" className="pr-8 text-xl font-semibold text-brand-900 sm:text-2xl">
+              {product.name}
+            </h3>
 
             {specRows.length > 0 && (
               <dl className="mt-4 divide-y divide-brand-100 border-t border-brand-100 text-sm">
@@ -169,6 +177,27 @@ function MachineModal({
                 ))}
               </dl>
             )}
+
+            <div className="mt-6 flex flex-col gap-2.5 border-t border-brand-100 pt-5">
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn w-full bg-[#25D366] text-white hover:brightness-105"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                WhatsApp: {siteConfig.phoneDisplay}
+              </a>
+              <a href={`tel:${siteConfig.phone}`} className="btn-secondary w-full">
+                <svg viewBox="0 0 20 20" className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4.5 3.5h2.7l1.1 3.3-1.6 1.2a9.2 9.2 0 0 0 4.3 4.3l1.2-1.6 3.3 1.1v2.7c0 .8-.7 1.4-1.5 1.3A13 13 0 0 1 3.2 5c-.1-.8.5-1.5 1.3-1.5Z" />
+                </svg>
+                Call: {siteConfig.phoneDisplay}
+              </a>
+              <Link href="/contact" className="btn-primary w-full">
+                Contact Us for This Machine
+              </Link>
+            </div>
           </div>
         </div>
       </div>

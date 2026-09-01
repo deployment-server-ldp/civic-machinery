@@ -15,6 +15,7 @@ export default function MachineImage({
   className = "",
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   aspect = "aspect-[4/3]",
+  fit = "cover",
 }: {
   src?: string;
   alt: string;
@@ -24,6 +25,8 @@ export default function MachineImage({
   className?: string;
   sizes?: string;
   aspect?: string;
+  /** "contain" shows the whole machine without cropping (e.g. in a detail view). */
+  fit?: "cover" | "contain";
 }) {
   return (
     <div
@@ -37,7 +40,7 @@ export default function MachineImage({
           sizes={sizes}
           priority={priority}
           loading={priority ? undefined : "lazy"}
-          className="object-cover"
+          className={fit === "contain" ? "object-contain" : "object-cover"}
         />
       ) : (
         <Placeholder label={label || alt} />
