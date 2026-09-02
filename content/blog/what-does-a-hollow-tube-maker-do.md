@@ -2,7 +2,6 @@
 title: "What Does a Hollow Tube Maker Do in a Cigarette Line?"
 metaTitle: "What Does a Hollow Tube Maker Do in a Cigarette Line?"
 description: "A hollow tube maker produces the plug wrap tubes used in filter assembly. Here's what it actually does, where it fits in the line, and how it works."
-excerpt: ""
 date: "2026-08-04"
 author: "Ahmed Khan"
 authorTitle: "Filter & Tobacco Machinery Specialist, Civic Tobacco Machinery"

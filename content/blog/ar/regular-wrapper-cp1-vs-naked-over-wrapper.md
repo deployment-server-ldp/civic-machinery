@@ -2,7 +2,6 @@
 title: "Regular Wrapper CP1 مقابل Naked Over Wrapper: ما الفرق؟"
 metaTitle: "Regular Wrapper CP1 مقابل Naked Over Wrapper | Civic Tobacco Machinery"
 description: "مقارنة بين ماكينتي لفّ علب السجائر Regular Wrapper CP1 وNaked Over Wrapper من حيث السرعة والوظيفة وموضع كلٍّ في خط تغليفك."
-excerpt: ""
 date: "2026-07-29"
 author: "Mustafa Qureshi"
 authorTitle: "متخصصون في ماكينات التبغ، كراتشي"

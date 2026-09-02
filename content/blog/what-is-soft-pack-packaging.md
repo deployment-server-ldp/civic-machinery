@@ -2,7 +2,6 @@
 title: "What Is Soft Pack Packaging? How SASIB Machines Produce It"
 metaTitle: "What Is Soft Pack Packaging? How SASIB Machines Produce It"
 description: "What is soft pack packaging? See how SASIB machines fold, wrap, and finish soft pack cigarettes for production."
-excerpt: ""
 date: "2026-08-25"
 author: "Ali Abdullah"
 authorTitle: "Tobacco Machinery Specialists, Karachi"

@@ -67,8 +67,7 @@ Open `https://civic-tobacco-machinery.com/admin`, enter **your name** and your
 | **Title (H1)** | The main headline — becomes the page's `<h1>`. |
 | **URL slug** | Auto-generated from the title; you can edit it. |
 | **Content** | The article body. Use the toolbar (**H2**, **H3**, **Bold**, **List**, **Link**) — it's Markdown. `##` makes a section heading. |
-| **Excerpt** | Short summary shown on the blog list page. |
-| **Meta description** | The Google snippet (keep it under ~160 characters). |
+| **Meta description** | The Google snippet (keep it under ~160 characters); also shown as the summary on the blog list page. |
 | **Featured image** | The main image. **Recommended: 1200 × 630 px, JPG or WebP, under 300 KB.** The CMS warns you if it's too big. |
 | **Publish date** | Defaults to today. |
 | **Categories** | Click to select one or more. |

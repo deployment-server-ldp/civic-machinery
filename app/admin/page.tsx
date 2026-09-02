@@ -33,7 +33,6 @@ const emptyForm = (author: string): PostFields => ({
   title: "",
   metaTitle: "",
   description: "",
-  excerpt: "",
   date: todayISO(),
   author: author || "Civic Tobacco Machinery",
   authorTitle: "Tobacco Machinery Specialists, Karachi",
@@ -511,15 +510,6 @@ export default function AdminPage() {
                   className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm leading-relaxed"
                 />
               )}
-            </Field>
-
-            <Field label="Excerpt" hint="Short summary shown on the blog list">
-              <textarea
-                value={form.excerpt}
-                onChange={(e) => set("excerpt", e.target.value)}
-                rows={2}
-                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
-              />
             </Field>
 
             <Field

@@ -2,7 +2,6 @@
 title: "Molins Mark 8 Post 64 против Mark 8D MAX 15: что подходит под ваши потребности в выпуске?"
 metaTitle: "Molins Mark 8 Post 64 против Mark 8D MAX 15 | Civic Tobacco Machinery"
 description: "Сравнение сигаретных машин Molins Mark 8 Post 64 и Mark 8D MAX 15 по скорости, выпуску, мощности и тому, какая лучше подходит вашей линии."
-excerpt: ""
 date: "2026-07-24"
 author: "Saad Ali"
 authorTitle: "Специалисты по табачному оборудованию, Карачи"

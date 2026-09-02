@@ -2,7 +2,6 @@
 title: "Intertabac 2026: Everything You Need to Know"
 metaTitle: "Intertabac 2026: Everything You Need to Know"
 description: "Intertabac 2026 runs September 15-17 in Dortmund. Dates, schedule changes, what InterSupply covers, and what machinery buyers should expect."
-excerpt: ""
 date: "2026-09-02"
 author: "Syed Kashif Ali"
 authorTitle: "CEO, Ali Machinery"

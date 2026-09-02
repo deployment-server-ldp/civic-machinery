@@ -85,7 +85,7 @@ export default function LocaleBlogPage({
                   </Link>
                 </h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-600">
-                  {post.excerpt}
+                  {post.description}
                 </p>
                 <span className="mt-4 text-sm font-semibold text-accent-700">
                   {b.readArticle}
