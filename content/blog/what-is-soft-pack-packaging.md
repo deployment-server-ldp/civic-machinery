@@ -2,7 +2,7 @@
 title: "What Is Soft Pack Packaging? How SASIB Machines Produce It"
 metaTitle: "What Is Soft Pack Packaging? How SASIB Machines Produce It"
 description: "What is soft pack packaging? See how SASIB machines fold, wrap, and finish soft pack cigarettes for production."
-excerpt: "Soft pack machines are typically built around specific pack dimensions. The SASIB 3000, for example, is configured for 84mm and 100mm packs with squared corners, while the SASIB 5000 is built for 100mm soft pack production. If your product lineup includes multiple sizes, confirm which machine's configuration matches your actual pack dimensions before choosing between them, since a machine set up for one format doesn't automatically handle another without reconfiguration."
+excerpt: ""
 date: "2026-08-25"
 author: "Ali Abdullah"
 authorTitle: "Tobacco Machinery Specialists, Karachi"
