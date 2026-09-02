@@ -2,7 +2,6 @@
 title: "Regular Wrapper CP1 vs Naked Over Wrapper: qual è la differenza?"
 metaTitle: "Regular Wrapper CP1 vs Naked Over Wrapper | Civic Tobacco Machinery"
 description: "Confronto tra le macchine incartatrici Regular Wrapper CP1 e Naked Over Wrapper su velocità, funzione e posizione nella tua linea di impacchettamento."
-excerpt: ""
 date: "2026-07-29"
 author: "Mustafa Qureshi"
 authorTitle: "Specialisti di macchine per il tabacco, Karachi"

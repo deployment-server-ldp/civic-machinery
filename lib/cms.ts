@@ -29,7 +29,6 @@ export interface PostFields {
   title: string;
   metaTitle?: string;
   description: string;
-  excerpt: string;
   date: string;
   author: string;
   authorTitle?: string;
@@ -86,7 +85,6 @@ export function buildPostMarkdown(f: PostFields): string {
     `title: ${q(f.title)}`,
     ...(f.metaTitle ? [`metaTitle: ${q(f.metaTitle)}`] : []),
     `description: ${q(f.description)}`,
-    `excerpt: ${q(f.excerpt)}`,
     `date: ${q(f.date)}`,
     `author: ${q(f.author)}`,
     ...(f.authorTitle ? [`authorTitle: ${q(f.authorTitle)}`] : []),

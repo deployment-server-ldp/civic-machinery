@@ -2,7 +2,6 @@
 title: "Regular Wrapper CP1 vs Naked Over Wrapper: What's the Difference?"
 metaTitle: "Regular Wrapper CP1 vs Naked Over Wrapper | Civic Tobacco Machinery"
 description: "Comparing the Regular Wrapper CP1 and Naked Over Wrapper cigarette box wrapping machines on speed, function, and where each fits in your packing line."
-excerpt: ""
 date: "2026-07-29"
 author: "Mustafa Qureshi"
 authorTitle: "Packing & Wrapping Machinery Specialist, Civic Tobacco Machinery"
