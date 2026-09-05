@@ -188,7 +188,7 @@ export const categories: Category[] = [
       {
         question: "How many cigarettes per minute do the makers produce?",
         answer:
-          "Depending on the model, our makers run from around 3,000 up to 8,000 cigarettes per minute, so you can match the machine to your target output.",
+          "Depending on the model, our makers run from around 1,800 up to 8,000 cigarettes per minute, so you can match the machine to your target output.",
       },
       {
         question: "Do you supply new or reconditioned machines?",
@@ -196,9 +196,14 @@ export const categories: Category[] = [
           "Both. Reconditioned Molins and Hauni machines are fully inspected, serviced and tested before sale, offering strong value for growing factories.",
       },
       {
-        question: "Do you help match the maker with the right filter line?",
+        question: "Do you help match the maker with the right filter and packing line?",
         answer:
-          "Yes. We make sure the maker and filter maker run in step so the whole line stays balanced. Tell us your brands and target output and we will recommend a setup.",
+          "Yes. We make sure the maker, filter line and packing line run in step so the whole production line stays balanced. Tell us your brands and target output and we'll recommend a setup.",
+      },
+      {
+        question: "Do you supply machinery for factories outside Pakistan?",
+        answer:
+          "Yes. Alongside our Pakistan-based customers, we export cigarette manufacturing machines to markets including Bangladesh, Turkey, Indonesia, Poland, and Bulgaria.",
       },
     ],
     hasSubcategories: true,
