@@ -80,9 +80,7 @@ export default function ManufacturingMachinesPage() {
       </section>
 
       <section className="container mx-auto pb-14">
-        <div className="prose-content max-w-3xl">
-          <CigaretteMakingMachinesContent />
-        </div>
+        <CigaretteMakingMachinesContent />
       </section>
 
       {category.faqs && category.faqs.length > 0 && (
