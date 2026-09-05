@@ -6,6 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
+import CigaretteMakingMachinesContent from "@/components/content/CigaretteMakingMachinesContent";
 import { faqSchema } from "@/lib/schema";
 import {
   getCategory,
@@ -75,6 +76,12 @@ export default function ManufacturingMachinesPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="container mx-auto pb-14">
+        <div className="prose-content max-w-3xl">
+          <CigaretteMakingMachinesContent />
         </div>
       </section>
 
