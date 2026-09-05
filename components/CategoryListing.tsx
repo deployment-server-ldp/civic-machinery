@@ -20,6 +20,7 @@ export default function CategoryListing({
   crumbs,
   products,
   emptyNote,
+  content,
   faqs,
   locale = defaultLocale,
 }: {
@@ -29,6 +30,8 @@ export default function CategoryListing({
   crumbs: Crumb[];
   products: Product[];
   emptyNote?: string;
+  /** Longer guide-style content, rendered above the FAQ section. English only for now. */
+  content?: React.ReactNode;
   faqs?: FaqType[];
   locale?: LocaleCode;
 }) {
@@ -63,6 +66,12 @@ export default function CategoryListing({
           </p>
         )}
       </section>
+
+      {content && (
+        <section className="container mx-auto pb-14">
+          <div className="prose-content max-w-3xl">{content}</div>
+        </section>
+      )}
 
       {faqs && faqs.length > 0 && (
         <section className="container mx-auto pb-14">
