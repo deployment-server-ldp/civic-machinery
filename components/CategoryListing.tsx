@@ -68,9 +68,7 @@ export default function CategoryListing({
       </section>
 
       {content && (
-        <section className="container mx-auto pb-14">
-          <div className="prose-content max-w-3xl">{content}</div>
-        </section>
+        <section className="container mx-auto pb-14">{content}</section>
       )}
 
       {faqs && faqs.length > 0 && (

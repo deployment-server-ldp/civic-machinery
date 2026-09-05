@@ -3,7 +3,7 @@ import Link from "next/link";
 /** Guide-style content for the cigarette filter making machines page. */
 export default function CigaretteFilterMakingMachinesContent() {
   return (
-    <>
+    <div className="prose-content max-w-3xl">
       <h2>Cigarette Filter Making Machines: A Complete Guide</h2>
       <p>
         The filter controls draw, firmness and the overall feel of the smoke,
@@ -60,6 +60,6 @@ export default function CigaretteFilterMakingMachinesContent() {
         <li>Is installation and commissioning part of the sale?</li>
         <li>Is ongoing technical support available once it is in production?</li>
       </ul>
-    </>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 /** Guide-style content for the cigarette wrapping & box packing machines page. */
 export default function CigaretteWrappingMachinesContent() {
   return (
-    <>
+    <div className="prose-content max-w-3xl">
       <h2>Cigarette Wrapping &amp; Box Packing Machines: A Complete Guide</h2>
       <p>
         Wrapping and boxing are the last things that happen to a pack before
@@ -61,6 +61,6 @@ export default function CigaretteWrappingMachinesContent() {
         <li>Is installation and setup included so it runs correctly from day one?</li>
         <li>Is technical support available if the machine needs attention later?</li>
       </ul>
-    </>
+    </div>
   );
 }

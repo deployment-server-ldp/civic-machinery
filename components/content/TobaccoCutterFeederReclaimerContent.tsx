@@ -3,7 +3,7 @@ import Link from "next/link";
 /** Guide-style content for the tobacco cutter, feeder & reclaimer page. */
 export default function TobaccoCutterFeederReclaimerContent() {
   return (
-    <>
+    <div className="prose-content max-w-3xl">
       <h2>Tobacco Cutter, Feeder &amp; Reclaimer Machines: A Complete Guide</h2>
       <p>
         Before a single cigarette is made, tobacco has to be cut to size and
@@ -63,6 +63,6 @@ export default function TobaccoCutterFeederReclaimerContent() {
         <li>Is installation and setup around your existing floor included?</li>
         <li>Is technical support available once the equipment is running?</li>
       </ul>
-    </>
+    </div>
   );
 }
