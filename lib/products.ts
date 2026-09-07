@@ -102,25 +102,29 @@ export const categories: Category[] = [
     ],
     faqs: [
       {
-        question:
-          "What is the difference between hard pack and soft pack machines?",
+        question: "What's the difference between the HLP and SASIB ranges?",
         answer:
-          "Hard packs (hinge-lid boxes) run on HLP-style machines, while soft packs (folded foil and printed outer) run on SASIB-style machines. We supply both and help you match the machine to the pack format your brands actually sell.",
+          "The HLP range produces hard pack, rigid hinge-lid cigarette packs. The SASIB range produces soft pack, foil-wrapped cigarette packs. They're built for genuinely different pack formats rather than different speed tiers of the same product.",
       },
       {
-        question: "What packing speeds do you offer?",
+        question: "Which HLP model should I choose?",
         answer:
-          "Our cigarette packing machines run from around 180 up to 225 packs per minute. Pick a speed that matches your real shift demand with some room to grow, rather than paying for capacity that sits idle.",
+          "It depends on your target output. The HLP-180, HLP-200, and HLP-225 run at 180, 200, and 225 packs per minute respectively, so the right choice is the one that matches your actual production volume rather than the fastest machine available.",
       },
       {
-        question: "Do you sell new or reconditioned packing machines?",
+        question: "What packet set-up styles are available?",
         answer:
-          "Both. Every used HLP or SASIB packer is inspected, serviced and tested before sale, so a good reconditioned machine can run for years at a fraction of the new price.",
+          "Our HLP range supports round corner, bevel edge, D-type, and square set-ups. Tell us which style your brand requires and we'll confirm it against the machine you're considering.",
       },
       {
-        question: "Do you install the machine and supply spare parts?",
+        question: "Do you supply new or reconditioned packing machines?",
         answer:
-          "Yes. We install and set up the machine, and support HLP and SASIB with widely available spares and service. Message us on WhatsApp at +92 301 1111184 for price and current availability.",
+          "Both. Reconditioned packing equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
+      },
+      {
+        question: "What voltage do your packing machines run on?",
+        answer:
+          "Our HLP range supports both 220V and 380V setups. Confirm your factory's electrical supply with us before ordering so the machine is configured correctly from installation.",
       },
     ],
   },

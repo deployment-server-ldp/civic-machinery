@@ -1,178 +1,212 @@
 import Link from "next/link";
 
-const units: {
-  name: string;
-  href: string;
-  blurb: string;
-}[] = [
-  {
-    name: "HLP-225 Cigarette Packing Machine",
-    href: "/cigarette-packing-machines/hlp-225",
-    blurb:
-      "Our fastest hard pack line, a double plunger machine built for 225 packs a minute without giving up finish quality.",
-  },
-  {
-    name: "HLP-200 Cigarette Packing Machine",
-    href: "/cigarette-packing-machines/hlp-200",
-    blurb:
-      "A double plunger core unit running 200 packs a minute, built as the dependable centre of an integrated packing line.",
-  },
-  {
-    name: "SASIB 3000 Soft Pack Machine",
-    href: "/cigarette-packing-machines/sasib-3000",
-    blurb:
-      "A soft pack machine handling both 84mm and 100mm formats, finishing every pack with SASIB's signature squared corners.",
-  },
-];
-
-/** Long-form, two-column guide content for the cigarette packing machines page. */
+/** Guide content for the cigarette packing machines page. */
 export default function CigarettePackingMachinesContent() {
   return (
     <div className="mx-auto max-w-6xl">
-      {/* Row 1: positioning + automation */}
+      {/* Row 1 */}
       <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
         <div className="prose-content max-w-none">
-          <h2>High-Performance Cigarette Packing Machinery</h2>
+          <h2>What Is a Cigarette Packing Machine?</h2>
           <p>
-            Civic Tobacco Machinery supplies cigarette packing machines built
-            for precision, speed and repeatability. These machines carry a
-            counted batch of cigarettes through forming, folding and sealing
-            in one continuous cycle, so every pack that leaves the line looks
-            and feels the same as the one before it. Whether your brands run
-            King Size, Slim, Super Slim or Nano formats, our hard pack and
-            soft pack lines are built to hold that consistency at speed
-            rather than trade it off for output.
+            A cigarette packing machine takes finished cigarettes coming off
+            the maker and forms, fills, and seals them into individual
+            packs. This stage doesn&rsquo;t touch tobacco formation or
+            filter attachment at all. It works purely on the finished
+            product, counting cigarettes into the correct quantity per pack
+            and building the pack itself, whether that&rsquo;s a rigid
+            hinge-lid box or a folded soft pack, before the pack moves on to
+            overwrapping.
           </p>
         </div>
 
         <div className="prose-content max-w-none">
-          <h2>Automated Efficiency in Cigarette Packaging</h2>
+          <h2>Hard Pack vs. Soft Pack: How HLP and SASIB Machines Differ</h2>
           <p>
-            Moving to an automatic packer changes what a packing floor looks
-            like day to day. PLC control keeps every cycle on spec, so
-            plunger movement, fold timing and seal pressure stay consistent
-            across a full shift rather than drifting as an operator tires.
-            The result is fewer rejects, less material wasted on correction,
-            and a pack that holds its shape and seal from the line to the
-            shelf.
-          </p>
-          <p>
-            Packing is only one stage of a working line. See our{" "}
-            <Link href="/cigarette-manufacturing-machines">
-              cigarette making machines
+            Not all packing machines build the same style of pack, and this
+            is the main technical split in our range. Our{" "}
+            <Link href="/cigarette-packing-machines/hlp-180">HLP-180</Link>,{" "}
+            <Link href="/cigarette-packing-machines/hlp-200">HLP-200</Link>,
+            and{" "}
+            <Link href="/cigarette-packing-machines/hlp-225">HLP-225</Link>{" "}
+            are hard pack machines, forming the rigid hinge-lid box most
+            factories associate with a standard cigarette pack. Our{" "}
+            <Link href="/cigarette-packing-machines/sasib-3000">
+              SASIB 3000
             </Link>{" "}
             and{" "}
-            <Link href="/cigarette-box-wrapping-machines">
-              wrapping &amp; box packing machines
+            <Link href="/cigarette-packing-machines/sasib-5000">
+              SASIB 5000
             </Link>{" "}
-            for the stages either side of it.
+            are soft pack machines, building the flexible, foil-wrapped pack
+            format still in strong demand in several markets.
+          </p>
+          <p>
+            These aren&rsquo;t interchangeable configurations of the same
+            machine. A hard pack line and a soft pack line are genuinely
+            different mechanically, so the choice between HLP and SASIB
+            comes down to which pack format your market and product
+            actually need, not which machine is &ldquo;better.&rdquo;
           </p>
         </div>
       </div>
 
-      {/* Why choose us */}
-      <div className="prose-content mt-14 max-w-3xl">
-        <h2>Why Choose Civic Tobacco Machinery</h2>
-        <p>
-          We work with factories at every stage, from a first packing line to
-          a floor being expanded with a second or third unit, and we size the
-          machine to the job rather than the other way round. That means:
-        </p>
-        <ul>
-          <li>Recommendations matched to your actual output target and pack format, not a one-size sales pitch</li>
-          <li>High-speed machines running modern PLC control rather than dated mechanical systems</li>
-          <li>Installation, commissioning and operator handover included, not left to figure out on site</li>
-          <li>Spare parts and technical support you can call on long after the sale</li>
-        </ul>
-      </div>
-
-      {/* Format flexibility + hard vs soft */}
+      {/* Row 2 */}
       <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
         <div className="prose-content max-w-none">
-          <h2>Cigarette Box Packing Machines for Modern Production</h2>
+          <h2>Understanding Packet Set-Up Options</h2>
           <p>
-            Pack presentation is part of how a brand competes on the shelf, so
-            our hard pack machines are built to handle round corner, bevel
-            edge, D-type and square formats without swapping to a different
-            machine. That flexibility lets a single line serve more than one
-            brand or format as your product range grows.
+            Our HLP range supports several packet set-up styles, including
+            round corner, bevel edge, D-type, and square. This isn&rsquo;t
+            just a cosmetic choice. Each set-up affects how the pack looks
+            and feels on shelf, and different markets and brands tend to
+            favor different styles as part of their product identity.
+            Confirming which set-up your brand requires before ordering
+            avoids a mismatch between the machine you buy and the pack
+            design you actually need to produce.
           </p>
-          <ul>
-            <li>PLC-controlled automation for precise, repeatable cycles</li>
-            <li>Multi-format compatibility across cigarette sizes and pack shapes</li>
-            <li>Durable mechanical builds designed for continuous, shift-after-shift running</li>
-            <li>Low maintenance demands, with parts and service readily available</li>
-          </ul>
         </div>
 
         <div className="prose-content max-w-none">
-          <h2>Hard Pack vs. Soft Pack Packing Machines</h2>
+          <h2>What a Double Plunger Mechanism Does</h2>
           <p>
-            Hard pack and soft pack cigarettes are built on genuinely
-            different machines, not just a different setting on the same
-            line. Our HLP-series machines form the rigid, hinge-lid hard pack
-            using a plunger mechanism, single or double depending on the
-            model, while our SASIB soft packers wrap and fold cigarettes into
-            a flexible pack finished with alufoil and label wrapping around
-            an arbour for neat, squared corners.
-          </p>
-          <p>
-            Picking between them comes down to which format your brands
-            actually sell, or whether you need both running side by side.
+            Machines like the{" "}
+            <Link href="/cigarette-packing-machines/hlp-200">HLP-200</Link>{" "}
+            and{" "}
+            <Link href="/cigarette-packing-machines/hlp-225">HLP-225</Link>{" "}
+            use a double plunger system, a mechanism that pushes cigarettes
+            into the pack shell from two coordinated points rather than one.
+            This matters at higher speeds specifically, since a
+            single-plunger design can struggle to maintain consistent pack
+            density and alignment once output climbs past a certain point.
+            The double plunger design is part of what allows these machines
+            to hold their rated speed without a rise in rejected or poorly
+            formed packs.
           </p>
         </div>
       </div>
 
-      {/* Featured units */}
-      <div className="prose-content mt-14 max-w-none">
-        <h2>Featured Cigarette Packing Machines</h2>
-      </div>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
-        {units.map((u) => (
-          <div
-            key={u.href}
-            className="prose-content max-w-none rounded-2xl border border-brand-100 bg-brand-50/50 p-6"
-          >
-            <h3 className="!mt-0">
-              <Link href={u.href}>{u.name}</Link>
-            </h3>
-            <p className="!mb-0">{u.blurb}</p>
-          </div>
-        ))}
+      {/* Row 3 */}
+      <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
+        <div className="prose-content max-w-none">
+          <h2>Speed and Output Across Our Packing Range</h2>
+          <ul>
+            <li>
+              <Link href="/cigarette-packing-machines/hlp-180">
+                HLP-180
+              </Link>
+              ,{" "}
+              <Link href="/cigarette-packing-machines/hlp-200">
+                HLP-200
+              </Link>
+              , and{" "}
+              <Link href="/cigarette-packing-machines/hlp-225">
+                HLP-225
+              </Link>
+              : run at 180, 200, and 225 packs per minute respectively,
+              giving a clear speed tier to match different production
+              targets on the hard pack side.
+            </li>
+            <li>
+              <Link href="/cigarette-packing-machines/sasib-3000">
+                SASIB 3000
+              </Link>
+              : a soft packer built for 84mm and 100mm packs with squared
+              corners.
+            </li>
+            <li>
+              <Link href="/cigarette-packing-machines/sasib-5000">
+                SASIB 5000
+              </Link>
+              : a soft packer built for 100mm pack production with alufoil
+              wrapping.
+            </li>
+          </ul>
+          <p>
+            Within the HLP range specifically, the model numbers directly
+            reflect rated output, so choosing between them is largely a
+            question of matching your target packs-per-minute to your
+            actual production volume rather than assuming the highest
+            number is automatically the right choice.
+          </p>
+        </div>
+
+        <div className="prose-content max-w-none">
+          <h2>Matching Packing Output to Your Cigarette Maker</h2>
+          <p>
+            A packing machine needs to keep pace with the cigarette maker
+            feeding it, or it becomes the bottleneck right after the most
+            expensive part of your line. A high-speed maker like the{" "}
+            <Link href="/cigarette-manufacturing-machines/protos-80-er">
+              Protos 80 ER
+            </Link>
+            , producing up to 8,000 cigarettes per minute, needs a packing
+            setup capable of genuinely keeping up, which typically means
+            running more than one packing line in parallel rather than
+            expecting a single packer to absorb that entire output. Confirm
+            this pairing before finalizing a line, rather than treating the
+            packer as an afterthought once the maker is already selected.
+          </p>
+        </div>
       </div>
 
-      {/* Integrated line */}
+      {/* Why buy */}
       <div className="prose-content mt-14 max-w-3xl">
-        <h2>An Integrated Cigarette Production Line</h2>
+        <h2>Why Buy Packing Machines From Civic Tobacco Machinery</h2>
         <p>
-          A packing machine performs best when it is not working in
-          isolation. We help factories build a matched line end to end:
+          Civic Tobacco Machinery has supplied and supported tobacco
+          machinery from the SITE industrial estate in Karachi since 1998,
+          including complete packing lines alongside makers, filter
+          machines, and wrappers. A few reasons factories choose us for
+          packing equipment specifically:
         </p>
         <ul>
           <li>
-            <Link href="/cigarette-manufacturing-machines">
-              Cigarette making machines
-            </Link>{" "}
-            for rod formation and filter attachment upstream of packing
+            <strong>Machines matched to your maker&rsquo;s output.</strong>{" "}
+            We help confirm packing capacity actually keeps pace with your
+            cigarette making machine before you commit to a setup.
           </li>
           <li>
-            <Link href="/cigarette-filter-making-machines">
-              Cigarette filter making machines
-            </Link>{" "}
-            supplying the filter rod the maker attaches
+            <strong>Installation and commissioning included.</strong> Our
+            own team sets up packing lines on your factory floor, tested
+            and ready to run.
           </li>
           <li>
-            <Link href="/cigarette-box-wrapping-machines">
-              Wrapping &amp; box packing machines
-            </Link>{" "}
-            to finish and carton the pack once it leaves this stage
+            <strong>Ongoing spares and service.</strong> We stay reachable
+            after handover for parts and technical support.
+          </li>
+          <li>
+            <strong>New, used and reconditioned options.</strong> Whether
+            you&rsquo;re building a new line or adding packing capacity to
+            an existing one, there&rsquo;s a genuine option for different
+            budgets.
           </li>
         </ul>
-        <p>
-          Sourcing the whole line through one supplier keeps speeds matched
-          stage to stage and puts spares and technical support for every
-          machine behind a single call.
-        </p>
+      </div>
+
+      {/* Row 4 */}
+      <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
+        <div className="prose-content max-w-none">
+          <h2>New, Used &amp; Reconditioned Packing Machines</h2>
+          <p>
+            Packing equipment is available new, used, or reconditioned,
+            priced to fit different stages of a factory&rsquo;s growth.
+            Every reconditioned unit is inspected, serviced, and tested
+            before it leaves us, and our engineers stay involved through
+            setup so the machine performs the way it was described.
+          </p>
+        </div>
+
+        <div className="prose-content max-w-none">
+          <h2>Exporting Packing Machines From Pakistan</h2>
+          <p>
+            Alongside factories across Pakistan, we export packing machines
+            to markets including Bangladesh, Turkey, Indonesia, Poland,
+            Bulgaria and beyond. See our{" "}
+            <Link href="/export-to">export destinations</Link> for more on
+            shipping and support outside Pakistan.
+          </p>
+        </div>
       </div>
     </div>
   );
