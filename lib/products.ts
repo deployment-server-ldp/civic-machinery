@@ -298,25 +298,25 @@ export const subcategories: Subcategory[] = [
     ],
     faqs: [
       {
-        question: "What do tobacco feeders, cutters and reclaimers do?",
+        question: "What does a cigarette reclaimer actually recover?",
         answer:
-          "Feeders keep the makers supplied with tobacco, cutters cut leaf to size for production, and reclaimers recover tobacco from rejected cigarettes so it can be reused, keeping the primary and secondary floors running smoothly.",
+          "A reclaimer separates usable tobacco from rejected cigarettes, removing paper and filter material so the tobacco itself can be reintroduced into production rather than discarded as waste.",
       },
       {
-        question: "Can this equipment reduce tobacco waste?",
+        question: "Is a tobacco stem flattener necessary, or optional?",
         answer:
-          "Yes. A reclaimer recovers usable tobacco from rejected sticks, which cuts waste and lowers running costs over time.",
+          "It depends on your leaf and blend requirements. A stem flattener improves blending uniformity and reduces leaf waste, which matters more for factories aiming for consistent quality at scale than for very small production runs.",
       },
       {
-        question: "Which brands do you supply?",
+        question: "Is your tobacco feeder compatible with any cigarette maker?",
         answer:
-          "We supply well-supported machines such as the Hauni KT-400 tobacco cutter, along with tobacco feeders, cigarette reclaimers and stem flatteners.",
+          "Our feeder is built to work with Mark 8 and Mark 9 class machines specifically. Confirm compatibility with your exact maker model before assuming any feeder will work with it.",
       },
       {
         question:
-          "Are the machines new or reconditioned, and do you support them?",
+          "Do you supply new or reconditioned cutting and feeding equipment?",
         answer:
-          "Both new and reconditioned units are available, all tested before sale, with installation, spares and service. Contact us on WhatsApp at +92 301 1111184.",
+          "Both. Reconditioned equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
