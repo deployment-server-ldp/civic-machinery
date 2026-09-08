@@ -256,24 +256,25 @@ export const subcategories: Subcategory[] = [
     ],
     faqs: [
       {
-        question: "Which filter making machines do you supply?",
+        question:
+          "What's the difference between a hollow tube maker and a conventional filter rod maker?",
         answer:
-          "We supply Hauni KDF-1 and KDF-2 filter makers, Molins PM filter makers and hollow tube machines for speciality formats, for factories running filter rod production.",
+          "A conventional filter rod maker, like the KDF-1, KDF-2, or PM-5, forms cellulose acetate tow into a solid filter rod. A hollow tube maker produces a paper tube section instead, used in filter designs that call for a hollow or specialty tube rather than a fully solid tow plug. They serve different filter designs and aren't interchangeable.",
       },
       {
-        question: "Can the filter maker match my cigarette maker's speed?",
+        question: "What filter lengths can your machines produce?",
         answer:
-          "Yes. We help you pick a filter line that matches the speed of your makers so the two run in step and the line stays balanced.",
+          "Depending on the model, our filter making machines cover a length range of roughly 64mm up to 150mm on the KDF range, and 108mm to 126mm on the Molins PM-5. Confirm your target cigarette format against these ranges before choosing a machine.",
       },
       {
-        question: "Do you offer new and reconditioned filter makers?",
+        question: "Can a filter making machine be used with any cigarette maker?",
         answer:
-          "Both. Every reconditioned KDF or PM machine is inspected, serviced and tested before sale.",
+          "The filter rod itself needs to match your cigarette maker's circumference and rod length requirements, and the filter machine's output speed needs to keep pace with your maker's rated cigarettes per minute. We help confirm both before recommending a setup.",
       },
       {
-        question: "Do you install and support filter making machines?",
+        question: "Do you supply new or reconditioned filter making machines?",
         answer:
-          "Yes, installation, spares and service are included. Message us on WhatsApp at +92 301 1111184 for price and availability.",
+          "Both. Reconditioned filter making equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
