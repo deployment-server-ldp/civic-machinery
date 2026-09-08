@@ -146,24 +146,24 @@ export const categories: Category[] = [
     ],
     faqs: [
       {
-        question: "What is the difference between an over-wrapper and a boxer?",
+        question: "What's the difference between an overwrapper and a boxer?",
         answer:
-          "An over-wrapper seals each pack in cellophane film with a tear tape, while a boxer (cartoning machine) groups finished packs into cartons or boxes. Most lines use both, one after the other.",
+          "An overwrapper seals an individual pack or outer pack in film, typically with a tear tape. A boxer groups a set number of already-packed products into an outer carton for shipping. They handle different stages of the line and aren't interchangeable.",
       },
       {
-        question: "Which wrapping and boxing machines do you supply?",
+        question: "Do I need both an overwrapper and a boxer?",
         answer:
-          "We supply Molins and SASIB over-wrappers and boxers, including the CP1 pack wrapper, the naked over-wrapper and Molins and SASIB boxers, for both hard-pack and soft-pack lines.",
+          "It depends on how far your line extends. If your product ships as individually wrapped packs without further cartoning, an overwrapper alone may be enough. If you're building a complete line through to shipping-ready cartons, you'll typically need both stages.",
       },
       {
-        question: "Do you offer new or reconditioned wrapping machines?",
+        question: "Can these machines handle multiple pack sizes?",
         answer:
-          "Both new and carefully reconditioned units are available. Every used machine is checked, set up and handed over ready to run.",
+          "Our wrapping and boxing range is built to handle standard cigarette pack formats, but exact size compatibility depends on the specific machine. Tell us your pack dimensions and we'll confirm which machine fits your product.",
       },
       {
-        question: "Do you provide installation and spares?",
+        question: "Do you supply new or reconditioned wrapping machines?",
         answer:
-          "Yes, installation, setup, spares and service are all part of what we do. Contact us on WhatsApp at +92 301 1111184 for a quotation.",
+          "Both. Reconditioned wrapping and boxing equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
