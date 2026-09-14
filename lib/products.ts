@@ -451,7 +451,7 @@ const packing: Product[] = [
       "SASIB 5000 soft packer",
       "soft pack cigarette machine Pakistan",
     ],
-    image: "/images/machines/ssasib-5000.webp",
+    image: "/images/machines/sasib-5000.webp",
     intro: [
       "The SASIB 5000 is a versatile machine built for producing soft packs of 100mm cigarettes. Using alufoil and label wrapping performed around an arbour, it delivers perfect, consistent packs with neatly squared corners.",
       "That wrapping method does more than look good, it protects the cigarettes and keeps each pack intact, while also lifting the visual appeal of the finished product. For manufacturers in Pakistan who want a premium soft pack finish, it is a reliable, high-quality choice.",
@@ -483,7 +483,7 @@ const packing: Product[] = [
       "SASIB 3000 soft packer",
       "soft pack cigarette machine Pakistan",
     ],
-    image: "/images/machines/ssasib-3000.webp",
+    image: "/images/machines/sasib-3000.webp",
     intro: [
       "The SASIB 3000 adds extra versatility to the SASIB soft pack line with its ability to handle both 84mm and 100mm cigarette packs. Using alufoil and label wrapping performed around an arbor, it keeps the hallmark SASIB finish, perfect, consistent packs with neatly squared corners.",
       "That dual-size capability makes the SASIB 3000 a valuable asset for manufacturers in Pakistan who need flexibility in their production while keeping every pack to a high standard of presentation and protection.",

@@ -7,7 +7,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "South Africa Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in South Africa. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to South Africa: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in South Africa.",
     overview: [
@@ -82,7 +82,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Zimbabwe Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Zimbabwe. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Zimbabwe: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette and tobacco production in Zimbabwe.",
     overview: [
@@ -157,7 +157,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Argentina Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Argentina. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Argentina: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in Argentina.",
     overview: [
@@ -232,7 +232,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Switzerland Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to industrial buyers in Switzerland. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Switzerland: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery categories we can supply to industrial buyers in Switzerland, for direct production, refurbishment or parts sourcing.",
     overview: [
@@ -303,7 +303,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Colombia Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Colombia. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Colombia: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in Colombia.",
     overview: [
@@ -378,7 +378,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Chile Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Chile. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Chile: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in Chile.",
     overview: [
@@ -453,7 +453,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Uruguay Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Uruguay. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Uruguay: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in Uruguay.",
     overview: [
@@ -528,7 +528,7 @@ export const otherRegionCountries: ExportCountry[] = [
     region: "Other Regions",
     metaTitle: "Brazil Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Brazil. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Brazil: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette production in Brazil.",
     overview: [

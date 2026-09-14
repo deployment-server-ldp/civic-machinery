@@ -7,7 +7,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Qatar Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to buyers in Qatar. New and reconditioned equipment.",
+      "Civic Tobacco Machinery exports cigarette machinery to Qatar: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with buyers internationally. This page covers the machinery we can supply for cigarette and tobacco operations in Qatar.",
     overview: [
@@ -87,7 +87,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Kuwait Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Kuwait. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Kuwait: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, supporting international buyers. This page covers the machinery we can supply for operations in Kuwait.",
     overview: [
@@ -166,7 +166,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Oman Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Oman. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Oman: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery we can supply for operations in Oman.",
     overview: [
@@ -245,7 +245,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Bahrain Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Bahrain. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to Bahrain: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery we can supply for operations in Bahrain.",
     overview: [
@@ -324,7 +324,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Saudi Arabia Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to buyers in Saudi Arabia. New and reconditioned equipment.",
+      "Civic Tobacco Machinery exports cigarette machinery to Saudi Arabia: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with buyers internationally. This page covers the machinery we can supply for cigarette and tobacco operations in Saudi Arabia.",
     overview: [
@@ -405,7 +405,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "United Arab Emirates Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in the United Arab Emirates. New and reconditioned equipment from Pakistan.",
+      "Civic Tobacco Machinery exports cigarette machinery to the United Arab Emirates: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery we can supply to buyers in the United Arab Emirates, whether for direct production or regional distribution.",
     overview: [
@@ -485,7 +485,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Yemen Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery, a Pakistan-based supplier, offers cigarette making, packing, filter and wrapping machinery for buyers in Yemen. New and reconditioned equipment.",
+      "Civic Tobacco Machinery exports cigarette machinery to Yemen: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery categories we can discuss for buyers in Yemen, with shipping and order-specific arrangements confirmed at enquiry.",
     overview: [
@@ -560,7 +560,7 @@ export const middleEastCountries: ExportCountry[] = [
     region: "Middle East",
     metaTitle: "Syria Cigarette Machinery | Civic Tobacco",
     metaDescription:
-      "Civic Tobacco Machinery, a Pakistan-based supplier, offers cigarette making, packing, filter and wrapping machinery for buyers in Syria. New and reconditioned equipment.",
+      "Civic Tobacco Machinery exports cigarette machinery to Syria: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
     heroIntro:
       "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery categories we can discuss for buyers in Syria, with shipping and order-specific arrangements confirmed at enquiry.",
     overview: [
