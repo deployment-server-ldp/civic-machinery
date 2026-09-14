@@ -117,7 +117,11 @@ const staticTranslatedPaths = [
   "/cigarette-box-wrapping-machines",
   "/cigarette-filter-making-machines",
   "/cutter-feeder-reclaimer",
-  // Blog: the index + the translated posts (kept in sync with content/blog/de).
+  // Blog: the index + every translated post (kept in sync with content/blog/de,
+  // which mirrors it, ru, ar, pl, bg, zh, vi, id, tr and fa — all 11 non-English,
+  // non-en-variant locales carry the full post set as of the 2026-09 translation
+  // pass; za/zw are excluded from blog hreflang below since they have no blog
+  // translations at all).
   // Hardcoded here so client chrome + hreflang work without importing the
   // fs-backed blog loader into client code.
   "/blog",
@@ -125,7 +129,13 @@ const staticTranslatedPaths = [
   "/blog/molins-mark-8-post-64-vs-mark-8d-max-15",
   "/blog/regular-wrapper-cp1-vs-naked-over-wrapper",
   "/blog/what-does-a-hollow-tube-maker-do",
+  "/blog/intertabac-dortmund-germany",
+  "/blog/what-does-a-tobacco-feeder-do",
+  "/blog/what-is-soft-pack-packaging",
 ];
+
+/** Blog paths (index + posts) never advertise za/zw — neither has any blog translation. */
+const isBlogPath = (path: string) => path === "/blog" || path.startsWith("/blog/");
 
 export const translatedPaths: readonly string[] = [
   ...staticTranslatedPaths,
@@ -134,7 +144,9 @@ export const translatedPaths: readonly string[] = [
 
 /** Live locales a given English path is translated into (always includes en). */
 export function localesForPath(path: string): LocaleCode[] {
-  return translatedPaths.includes(path) ? liveLocaleCodes : [defaultLocale];
+  if (!translatedPaths.includes(path)) return [defaultLocale];
+  if (isBlogPath(path)) return liveLocaleCodes.filter((c) => c !== "za" && c !== "zw");
+  return liveLocaleCodes;
 }
 
 /**
@@ -143,7 +155,9 @@ export function localesForPath(path: string): LocaleCode[] {
  * localized chrome (nav, footer) from linking to pages that don't exist yet.
  */
 export function localeHref(code: LocaleCode, path: string): string {
-  return translatedPaths.includes(path) ? localePath(code, path) : path;
+  if (!translatedPaths.includes(path)) return path;
+  if (isBlogPath(path) && (code === "za" || code === "zw")) return path;
+  return localePath(code, path);
 }
 
 /** Strip a leading locale folder from a path, returning the canonical English path. */
