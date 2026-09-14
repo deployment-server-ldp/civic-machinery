@@ -8,7 +8,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "India",
     slug: "india",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in India | Civic Tobacco Machinery",
+    metaTitle: "India Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery supplies cigarette making, packing, filter and wrapping machinery to manufacturers in India. New, used and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -113,7 +113,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Bangladesh",
     slug: "bangladesh",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Bangladesh | Civic Tobacco Machinery",
+    metaTitle: "Bangladesh Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to manufacturers in Bangladesh. New and reconditioned equipment.",
     heroIntro:
@@ -212,7 +212,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "China",
     slug: "china",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in China | Civic Tobacco Machinery",
+    metaTitle: "China Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery supplies cigarette making, packing, filter and wrapping machinery to industrial buyers in China. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -306,7 +306,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Indonesia",
     slug: "indonesia",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Indonesia | Civic Tobacco Machinery",
+    metaTitle: "Indonesia Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to manufacturers in Indonesia. New and reconditioned.",
     heroIntro:
@@ -403,7 +403,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Malaysia",
     slug: "malaysia",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Malaysia | Civic Tobacco Machinery",
+    metaTitle: "Malaysia Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Malaysia. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -488,7 +488,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Singapore",
     slug: "singapore",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Singapore | Civic Tobacco Machinery",
+    metaTitle: "Singapore Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery supplies cigarette making, packing, filter and wrapping machinery to industrial buyers in Singapore. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -572,7 +572,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Iran",
     slug: "iran",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Iran | Civic Tobacco Machinery",
+    metaTitle: "Iran Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, offers cigarette making, packing, filter and wrapping machinery for manufacturers in Iran. New and reconditioned equipment.",
     heroIntro:
@@ -657,7 +657,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Philippines",
     slug: "philippines",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in the Philippines | Civic Tobacco Machinery",
+    metaTitle: "Philippines Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in the Philippines. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -741,7 +741,7 @@ export const asiaCountries: ExportCountry[] = [
     name: "Vietnam",
     slug: "vietnam",
     region: "Asia",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Vietnam | Civic Tobacco Machinery",
+    metaTitle: "Vietnam Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Vietnam. New and reconditioned equipment from Pakistan.",
     heroIntro:

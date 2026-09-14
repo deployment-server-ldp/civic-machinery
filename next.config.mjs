@@ -22,6 +22,12 @@ const nextConfig = {
     if (isExport) return []; // handled by public/.htaccess on static hosting
     // Permanent (308) redirects from old URLs to the new clean structure.
     return [
+      // Blog: duplicate InterTabac post merged into the original write-up.
+      {
+        source: "/blog/intertabac-2026-everything-you-need-to-know-about-this-global-trade-show",
+        destination: "/blog/intertabac-dortmund-germany",
+        permanent: true,
+      },
       // Blog: old "karachi" URLs → "pakistan" URLs.
       {
         source: "/blog/how-to-choose-cigarette-packing-machine-karachi",

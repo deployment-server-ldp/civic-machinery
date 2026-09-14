@@ -5,7 +5,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "South Africa",
     slug: "south-africa",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in South Africa | Civic Tobacco Machinery",
+    metaTitle: "South Africa Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in South Africa. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -80,7 +80,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Zimbabwe",
     slug: "zimbabwe",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Zimbabwe | Civic Tobacco Machinery",
+    metaTitle: "Zimbabwe Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Zimbabwe. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -155,7 +155,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Argentina",
     slug: "argentina",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Argentina | Civic Tobacco Machinery",
+    metaTitle: "Argentina Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Argentina. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -230,7 +230,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Switzerland",
     slug: "switzerland",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Switzerland | Civic Tobacco Machinery",
+    metaTitle: "Switzerland Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to industrial buyers in Switzerland. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -301,7 +301,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Colombia",
     slug: "colombia",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Colombia | Civic Tobacco Machinery",
+    metaTitle: "Colombia Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Colombia. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -376,7 +376,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Chile",
     slug: "chile",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Chile | Civic Tobacco Machinery",
+    metaTitle: "Chile Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Chile. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -451,7 +451,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Uruguay",
     slug: "uruguay",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Uruguay | Civic Tobacco Machinery",
+    metaTitle: "Uruguay Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Uruguay. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -526,7 +526,7 @@ export const otherRegionCountries: ExportCountry[] = [
     name: "Brazil",
     slug: "brazil",
     region: "Other Regions",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Brazil | Civic Tobacco Machinery",
+    metaTitle: "Brazil Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to manufacturers in Brazil. New and reconditioned equipment from Pakistan.",
     heroIntro:

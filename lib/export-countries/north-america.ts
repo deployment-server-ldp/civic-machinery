@@ -5,7 +5,7 @@ export const northAmericaCountries: ExportCountry[] = [
     name: "Canada",
     slug: "canada",
     region: "North America",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Canada | Civic Tobacco Machinery",
+    metaTitle: "Canada Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to industrial buyers in Canada. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -84,7 +84,7 @@ export const northAmericaCountries: ExportCountry[] = [
     name: "United States",
     slug: "united-states",
     region: "North America",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in the United States | Civic Tobacco Machinery",
+    metaTitle: "United States Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to industrial buyers in the United States. New and reconditioned equipment from Pakistan.",
     heroIntro:

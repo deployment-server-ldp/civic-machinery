@@ -5,7 +5,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Qatar",
     slug: "qatar",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Qatar | Civic Tobacco Machinery",
+    metaTitle: "Qatar Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to buyers in Qatar. New and reconditioned equipment.",
     heroIntro:
@@ -85,7 +85,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Kuwait",
     slug: "kuwait",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Kuwait | Civic Tobacco Machinery",
+    metaTitle: "Kuwait Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Kuwait. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -164,7 +164,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Oman",
     slug: "oman",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Oman | Civic Tobacco Machinery",
+    metaTitle: "Oman Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Oman. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -243,7 +243,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Bahrain",
     slug: "bahrain",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Bahrain | Civic Tobacco Machinery",
+    metaTitle: "Bahrain Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Bahrain. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -322,7 +322,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Saudi Arabia",
     slug: "saudi-arabia",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Saudi Arabia | Civic Tobacco Machinery",
+    metaTitle: "Saudi Arabia Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, exports cigarette making, packing, filter and wrapping machinery to buyers in Saudi Arabia. New and reconditioned equipment.",
     heroIntro:
@@ -403,7 +403,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "United Arab Emirates",
     slug: "united-arab-emirates",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in the UAE | Civic Tobacco Machinery",
+    metaTitle: "United Arab Emirates Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in the United Arab Emirates. New and reconditioned equipment from Pakistan.",
     heroIntro:
@@ -483,7 +483,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Yemen",
     slug: "yemen",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Yemen | Civic Tobacco Machinery",
+    metaTitle: "Yemen Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, offers cigarette making, packing, filter and wrapping machinery for buyers in Yemen. New and reconditioned equipment.",
     heroIntro:
@@ -558,7 +558,7 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Syria",
     slug: "syria",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Syria | Civic Tobacco Machinery",
+    metaTitle: "Syria Cigarette Machinery | Civic Tobacco",
     metaDescription:
       "Civic Tobacco Machinery, a Pakistan-based supplier, offers cigarette making, packing, filter and wrapping machinery for buyers in Syria. New and reconditioned equipment.",
     heroIntro:
