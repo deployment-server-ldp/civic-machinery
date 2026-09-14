@@ -3138,9 +3138,45 @@ const za: Dictionary = {
   home: {
     ...en.home,
     metaTitle: "Civic Tobacco Machinery | Cigarette Machinery South Africa",
+    metaDescription:
+      "Cigarette making, packing, filter and wrapping machinery exported from Pakistan to South Africa. New and reconditioned lines, spares and installation support for local manufacturers.",
     hero: {
       ...en.home.hero,
       h1: "Looking for Cigarette & Tobacco Machinery in South Africa?",
+      lead: "South African manufacturers turn to Civic Tobacco Machinery for complete cigarette lines, making, filter, packing and wrapping equipment, sourced new or reconditioned, shipped from Pakistan and backed by spare parts and technical support after delivery.",
+    },
+    about: {
+      ...en.home.about,
+      lead: "Now in its third generation, our family business has spent more than 35 years working exclusively in tobacco machinery, experience that now extends to manufacturers across South Africa.",
+      p1: "Three generations of one family have stayed in a single trade, tobacco machinery, since the business began as a small trading operation. That history has built the kind of trusted name that new and long-established cigarette producers, including buyers sourcing machinery for South Africa, return to when they need a line that actually works.",
+      p2: "As specialist tobacco machinery suppliers, we cover the complete line, makers, filter machines, packers and wrappers, sourced, inspected and shipped as one coordinated order rather than piecemeal purchases. Buyers can see equipment running before it ships, and we back every machine with free demonstration and technician training so your team is confident from the first day it starts up on your floor.",
+      bullets: [
+        "Three generations, one family business",
+        "New and reconditioned machinery",
+        "Complete lines, maker through to packer",
+        "Demonstration and technician training included",
+      ],
+    },
+    why: {
+      ...en.home.why,
+      reasons: [
+        {
+          title: "Brands that keep parts easy to find",
+          text: "Our lines are built around well-established brands like Molins, HLP and SASIB, so replacement parts and mechanical know-how stay available long after the sale, keeping your shift running instead of waiting on a part.",
+        },
+        {
+          title: "No surprises on used equipment",
+          text: "Every reconditioned machine goes through inspection, servicing and testing before it's offered, and we tell you exactly what condition it's in rather than leaving you to guess from a photo.",
+        },
+        {
+          title: "A line that's matched, not just sold",
+          text: "We help you size the maker, filter line, packer and wrapper together so one machine's output doesn't choke the next, then install and support the whole set.",
+        },
+        {
+          title: "Export support, start to finish",
+          text: "We're based in Pakistan and ship to manufacturers across South Africa, coordinating shipping and documentation and staying reachable for spares and technical support once your machine is running.",
+        },
+      ],
     },
   },
   categories: {
@@ -3148,22 +3184,52 @@ const za: Dictionary = {
     "/cigarette-manufacturing-machines": {
       ...en.categories["/cigarette-manufacturing-machines"],
       title: "Cigarette Manufacturing Machines in South Africa",
+      description:
+        "Molins cigarette making machines, filter makers and supporting tobacco machinery exported from Pakistan to South Africa, new and reconditioned, matched to your output target.",
+      intro: [
+        "A cigarette line lives or dies on three machines working in step: the maker laying an even rod, the filter line cutting clean, and the tobacco machinery feeding both without a gap. Civic Tobacco Machinery exports this complete set from Pakistan to manufacturers building or expanding capacity in South Africa.",
+        "Our range runs from Molins making machines through KDF and PM filter makers to the feeders, cutters and reclaimers that keep them supplied. Send us the brands already on your floor and the output you're targeting, and we'll put together a set that runs at matched speed rather than one machine holding the rest back.",
+      ],
     },
     "/cigarette-packing-machines": {
       ...en.categories["/cigarette-packing-machines"],
       title: "Cigarette Packing Machines in South Africa",
+      description:
+        "HLP and SASIB cigarette packing machines, hard and soft pack, 180 to 225 packs per minute, exported from Pakistan to South Africa with installation and ongoing spares support.",
+      intro: [
+        "By the time tobacco reaches the packer, the product is basically finished, what's left is turning out packs that look identical, pack after pack, shift after shift. That consistency is what we screen for before any machine leaves Pakistan for a buyer in South Africa.",
+        "Hard pack (hinge-lid) and soft pack formats are both covered, running from 180 to 225 packs per minute across HLP and SASIB-style machines, new or carefully reconditioned. Whether you're building a first line or adding a second packer alongside an existing one, we match the machine to your volume, budget and the brands you actually run.",
+      ],
     },
     "/cigarette-box-wrapping-machines": {
       ...en.categories["/cigarette-box-wrapping-machines"],
       title: "Cigarette Wrapping Machines in South Africa",
+      description:
+        "Overwrappers, boxers and cellophane wrapping machines that seal packs cleanly, sourced from Pakistan for cigarette manufacturers in South Africa, with spares and service included.",
+      intro: [
+        "A crooked tear tape or a loose film seal is the kind of small fault a shopper notices before they've even opened the pack. Civic Tobacco Machinery supplies the overwrapping and boxing equipment that keeps that finish tight and consistent, exported to cigarette manufacturers across South Africa.",
+        "The range runs from single-pack over-wrappers through to box wrappers and carton boxers, covering the full step from loose pack to shelf-ready carton. Each machine is checked and set up before it ships, and spares and service remain available once it's running on your floor.",
+      ],
     },
     "/cigarette-filter-making-machines": {
       ...en.categories["/cigarette-filter-making-machines"],
       title: "Cigarette Filter Making Machines in South Africa",
+      description:
+        "Molins KDF, Molins PM and hollow tube filter makers, exported from Pakistan to South Africa and matched in speed to the cigarette maker already running on your floor.",
+      intro: [
+        "The filter shapes more of the smoking experience than most people realise, draw, firmness, the whole feel in hand. We export filter making machines from Pakistan that hold a consistent rod, so the cigarette maker on the other end of your line has something reliable to work with.",
+        "Molins KDF and Molins PM filter makers form the core of the range, alongside hollow tube machines for speciality formats. Whatever filter length or type your brands need, we'll help size a filter line that keeps pace with the makers you're already running in South Africa.",
+      ],
     },
     "/cutter-feeder-reclaimer": {
       ...en.categories["/cutter-feeder-reclaimer"],
       title: "Tobacco Cutter, Feeder & Reclaimer Machines in South Africa",
+      description:
+        "Tobacco feeders, cutters, reclaimers and stem flatteners exported from Pakistan, keeping primary and secondary processing floors supplied for manufacturers in South Africa.",
+      intro: [
+        "Every maker and packer depends on a less visible set of machines doing the groundwork, feeding tobacco through, cutting it to size, pulling usable leaf back out of rejects. Civic Tobacco Machinery ships this supporting machinery from Pakistan to manufacturers building out their South African production floors.",
+        "Feeders, cutters, reclaimers and stem flatteners work as a set to keep a steady supply moving into your line while cutting down what gets wasted. We help fit the right combination around the makers and packers you already have installed.",
+      ],
     },
   },
   manufacturingSection: {
@@ -3182,9 +3248,45 @@ const zw: Dictionary = {
   home: {
     ...en.home,
     metaTitle: "Civic Tobacco Machinery | Cigarette Machinery Zimbabwe",
+    metaDescription:
+      "Molins, HLP, SASIB and Hauni cigarette machinery exported from Pakistan to Zimbabwe: making, filter, packing and wrapping lines, new or reconditioned, with spare parts and installation support built in.",
     hero: {
       ...en.home.hero,
       h1: "Looking for Cigarette & Tobacco Machinery in Zimbabwe?",
+      lead: "Civic Tobacco Machinery exports complete cigarette production lines from Pakistan to manufacturers across Zimbabwe: making, filter, packing and wrapping equipment, new or carefully reconditioned. Every machine arrives inspected, gets installed and tuned on your floor, and stays backed by the spare parts and technical support you need long after delivery.",
+    },
+    about: {
+      ...en.home.about,
+      lead: "Three generations of one family, more than 35 years focused solely on tobacco machinery, now supplying manufacturers across Zimbabwe from our base in Pakistan.",
+      p1: "Zimbabwe's tobacco growing and processing industry has deep roots, and turning that leaf into a finished cigarette calls for machinery that holds its speed and quality shift after shift. Our family has worked in exactly that field for more than 35 years, starting as a small trading operation and building it, across three generations, into a name cigarette manufacturers trust to source, install and keep running.",
+      p2: "As specialist tobacco machinery manufacturers and exporters, we handle the full line, making machines, filter makers, packers and wrappers, so you are not juggling separate suppliers for each stage. We confirm a machine's condition before you commit, coordinate shipping and documentation for the Zimbabwe order, and once it lands, support installation and commissioning. Technicians get free demonstration and training as part of the package, so your team is running the machine confidently from day one.",
+      bullets: [
+        "Three-generation family business",
+        "New and reconditioned machinery",
+        "Complete lines, making through packing",
+        "Free technician demonstration & training",
+      ],
+    },
+    why: {
+      ...en.home.why,
+      reasons: [
+        {
+          title: "Brands built to keep running",
+          text: "We work with proven names, Molins, HLP, SASIB and Hauni among them, chosen because parts and know-how stay easy to find years after installation, so your line keeps its shift-after-shift output.",
+        },
+        {
+          title: "No surprises on condition",
+          text: "Every reconditioned machine goes through inspection, servicing and testing before it ships, and we tell you exactly what you are getting rather than a polished sales pitch.",
+        },
+        {
+          title: "A line that fits together",
+          text: "Buying maker, filter line, packer and wrapper from one supplier means we match speeds and formats across the whole floor, rather than leaving you to reconcile machines bought separately.",
+        },
+        {
+          title: "Export process you can rely on",
+          text: "From quotation through shipping and documentation, we coordinate the Zimbabwe order end to end, and spare parts support continues long after the machine has landed and is running.",
+        },
+      ],
     },
   },
   categories: {
@@ -3192,22 +3294,52 @@ const zw: Dictionary = {
     "/cigarette-manufacturing-machines": {
       ...en.categories["/cigarette-manufacturing-machines"],
       title: "Cigarette Manufacturing Machines in Zimbabwe",
+      description:
+        "Molins cigarette making machines, filter makers and tobacco machinery exported from Pakistan to Zimbabwe, new and reconditioned, matched and installed as one working line.",
+      intro: [
+        "Zimbabwe's tobacco processing sector already has the leaf; what many operations are sourcing is the machinery to turn it into a finished, sellable cigarette at consistent speed. Civic Tobacco Machinery exports the core of that line from Pakistan, Molins-style making machines, filter makers, and the feeders, cutters and reclaimers that keep them supplied.",
+        "Every machine we send is matched to the output and brands you actually run, not sold as a one-size-fits-all unit, so the making line, filter line and support equipment work in step once they reach your floor.",
+      ],
     },
     "/cigarette-packing-machines": {
       ...en.categories["/cigarette-packing-machines"],
       title: "Cigarette Packing Machines in Zimbabwe",
+      description:
+        "HLP and SASIB cigarette packing machines exported to Zimbabwe, hard and soft pack lines running 180 to 225 packs per minute, supplied, installed and backed by ongoing support.",
+      intro: [
+        "Whether you are packing a hinge-lid hard pack or a folded soft pack, the packer is what decides whether every box leaving your factory looks identical to the last one. Civic Tobacco Machinery exports HLP and SASIB packing machines from Pakistan to manufacturers in Zimbabwe, running from 180 up to 225 packs per minute across both formats.",
+        "New and reconditioned units are both available, and we work from your actual volume and budget rather than pushing maximum speed for its own sake. Adding a second packer to lift capacity or setting up a first line from scratch, we help you land on the machine that fits.",
+      ],
     },
     "/cigarette-box-wrapping-machines": {
       ...en.categories["/cigarette-box-wrapping-machines"],
       title: "Cigarette Wrapping Machines in Zimbabwe",
+      description:
+        "Overwrappers, boxers and cellophane wrapping machines exported to Zimbabwe for a clean cigarette pack seal, supplied with spare parts and ongoing service from Civic Tobacco Machinery.",
+      intro: [
+        "A pack that arrives with a loose film or a crooked tear tape undercuts everything the rest of your line got right. We export cigarette wrapping machines from Pakistan to Zimbabwe built to close that gap: a tight cellophane seal, a straight tear strip, and a pack that still looks fresh once it reaches the shelf.",
+        "The range runs from single-pack overwrappers through to box wrappers and carton boxers, covering the full run from pack to case. Each unit is inspected and set up before it leaves us, and spares and service stay available once it is running on your floor.",
+      ],
     },
     "/cigarette-filter-making-machines": {
       ...en.categories["/cigarette-filter-making-machines"],
       title: "Cigarette Filter Making Machines in Zimbabwe",
+      description:
+        "Molins KDF, Molins PM and hollow tube filter makers exported from Pakistan to Zimbabwe, filter rod lines matched to your maker's speed and supported after installation.",
+      intro: [
+        "The filter shapes draw resistance and firmness as much as anything else in the cigarette, so it needs to come off the line consistent, rod after rod. Civic Tobacco Machinery exports filter making machines from Pakistan to manufacturers in Zimbabwe built to hold that consistency at production speed.",
+        "Molins KDF and Molins PM filter makers form the core of what we supply, alongside hollow tube machines for speciality formats. Whatever length or type you are producing, the filter line gets matched to the speed of the maker it feeds, so neither stage sits waiting on the other.",
+      ],
     },
     "/cutter-feeder-reclaimer": {
       ...en.categories["/cutter-feeder-reclaimer"],
       title: "Tobacco Cutter, Feeder & Reclaimer Machines in Zimbabwe",
+      description:
+        "Tobacco feeders, cutters, reclaimers and stem flatteners exported from Pakistan to Zimbabwe, keeping the primary and secondary processing floor supplied and cutting leaf waste.",
+      intro: [
+        "Long before a rod reaches the maker, tobacco has to be fed in, cut to size and, where possible, recovered from rejected sticks rather than thrown away. Civic Tobacco Machinery exports this supporting machinery from Pakistan to Zimbabwe, the equipment that keeps the primary and secondary processing floor moving without anyone noticing it is there.",
+        "Feeders, cutters, reclaimers and stem flatteners are supplied to work as a set, holding a steady feed to your line and cutting down on leaf lost to waste. We size and fit them around the makers and packers already installed on your floor.",
+      ],
     },
   },
   manufacturingSection: {
