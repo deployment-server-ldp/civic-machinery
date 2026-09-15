@@ -4,7 +4,16 @@
  * Every category and product page, the mega menu, breadcrumbs, the sitemap
  * and the JSON-LD Product schema all read from the data below. Add a machine
  * here and it appears everywhere automatically.
+ *
+ * Machines added through the /admin "Machines" CMS tab are stored separately
+ * in content/products-cms.json (one JSON array, edited via the GitHub API —
+ * see lib/products-cms.ts) and merged into `products` below. It's a plain
+ * JSON import rather than an fs read so this file stays safe to import from
+ * client components (e.g. Footer.tsx uses `categories`/`subcategories` from
+ * here) — Node's `fs` module can't be bundled for the browser.
  */
+
+import cmsProducts from "@/content/products-cms.json";
 
 export type CategorySlug =
   | "packing-machines"
@@ -1139,6 +1148,7 @@ export const products: Product[] = [
   ...making,
   ...filter,
   ...tobacco,
+  ...(cmsProducts as Product[]),
 ];
 
 /* ------------------------------------------------------------------ */

@@ -141,6 +141,11 @@ export default function HomePage() {
       href: categoryPaths["wrapping-machines"],
       items: toItems(getProductsByCategory("wrapping-machines")),
     },
+    {
+      label: "Tobacco Cutter, Feeder & Reclaimer Machines",
+      href: subcategoryPaths["tobacco-machinery"],
+      items: toItems(getProductsBySubcategory("tobacco-machinery")),
+    },
   ];
 
   return (

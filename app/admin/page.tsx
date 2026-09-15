@@ -20,6 +20,19 @@ import {
   utf8ToBase64,
   verifyToken,
 } from "@/lib/cms";
+import type { Product } from "@/lib/products";
+import {
+  CATEGORY_OPTIONS,
+  CONDITIONS,
+  type MachineFields,
+  buildProduct,
+  emptyMachine,
+  existingSlugs,
+  loadCmsProducts,
+  saveCmsProducts,
+  uniqueSlug,
+  uploadMachineImage,
+} from "@/lib/products-cms";
 
 const LS_TOKEN = "cms_token";
 const LS_AUTHOR = "cms_author";
@@ -91,6 +104,8 @@ export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
   const [booting, setBooting] = useState(true);
 
+  const [section, setSection] = useState<"blog" | "machines">("blog");
+
   const [view, setView] = useState<"list" | "edit">("list");
   const [posts, setPosts] = useState<RepoFile[]>([]);
   const [form, setForm] = useState<PostFields>(emptyForm(""));
@@ -103,6 +118,16 @@ export default function AdminPage() {
 
   const contentRef = useRef<HTMLTextAreaElement>(null);
 
+  // ---- Machines (products) CMS state ----
+  const [mView, setMView] = useState<"list" | "edit">("list");
+  const [mItems, setMItems] = useState<Product[]>([]);
+  const [mForm, setMForm] = useState<MachineFields>(emptyMachine());
+  const [mEditingSlug, setMEditingSlug] = useState<string | undefined>();
+  const [mSlugTouched, setMSlugTouched] = useState(false);
+  const [mImageFile, setMImageFile] = useState<File | null>(null);
+  const [mImagePreview, setMImagePreview] = useState<string>("");
+  const [mStatus, setMStatus] = useState<Status>({ kind: "idle" });
+
   // Restore session
   useEffect(() => {
     const t = localStorage.getItem(LS_TOKEN) || "";
@@ -114,6 +139,7 @@ export default function AdminPage() {
           setAuthor(a);
           setAuthed(true);
           refreshPosts(t);
+          refreshMachines(t);
         } else {
           localStorage.removeItem(LS_TOKEN);
         }
@@ -133,6 +159,15 @@ export default function AdminPage() {
     }
   }
 
+  async function refreshMachines(t: string) {
+    try {
+      const { items } = await loadCmsProducts(t);
+      setMItems(items);
+    } catch (e) {
+      setMStatus({ kind: "error", msg: errMsg(e) });
+    }
+  }
+
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setStatus({ kind: "busy", msg: "Checking access…" });
@@ -146,6 +181,7 @@ export default function AdminPage() {
     setAuthed(true);
     setStatus({ kind: "idle" });
     refreshPosts(token);
+    refreshMachines(token);
   }
 
   function logout() {
@@ -153,6 +189,8 @@ export default function AdminPage() {
     setToken("");
     setAuthed(false);
     setView("list");
+    setMView("list");
+    setSection("blog");
   }
 
   function newPost() {
@@ -203,6 +241,148 @@ export default function AdminPage() {
     () => (slugTouched ? form.slug : slugify(form.title)),
     [form.slug, form.title, slugTouched],
   );
+
+  // ---- Machines (products) handlers ----
+
+  function newMachine() {
+    setMForm(emptyMachine());
+    setMEditingSlug(undefined);
+    setMSlugTouched(false);
+    setMImageFile(null);
+    setMImagePreview("");
+    setMStatus({ kind: "idle" });
+    setMView("edit");
+  }
+
+  function editMachine(p: Product) {
+    const opt = CATEGORY_OPTIONS.find(
+      (o) => o.category === p.category && o.subcategory === p.subcategory,
+    );
+    setMForm({
+      slug: p.slug,
+      name: p.name,
+      categoryOptionKey: opt?.key ?? CATEGORY_OPTIONS[0].key,
+      brand: p.brand ?? "",
+      condition: p.condition,
+      tagline: p.tagline,
+      h1: p.h1 ?? "",
+      metaTitle: p.metaTitle ?? "",
+      metaDescription: p.metaDescription,
+      keywords: p.keywords,
+      intro: p.intro.length ? p.intro : [""],
+      specs:
+        p.featureTable && p.featureTable.length
+          ? p.featureTable
+          : [{ label: "", value: "" }],
+      applications: p.applications ?? [],
+      image: p.image ?? "",
+    });
+    setMEditingSlug(p.slug);
+    setMSlugTouched(true);
+    setMImageFile(null);
+    setMImagePreview(p.image || "");
+    setMStatus({ kind: "idle" });
+    setMView("edit");
+  }
+
+  async function removeMachine(p: Product) {
+    if (!confirm(`Delete "${p.name}"? This cannot be undone.`)) return;
+    setMStatus({ kind: "busy", msg: "Deleting…" });
+    try {
+      const next = mItems.filter((x) => x.slug !== p.slug);
+      await saveCmsProducts(token, next);
+      setMItems(next);
+      setMStatus({ kind: "ok", msg: "Machine deleted." });
+    } catch (e) {
+      setMStatus({ kind: "error", msg: errMsg(e) });
+    }
+  }
+
+  function setM<K extends keyof MachineFields>(key: K, value: MachineFields[K]) {
+    setMForm((f) => ({ ...f, [key]: value }));
+  }
+
+  const mSlug = useMemo(
+    () => (mSlugTouched ? mForm.slug : slugify(mForm.name)),
+    [mForm.slug, mForm.name, mSlugTouched],
+  );
+
+  function onMachineImage(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setMImageFile(file);
+    setMImagePreview(URL.createObjectURL(file));
+  }
+
+  function addSpecRow() {
+    setM("specs", [...mForm.specs, { label: "", value: "" }]);
+  }
+  function removeSpecRow(i: number) {
+    setM("specs", mForm.specs.filter((_, idx) => idx !== i));
+  }
+  function setSpecRow(i: number, key: "label" | "value", value: string) {
+    setM(
+      "specs",
+      mForm.specs.map((s, idx) => (idx === i ? { ...s, [key]: value } : s)),
+    );
+  }
+
+  function addIntroPara() {
+    setM("intro", [...mForm.intro, ""]);
+  }
+  function removeIntroPara(i: number) {
+    setM("intro", mForm.intro.filter((_, idx) => idx !== i));
+  }
+  function setIntroPara(i: number, value: string) {
+    setM("intro", mForm.intro.map((p, idx) => (idx === i ? value : p)));
+  }
+
+  async function publishMachine() {
+    if (!mForm.name.trim()) return setMStatus({ kind: "error", msg: "Machine name is required." });
+    if (!mForm.tagline.trim()) return setMStatus({ kind: "error", msg: "Tagline is required." });
+    if (!mForm.metaDescription.trim())
+      return setMStatus({ kind: "error", msg: "Meta description is required." });
+
+    // existingSlugs() covers the hardcoded catalogue (as of this admin
+    // bundle's last build) plus whatever CMS machines it already knew about;
+    // union in the freshly-loaded mItems so a machine added earlier in this
+    // same session (before the next deploy rebuilds the bundle) is caught too.
+    const taken = existingSlugs(mEditingSlug);
+    mItems.forEach((p) => {
+      if (p.slug !== mEditingSlug) taken.add(p.slug);
+    });
+    const finalSlug = mSlug || uniqueSlug(mForm.name, taken);
+    if (taken.has(finalSlug)) {
+      return setMStatus({
+        kind: "error",
+        msg: `The slug "${finalSlug}" is already used by another machine. Change the name or edit the slug field.`,
+      });
+    }
+
+    setMStatus({ kind: "busy", msg: "Publishing…" });
+    try {
+      let image = mForm.image || "";
+      if (mImageFile) {
+        image = await uploadMachineImage(token, finalSlug, mImageFile);
+      }
+
+      const product = buildProduct({ ...mForm, slug: finalSlug, image });
+      const next = mEditingSlug
+        ? mItems.map((p) => (p.slug === mEditingSlug ? product : p))
+        : [...mItems, product];
+
+      await saveCmsProducts(token, next);
+      setMItems(next);
+      setMStatus({
+        kind: "ok",
+        msg: "Published! Your site is rebuilding and will be live in a few minutes.",
+      });
+      setMEditingSlug(undefined);
+      setMView("list");
+    } catch (e) {
+      setMStatus({ kind: "error", msg: errMsg(e) });
+    }
+  }
 
   function onImage(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -386,8 +566,12 @@ export default function AdminPage() {
           <p className="text-sm text-brand-500">Signed in as {author || "author"}</p>
         </div>
         <div className="flex items-center gap-2">
-          <a href="/blog" target="_blank" className="rounded-full border border-brand-200 px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-white">
-            View blog ↗
+          <a
+            href={section === "machines" ? "/cigarette-manufacturing-machines" : "/blog"}
+            target="_blank"
+            className="rounded-full border border-brand-200 px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-white"
+          >
+            {section === "machines" ? "View machines ↗" : "View blog ↗"}
           </a>
           <button onClick={logout} className="rounded-full border border-brand-200 px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-white">
             Log out
@@ -395,7 +579,28 @@ export default function AdminPage() {
         </div>
       </header>
 
-      {status.msg && (
+      <div className="mt-6 flex gap-1.5 rounded-full border border-brand-200 bg-brand-50 p-1 text-sm font-semibold">
+        <button
+          type="button"
+          onClick={() => setSection("blog")}
+          className={`flex-1 rounded-full px-4 py-2 ${
+            section === "blog" ? "bg-white text-brand-900 shadow-sm" : "text-brand-500"
+          }`}
+        >
+          Blog
+        </button>
+        <button
+          type="button"
+          onClick={() => setSection("machines")}
+          className={`flex-1 rounded-full px-4 py-2 ${
+            section === "machines" ? "bg-white text-brand-900 shadow-sm" : "text-brand-500"
+          }`}
+        >
+          Machines
+        </button>
+      </div>
+
+      {section === "blog" && status.msg && (
         <div
           className={`mt-4 rounded-lg px-4 py-3 text-sm ${
             status.kind === "error"
@@ -409,7 +614,7 @@ export default function AdminPage() {
         </div>
       )}
 
-      {view === "list" ? (
+      {section === "blog" && (view === "list" ? (
         <section className="mt-6">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-brand-800">All posts ({posts.length})</h2>
@@ -650,7 +855,261 @@ export default function AdminPage() {
             </div>
           </aside>
         </section>
+      ))}
+
+      {section === "machines" && mStatus.msg && (
+        <div
+          className={`mt-4 rounded-lg px-4 py-3 text-sm ${
+            mStatus.kind === "error"
+              ? "bg-red-50 text-red-700"
+              : mStatus.kind === "ok"
+                ? "bg-green-50 text-green-700"
+                : "bg-brand-100 text-brand-700"
+          }`}
+        >
+          {mStatus.msg}
+        </div>
       )}
+
+      {section === "machines" && (mView === "list" ? (
+        <section className="mt-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-brand-800">All machines ({mItems.length})</h2>
+            <button onClick={newMachine} className="rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-600">
+              + New machine
+            </button>
+          </div>
+          <p className="mt-2 text-xs text-brand-400">
+            This list only shows machines added through this CMS. The original catalogue (the
+            machines already on the site) is managed in code and isn&rsquo;t editable here.
+          </p>
+          <ul className="mt-4 divide-y divide-brand-100 rounded-2xl border border-brand-100 bg-white">
+            {mItems.length === 0 && (
+              <li className="p-6 text-sm text-brand-500">No CMS machines yet. Add your first one.</li>
+            )}
+            {mItems.map((p) => {
+              const opt = CATEGORY_OPTIONS.find(
+                (o) => o.category === p.category && o.subcategory === p.subcategory,
+              );
+              return (
+                <li key={p.slug} className="flex items-center justify-between gap-4 p-4">
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium text-brand-800">
+                      {p.name}
+                    </span>
+                    <span className="block truncate text-xs text-brand-400">
+                      {opt?.label ?? p.category}
+                    </span>
+                  </span>
+                  <span className="flex shrink-0 gap-2">
+                    <button onClick={() => editMachine(p)} className="rounded-full border border-brand-200 px-3 py-1.5 text-xs font-semibold text-brand-700 hover:bg-brand-50">
+                      Edit
+                    </button>
+                    <button onClick={() => removeMachine(p)} className="rounded-full border border-red-200 px-3 py-1.5 text-xs font-semibold text-red-600 hover:bg-red-50">
+                      Delete
+                    </button>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ) : (
+        <section className="mt-6 grid gap-6 lg:grid-cols-[1fr_320px]">
+          {/* Main column */}
+          <div className="space-y-5 rounded-2xl border border-brand-100 bg-white p-6">
+            <Field label="Category">
+              <select
+                value={mForm.categoryOptionKey}
+                onChange={(e) => setM("categoryOptionKey", e.target.value)}
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              >
+                {CATEGORY_OPTIONS.map((o) => (
+                  <option key={o.key} value={o.key}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            </Field>
+
+            <Field label="Machine name">
+              <input
+                value={mForm.name}
+                onChange={(e) => setM("name", e.target.value)}
+                placeholder="e.g. HLP-250 Cigarette Packing Machine"
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-lg font-semibold"
+              />
+            </Field>
+
+            <Field label="URL slug" hint={`…/${mSlug || "…"}`}>
+              <input
+                value={mSlug}
+                onChange={(e) => {
+                  setMSlugTouched(true);
+                  setM("slug", slugify(e.target.value));
+                }}
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              />
+            </Field>
+
+            <div className="grid grid-cols-2 gap-4">
+              <Field label="Brand">
+                <input
+                  value={mForm.brand}
+                  onChange={(e) => setM("brand", e.target.value)}
+                  placeholder="e.g. Molins, HLP, SASIB"
+                  className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                />
+              </Field>
+              <Field label="Condition">
+                <select
+                  value={mForm.condition}
+                  onChange={(e) => setM("condition", e.target.value as MachineFields["condition"])}
+                  className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                >
+                  {CONDITIONS.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+            </div>
+
+            <Field label="Tagline" hint="One line, shown on cards and as a fallback meta description">
+              <input
+                value={mForm.tagline}
+                onChange={(e) => setM("tagline", e.target.value)}
+                placeholder="e.g. High-speed hard pack line running 180 packs per minute."
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              />
+            </Field>
+
+            <Field label="Description" hint="One paragraph per box — add as many as you need">
+              <div className="space-y-2">
+                {mForm.intro.map((p, i) => (
+                  <div key={i} className="flex gap-2">
+                    <textarea
+                      value={p}
+                      onChange={(e) => setIntroPara(i, e.target.value)}
+                      rows={3}
+                      placeholder="Write like a person wrote it — what it does, how it performs, why it matters."
+                      className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm leading-relaxed"
+                    />
+                    {mForm.intro.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => removeIntroPara(i)}
+                        className="shrink-0 self-start rounded-lg border border-red-200 px-2 py-2 text-xs font-semibold text-red-600 hover:bg-red-50"
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+                ))}
+                <ToolBtn onClick={addIntroPara}>+ Add paragraph</ToolBtn>
+              </div>
+            </Field>
+
+            <Field label="Specifications" hint="Shown as the spec table on the product page">
+              <div className="space-y-2">
+                {mForm.specs.map((s, i) => (
+                  <div key={i} className="flex gap-2">
+                    <input
+                      value={s.label}
+                      onChange={(e) => setSpecRow(i, "label", e.target.value)}
+                      placeholder="Label, e.g. Machine Speed"
+                      className="w-1/2 rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                    />
+                    <input
+                      value={s.value}
+                      onChange={(e) => setSpecRow(i, "value", e.target.value)}
+                      placeholder="Value, e.g. 180 packs/min"
+                      className="w-1/2 rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                    />
+                    {mForm.specs.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => removeSpecRow(i)}
+                        className="shrink-0 rounded-lg border border-red-200 px-2 py-2 text-xs font-semibold text-red-600 hover:bg-red-50"
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+                ))}
+                <ToolBtn onClick={addSpecRow}>+ Add row</ToolBtn>
+              </div>
+            </Field>
+
+            <Field label="Meta title (SEO)" hint="Browser tab & Google title — leave blank to use the machine name">
+              <input
+                value={mForm.metaTitle}
+                onChange={(e) => setM("metaTitle", e.target.value)}
+                placeholder={mForm.name || "SEO title (≤ 60 chars)"}
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              />
+            </Field>
+
+            <Field label="Meta description" hint="For Google (≤ 160 chars)">
+              <textarea
+                value={mForm.metaDescription}
+                onChange={(e) => setM("metaDescription", e.target.value)}
+                rows={2}
+                className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+              />
+            </Field>
+          </div>
+
+          {/* Sidebar */}
+          <aside className="space-y-5">
+            <div className="space-y-4 rounded-2xl border border-brand-100 bg-white p-5">
+              <button
+                onClick={publishMachine}
+                disabled={mStatus.kind === "busy"}
+                className="w-full rounded-full bg-accent-500 px-5 py-3 font-semibold text-white hover:bg-accent-600 disabled:opacity-60"
+              >
+                {mStatus.kind === "busy" ? "Publishing…" : mEditingSlug ? "Update machine" : "Publish"}
+              </button>
+              <button onClick={() => setMView("list")} className="w-full text-sm font-semibold text-brand-500 hover:text-brand-700">
+                ← Back to all machines
+              </button>
+            </div>
+
+            <div className="space-y-3 rounded-2xl border border-brand-100 bg-white p-5">
+              <p className="text-sm font-semibold text-brand-800">Machine photo</p>
+              <div className="aspect-[4/3] overflow-hidden rounded-lg bg-brand-100">
+                {mImagePreview ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={mImagePreview} alt="" className="h-full w-full object-cover" />
+                ) : (
+                  <div className="grid h-full place-items-center text-xs text-brand-400">No image</div>
+                )}
+              </div>
+              <input type="file" accept="image/*" onChange={onMachineImage} className="w-full text-xs" />
+              <p className="text-xs text-brand-400">A clean product photo, ideally on a plain background.</p>
+            </div>
+
+            <div className="space-y-4 rounded-2xl border border-brand-100 bg-white p-5">
+              <Field label="Keywords (SEO)" hint="Comma separated">
+                <input
+                  value={mForm.keywords.join(", ")}
+                  onChange={(e) => setM("keywords", toList(e.target.value))}
+                  className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                />
+              </Field>
+              <Field label="Best suited for" hint="Comma separated, optional">
+                <input
+                  value={mForm.applications.join(", ")}
+                  onChange={(e) => setM("applications", toList(e.target.value))}
+                  placeholder="e.g. High-volume hard pack production"
+                  className="w-full rounded-lg border border-brand-200 px-3 py-2 text-sm"
+                />
+              </Field>
+            </div>
+          </aside>
+        </section>
+      ))}
     </div>
   );
 }
