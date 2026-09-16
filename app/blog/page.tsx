@@ -40,6 +40,20 @@ export default function BlogPage() {
         ]}
       />
 
+      <section className="container mx-auto pt-14">
+        <div className="prose-content mx-auto max-w-3xl">
+          <p>
+            This blog is written by the people who spec, install and service
+            these machines day to day, not by a marketing team working from
+            spec sheets. Expect practical buying guides (how to choose
+            between models, new versus used), straight comparisons between
+            specific machines, and coverage of the trade shows and industry
+            news that actually affect a factory floor, rather than generic
+            filler.
+          </p>
+        </div>
+      </section>
+
       <section className="container mx-auto py-14">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (

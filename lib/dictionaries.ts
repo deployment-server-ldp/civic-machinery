@@ -397,11 +397,11 @@ const en: Dictionary = {
       eyebrow: "About Us",
       title: "Cigarette & Tobacco Machinery, Backed by People Who Know It",
       intro:
-        "Civic Tobacco Machinery has spent years helping factories across Pakistan build, expand and maintain their cigarette lines.",
+        "Civic Tobacco Machinery has supplied and supported cigarette and tobacco machinery from Karachi since 1990, helping factories across Pakistan build, expand and maintain their cigarette lines.",
     },
     whoHeading: "Who we are",
     who: [
-      "We are a Pakistan-based supplier of cigarette and tobacco machinery. Over the years we have worked with everything from small workshops taking their first steps into cigarette production to established factories adding a second or third line. That experience shapes how we work, we listen first, understand what you actually need, and then point you to the machine that fits.",
+      "We are a Pakistan-based supplier of cigarette and tobacco machinery, now in our third generation as a family business, supplying and supporting machinery from Karachi since 1990. Over the years we have worked with everything from small workshops taking their first steps into cigarette production to established factories adding a second or third line. That experience shapes how we work, we listen first, understand what you actually need, and then point you to the machine that fits.",
       "Our range covers the whole line: making machines that form the rod, filter makers, packing machines for hard and soft packs, wrapping and boxing machines, and the tobacco machinery that keeps the floor fed. We deal in both new and carefully reconditioned equipment, so there is a sensible option whatever your budget looks like.",
     ],
     howHeading: "How we work",
