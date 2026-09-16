@@ -151,7 +151,7 @@ export default function TobaccoCutterFeederReclaimerContent() {
           <p>
             Civic Tobacco Machinery has supplied and supported tobacco
             machinery from the SITE industrial estate in Karachi since
-            1998, including the cutting, feeding, and reclaiming equipment
+            1990, including the cutting, feeding, and reclaiming equipment
             that supports a complete production line, not just the maker
             itself. A few reasons factories choose us for this equipment
             specifically:

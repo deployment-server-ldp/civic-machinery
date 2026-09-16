@@ -155,7 +155,7 @@ export default function CigarettePackingMachinesContent() {
         <h2>Why Buy Packing Machines From Civic Tobacco Machinery</h2>
         <p>
           Civic Tobacco Machinery has supplied and supported tobacco
-          machinery from the SITE industrial estate in Karachi since 1998,
+          machinery from the SITE industrial estate in Karachi since 1990,
           including complete packing lines alongside makers, filter
           machines, and wrappers. A few reasons factories choose us for
           packing equipment specifically:

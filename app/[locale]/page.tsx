@@ -103,13 +103,21 @@ export default function LocaleHomePage({
       href: localeHref(locale, categoryPaths["wrapping-machines"]),
       items: toItems(getProductsByCategory("wrapping-machines")),
     },
+    {
+      label: dict.footer.labels["/cutter-feeder-reclaimer"],
+      href: localeHref(locale, subcategoryPaths["tobacco-machinery"]),
+      items: toItems(getProductsBySubcategory("tobacco-machinery")),
+    },
   ];
 
   const browseTypes = [
     { label: h.browse.packing, href: localeHref(locale, categoryPaths["packing-machines"]) },
     { label: h.browse.wrapping, href: localeHref(locale, categoryPaths["wrapping-machines"]) },
     { label: h.browse.making, href: localeHref(locale, categoryPaths["manufacturing-machines"]) },
-    { label: h.browse.used, href: localeHref(locale, categoryPaths["manufacturing-machines"]) },
+    {
+      label: dict.footer.labels["/cutter-feeder-reclaimer"],
+      href: localeHref(locale, subcategoryPaths["tobacco-machinery"]),
+    },
   ];
 
   return (

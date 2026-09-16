@@ -59,13 +59,12 @@ const homeFaqs = [
   },
 ];
 
-// "Browse by machine type" quick links in the hero (Used points to the
-// manufacturing range since our stock is largely reconditioned).
+// "Browse by machine type" quick links in the hero.
 const browseTypes = [
   { label: "Cigarette Packing Machines", href: categoryPaths["packing-machines"] },
   { label: "Cigarette Wrapping Machines", href: categoryPaths["wrapping-machines"] },
   { label: "Cigarette Manufacturing Machines", href: categoryPaths["manufacturing-machines"] },
-  { label: "Used Cigarette Machinery", href: categoryPaths["manufacturing-machines"] },
+  { label: "Tobacco Cutter, Feeder & Reclaimer", href: subcategoryPaths["tobacco-machinery"] },
 ];
 
 // Gallery photos. Add more by dropping files in public/images/gallery and

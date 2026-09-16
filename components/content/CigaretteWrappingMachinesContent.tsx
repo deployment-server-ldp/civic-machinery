@@ -133,7 +133,7 @@ export default function CigaretteWrappingMachinesContent() {
           <p>
             Civic Tobacco Machinery has supplied and supported tobacco
             machinery from the SITE industrial estate in Karachi since
-            1998, including complete wrapping and boxing lines alongside
+            1990, including complete wrapping and boxing lines alongside
             makers, filter machines, and packers. A few reasons factories
             choose us for this stage of their line:
           </p>

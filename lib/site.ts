@@ -61,7 +61,7 @@ export const siteConfig = {
     "South America",
     "Australia",
   ],
-  foundingYear: "1998",
+  foundingYear: "1990",
 } as const;
 
 export const whatsappLink = (message?: string) => {

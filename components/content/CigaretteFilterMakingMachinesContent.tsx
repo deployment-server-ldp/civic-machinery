@@ -163,7 +163,7 @@ export default function CigaretteFilterMakingMachinesContent() {
           <p>
             Civic Tobacco Machinery has supplied and supported tobacco
             machinery from the SITE industrial estate in Karachi since
-            1998, including complete filter production lines alongside
+            1990, including complete filter production lines alongside
             cigarette makers, packers, and wrappers. A few reasons
             factories choose us for filter equipment specifically:
           </p>

@@ -146,7 +146,7 @@ export default function CigaretteMakingMachinesContent() {
           <p>
             Civic Tobacco Machinery has supplied and supported cigarette
             making machines from the SITE industrial estate in Karachi
-            since 1998, working with factories across Pakistan and export
+            since 1990, working with factories across Pakistan and export
             markets beyond it. A few reasons factories keep coming back to
             us:
           </p>
