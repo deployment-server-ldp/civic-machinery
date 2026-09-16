@@ -139,6 +139,109 @@ export default function CigaretteMakingMachinesContent() {
         </div>
       </div>
 
+      {/* Comparison table */}
+      <div className="mt-14 prose-content max-w-none">
+        <h2>Compare Our Cigarette Making Machines</h2>
+        <p>
+          All seven makers run the same 17mm&ndash;28.3mm circumference and
+          65mm&ndash;110mm filter-and-tobacco rod length range, so the
+          practical differences between them come down to speed, power draw
+          and weight. Here&rsquo;s how they stack up side by side.
+        </p>
+        <div className="prose-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Speed</th>
+                <th>Power</th>
+                <th>Weight</th>
+                <th>Best suited for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/mark-8-post-64">
+                    Mark 8 Post 64
+                  </Link>
+                </td>
+                <td>1,800&ndash;2,000 cpm</td>
+                <td>&mdash;</td>
+                <td>3,500 kg</td>
+                <td>Entry maker line, reliable backup maker</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/mark-8d-max-15">
+                    Mark 8D MAX 15
+                  </Link>
+                </td>
+                <td>3,000 cpm</td>
+                <td>17 KW</td>
+                <td>5,000 kg</td>
+                <td>High-volume production, multi-format factories</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/mark-9-5-lenze-servo-drives">
+                    Mark 9.5 (Lenze Servo Drives)
+                  </Link>
+                </td>
+                <td>3,500 cpm (regular), 3,200 cpm (slim)</td>
+                <td>MK-9.5 35 KW + MAX-S 20 KW + HCF80 15 KW</td>
+                <td>8,600 kg</td>
+                <td>High-volume production, multi-format factories</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/mark-9-5-max-s-tray-filler">
+                    Mark-9.5 (Max S &amp; Tray Filler)
+                  </Link>
+                </td>
+                <td>4,500&ndash;5,000 cpm</td>
+                <td>&mdash;</td>
+                <td>7,800 kg</td>
+                <td>High-volume production, export-ready manufacturing</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/mark-9-max-s">
+                    MK-9 (Max S)
+                  </Link>
+                </td>
+                <td>4,500&ndash;5,000 cpm</td>
+                <td>&mdash;</td>
+                <td>7,800 kg</td>
+                <td>High-volume production, main maker line</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/protos-70">
+                    Protos 70
+                  </Link>
+                </td>
+                <td>7,000 cpm (regular), 6,000 cpm (slim)</td>
+                <td>S7000 50 KW + M8000 20 KW + F80 15 KW</td>
+                <td>10,800 kg</td>
+                <td>High-volume production, large-scale manufacturing</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-manufacturing-machines/protos-80-er">
+                    Protos 80 ER
+                  </Link>
+                </td>
+                <td>8,000 cpm (regular), 7,000 cpm (slim)</td>
+                <td>S7000 50 KW + M8000 20 KW + F80 15 KW</td>
+                <td>10,800 kg</td>
+                <td>High-volume production, large-scale manufacturing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Row 3 */}
       <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
         <div className="prose-content max-w-none">

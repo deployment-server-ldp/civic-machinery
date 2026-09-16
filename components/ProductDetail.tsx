@@ -4,9 +4,13 @@ import ProductImageZoom from "./ProductImageZoom";
 import WhatsAppIcon from "./WhatsAppIcon";
 import ProductCard from "./ProductCard";
 import ContactForm from "./ContactForm";
+import Faq from "./Faq";
+import JsonLd from "./JsonLd";
 import type { Crumb } from "./Breadcrumbs";
 import { whatsappLink, siteConfig } from "@/lib/site";
 import { type Product, productHref } from "@/lib/products";
+import { productFaqs } from "@/lib/product-faqs";
+import { faqSchema } from "@/lib/schema";
 import { getDict } from "@/lib/dictionaries";
 import { defaultLocale, type LocaleCode } from "@/lib/i18n";
 
@@ -25,9 +29,15 @@ export default function ProductDetail({
 }) {
   const t = getDict(locale).product;
   const wa = whatsappLink(t.waMessage(product.name));
+  // English-only for now: the FAQ copy isn't translated per locale yet, so
+  // showing it only on the default-locale page avoids mixing English answers
+  // into a translated product page.
+  const faqs = locale === defaultLocale ? productFaqs(product) : [];
 
   return (
     <>
+      {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
+
       <PageHero
         eyebrow={categoryLabel}
         title={product.h1 ?? product.name}
@@ -180,6 +190,16 @@ export default function ProductDetail({
             ))}
           </div>
         </div>
+
+        {/* FAQ */}
+        {faqs.length > 0 && (
+          <div className="mt-14 border-t border-brand-100 pt-10">
+            <h2 className="text-2xl">Frequently Asked Questions</h2>
+            <div className="mt-6">
+              <Faq items={faqs} />
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Enquiry */}

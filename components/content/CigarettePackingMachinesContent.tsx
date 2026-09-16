@@ -86,6 +86,60 @@ export default function CigarettePackingMachinesContent() {
         </div>
       </div>
 
+      {/* Comparison table */}
+      <div className="mt-14 prose-content max-w-none">
+        <h2>Compare Our HLP Hard Pack Machines</h2>
+        <p>
+          All three HLP models cover the same King Size, Demi, Slims, Super
+          Slims and Nano formats and the same round corner, bevel edge,
+          D-type and square pack styles, run on PLC control, and are
+          available new or reconditioned. The real differences are speed,
+          plunger type and pack throughput.
+        </p>
+        <div className="prose-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Speed</th>
+                <th>Type</th>
+                <th>Other specs</th>
+                <th>Best suited for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <Link href="/cigarette-packing-machines/hlp-180">HLP-180</Link>
+                </td>
+                <td>180 packs/min</td>
+                <td>Single plunger</td>
+                <td>&mdash;</td>
+                <td>High-volume hard pack production, local and export markets</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-packing-machines/hlp-200">HLP-200</Link>
+                </td>
+                <td>200 packs/min</td>
+                <td>Double plunger</td>
+                <td>12,000 cigarettes max. capacity, 220V/380V</td>
+                <td>Core of an integrated packing line</td>
+              </tr>
+              <tr>
+                <td>
+                  <Link href="/cigarette-packing-machines/hlp-225">HLP-225</Link>
+                </td>
+                <td>225 packs/min</td>
+                <td>Double plunger</td>
+                <td>&mdash;</td>
+                <td>Large-scale packing lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       {/* Row 3 */}
       <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2">
         <div className="prose-content max-w-none">
