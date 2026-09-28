@@ -85,77 +85,240 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Kuwait",
     slug: "kuwait",
     region: "Middle East",
-    metaTitle: "Kuwait Cigarette Machinery | Civic Tobacco",
+    metaTitle: "Tobacco Machinery Export to Kuwait | Competitive Prices & Full Support",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette machinery to Kuwait: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
+      "Leading supplier of cigarette making machines, tobacco equipment & spare parts to Kuwait. Civic exports MK8, Protos, HLP machines to Kuwait City & Ahmadi.",
     heroIntro:
-      "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, supporting international buyers. This page covers the machinery we can supply for operations in Kuwait.",
+      "Civic Tobacco Machinery is your trusted source for cigarette manufacturing machines, tobacco processing equipment, and spare parts in Kuwait. From industrial zones in Shuwaikh and Shuaiba to factory setups across Kuwait City, Hawalli, Farwaniya, and Ahmadi, we supply machinery that meets the performance and quality standards required for competitive tobacco production. Our entire range ships directly from Pakistan with full export documentation and technical support.",
+
+    machineryCategories: [
+      {
+        title: "Cigarette Making Machines",
+        text: "Proven models from HAUNI and Molins, including the MK8, MK9, Protos 70, and Protos 80, deliver consistent rod formation, precision paper wrapping, and high-speed output suitable for commercial-scale production. Kuwait-based investors planning new facilities will find our HAUNI cigarette making machine options thoroughly inspected and ready for deployment, available new and reconditioned with full technical documentation.",
+      },
+      {
+        title: "Cigarette Packing Machines",
+        text: "HLP and HLP2 cigarette packing machines alongside complete packing line solutions, handling soft pack and hard pack formats, cellophane overwrapping, carton packing, and case packing. The HLP is a staple of production lines worldwide, and we maintain steady availability for Kuwait-bound shipments, integrating smoothly with our cigarette making machines.",
+      },
+      {
+        title: "Filter Rod Making Machines",
+        text: "KDF2, KDF4, and AF series filter rod making machines produce acetate tow filter rods in customizable lengths and diameters, giving factories in Kuwait precise control over filter quality and specifications, along with the tooling and format parts needed for quick changeovers between filter sizes.",
+      },
+      {
+        title: "Tobacco Processing Machines",
+        text: "Tobacco cutting machines, conditioning cylinders, rotary dryers, threshing equipment, and flavoring drums for cutting, conditioning, drying, and blending raw tobacco before it enters the cigarette making machine. For investors exploring shisha tobacco production alongside cigarette manufacturing, our processing machines handle both conventional and specialty blends, in new and reconditioned condition.",
+      },
+      {
+        title: "Spare Parts & Accessories",
+        text: "A well-stocked spare parts inventory is the backbone of uninterrupted production. We export spare parts for HAUNI, Molins, Decoufle, Sasib, and other major brands — suction tapes, garniture belts, knives, gears, bearings, sensors, and format parts — with air courier delivery from Pakistan in as few as 3 to 5 business days.",
+      },
+    ],
+
+    quickFacts: [
+      { label: "Customs Duty", value: "5% (GCC Common External Tariff)" },
+      { label: "VAT", value: "None — Kuwait does not levy VAT" },
+      { label: "Main Ports", value: "Shuwaikh Port / Shuaiba Port" },
+      { label: "Sea Transit", value: "5–10 days from Karachi" },
+      { label: "Typical Delivery", value: "2–4 weeks, order to port" },
+    ],
+
     overview: [
-      "Buyers in Kuwait sourcing cigarette or tobacco machinery typically need either a specific replacement machine or a fuller production or processing setup, and in both cases matching machine specification to the actual requirement is the starting point.",
-      "Civic Tobacco Machinery supplies across cigarette making machines, packing machines, filter making machines, wrapping and boxing equipment, and supporting tobacco cutting, feeding and reclaiming machinery, available new and reconditioned.",
+      "Kuwait currently imports all of its tobacco products, and the growing interest in establishing local production capabilities, particularly for regional re-export, has driven demand for reliable tobacco machinery suppliers. Civic brings decades of industry knowledge and a comprehensive machine catalog to serve this emerging opportunity.",
+      "Civic Tobacco Machinery has earned its position as a preferred tobacco equipment supplier across the GCC region. Our clients in the UAE, Bahrain, and beyond rely on us for accurate machine sourcing, transparent pricing, and dependable after-sales service. Kuwait is a natural extension of this network, and our experience supplying to neighboring GCC markets gives us a clear understanding of the regulatory and logistical requirements involved.",
+      "Pakistan and Kuwait maintain active trade ties within the GCC economic framework. Pakistan's position as a competitive sourcing hub for reconditioned and new industrial machinery makes it an attractive option for Kuwaiti investors. Civic capitalizes on this trade relationship to offer tobacco machinery at prices significantly below European and East Asian alternatives, without compromising on machine quality or documentation standards.",
+      "Our approach is straightforward. We listen to your production goals, recommend the right machines, provide transparent quotations, and handle every step of the export process from our end. That simplicity is why repeat buyers across the Middle East continue to work with us.",
     ],
     sourcingGuide: [
-      "A clear production target, required output, formats and pack styles, makes it easier to specify a maker, filter line, packer and wrapper that work together as a balanced line rather than as separate purchases.",
-      "For reconditioned machinery, what has actually been inspected and serviced is more informative than a machine's age or original speed rating. We are transparent about condition and history on every machine we offer.",
+      "Importing industrial machinery into Kuwait requires coordination with the Kuwait General Administration of Customs and the Ministry of Commerce and Industry. Importers must hold a valid commercial registration and be registered with the Kuwait Chamber of Commerce and Industry (KCCI). For industrial machinery specifically, an import license from the Industrial Development Commission is also required.",
+      "Kuwait applies the GCC Common External Tariff, which sets a standard customs duty of 5% on the CIF (cost, insurance, freight) value for industrial machinery. Unlike some GCC neighbors, Kuwait currently does not levy VAT, which simplifies cost calculations for buyers. Note that the 100% duty rate applies specifically to tobacco products, not to the machinery used for their manufacture.",
+      "Required documentation for customs clearance includes a certificate of origin, commercial invoice, packing list, and bill of lading. Civic prepares all export documentation from the Pakistan side and provides every document your customs broker or clearing agent needs for smooth processing at Shuwaikh Port or Shuaiba Port.",
     ],
+
     supplierSelection: [
-      "Look for a supplier who can speak honestly to machine condition, confirm spare parts availability for the brand in question, and provide clear documentation and shipping information for an international order.",
-      "We focus on established brands, Molins, HLP and SASIB among them, because their parts and mechanical know-how remain widely available well beyond the machine's original build date.",
+      "Buyers in Kuwait should evaluate four key factors before committing to a machinery purchase.",
+    ],
+    supplierSelectionPoints: [
+      {
+        title: "Machine Condition & History",
+        text: "New machines deliver the latest technology, but reconditioned equipment from a trusted supplier like Civic offers 40% to 60% cost savings while performing at near-original specifications. Every reconditioned machine in our inventory goes through comprehensive mechanical overhaul, electrical testing, and documented trial runs before shipment.",
+      },
+      {
+        title: "Output Capacity",
+        text: "Match your machine selection to your production targets. An MK8 suits smaller operations, while a Protos 80 or MK9 delivers the speed needed for high-volume output. Civic helps you model the right configuration based on your target daily production.",
+      },
+      {
+        title: "Electrical Compatibility",
+        text: "Kuwait operates on a 240V, 50Hz power system. All machines we export are verified for voltage compatibility, and we arrange electrical modifications where necessary to ensure plug-and-play readiness at your Kuwait facility.",
+      },
+      {
+        title: "Ongoing Support",
+        text: "The best suppliers stay engaged after delivery. Civic provides remote troubleshooting, on-site installation assistance, and a reliable spare parts pipeline to Kuwait. Our goal is to keep your production running, not just to ship a machine.",
+      },
     ],
     whyChooseUs: [
-      "New and reconditioned machinery across making, packing, filter and wrapping equipment",
-      "Machine selection matched to your production requirements",
-      "Reconditioned machines inspected, serviced and tested before shipping",
-      "Ongoing spare parts support for supplied brands",
-      "Pakistan-based export support for international buyers",
+      "Pricing advantage sourced from Pakistan, undercutting Europe, Turkey and China",
+      "Full machine range — making, packing, filter and spare parts, one supplier",
+      "Regional GCC experience across UAE, Bahrain, Oman, Qatar and Saudi Arabia",
+      "Flexible terms — L/C, T/T, and structured payment plans",
+    ],
+    whyChooseUsPoints: [
+      {
+        title: "Pricing Advantage from Pakistan",
+        text: "Our sourcing base gives us access to quality machinery at costs that consistently undercut European, Turkish, and Chinese alternatives. The savings on a complete cigarette production machine line can be substantial, particularly when purchasing multiple units.",
+      },
+      {
+        title: "Full Machine Range",
+        text: "Civic covers every stage of cigarette production. Cigarette making machines like the MK8 and Protos 80, HLP packing machines, KDF2 filter rod machines, tobacco cutting machines, and a comprehensive spare parts catalog. One supplier, one point of contact, one shipment.",
+      },
+      {
+        title: "Regional Experience",
+        text: "We supply across the GCC, including the UAE, Bahrain, Oman, Qatar, and Saudi Arabia. Our familiarity with GCC customs procedures, shipping routes, and trade regulations translates directly into smoother transactions for Kuwait-based buyers.",
+      },
+      {
+        title: "Flexible Terms",
+        text: "We accommodate letters of credit (L/C), telegraphic transfers (T/T), and structured payment plans. Whether you are a well-capitalized investor or a startup managing cash flow carefully, we work with you on terms that fit.",
+      },
     ],
     productionScale: [
-      "Higher-volume operations typically need high-speed making and packing equipment with matching filter and wrapping capacity, while smaller operations or new setups are often better served by reconditioned machinery.",
+      "Kuwait's tobacco market is entirely import-dependent, which creates a clear opportunity for investors willing to establish local manufacturing, particularly for GCC-wide distribution and re-export.",
+    ],
+    productionScalePoints: [
+      {
+        title: "Small-Scale & Startup Operations",
+        text: "Typically begin with one cigarette making machine (an MK8 or Protos 70), one HLP packing machine, a KDF2 filter rod machine, and essential tobacco processing equipment including a tobacco cutting machine and conditioning cylinder. This produces 1,000 to 2,000 cigarettes per minute and is a practical entry point in Kuwait's Shuaiba or Subhan industrial areas.",
+      },
+      {
+        title: "Medium-Scale Production Lines",
+        text: "Step up to higher-speed machines — a Protos 80 or MK9, paired with multiple HLP2 packing units and KDF4 filter machines, pushes output to 3,000 to 5,000 cigarettes per minute. The tobacco processing section grows to include larger dryers, blending silos, and dedicated flavoring equipment.",
+      },
+      {
+        title: "Large-Scale Industrial Operations",
+        text: "Deploy multiple parallel lines, centralized tobacco processing plants, and fully automated packing and distribution systems. Civic supplies complete turnkey solutions for this tier, handling everything from factory layout consultation to equipment procurement and installation.",
+      },
     ],
     usedReconditioned: [
-      "Reconditioned machinery offers a proven mechanical base at a lower cost than new equipment, and depending on current stock, can often be sourced on a shorter timeline. Every reconditioned machine is inspected, serviced and tested before shipping.",
+      "Reconditioned tobacco machinery is the smart choice for cost-conscious investors entering the tobacco manufacturing sector. Civic specializes in sourcing, refurbishing, and exporting used cigarette making machines, packing machines, and processing equipment that deliver production performance close to factory-new standards.",
+      "Our refurbishment process covers every detail. Each machine is fully disassembled, inspected component by component, and rebuilt with genuine or high-quality compatible replacement parts. Electrical systems are tested, pneumatic circuits are verified, and every machine completes documented trial runs before we approve it for shipment.",
+      "A reconditioned Protos cigarette making machine or a refurbished HLP cigarette packing machine typically costs 40% to 60% less than buying new, making it a compelling option for startups and first-time investors in Kuwait. We also supply reconditioned tobacco cutting machines, filter rod machines, and conditioning cylinders.",
+      "Quality assurance is non-negotiable. We share detailed inspection reports and photos with buyers before shipment, and every reconditioned machine ships with spare parts support from Civic.",
     ],
+    usedReconditionedStat: {
+      value: "40–60%",
+      label: "Lower cost than new equipment, fully reconditioned & tested",
+    },
     completeSolutions: [
-      "We supply across making, filter, packing, wrapping and supporting tobacco machinery, helping buyers source a compatible set of equipment through a single supplier.",
+      "Civic provides end-to-end tobacco machinery solutions that take your Kuwait factory from blueprint to production.",
+    ],
+    completeSolutionsPoints: [
+      {
+        title: "Factory Layout & Planning",
+        text: "Our technical team designs production floor layouts that optimize material flow, minimize space waste, and meet local industrial safety standards. We account for Kuwait's climate considerations, including ventilation and temperature control for tobacco storage.",
+      },
+      {
+        title: "Integrated Procurement",
+        text: "Rather than coordinating with multiple machinery vendors, buyers work exclusively with Civic. We source and ship cigarette making machines, packing equipment, filter rod machines, tobacco processing lines, and all support equipment in coordinated shipments.",
+      },
+      {
+        title: "Installation & Commissioning",
+        text: "Our engineers travel to Kuwait for hands-on installation, machine alignment, calibration, and production line commissioning. We remain on-site until your line is producing at target capacity and quality.",
+      },
+      {
+        title: "Operator Training",
+        text: "We train your production staff on machine operation, daily maintenance routines, troubleshooting procedures, and safety protocols. Trained operators reduce downtime and extend machine life.",
+      },
     ],
     exportShipping: [
-      "Exporting machinery from Pakistan follows requirement discussion, machine selection, condition confirmation, commercial quotation, then shipping and documentation coordination. Shipping arrangements and import requirements vary by destination and should be confirmed for each order.",
+      "Pakistan's industrial machinery export sector is well-established, and Civic operates at its core within the tobacco machinery segment.",
+    ],
+    exportShippingPoints: [
+      {
+        title: "Shipping Route",
+        text: "Machinery ships from Karachi Port to Shuwaikh Port or Shuaiba Port in Kuwait via sea freight. Transit time averages 5 to 10 days depending on the shipping line and routing. Air freight through Jinnah International Airport (Karachi) to Kuwait International Airport is available for urgent spare parts and smaller shipments.",
+      },
+      {
+        title: "Documentation",
+        text: "Civic prepares the complete export documentation package: commercial invoice, packing list, certificate of origin, bill of lading, and any additional certificates required. We coordinate with our freight partners to ensure timely vessel booking and container loading.",
+      },
+      {
+        title: "Packing Standards",
+        text: "All machines are packed in heavy-duty wooden crates or steel frames, secured to pallets with industrial strapping. We photograph and document the packing process for buyer transparency. Smaller components and spare parts ship in reinforced cartons with protective cushioning.",
+      },
+      {
+        title: "Delivery Timeline",
+        text: "In-stock machines reach Kuwait within 2 to 4 weeks from order confirmation, covering documentation, packing, and shipping. Machines undergoing reconditioning require 4 to 6 weeks depending on scope.",
+      },
     ],
     technicalSupport: [
-      "We support the brands we supply with spare parts availability and technical guidance on setup, troubleshooting and maintenance.",
+      "Post-delivery support defines the real value of a machinery supplier. Civic invests in keeping your Kuwait factory running.",
+    ],
+    technicalSupportPoints: [
+      {
+        title: "Remote Support",
+        text: "Our technicians provide real-time troubleshooting via phone, WhatsApp, and video call. Most common issues can be diagnosed and resolved remotely, saving you the cost and delay of waiting for an on-site visit.",
+      },
+      {
+        title: "On-Site Service",
+        text: "For complex issues, installations, or overhauls, we send engineers to Kuwait. On-site support covers machine commissioning, production line optimization, major repairs, and preventive maintenance.",
+      },
+      {
+        title: "Spare Parts Pipeline",
+        text: "Civic maintains a deep inventory of tobacco machinery spare parts for HAUNI, Molins, Decoufle, and other brands. Express shipments from Pakistan reach Kuwait in 3 to 5 business days via air courier.",
+      },
+      {
+        title: "Warranty & Maintenance",
+        text: "Reconditioned machines from Civic carry a warranty on major mechanical and electrical components. We also offer annual maintenance contracts for clients who want scheduled service visits and priority spare parts access.",
+      },
     ],
     faqs: [
       {
-        question: "Can Civic Tobacco Machinery supply cigarette machinery to Kuwait?",
+        question: "How can I import tobacco machinery to Kuwait?",
         answer:
-          "Yes, we supply cigarette making, packing, filter making, wrapping and tobacco cutting/feeding/reclaiming machinery to buyers internationally, including Kuwait.",
+          "You need a valid commercial registration with the Kuwait Chamber of Commerce and Industry (KCCI), plus an industrial machinery import license from the Industrial Development Commission under the Ministry of Commerce and Industry. The standard customs duty is 5% on the CIF value under the GCC Common External Tariff. Kuwait does not currently impose VAT. Civic handles all export documentation from Pakistan and coordinates with freight forwarders for clearance at Shuwaikh Port or Shuaiba Port.",
       },
       {
-        question: "What machinery can you export to Kuwait?",
+        question: "What is the cost of a cigarette making machine in Kuwait?",
         answer:
-          "Molins and Protos cigarette makers, HLP and SASIB packing machines, KDF and Molins filter makers, wrapping and boxing machines, and supporting tobacco machinery.",
+          "Pricing depends on the model, condition, and capacity. A reconditioned MK8 or Protos 70 typically falls between $25,000 and $80,000. Higher-speed machines like the Protos 80 or MK9 cost more. New machines from original equipment manufacturers are priced significantly higher. Contact Civic for a quotation tailored to your specific production needs.",
       },
       {
-        question: "Is used and reconditioned machinery available?",
-        answer: "Yes, reconditioned units are inspected, serviced and tested before shipping.",
-      },
-      {
-        question: "Can I order a single machine instead of a full line?",
-        answer: "Yes, individual machines or a complete, compatible line can both be arranged.",
-      },
-      {
-        question: "Do you provide spare parts after delivery?",
-        answer: "Yes, ongoing parts availability and technical guidance are part of our support.",
-      },
-      {
-        question: "How does the export process from Pakistan to Kuwait work?",
+        question: "Which tobacco machinery brands does Civic supply to Kuwait?",
         answer:
-          "Requirement discussion, machine selection, condition confirmation, quotation, then shipping and documentation coordination, confirmed per order.",
+          "We supply machines from HAUNI (Protos 70, Protos 80), Molins (MK8, MK9), Decoufle, and Sasib. Our catalog also includes HLP and HLP2 packing machines, KDF2 and KDF4 filter rod machines, and a full range of tobacco processing equipment. Both new and reconditioned options are available.",
       },
       {
-        question: "What should I include in a quotation request?",
+        question: "Do you offer installation support in Kuwait City and other areas?",
         answer:
-          "Your target output, required formats, preferred condition and whether you need a single machine or a full line.",
+          "Yes. Civic engineers provide on-site installation and commissioning throughout Kuwait, including Kuwait City, Shuwaikh Industrial Area, Shuaiba, Ahmadi, Hawalli, and Farwaniya. We handle machine setup, alignment, trial runs, and operator training at your factory location.",
+      },
+      {
+        question: "What are the import duties on tobacco machinery in Kuwait?",
+        answer:
+          "Industrial machinery imports into Kuwait attract a 5% customs duty under the GCC Common External Tariff, calculated on the CIF value. Kuwait does not currently apply VAT, so no additional value-added tax is charged on top. The 100% duty applies to tobacco products only, not to manufacturing machinery.",
+      },
+      {
+        question: "Can I buy reconditioned tobacco machines for a factory in Kuwait?",
+        answer:
+          "Yes. Civic offers a wide selection of reconditioned tobacco machinery, including cigarette making machines, HLP packing machines, filter rod machines, and tobacco processing equipment. Each machine undergoes full refurbishment including mechanical overhaul, parts replacement, electrical testing, and trial runs. Reconditioned machines cost 40% to 60% less than new equipment.",
+      },
+      {
+        question: "How long does shipping take from Pakistan to Kuwait?",
+        answer:
+          "Sea freight from Karachi Port to Shuwaikh Port or Shuaiba Port takes approximately 5 to 10 days. Air freight is available for spare parts and urgent items, with delivery in 2 to 3 days. Total delivery time from order confirmation is 2 to 4 weeks for in-stock machines.",
+      },
+      {
+        question: "What spare parts do you supply for tobacco machines in Kuwait?",
+        answer:
+          "Civic supplies tobacco machinery spare parts for all major brands, including suction tapes, garniture belts, knives, gears, bearings, sensors, belts, glue nozzles, and format parts. We stock parts for HAUNI, Molins, Decoufle, and Sasib machines. Parts ship from Pakistan to Kuwait via air courier with 3 to 5 business day delivery.",
+      },
+      {
+        question: "Can Civic set up a complete cigarette factory in Kuwait?",
+        answer:
+          "Yes. We provide turnkey solutions covering factory layout design, production line configuration, machine procurement, shipping, installation, commissioning, and operator training. This is a single-source approach that simplifies the process for investors establishing their first tobacco manufacturing facility in Kuwait.",
+      },
+      {
+        question: "Is there local tobacco manufacturing in Kuwait?",
+        answer:
+          "Kuwait does not currently have significant local tobacco manufacturing. All tobacco products consumed in the country are imported. This creates a strategic opportunity for investors to establish production facilities, particularly for products targeting GCC and wider regional distribution. Civic supplies the machinery needed for any scale of operation.",
       },
     ],
   },
