@@ -1061,73 +1061,255 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Syria",
     slug: "syria",
     region: "Middle East",
-    metaTitle: "Syria Cigarette Machinery | Civic Tobacco",
+    metaTitle: "Tobacco Machinery Export to Syria | Reliable Supply & Support",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette machinery to Syria: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
+      "Civic exports cigarette making machines, tobacco processing equipment & spare parts to Syria. MK8, Protos, HLP machines shipped to Damascus & Latakia.",
     heroIntro:
-      "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery categories we can discuss for buyers in Syria, with shipping and order-specific arrangements confirmed at enquiry.",
+      "Civic Tobacco Machinery exports cigarette manufacturing machines, tobacco processing equipment, and spare parts to the Syrian Arab Republic. Whether you are modernizing an existing factory in Damascus, rebuilding production capacity in Aleppo, or establishing a new private-sector tobacco operation in Latakia or Homs, Civic supplies proven machinery at competitive prices from Pakistan.",
+
+    machineryCategories: [
+      {
+        title: "Cigarette Making Machines",
+        text: "The MK8, MK9, Protos 70, and Protos 80 from HAUNI and Molins deliver high-speed tobacco rod formation, precision paper wrapping, and consistent output for commercial cigarette production. Syria's tobacco manufacturers, both state-run and newly entering private operators, will find our HAUNI inventory fully inspected, tested, and documented — new and reconditioned machines available.",
+      },
+      {
+        title: "Cigarette Packing Machines",
+        text: "HLP and HLP2 cigarette packing machines for high-speed, precision cigarette packaging, covering soft pack, hard pack, cellophane overwrapping, carton packing, and case packing. The HLP is an industry standard worldwide, and we maintain steady availability for Syria-bound shipments.",
+      },
+      {
+        title: "Filter Rod Making Machines",
+        text: "KDF2, KDF4, and AF series filter rod making machines produce acetate tow filter rods in customizable lengths and diameters, giving Syrian factories full control over filter quality and specifications — an important factor as the domestic market rebuilds.",
+      },
+      {
+        title: "Tobacco Processing Machines",
+        text: "Syria grows tobacco domestically, which means local factories need robust processing equipment. We supply tobacco cutting machines, conditioning cylinders, rotary dryers, threshing lines, and flavoring drums, handling both Virginia and Oriental tobacco varieties, including Syrian-grown leaf for cigarette and shisha production.",
+      },
+      {
+        title: "Spare Parts & Accessories",
+        text: "Many Syrian tobacco factories operate legacy equipment that requires reliable spare parts sourcing. We export parts for HAUNI, Molins, Decoufle, Sasib, and other major brands — suction tapes, garniture belts, knives, gears, bearings, sensors, and format parts — keeping your parts pipeline open.",
+      },
+    ],
+
+    quickFacts: [
+      { label: "Customs Duty", value: "1–10% (Syria is not a GCC member)" },
+      { label: "Sanctions Status", value: "Lifted in 2025 (US, EU, UK)" },
+      { label: "Main Ports", value: "Latakia Port / Tartus Port" },
+      { label: "Sea Transit", value: "12–18 days from Karachi" },
+      { label: "Typical Delivery", value: "4–6 weeks, order to port" },
+    ],
+
     overview: [
-      "Buyers in Syria sourcing cigarette or tobacco machinery may be replacing existing equipment, rebuilding production capacity, or sourcing a line for the first time. In each case, matching machinery to the actual, current production requirement is the practical starting point.",
-      "Civic Tobacco Machinery's range covers cigarette making machines, packing machines, filter making machines, wrapping and boxing equipment, and supporting tobacco cutting, feeding and reclaiming machinery, available new and as reconditioned units.",
+      "Syria has a deep-rooted tobacco industry. Tobacco is the country's third most important agricultural crop, with over 60,000 farmers engaged in its cultivation across Latakia, Hama, Homs, and Daraa. The lifting of international sanctions in 2025 and the opening of the tobacco sector to private investment have created significant demand for modern cigarette manufacturing and processing equipment. Civic is positioned to supply the machines that Syria's tobacco industry needs to rebuild and modernize.",
+      "Civic Tobacco Machinery has built a supply network spanning the Middle East. Our established client relationships in the UAE, Saudi Arabia, Kuwait, Oman, and Qatar demonstrate our capability to deliver reliable machinery across diverse regulatory and logistical environments. Syria represents a natural expansion of this network as trade channels reopen.",
+      "Pakistan and Syria share longstanding diplomatic and trade ties. Pakistan was among the countries that maintained relations with Syria throughout the conflict period. As sanctions have been lifted and commercial trade resumes, Civic is leveraging this relationship to offer Syrian buyers competitive access to quality tobacco machinery. Our pricing consistently undercuts European and East Asian alternatives, which is particularly valuable for Syrian manufacturers operating within tight capital budgets during the reconstruction period.",
+      "We understand that Syria's business environment requires flexibility and patience. Civic works with Syrian buyers to accommodate payment structures that reflect the current economic realities, and we provide the technical guidance needed to get machines installed and running even in challenging infrastructure conditions.",
     ],
     sourcingGuide: [
-      "A clear production target, required output, formats and pack styles, makes it easier to specify a maker, filter line, packer and wrapper that work together rather than as isolated purchases.",
-      "For reconditioned equipment, what has actually been inspected and serviced is more informative than a machine's age or original rating alone. We disclose condition and history on every machine we offer.",
+      "Importing industrial machinery into Syria is governed by the Syrian Customs Directorate under the Ministry of Finance. Syria is not a GCC member, so the GCC Common External Tariff does not apply. Import duties vary by product category and are set by the Syrian tariff schedule. Industrial machinery typically attracts customs duties in the range of 1% to 10%, though rates may be reduced or waived for equipment imported for approved industrial projects.",
+      "The lifting of US sanctions (Executive Order 14312, June 2025), EU sanctions (May 2025), and UK sanctions (April 2025) has removed the major trade barriers that restricted commercial exports to Syria for over a decade. Most civilian-use industrial goods, including tobacco machinery, can now be exported to Syria without special licenses. Buyers should verify that their specific transaction does not involve any remaining sanctioned individuals or entities.",
+      "Required documentation typically includes a commercial invoice, packing list, certificate of origin, bill of lading, and an import license from the relevant Syrian ministry. Civic prepares all export documentation from Pakistan and coordinates with freight forwarders who have active shipping routes to Syria's ports at Latakia and Tartus.",
     ],
+
+    highlightsHeading: "Sanctions Relief Opening Syria's Tobacco Sector",
+    highlights: [
+      {
+        title: "United States",
+        text: "Comprehensive sanctions lifted June 2025 under Executive Order 14312, removing the major barrier to US-linked commercial trade with Syria.",
+      },
+      {
+        title: "European Union",
+        text: "Economic sanctions lifted May 2025, opening EU trade channels for civilian industrial goods including tobacco manufacturing machinery.",
+      },
+      {
+        title: "United Kingdom",
+        text: "Sanctions relaxed April 2025, aligning with the wider international shift toward normalized trade with Syria.",
+      },
+    ],
+
     supplierSelection: [
-      "Worth confirming before ordering: an honest specification of machine condition, confirmed spare parts availability, and clarity on documentation and shipping arrangements for your specific order.",
-      "We supply established brands, Molins, HLP and SASIB among them, whose parts and mechanical know-how remain widely available.",
+      "Syrian buyers face unique considerations in the current environment.",
+    ],
+    supplierSelectionPoints: [
+      {
+        title: "Machine Condition & Cost",
+        text: "Capital is scarce in Syria's reconstruction economy. Reconditioned equipment from Civic delivers 40% to 60% cost savings compared to new machines, making it the practical choice for most Syrian manufacturers. Every reconditioned machine in our inventory undergoes full mechanical overhaul, electrical testing, and documented trial runs.",
+      },
+      {
+        title: "Infrastructure Readiness",
+        text: "Some Syrian factories may need electrical and utility upgrades before installing new equipment. Civic assesses your facility's readiness and advises on any modifications needed. Syria operates on a 220V, 50Hz power system, and all machines we export are verified for compatibility.",
+      },
+      {
+        title: "Production Capacity",
+        text: "An MK8 suits smaller operations and factory restarts, while a Protos 80 or MK9 delivers the throughput for larger production facilities. Civic helps match machine capacity to your target output and available raw material supply.",
+      },
+      {
+        title: "Spare Parts Supply Chain",
+        text: "With limited local availability of tobacco machinery spare parts, having a reliable international supplier is essential. Civic maintains a deep inventory and ships parts to Syria via air or sea freight.",
+      },
     ],
     whyChooseUs: [
-      "New and reconditioned machinery across making, packing, filter and wrapping equipment",
-      "Machine selection matched to your production requirements",
-      "Reconditioned machines inspected, serviced and tested before shipping",
-      "Order-specific confirmation of shipping and logistics at enquiry",
+      "Affordable pricing from Pakistan, 30–50% below European alternatives",
+      "Complete machine range — making, packing, filter and spare parts under one roof",
+      "Middle East experience across UAE, Bahrain, Kuwait, Saudi Arabia and more",
+      "Flexible terms suited to Syria's current economic realities",
+    ],
+    whyChooseUsPoints: [
+      {
+        title: "Affordable Pricing from Pakistan",
+        text: "Syria's economy is rebuilding, and every dollar matters. Civic's Pakistan-based sourcing delivers quality machinery at prices 30% to 50% below European alternatives. Reconditioned machines stretch limited capital budgets further.",
+      },
+      {
+        title: "Complete Machine Range",
+        text: "Cigarette making machines (MK8, Protos 80), HLP packing machines, KDF2 filter machines, tobacco cutting machines, and spare parts. Everything a tobacco factory needs, from one supplier.",
+      },
+      {
+        title: "Middle East Experience",
+        text: "Active supply relationships across the UAE, Bahrain, Kuwait, Saudi Arabia, and other markets. We understand the region's trade logistics and documentation requirements.",
+      },
+      {
+        title: "Flexible Terms",
+        text: "We understand Syria's financial realities. Civic works with telegraphic transfers (T/T), trade facilitation arrangements, and structured payment schedules that accommodate the current business environment.",
+      },
     ],
     productionScale: [
-      "Machinery requirements vary by scale and by whether a buyer is rebuilding or expanding capacity, larger operations generally need higher-speed equipment, while smaller or rebuilding operations are often better served by reconditioned machinery.",
+      "Syria's tobacco sector ranges from legacy state-run facilities that need modernization to new private-sector entrants established under Decree No. 16 of 2024.",
+    ],
+    productionScalePoints: [
+      {
+        title: "Factory Restart & Modernization",
+        text: "The most common scenario. Existing factories need replacement machines or upgraded equipment to resume production. A reconditioned MK8 or Protos 70 paired with an HLP packing machine and a KDF2 filter rod machine brings a dormant line back to life at minimal cost. Adding a tobacco cutting machine and conditioning cylinder completes the processing section.",
+      },
+      {
+        title: "New Private-Sector Operations",
+        text: "Established after the 2024 privatization decree, these need complete production line setups. A medium-scale line with a Protos 80 or MK9, multiple HLP2 packing units, and KDF4 filter machines produces 3,000 to 5,000 cigarettes per minute.",
+      },
+      {
+        title: "Large-Scale Export-Oriented Operations",
+        text: "Deploy multiple parallel lines with centralized tobacco processing and automated packing. Civic provides complete turnkey solutions, from factory layout design to full commissioning.",
+      },
     ],
     usedReconditioned: [
-      "Reconditioned machinery from established brands offers further years of service at a lower cost than new equipment, which can be particularly relevant when rebuilding or expanding production capacity. Every reconditioned machine is inspected, serviced and tested before shipping.",
+      "Reconditioned tobacco machinery is especially relevant for Syria's market, where cost efficiency drives purchasing decisions. Civic sources, refurbishes, and exports used cigarette making machines, packing machines, and processing equipment that deliver near-original performance at a fraction of new equipment cost.",
+      "Each machine undergoes complete disassembly, component inspection, genuine parts replacement, electrical testing, and documented trial runs. We share inspection reports and photos with Syrian buyers before shipping, building confidence in every purchase.",
+      "A reconditioned Protos cigarette making machine or HLP cigarette packing machine costs 40% to 60% less than new. For Syrian factories restarting production or private investors entering the market on limited capital, reconditioned machines are the smart path forward. We also supply reconditioned tobacco cutting machines, filter rod machines, and conditioning cylinders, all with spare parts support.",
     ],
+    usedReconditionedStat: {
+      value: "40–60%",
+      label: "Lower cost than new equipment, fully reconditioned & tested",
+    },
     completeSolutions: [
-      "We supply across making, filter, packing, wrapping and supporting tobacco machinery, helping buyers source a compatible set of machinery through a single supplier.",
+      "Civic provides end-to-end factory solutions suited to Syria's reconstruction environment.",
+    ],
+    completeSolutionsPoints: [
+      {
+        title: "Factory Assessment & Planning",
+        text: "We assess existing factory infrastructure and design production layouts that work with available utilities and space. For new builds, we plan from the ground up.",
+      },
+      {
+        title: "Integrated Procurement",
+        text: "Single-source supply of cigarette making machines, packing equipment, filter rod machines, tobacco processing lines, and all ancillary equipment. One shipment, one point of contact.",
+      },
+      {
+        title: "Installation & Commissioning",
+        text: "Civic engineers travel to Syria for on-site setup, electrical verification, calibration, and commissioning. We stay until your production line runs at target capacity.",
+      },
+      {
+        title: "Operator Training",
+        text: "Machine operation, daily maintenance, troubleshooting, and safety protocols. Trained operators are critical in Syria's current environment where experienced factory workers may have relocated during the conflict period.",
+      },
     ],
     exportShipping: [
-      "Exporting machinery from Pakistan generally follows requirement discussion, machine selection, condition confirmation, commercial quotation, then shipping and documentation coordination.",
-      "Shipping arrangements and import requirements vary by destination and by the specific machinery involved and should be confirmed for each order individually as part of the quotation process.",
+      "Pakistan maintains diplomatic relations with Syria, and trade routes are well established through regional shipping networks.",
+    ],
+    exportShippingPoints: [
+      {
+        title: "Shipping Route",
+        text: "Machinery ships from Karachi Port to Latakia Port or Tartus Port in Syria via sea freight. The route typically transits through the Suez Canal or via transshipment at regional hub ports. Sea freight transit averages 12 to 18 days depending on the routing and transshipment schedule. Air freight handles urgent spare parts via connecting flights through regional hubs.",
+      },
+      {
+        title: "Documentation",
+        text: "Civic prepares commercial invoices, packing lists, certificates of origin, bills of lading, and inspection certificates. Given the evolving regulatory environment, we coordinate closely with freight forwarders experienced in Syria trade to ensure all documentation meets current requirements.",
+      },
+      {
+        title: "Packing Standards",
+        text: "Heavy-duty wooden crates and steel frames with industrial strapping. Syria-bound shipments receive extra protective packing given the longer transit times and multiple handling points.",
+      },
+      {
+        title: "Delivery Timeline",
+        text: "In-stock machines reach Syria in 4 to 6 weeks from order confirmation, accounting for documentation, packing, shipping, and port clearance. Reconditioning adds 4 to 6 weeks.",
+      },
     ],
     technicalSupport: [
-      "We support the brands we supply with spare parts availability and technical guidance on setup, troubleshooting and maintenance.",
+      "Reliable post-sale support is especially critical in Syria, where local technical resources are limited.",
+    ],
+    technicalSupportPoints: [
+      {
+        title: "Remote Support",
+        text: "Phone, WhatsApp, and video call troubleshooting from our technicians. Remote support is the fastest way to resolve issues in Syria's current environment.",
+      },
+      {
+        title: "On-Site Service",
+        text: "Civic engineers travel to Syria for installations, major repairs, production optimization, and training. On-site visits are coordinated through established travel channels to Damascus, Latakia, and Aleppo.",
+      },
+      {
+        title: "Spare Parts Pipeline",
+        text: "Civic maintains a deep inventory of tobacco machinery spare parts for HAUNI, Molins, Decoufle, and other brands. Parts ship via sea freight to Latakia Port or via air courier through regional transit points.",
+      },
+      {
+        title: "Warranty & Maintenance",
+        text: "Reconditioned machines carry a warranty on major components. We also provide maintenance guidance documentation in Arabic to support your local operators.",
+      },
     ],
     faqs: [
       {
-        question: "Can Civic Tobacco Machinery supply cigarette machinery to Syria?",
+        question: "Can tobacco machinery be exported to Syria now that sanctions are lifted?",
         answer:
-          "We can discuss cigarette and tobacco machinery enquiries for Syria; shipping and order-specific arrangements are confirmed individually at the time of enquiry.",
+          "Yes. The US lifted comprehensive sanctions on Syria in June 2025 (Executive Order 14312), the EU lifted economic sanctions in May 2025, and the UK relaxed sanctions in April 2025. Most civilian-use industrial goods, including tobacco manufacturing machinery, can now be exported to Syria. Buyers should verify that their specific transaction does not involve any remaining sanctioned individuals or entities. Civic handles all export compliance from Pakistan.",
       },
       {
-        question: "What machinery does Civic Tobacco Machinery offer?",
+        question: "What is the cost of a cigarette making machine for Syria?",
         answer:
-          "Cigarette making machines, packing machines, filter making machines, wrapping and boxing equipment, and tobacco cutting, feeding and reclaiming machinery, new and reconditioned.",
+          "A reconditioned MK8 or Protos 70 typically costs $25,000 to $80,000. Higher-speed Protos 80 or MK9 models are priced higher. Reconditioned machines offer the best value for Syria's reconstruction economy. Contact Civic for a detailed quotation.",
       },
       {
-        question: "Is used and reconditioned machinery available?",
-        answer: "Yes, reconditioned units are inspected, serviced and tested before shipping.",
-      },
-      {
-        question: "Can I request a single machine rather than a full line?",
-        answer: "Yes, individual machines or a complete, compatible line can both be discussed.",
-      },
-      {
-        question: "How are shipping and logistics handled?",
+        question: "Which tobacco machinery brands does Civic supply to Syria?",
         answer:
-          "Shipping arrangements and import requirements vary by destination and are confirmed individually for each order as part of the quotation process.",
+          "HAUNI (Protos 70, Protos 80), Molins (MK8, MK9), Decoufle, and Sasib. Plus HLP and HLP2 packing machines, KDF2 and KDF4 filter rod machines, and complete tobacco processing equipment. New and reconditioned options available.",
       },
       {
-        question: "Do you provide spare parts and technical support?",
+        question: "Do you provide installation support in Damascus and other Syrian cities?",
         answer:
-          "Yes, ongoing spare parts availability and technical guidance are part of the support we provide for the brands we supply.",
+          "Yes. Civic engineers travel to Syria for on-site installation and commissioning, including Damascus, Aleppo, Latakia, Homs, Tartus, and Hama. We handle machine setup, electrical verification, alignment, trial runs, and operator training.",
+      },
+      {
+        question: "What are the import duties on tobacco machinery in Syria?",
+        answer:
+          "Syria is not a GCC member, so the GCC Common External Tariff does not apply. Syrian customs duties on industrial machinery typically range from 1% to 10% depending on the product classification. Rates may be reduced for approved industrial investment projects. Import regulations are evolving under Syria's new government, and Civic coordinates with experienced freight forwarders to ensure accurate duty calculations.",
+      },
+      {
+        question: "Can I buy reconditioned tobacco machines for a factory in Syria?",
+        answer:
+          "Yes. Reconditioned machinery is particularly suited to Syria's market. Civic supplies reconditioned tobacco machinery including cigarette making machines, HLP packing machines, filter rod machines, and tobacco processing equipment. Costs run 40% to 60% below new equipment, making reconditioned machines the practical choice for Syrian manufacturers.",
+      },
+      {
+        question: "How long does shipping take from Pakistan to Syria?",
+        answer:
+          "Sea freight from Karachi Port to Latakia Port or Tartus Port takes approximately 12 to 18 days, depending on routing and transshipment. Total delivery time from order confirmation is 4 to 6 weeks for in-stock machines.",
+      },
+      {
+        question: "What spare parts do you supply for tobacco machines in Syria?",
+        answer:
+          "Civic supplies tobacco machinery spare parts for all major brands: suction tapes, garniture belts, knives, gears, bearings, sensors, glue nozzles, and format parts for HAUNI, Molins, Decoufle, and Sasib. Parts ship to Syria via sea freight to Latakia Port or through regional air courier channels.",
+      },
+      {
+        question: "Has Syria's tobacco industry been privatized?",
+        answer:
+          "In 2024, Syria issued Decree No. 16, opening the tobacco industry to private sector investment. Previously, tobacco manufacturing and marketing were controlled by the General Organization of Tobacco, a state-run monopoly. The privatization decree allows private companies to invest in tobacco manufacturing, processing, and marketing. This has created new demand for modern cigarette making and processing machinery from private investors entering the sector.",
+      },
+      {
+        question: "Can Civic help restart or modernize an existing tobacco factory in Syria?",
+        answer:
+          "Yes. Many Syrian tobacco factories have aging equipment or have been inactive during the conflict period. Civic provides factory assessment, machine replacement or upgrade procurement, shipping, installation, and operator training. We specialize in matching reconditioned machines to existing factory infrastructure, minimizing the capital investment needed to resume production.",
       },
     ],
   },
