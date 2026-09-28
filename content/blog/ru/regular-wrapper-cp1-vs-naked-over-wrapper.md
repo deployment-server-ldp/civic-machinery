@@ -2,7 +2,6 @@
 title: "Regular Wrapper CP1 против Naked Over Wrapper: в чём разница?"
 metaTitle: "Regular Wrapper CP1 против Naked Over Wrapper | Civic Tobacco Machinery"
 description: "Сравнение обёрточных машин Regular Wrapper CP1 и Naked Over Wrapper по скорости, функции и месту каждой в вашей упаковочной линии."
-excerpt: ""
 date: "2026-07-29"
 author: "Mustafa Qureshi"
 authorTitle: "Специалисты по табачному оборудованию, Карачи"

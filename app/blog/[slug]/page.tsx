@@ -106,7 +106,7 @@ export default function BlogPostPage({
           </div>
 
           <div className="prose-content mt-8">
-            <p className="text-lg text-brand-700">{post.excerpt}</p>
+            <p className="text-lg text-brand-700">{post.description}</p>
             <Markdown>{post.content}</Markdown>
           </div>
 

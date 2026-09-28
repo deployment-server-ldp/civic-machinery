@@ -2,7 +2,6 @@
 title: "Molins Mark 8 Post 64 مقابل Mark 8D MAX 15: أيّهما يناسب احتياجات إنتاجك؟"
 metaTitle: "Molins Mark 8 Post 64 مقابل Mark 8D MAX 15 | Civic Tobacco Machinery"
 description: "مقارنة بين ماكينتي صناعة السجائر Molins Mark 8 Post 64 وMark 8D MAX 15 من حيث السرعة والإنتاج والقدرة والأنسب لخطك."
-excerpt: ""
 date: "2026-07-24"
 author: "Saad Ali"
 authorTitle: "متخصصون في ماكينات التبغ، كراتشي"

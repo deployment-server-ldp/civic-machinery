@@ -4,7 +4,16 @@
  * Every category and product page, the mega menu, breadcrumbs, the sitemap
  * and the JSON-LD Product schema all read from the data below. Add a machine
  * here and it appears everywhere automatically.
+ *
+ * Machines added through the /admin "Machines" CMS tab are stored separately
+ * in content/products-cms.json (one JSON array, edited via the GitHub API —
+ * see lib/products-cms.ts) and merged into `products` below. It's a plain
+ * JSON import rather than an fs read so this file stays safe to import from
+ * client components (e.g. Footer.tsx uses `categories`/`subcategories` from
+ * here) — Node's `fs` module can't be bundled for the browser.
  */
+
+import cmsProducts from "@/content/products-cms.json";
 
 export type CategorySlug =
   | "packing-machines"
@@ -102,25 +111,29 @@ export const categories: Category[] = [
     ],
     faqs: [
       {
-        question:
-          "What is the difference between hard pack and soft pack machines?",
+        question: "What's the difference between the HLP and SASIB ranges?",
         answer:
-          "Hard packs (hinge-lid boxes) run on HLP-style machines, while soft packs (folded foil and printed outer) run on SASIB-style machines. We supply both and help you match the machine to the pack format your brands actually sell.",
+          "The HLP range produces hard pack, rigid hinge-lid cigarette packs. The SASIB range produces soft pack, foil-wrapped cigarette packs. They're built for genuinely different pack formats rather than different speed tiers of the same product.",
       },
       {
-        question: "What packing speeds do you offer?",
+        question: "Which HLP model should I choose?",
         answer:
-          "Our cigarette packing machines run from around 180 up to 225 packs per minute. Pick a speed that matches your real shift demand with some room to grow, rather than paying for capacity that sits idle.",
+          "It depends on your target output. The HLP-180, HLP-200, and HLP-225 run at 180, 200, and 225 packs per minute respectively, so the right choice is the one that matches your actual production volume rather than the fastest machine available.",
       },
       {
-        question: "Do you sell new or reconditioned packing machines?",
+        question: "What packet set-up styles are available?",
         answer:
-          "Both. Every used HLP or SASIB packer is inspected, serviced and tested before sale, so a good reconditioned machine can run for years at a fraction of the new price.",
+          "Our HLP range supports round corner, bevel edge, D-type, and square set-ups. Tell us which style your brand requires and we'll confirm it against the machine you're considering.",
       },
       {
-        question: "Do you install the machine and supply spare parts?",
+        question: "Do you supply new or reconditioned packing machines?",
         answer:
-          "Yes. We install and set up the machine, and support HLP and SASIB with widely available spares and service. Message us on WhatsApp at +92 301 1111184 for price and current availability.",
+          "Both. Reconditioned packing equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
+      },
+      {
+        question: "What voltage do your packing machines run on?",
+        answer:
+          "Our HLP range supports both 220V and 380V setups. Confirm your factory's electrical supply with us before ordering so the machine is configured correctly from installation.",
       },
     ],
   },
@@ -142,24 +155,24 @@ export const categories: Category[] = [
     ],
     faqs: [
       {
-        question: "What is the difference between an over-wrapper and a boxer?",
+        question: "What's the difference between an overwrapper and a boxer?",
         answer:
-          "An over-wrapper seals each pack in cellophane film with a tear tape, while a boxer (cartoning machine) groups finished packs into cartons or boxes. Most lines use both, one after the other.",
+          "An overwrapper seals an individual pack or outer pack in film, typically with a tear tape. A boxer groups a set number of already-packed products into an outer carton for shipping. They handle different stages of the line and aren't interchangeable.",
       },
       {
-        question: "Which wrapping and boxing machines do you supply?",
+        question: "Do I need both an overwrapper and a boxer?",
         answer:
-          "We supply Molins and SASIB over-wrappers and boxers, including the CP1 pack wrapper, the naked over-wrapper and Molins and SASIB boxers, for both hard-pack and soft-pack lines.",
+          "It depends on how far your line extends. If your product ships as individually wrapped packs without further cartoning, an overwrapper alone may be enough. If you're building a complete line through to shipping-ready cartons, you'll typically need both stages.",
       },
       {
-        question: "Do you offer new or reconditioned wrapping machines?",
+        question: "Can these machines handle multiple pack sizes?",
         answer:
-          "Both new and carefully reconditioned units are available. Every used machine is checked, set up and handed over ready to run.",
+          "Our wrapping and boxing range is built to handle standard cigarette pack formats, but exact size compatibility depends on the specific machine. Tell us your pack dimensions and we'll confirm which machine fits your product.",
       },
       {
-        question: "Do you provide installation and spares?",
+        question: "Do you supply new or reconditioned wrapping machines?",
         answer:
-          "Yes, installation, setup, spares and service are all part of what we do. Contact us on WhatsApp at +92 301 1111184 for a quotation.",
+          "Both. Reconditioned wrapping and boxing equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
@@ -188,7 +201,7 @@ export const categories: Category[] = [
       {
         question: "How many cigarettes per minute do the makers produce?",
         answer:
-          "Depending on the model, our makers run from around 3,000 up to 8,000 cigarettes per minute, so you can match the machine to your target output.",
+          "Depending on the model, our makers run from around 1,800 up to 8,000 cigarettes per minute, so you can match the machine to your target output.",
       },
       {
         question: "Do you supply new or reconditioned machines?",
@@ -196,9 +209,14 @@ export const categories: Category[] = [
           "Both. Reconditioned Molins and Hauni machines are fully inspected, serviced and tested before sale, offering strong value for growing factories.",
       },
       {
-        question: "Do you help match the maker with the right filter line?",
+        question: "Do you help match the maker with the right filter and packing line?",
         answer:
-          "Yes. We make sure the maker and filter maker run in step so the whole line stays balanced. Tell us your brands and target output and we will recommend a setup.",
+          "Yes. We make sure the maker, filter line and packing line run in step so the whole production line stays balanced. Tell us your brands and target output and we'll recommend a setup.",
+      },
+      {
+        question: "Do you supply machinery for factories outside Pakistan?",
+        answer:
+          "Yes. Alongside our Pakistan-based customers, we export cigarette manufacturing machines to markets including Bangladesh, Turkey, Indonesia, Poland, and Bulgaria.",
       },
     ],
     hasSubcategories: true,
@@ -247,24 +265,25 @@ export const subcategories: Subcategory[] = [
     ],
     faqs: [
       {
-        question: "Which filter making machines do you supply?",
+        question:
+          "What's the difference between a hollow tube maker and a conventional filter rod maker?",
         answer:
-          "We supply Hauni KDF-1 and KDF-2 filter makers, Molins PM filter makers and hollow tube machines for speciality formats, for factories running filter rod production.",
+          "A conventional filter rod maker, like the KDF-1, KDF-2, or PM-5, forms cellulose acetate tow into a solid filter rod. A hollow tube maker produces a paper tube section instead, used in filter designs that call for a hollow or specialty tube rather than a fully solid tow plug. They serve different filter designs and aren't interchangeable.",
       },
       {
-        question: "Can the filter maker match my cigarette maker's speed?",
+        question: "What filter lengths can your machines produce?",
         answer:
-          "Yes. We help you pick a filter line that matches the speed of your makers so the two run in step and the line stays balanced.",
+          "Depending on the model, our filter making machines cover a length range of roughly 64mm up to 150mm on the KDF range, and 108mm to 126mm on the Molins PM-5. Confirm your target cigarette format against these ranges before choosing a machine.",
       },
       {
-        question: "Do you offer new and reconditioned filter makers?",
+        question: "Can a filter making machine be used with any cigarette maker?",
         answer:
-          "Both. Every reconditioned KDF or PM machine is inspected, serviced and tested before sale.",
+          "The filter rod itself needs to match your cigarette maker's circumference and rod length requirements, and the filter machine's output speed needs to keep pace with your maker's rated cigarettes per minute. We help confirm both before recommending a setup.",
       },
       {
-        question: "Do you install and support filter making machines?",
+        question: "Do you supply new or reconditioned filter making machines?",
         answer:
-          "Yes, installation, spares and service are included. Message us on WhatsApp at +92 301 1111184 for price and availability.",
+          "Both. Reconditioned filter making equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
@@ -288,25 +307,25 @@ export const subcategories: Subcategory[] = [
     ],
     faqs: [
       {
-        question: "What do tobacco feeders, cutters and reclaimers do?",
+        question: "What does a cigarette reclaimer actually recover?",
         answer:
-          "Feeders keep the makers supplied with tobacco, cutters cut leaf to size for production, and reclaimers recover tobacco from rejected cigarettes so it can be reused, keeping the primary and secondary floors running smoothly.",
+          "A reclaimer separates usable tobacco from rejected cigarettes, removing paper and filter material so the tobacco itself can be reintroduced into production rather than discarded as waste.",
       },
       {
-        question: "Can this equipment reduce tobacco waste?",
+        question: "Is a tobacco stem flattener necessary, or optional?",
         answer:
-          "Yes. A reclaimer recovers usable tobacco from rejected sticks, which cuts waste and lowers running costs over time.",
+          "It depends on your leaf and blend requirements. A stem flattener improves blending uniformity and reduces leaf waste, which matters more for factories aiming for consistent quality at scale than for very small production runs.",
       },
       {
-        question: "Which brands do you supply?",
+        question: "Is your tobacco feeder compatible with any cigarette maker?",
         answer:
-          "We supply well-supported machines such as the Hauni KT-400 tobacco cutter, along with tobacco feeders, cigarette reclaimers and stem flatteners.",
+          "Our feeder is built to work with Mark 8 and Mark 9 class machines specifically. Confirm compatibility with your exact maker model before assuming any feeder will work with it.",
       },
       {
         question:
-          "Are the machines new or reconditioned, and do you support them?",
+          "Do you supply new or reconditioned cutting and feeding equipment?",
         answer:
-          "Both new and reconditioned units are available, all tested before sale, with installation, spares and service. Contact us on WhatsApp at +92 301 1111184.",
+          "Both. Reconditioned equipment is fully inspected, serviced and tested before sale, giving growing factories a lower-cost entry point without an unknown machine history.",
       },
     ],
   },
@@ -441,7 +460,7 @@ const packing: Product[] = [
       "SASIB 5000 soft packer",
       "soft pack cigarette machine Pakistan",
     ],
-    image: "/images/machines/ssasib-5000.webp",
+    image: "/images/machines/sasib-5000.webp",
     intro: [
       "The SASIB 5000 is a versatile machine built for producing soft packs of 100mm cigarettes. Using alufoil and label wrapping performed around an arbour, it delivers perfect, consistent packs with neatly squared corners.",
       "That wrapping method does more than look good, it protects the cigarettes and keeps each pack intact, while also lifting the visual appeal of the finished product. For manufacturers in Pakistan who want a premium soft pack finish, it is a reliable, high-quality choice.",
@@ -473,7 +492,7 @@ const packing: Product[] = [
       "SASIB 3000 soft packer",
       "soft pack cigarette machine Pakistan",
     ],
-    image: "/images/machines/ssasib-3000.webp",
+    image: "/images/machines/sasib-3000.webp",
     intro: [
       "The SASIB 3000 adds extra versatility to the SASIB soft pack line with its ability to handle both 84mm and 100mm cigarette packs. Using alufoil and label wrapping performed around an arbor, it keeps the hallmark SASIB finish, perfect, consistent packs with neatly squared corners.",
       "That dual-size capability makes the SASIB 3000 a valuable asset for manufacturers in Pakistan who need flexibility in their production while keeping every pack to a high standard of presentation and protection.",
@@ -1129,6 +1148,7 @@ export const products: Product[] = [
   ...making,
   ...filter,
   ...tobacco,
+  ...(cmsProducts as Product[]),
 ];
 
 /* ------------------------------------------------------------------ */

@@ -42,6 +42,9 @@ Options -MultiViews
 
   # ---- 301 redirects: old URLs -> new clean URLs ----
 
+  # Blog: duplicate InterTabac post merged into the original write-up
+  RewriteRule ^blog/intertabac-2026-everything-you-need-to-know-about-this-global-trade-show/?$ /blog/intertabac-dortmund-germany/ [R=301,L]
+
   # Blog: old "karachi" slugs -> "pakistan" slugs
   RewriteRule ^blog/how-to-choose-cigarette-packing-machine-karachi/?$ /blog/how-to-choose-cigarette-packing-machine-pakistan/ [R=301,L]
   RewriteRule ^blog/buying-used-tobacco-machinery-karachi-checklist/?$ /blog/buying-used-tobacco-machinery-pakistan-checklist/ [R=301,L]

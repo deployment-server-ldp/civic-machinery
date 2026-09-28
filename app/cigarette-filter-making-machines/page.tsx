@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
+import CigaretteFilterMakingMachinesContent from "@/components/content/CigaretteFilterMakingMachinesContent";
 import {
   getCategory,
   getSubcategory,
@@ -32,6 +33,7 @@ export default function CigaretteFilterMakingMachinesPage() {
         { name: sub.navLabel, path: subcategoryHref(sub) },
       ]}
       products={getProductsBySubcategory(SUB)}
+      content={<CigaretteFilterMakingMachinesContent />}
       faqs={sub.faqs}
     />
   );

@@ -112,7 +112,7 @@ export default function LocaleBlogPostPage({
           </div>
 
           <div className="prose-content mt-8">
-            {post.excerpt && <p className="text-lg text-brand-700">{post.excerpt}</p>}
+            {post.description && <p className="text-lg text-brand-700">{post.description}</p>}
             <Markdown>{post.content}</Markdown>
           </div>
 

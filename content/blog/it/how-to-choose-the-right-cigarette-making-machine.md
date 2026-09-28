@@ -2,7 +2,6 @@
 title: "Come scegliere la macchina per sigarette giusta per la tua linea di produzione"
 metaTitle: "Come scegliere la macchina per sigarette giusta"
 description: "Scegliere una macchina per sigarette è più che una questione di velocità. Confronta produzione, flessibilità di formato e specifiche per trovare la scelta giusta per la tua linea."
-excerpt: ""
 date: "2026-07-20"
 author: "Saad Ali"
 authorTitle: "Specialisti di macchine per il tabacco, Karachi"

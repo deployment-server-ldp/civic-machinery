@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
+import TobaccoCutterFeederReclaimerContent from "@/components/content/TobaccoCutterFeederReclaimerContent";
 import {
   getCategory,
   getSubcategory,
@@ -32,6 +33,7 @@ export default function TobaccoMachineryPage() {
         { name: sub.navLabel, path: subcategoryHref(sub) },
       ]}
       products={getProductsBySubcategory(SUB)}
+      content={<TobaccoCutterFeederReclaimerContent />}
       faqs={sub.faqs}
     />
   );

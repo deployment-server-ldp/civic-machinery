@@ -2,7 +2,6 @@
 title: "Molins Mark 8 Post 64 vs. Mark 8D MAX 15: Was passt zu Ihrem Ausbringungsbedarf?"
 metaTitle: "Molins Mark 8 Post 64 vs. Mark 8D MAX 15 | Civic Tobacco Machinery"
 description: "Vergleich der Zigarettenstrangmaschinen Molins Mark 8 Post 64 und Mark 8D MAX 15 nach Geschwindigkeit, Ausbringung, Leistung und Eignung für Ihre Produktionslinie."
-excerpt: ""
 date: "2026-07-24"
 author: "Saad Ali"
 authorTitle: "Spezialisten für Tabakmaschinen, Karachi"

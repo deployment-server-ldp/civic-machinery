@@ -54,6 +54,42 @@ export default function ExportHubPage() {
         </div>
       </section>
 
+      <section className="border-t border-brand-100 bg-brand-50 py-14">
+        <div className="container mx-auto">
+          <div className="prose-content mx-auto max-w-3xl">
+            <h2>How Exporting From Pakistan Works</h2>
+            <p>
+              Whichever country you&rsquo;re buying for, the process runs the
+              same way: we start with a requirement discussion covering the
+              machine or machines you need and your target output, move to
+              machine selection and condition confirmation, then a
+              commercial quotation, and finally shipping and documentation
+              coordination through to delivery. Exact shipping arrangements
+              and import requirements vary by destination, so we confirm
+              those specifics for each order rather than quoting a single
+              figure that wouldn&rsquo;t hold true everywhere.
+            </p>
+            <h3>New, Used &amp; Reconditioned Machinery for Export</h3>
+            <p>
+              Every category we supply, making machines, filter machines,
+              packing and wrapping equipment, and supporting tobacco
+              machinery, is available new or reconditioned. Reconditioned
+              units are inspected, serviced and tested before they ship,
+              with condition disclosed upfront so an international buyer
+              isn&rsquo;t relying on photos alone.
+            </p>
+            <h3>Installation and Support After Delivery</h3>
+            <p>
+              A machine landing at your port is only half the job. We stay
+              involved after delivery with spare parts availability and
+              technical guidance on setup, troubleshooting and maintenance,
+              the same support we provide to factories here in Pakistan,
+              extended to buyers wherever the machine ends up running.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <CtaBand
         title="Don't See Your Country Listed?"
         text="Our export capability isn't limited to the countries shown here. Tell us where you are and what you are looking to produce, and our team can discuss machinery options and shipping for your location."

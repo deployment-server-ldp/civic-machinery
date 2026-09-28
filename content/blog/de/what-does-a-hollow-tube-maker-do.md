@@ -2,7 +2,6 @@
 title: "Was macht eine Hohlrohrmaschine in einer Zigarettenlinie?"
 metaTitle: "Was macht eine Hohlrohrmaschine in einer Zigarettenlinie?"
 description: "Eine Hohlrohrmaschine produziert die Hüllrohre für die Filtermontage. Hier erfahren Sie, was sie tatsächlich tut, wo sie in der Linie sitzt und wie sie arbeitet."
-excerpt: ""
 date: "2026-08-04"
 author: "Ahmed Khan"
 authorTitle: "Spezialisten für Tabakmaschinen, Karachi"

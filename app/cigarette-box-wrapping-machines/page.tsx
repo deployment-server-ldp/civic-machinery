@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import CategoryListing from "@/components/CategoryListing";
+import CigaretteWrappingMachinesContent from "@/components/content/CigaretteWrappingMachinesContent";
 import { getCategory, getProductsByCategory, categoryHref } from "@/lib/products";
 
 const category = getCategory("wrapping-machines")!;
@@ -23,6 +24,7 @@ export default function WrappingMachinesPage() {
         { name: category.navLabel, path: categoryHref(category) },
       ]}
       products={getProductsByCategory("wrapping-machines")}
+      content={<CigaretteWrappingMachinesContent />}
       faqs={category.faqs}
     />
   );

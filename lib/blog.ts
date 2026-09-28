@@ -17,7 +17,6 @@ export interface BlogPost {
   /** Custom <title> (defaults to `title`). Keep < 60 chars. */
   metaTitle?: string;
   description: string;
-  excerpt: string;
   date: string; // ISO (YYYY-MM-DD)
   updated?: string;
   author: string;
@@ -65,7 +64,6 @@ function readPost(dir: string, fileName: string): BlogPost {
     title: String(data.title ?? slug),
     metaTitle: data.metaTitle ? String(data.metaTitle) : undefined,
     description: String(data.description ?? ""),
-    excerpt: String(data.excerpt ?? data.description ?? ""),
     date: String(data.date ?? new Date().toISOString().slice(0, 10)),
     updated: data.updated ? String(data.updated) : undefined,
     author: String(data.author ?? "Civic Tobacco Machinery"),

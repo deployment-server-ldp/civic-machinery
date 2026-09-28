@@ -2,7 +2,6 @@
 title: "Cosa fa una macchina per tubi cavi in una linea per sigarette?"
 metaTitle: "Cosa fa una macchina per tubi cavi in una linea per sigarette?"
 description: "Una macchina per tubi cavi produce i tubi di carta usati nell'assemblaggio dei filtri. Ecco cosa fa davvero, dove si colloca nella linea e come funziona."
-excerpt: ""
 date: "2026-08-04"
 author: "Ahmed Khan"
 authorTitle: "Specialisti di macchine per il tabacco, Karachi"
