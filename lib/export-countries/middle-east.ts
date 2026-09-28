@@ -243,77 +243,239 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Bahrain",
     slug: "bahrain",
     region: "Middle East",
-    metaTitle: "Cigarette & Tobacco Machinery Suppliers in Bahrain | Civic Tobacco Machinery",
+    metaTitle: "Tobacco Machinery Export to Bahrain | Best Prices & Fast Delivery",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette making, packing, filter and wrapping machinery to buyers in Bahrain. New and reconditioned equipment from Pakistan.",
+      "Buy cigarette making machines, tobacco processing equipment & spare parts in Bahrain. Civic supplies MK8, Protos, HLP machines to Manama & Riffa factories.",
     heroIntro:
-      "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery we can supply for operations in Bahrain.",
+      "Civic Tobacco Machinery supplies a complete range of cigarette manufacturing machines, tobacco processing equipment, and spare parts to buyers across Bahrain. Whether you are setting up a new production facility in Manama, expanding operations in Riffa, or sourcing reconditioned equipment for a factory in Muharraq, we deliver reliable tobacco machinery backed by technical expertise and competitive pricing from Pakistan.",
+
+    machineryCategories: [
+      {
+        title: "Cigarette Making Machines",
+        text: "High-performance models including the MK8, MK9, Protos 70 and Protos 80, handling everything from tobacco rod formation to paper wrapping at speeds suitable for mid- and large-scale production. Bahrain-based manufacturers producing for GCC and regional export markets will find our HAUNI and Molins machines capable of meeting strict quality and output benchmarks. Every machine is thoroughly inspected before shipment from Karachi.",
+      },
+      {
+        title: "Cigarette Packing Machines",
+        text: "Industry-standard HLP and HLP2 cigarette packing machines built for speed and precision, plus cellophane overwrappers, carton packers and case packers. For Bahrain's export-oriented operations we also source complete packing lines that integrate seamlessly with upstream making machines — the HLP remains one of our most requested units across the Middle East.",
+      },
+      {
+        title: "Filter Rod Making Machines",
+        text: "KDF2, KDF4 and AF series filter rod makers producing acetate tow filter rods in various lengths and diameters, giving manufacturers full control over filter specifications — whether you need a standalone unit for a small setup or multiple units for a high-volume line.",
+      },
+      {
+        title: "Tobacco Processing Machines",
+        text: "Cutting machines, conditioning cylinders, rotary dryers, threshing lines and flavoring drums for raw tobacco cutting, conditioning, drying and blending. Bahrain's growing interest in shisha tobacco manufacturing also drives demand for specialized processing equipment, available new and reconditioned for factories in Hidd, Sitra and other industrial areas.",
+      },
+      {
+        title: "Spare Parts & Accessories",
+        text: "Genuine and compatible spare parts for all major brands — HAUNI, Molins, Decoufle and Sasib — from suction tapes and garniture belts to knives, gears and bearings, for both legacy and current-generation machines. Fast turnaround with direct shipment from our warehouse in Pakistan.",
+      },
+    ],
+
+    quickFacts: [
+      { label: "Customs Duty", value: "5% (GCC Common External Tariff)" },
+      { label: "VAT", value: "10% on CIF + duty" },
+      { label: "Main Port", value: "Khalifa Bin Salman Port, Hidd" },
+      { label: "Sea Transit", value: "7–12 days from Karachi" },
+      { label: "Typical Delivery", value: "3–4 weeks, order to port" },
+    ],
+
     overview: [
-      "Buyers in Bahrain sourcing cigarette or tobacco processing machinery, whether for a specific replacement or a wider production setup, benefit from working through the same core questions: required output, format range and how each machine fits with the rest of the line.",
-      "Civic Tobacco Machinery supplies across making machines, packing machines, filter making machines, wrapping and boxing equipment, and supporting tobacco cutting, feeding and reclaiming machinery, available new and reconditioned.",
+      "Bahrain's recent regulatory shift allowing tobacco manufacturing for export purposes has created fresh demand for industrial-grade cigarette and tobacco processing equipment. Civic is positioned to meet that demand with both new and reconditioned machines from globally recognized brands.",
+      "Civic Tobacco Machinery has built a reputation as one of the most dependable tobacco equipment suppliers serving the Middle East. Our understanding of GCC markets, combined with years of hands-on experience sourcing and supplying machines from globally recognized manufacturers, gives us a distinct advantage when working with Bahrain-based buyers. We also supply to neighboring markets including the UAE and Kuwait.",
+      "Pakistan and Bahrain share strong bilateral trade relations, reinforced by the broader Pakistan-GCC economic framework. Bahrain imports a significant portion of its industrial equipment from Asian markets, and Pakistan's competitive pricing on reconditioned and new tobacco machinery makes it a preferred sourcing destination. Civic leverages this trade corridor to deliver machines at prices that are consistently lower than European or East Asian alternatives.",
+      "Our team speaks the language of the tobacco industry. We know the difference between what a startup factory in Bahrain needs and what a large-scale production facility requires. That knowledge translates into better machine recommendations, accurate quotations, and fewer surprises during installation and commissioning.",
     ],
     sourcingGuide: [
-      "A clear production target, output, formats and pack styles required, makes it easier to specify a maker, filter line, packer and wrapper that function together as one balanced line.",
-      "For reconditioned equipment, what has actually been inspected and serviced is more useful than a machine's age or original rating alone. We disclose condition and history on every machine offered.",
+      "Importing industrial machinery into Bahrain involves navigating customs regulations, compliance requirements, and logistical planning. The Kingdom of Bahrain applies the GCC Common External Tariff, which generally levies a 5% customs duty on industrial machinery imports. A 10% Value Added Tax is applied on top of the CIF (cost, insurance, freight) value plus duty.",
+      "Bahrain's Ministry of Industry, Commerce and Tourism oversees the licensing of tobacco manufacturing activities. Following Decision No. 2 of 2023, conditions and regulations for manufacturing and packaging cigarettes and shisha tobacco have been formalized, primarily for export-oriented operations. Any buyer planning to set up a tobacco production facility should secure the necessary industrial license and comply with the National Bureau for Revenues (NBR) requirements, including digital excise stamp obligations for tobacco products.",
+      "Civic handles the export side of the logistics chain from Pakistan. We prepare all required documentation, including commercial invoices, packing lists, certificates of origin, and bills of lading. Our freight partners manage sea shipments from Karachi Port to Khalifa Bin Salman Port in Hidd, Bahrain's primary commercial port, ensuring smooth customs clearance on arrival.",
     ],
     supplierSelection: [
-      "Worth checking: an honest description of machine condition, confirmed spare parts availability for the brand, and clear documentation and shipping information for your order.",
-      "We work with established brands, Molins, HLP and SASIB among them, whose parts and know-how remain widely available.",
+      "Purchasing tobacco machinery is a significant capital investment, and buyers in Bahrain should evaluate several factors before placing an order.",
+    ],
+    supplierSelectionPoints: [
+      {
+        title: "Machine Condition",
+        text: "New machines offer the latest technology and manufacturer warranties, but reconditioned equipment from reputable suppliers like Civic delivers comparable performance at 40% to 60% lower cost. Every reconditioned machine we supply goes through a documented refurbishment process covering mechanical overhaul, electrical testing and trial runs.",
+      },
+      {
+        title: "Production Capacity",
+        text: "Production capacity should match your target output. A Protos 70, for example, operates at different speeds than a Protos 80 or an MK9. We help buyers calculate the right machine configuration based on their planned daily production volume.",
+      },
+      {
+        title: "Power Compatibility",
+        text: "Power compatibility is often overlooked. Bahrain runs on a 230V, 50Hz electrical system. All machines we export are checked for compatibility, and we can arrange for electrical modifications where needed.",
+      },
+      {
+        title: "After-Sales Support",
+        text: "After-sales support separates reliable suppliers from the rest. Civic provides remote technical guidance, on-site installation assistance, and a steady supply of spare parts to Bahrain. Downtime costs money, and our support infrastructure is designed to minimize it.",
+      },
     ],
     whyChooseUs: [
-      "New and reconditioned machinery across making, packing, filter and wrapping equipment",
-      "Machine selection matched to your production requirements",
-      "Reconditioned machines inspected, serviced and tested before shipping",
-      "Ongoing spare parts support for supplied brands",
-      "Pakistan-based export support for international buyers",
+      "Competitive pricing sourced from Pakistan, undercutting Europe, Turkey and China",
+      "Comprehensive machine range under one roof, from making to packing to filter",
+      "Technical expertise: pre-purchase consultation through post-delivery support",
+      "Flexible payment terms — L/C, T/T, and structured schedules",
+    ],
+    whyChooseUsPoints: [
+      {
+        title: "Competitive Pricing from Pakistan",
+        text: "Our sourcing base in Pakistan gives us access to high-quality reconditioned and new machinery at prices that undercut suppliers in Europe, Turkey and China. The savings on a single cigarette production machine can be substantial, especially for buyers purchasing complete lines.",
+      },
+      {
+        title: "Comprehensive Machine Range",
+        text: "We do not specialize in one category alone. From cigarette making machines like the MK8 and Protos 80 to HLP packing machines, KDF2 filter machines, and tobacco cutting machines, we supply everything a tobacco factory needs under one roof.",
+      },
+      {
+        title: "Technical Expertise",
+        text: "Our team includes professionals who understand the mechanical and electrical specifications of every machine we sell. We provide pre-purchase consultation, machine selection guidance, and post-delivery support that factory managers in Manama, Riffa and Muharraq rely on.",
+      },
+      {
+        title: "Flexible Payment Terms",
+        text: "We work with letters of credit (L/C), telegraphic transfers (T/T), and can structure payment terms that accommodate the cash flow needs of both startups and established manufacturers.",
+      },
     ],
     productionScale: [
-      "Higher-volume operations generally need high-speed making and packing equipment, while smaller operations often find reconditioned machinery a more accessible route to added capacity.",
+      "Bahrain's tobacco manufacturing landscape is evolving. With the government now permitting cigarette and shisha tobacco production for export, a range of production scales are emerging.",
+    ],
+    productionScalePoints: [
+      {
+        title: "Small-Scale & Startup Operations",
+        text: "Typically need one cigarette making machine (an MK8 or Protos 70), a single HLP packing machine, a filter rod maker like the KDF2, and basic tobacco processing equipment including a cutting machine and a conditioning cylinder. This setup can produce 1,000 to 2,000 cigarettes per minute and is ideal for new entrants testing the export market.",
+      },
+      {
+        title: "Medium-Scale Production Lines",
+        text: "Require higher-speed machines, often the Protos 80 or MK9, paired with multiple HLP2 packing units and KDF4 filter machines. A medium-scale line can output 3,000 to 5,000 cigarettes per minute and demands a more robust processing section with larger dryers, blending silos and flavoring equipment.",
+      },
+      {
+        title: "Large-Scale Industrial Operations",
+        text: "Involve multiple parallel production lines, fully automated packing and case-packing systems, centralized tobacco processing plants, and advanced quality control integration. Civic supplies complete turnkey solutions for this tier, including factory layout planning and equipment procurement across all categories.",
+      },
     ],
     usedReconditioned: [
-      "Reconditioned machinery offers a proven mechanical base at a lower cost than new equipment, and depending on current stock, can often be sourced on a shorter timeline. Every reconditioned machine is inspected, serviced and tested before shipping.",
+      "Reconditioned tobacco machinery offers Bahrain-based buyers a practical path to establishing or expanding production without the capital outlay required for brand-new equipment. Civic specializes in sourcing, refurbishing, and exporting used cigarette making machines, packing machines, and processing equipment that perform at near-original specifications.",
+      "Our reconditioning process is rigorous. Each machine undergoes complete disassembly, inspection of all wear components, replacement of damaged or worn parts with genuine or high-quality compatible spares, reassembly, electrical testing, and full trial runs. We document the entire process and share inspection reports with buyers before shipment.",
+      "The cost advantage is significant. A reconditioned Protos cigarette making machine or a refurbished HLP cigarette packing machine typically costs 40% to 60% less than its new equivalent, while delivering reliable production performance. For startups entering Bahrain's newly opened tobacco manufacturing sector, reconditioned machines reduce the financial barrier to entry.",
+      "We also supply reconditioned tobacco cutting machines, filter rod machines, and conditioning cylinders. Every unit ships with our quality assurance commitment and spare parts support.",
     ],
+    usedReconditionedStat: {
+      value: "40–60%",
+      label: "Lower cost than new equipment, fully reconditioned & tested",
+    },
     completeSolutions: [
-      "We supply across making, filter, packing, wrapping and supporting tobacco machinery, helping buyers source a compatible set of equipment through a single supplier.",
+      "Civic does more than sell individual machines. We provide complete tobacco machinery solutions designed to get your Bahrain factory from concept to production.",
+    ],
+    completeSolutionsPoints: [
+      {
+        title: "Factory Planning & Layout",
+        text: "Before you purchase a single machine, our technical team works with you to design a production floor layout that optimizes material flow, minimizes bottlenecks, and complies with Bahrain's industrial safety standards.",
+      },
+      {
+        title: "Full Production Line Procurement",
+        text: "Instead of sourcing machines from multiple suppliers across different countries, buyers work with Civic as a single point of contact. We procure and coordinate shipment of cigarette making machines, packing equipment, filter rod machines, tobacco processing lines, and all ancillary equipment.",
+      },
+      {
+        title: "Installation & Commissioning",
+        text: "Our engineers travel to Bahrain for on-site installation, machine alignment, calibration, and commissioning. We stay until your production line is running at target capacity.",
+      },
+      {
+        title: "Operator Training",
+        text: "We train your factory operators on machine operation, routine maintenance, troubleshooting, and safety protocols. This training reduces the learning curve and gets your production up to speed faster.",
+      },
     ],
     exportShipping: [
-      "Exporting machinery from Pakistan follows requirement discussion, machine selection, condition confirmation, commercial quotation, then shipping and documentation coordination. Shipping arrangements and import requirements vary by destination and should be confirmed for each order.",
+      "Pakistan has a well-established industrial machinery export sector, and Civic operates at the center of the tobacco machinery segment. We ship equipment from our facilities in Pakistan to destinations across the Middle East, Africa, and Asia.",
+    ],
+    exportShippingPoints: [
+      {
+        title: "Shipping Route",
+        text: "Tobacco machinery destined for Bahrain typically ships from Karachi Port via sea freight to Khalifa Bin Salman Port in Hidd. Sea transit averages 7 to 12 days depending on the shipping line and route. For urgent requirements, air freight via Jinnah International Airport (Karachi) to Bahrain International Airport is available, though it is more cost-effective for smaller items and spare parts.",
+      },
+      {
+        title: "Customs Documentation",
+        text: "Civic prepares all export documentation required by Pakistan Customs and provides the paperwork Bahrain Customs needs for clearance, including the commercial invoice, packing list, certificate of origin, bill of lading, and any required inspection certificates.",
+      },
+      {
+        title: "Packing & Crating",
+        text: "All machinery is professionally packed in wooden crates or steel frames to prevent damage during transit. Heavy equipment is secured to pallets with industrial strapping. We photograph the packing process and share images with buyers for transparency.",
+      },
+      {
+        title: "Order to Delivery Timeline",
+        text: "For in-stock machines, the typical timeline from order confirmation to delivery at Bahrain port is 3 to 4 weeks, including documentation, packing, and shipping. Machines requiring reconditioning may take 4 to 6 weeks depending on the scope of work.",
+      },
     ],
     technicalSupport: [
-      "We support the brands we supply with spare parts availability and technical guidance on setup, troubleshooting and maintenance.",
+      "Selling a machine is only the beginning of our relationship with Bahrain-based buyers. Civic provides ongoing technical support and a dependable spare parts supply chain to keep your factory running.",
+    ],
+    technicalSupportPoints: [
+      {
+        title: "Remote Technical Support",
+        text: "Our technicians are available via phone, WhatsApp, and video call to troubleshoot issues, guide your maintenance team through repairs, and answer operational questions. Most routine problems can be resolved remotely within hours.",
+      },
+      {
+        title: "On-Site Support",
+        text: "When a problem requires hands-on attention, we arrange for our engineers to visit your facility in Bahrain. On-site support covers installation, machine overhaul, production line optimization, and emergency repairs.",
+      },
+      {
+        title: "Spare Parts Supply",
+        text: "We maintain a large inventory of spare parts for HAUNI, Molins, Decoufle, and other major brands. Parts are shipped from Pakistan to Bahrain via express courier or air freight, with delivery times as short as 3 to 5 business days for standard items.",
+      },
+      {
+        title: "Warranty & Maintenance",
+        text: "Reconditioned machines sold by Civic come with a warranty covering major mechanical and electrical components. We also offer annual maintenance contracts for buyers who want scheduled preventive maintenance and priority parts supply.",
+      },
     ],
     faqs: [
       {
-        question: "Can Civic Tobacco Machinery supply cigarette machinery to Bahrain?",
+        question: "How can I import tobacco machinery to Bahrain?",
         answer:
-          "Yes, we supply cigarette making, packing, filter making, wrapping and tobacco cutting/feeding/reclaiming machinery to buyers internationally, including Bahrain.",
+          "Importing tobacco machinery into Bahrain requires standard commercial import procedures. You will need a valid commercial registration, an industrial license from the Ministry of Industry, Commerce and Tourism (if you plan to manufacture tobacco products), and proper customs documentation. Bahrain applies a 5% customs duty under the GCC Common External Tariff, plus 10% VAT on the CIF value. Civic handles all export documentation from Pakistan and coordinates with freight forwarders to ensure smooth clearance at Khalifa Bin Salman Port.",
       },
       {
-        question: "What machinery can you export to Bahrain?",
+        question: "What is the cost of a cigarette making machine in Bahrain?",
         answer:
-          "Molins and Protos cigarette makers, HLP and SASIB packing machines, KDF and Molins filter makers, wrapping and boxing machines, and supporting tobacco machinery.",
+          "The cost depends on the machine model, condition (new or reconditioned), and production capacity. A reconditioned MK8 or Protos 70 cigarette making machine typically ranges from $25,000 to $80,000, while higher-speed models like the Protos 80 or MK9 may cost more. New machines from original manufacturers carry significantly higher price tags. Contact Civic for a detailed quotation based on your specific production requirements.",
       },
       {
-        question: "Is used and reconditioned machinery available?",
-        answer: "Yes, reconditioned units are inspected, serviced and tested before shipping.",
-      },
-      {
-        question: "Can I order a single machine instead of a full line?",
-        answer: "Yes, individual machines or a complete, compatible line can both be arranged.",
-      },
-      {
-        question: "Do you provide spare parts after delivery?",
-        answer: "Yes, ongoing parts availability and technical guidance are part of our support.",
-      },
-      {
-        question: "How does the export process from Pakistan to Bahrain work?",
+        question: "Which tobacco machinery brands are available for Bahrain?",
         answer:
-          "Requirement discussion, machine selection, condition confirmation, quotation, then shipping and documentation coordination, confirmed per order.",
+          "Civic supplies machines from globally recognized brands including HAUNI (Protos 70, Protos 80), Molins (MK8, MK9), Decoufle, and Sasib. We also source HLP and HLP2 packing machines, KDF2 and KDF4 filter rod machines, and a wide range of tobacco processing equipment. All brands and models are available in both new and reconditioned condition.",
       },
       {
-        question: "What should I include in a quotation request?",
+        question: "Do you provide installation support in Manama and other cities in Bahrain?",
         answer:
-          "Your target output, required formats, preferred condition and whether you need a single machine or a full line.",
+          "Yes. Civic provides on-site installation and commissioning support across Bahrain, including Manama, Riffa, Muharraq, Hidd, and Sitra. Our engineers travel to your factory location to install machines, align production lines, run test batches, and train your operators. Installation support is available for both individual machines and complete production lines.",
+      },
+      {
+        question: "What are the import duties on tobacco machinery in Bahrain?",
+        answer:
+          "Bahrain applies the GCC Common External Tariff, which sets customs duty on industrial machinery at 5% of the CIF value. An additional 10% VAT is applied on the total of CIF value plus customs duty. There are no additional anti-dumping or special levies on tobacco machinery imports from Pakistan. Civic provides accurate CIF valuations on all invoices to facilitate smooth customs processing.",
+      },
+      {
+        question: "Can I buy reconditioned tobacco machines for my factory in Bahrain?",
+        answer:
+          "Absolutely. Civic specializes in reconditioned tobacco machinery, including cigarette making machines, HLP packing machines, filter rod machines, and tobacco processing equipment. Every reconditioned machine goes through a full refurbishment cycle covering mechanical overhaul, parts replacement, electrical testing, and trial runs. Reconditioned machines cost 40% to 60% less than new equipment and are ideal for startups or cost-conscious operations in Bahrain.",
+      },
+      {
+        question: "How long does shipping take from Pakistan to Bahrain?",
+        answer:
+          "Sea freight from Karachi Port to Khalifa Bin Salman Port in Bahrain takes approximately 7 to 12 days, depending on the shipping line and schedule. Air freight is available for smaller shipments and spare parts, with delivery in 2 to 4 days. The total delivery timeline, including documentation and packing, is typically 3 to 4 weeks from order confirmation for in-stock machines.",
+      },
+      {
+        question: "What spare parts do you supply for tobacco machines in Bahrain?",
+        answer:
+          "We supply a comprehensive range of tobacco machinery spare parts for all major brands. This includes suction tapes, garniture belts, knives, gears, bearings, sensors, belts, glue nozzles, and format parts for HAUNI, Molins, Decoufle, and other manufacturers. Parts ship from Pakistan to Bahrain via air courier, with standard delivery times of 3 to 5 business days.",
+      },
+      {
+        question: "Can Civic help set up a complete cigarette factory in Bahrain?",
+        answer:
+          "Yes. Civic provides turnkey tobacco factory solutions that cover everything from initial production line design and factory layout planning to machine procurement, shipping, installation, commissioning, and operator training. We work with buyers at every stage to ensure the factory is operational and producing at target capacity. This service is particularly relevant for investors entering Bahrain's newly opened tobacco manufacturing sector.",
+      },
+      {
+        question: "Is it legal to manufacture cigarettes in Bahrain?",
+        answer:
+          "Bahrain's Ministry of Industry, Commerce and Tourism issued Decision No. 2 of 2023, which sets conditions and regulations for the manufacturing and packaging of cigarettes and shisha tobacco. Manufacturing is permitted primarily for export purposes, subject to obtaining the required industrial license and complying with health ministry and NBR regulations. Civic supplies the machinery; licensing and regulatory compliance are the responsibility of the buyer, though we can advise on machine specifications that meet common regulatory standards.",
       },
     ],
   },

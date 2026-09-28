@@ -8,6 +8,9 @@ import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema, itemListSchema } from "@/lib/schema";
 import CountryMachinesShowcase from "@/components/export/CountryMachinesShowcase";
+import SectionCards from "@/components/export/SectionCards";
+import QuickFacts from "@/components/export/QuickFacts";
+import StatCallout from "@/components/export/StatCallout";
 import { exportCountries, getExportCountry } from "@/lib/export-countries";
 import { getExportMachineSections } from "@/lib/export-machine-sections";
 
@@ -105,56 +108,170 @@ export default function ExportCountryPage({
         </div>
       </section>
 
+      {/* What we export — service-card grid (only when the country defines one) */}
+      {country.machineryCategories && (
+        <section className="border-t border-brand-100 py-14">
+          <div className="container mx-auto">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="eyebrow">What We Export</p>
+              <h2 className="mt-2 text-3xl sm:text-4xl">
+                Tobacco &amp; Cigarette Machinery We Export to {country.name}
+              </h2>
+            </div>
+            <div className="mt-10">
+              <SectionCards items={country.machineryCategories} columns={3} />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Long-form country content */}
       <section className="border-t border-brand-100 bg-brand-50 py-14">
         <div className="container mx-auto">
-          <div className="prose-content mx-auto max-w-3xl">
-            <h2>{h.overview}</h2>
-            {country.overview.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Overview, with an optional quick-facts sidebar alongside it */}
+          <div className={country.quickFacts ? "lg:grid lg:grid-cols-3 lg:gap-10" : ""}>
+            <div className={`prose-content max-w-3xl ${country.quickFacts ? "lg:col-span-2" : "mx-auto"}`}>
+              <h2>{h.overview}</h2>
+              {country.overview.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            {country.quickFacts && (
+              <div className="mt-8 lg:mt-0">
+                <QuickFacts facts={country.quickFacts} />
+              </div>
+            )}
+          </div>
 
+          <div className="prose-content mx-auto mt-4 max-w-3xl">
             <h2>{h.sourcingGuide}</h2>
             {country.sourcingGuide.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
+          </div>
 
-            <h2>{h.supplierSelection}</h2>
-            {country.supplierSelection.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* What to look for — cards when available, prose otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.supplierSelection}</h2>
+            <div className="mt-6">
+              {country.supplierSelectionPoints ? (
+                <SectionCards items={country.supplierSelectionPoints} columns={2} />
+              ) : (
+                <div className="prose-content max-w-3xl">
+                  {country.supplierSelection.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.whyChooseUs}</h2>
-            <ul>
-              {country.whyChooseUs.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+          {/* Why choose us — cards when available, plain bullet list otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.whyChooseUs}</h2>
+            <div className="mt-6">
+              {country.whyChooseUsPoints ? (
+                <SectionCards items={country.whyChooseUsPoints} columns={2} />
+              ) : (
+                <ul className="prose-content max-w-3xl">
+                  {country.whyChooseUs.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.productionScale}</h2>
-            {country.productionScale.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Production scale tiers — cards when available, prose otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.productionScale}</h2>
+            <div className="mt-6">
+              {country.productionScalePoints ? (
+                <SectionCards items={country.productionScalePoints} columns={3} />
+              ) : (
+                <div className="prose-content max-w-3xl">
+                  {country.productionScale.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.usedReconditioned}</h2>
-            {country.usedReconditioned.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Used & reconditioned, with an optional pulled-out stat */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.usedReconditioned}</h2>
+            <div
+              className={`mt-6 ${
+                country.usedReconditionedStat ? "lg:grid lg:grid-cols-3 lg:gap-10" : ""
+              }`}
+            >
+              <div
+                className={`prose-content max-w-3xl ${
+                  country.usedReconditionedStat ? "lg:col-span-2" : ""
+                }`}
+              >
+                {country.usedReconditioned.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              {country.usedReconditionedStat && (
+                <div className="mt-6 lg:mt-0">
+                  <StatCallout
+                    value={country.usedReconditionedStat.value}
+                    label={country.usedReconditionedStat.label}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.completeSolutions}</h2>
-            {country.completeSolutions.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Complete solutions — cards when available, prose otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.completeSolutions}</h2>
+            <div className="mt-6">
+              {country.completeSolutionsPoints ? (
+                <SectionCards items={country.completeSolutionsPoints} columns={2} />
+              ) : (
+                <div className="prose-content max-w-3xl">
+                  {country.completeSolutions.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.exportShipping}</h2>
-            {country.exportShipping.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Export & shipping — cards when available, prose otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.exportShipping}</h2>
+            <div className="mt-6">
+              {country.exportShippingPoints ? (
+                <SectionCards items={country.exportShippingPoints} columns={2} />
+              ) : (
+                <div className="prose-content max-w-3xl">
+                  {country.exportShipping.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-            <h2>{h.technicalSupport}</h2>
-            {country.technicalSupport.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          {/* Technical support — cards when available, prose otherwise */}
+          <div className="mt-14">
+            <h2 className="text-2xl sm:text-3xl">{h.technicalSupport}</h2>
+            <div className="mt-6">
+              {country.technicalSupportPoints ? (
+                <SectionCards items={country.technicalSupportPoints} columns={2} />
+              ) : (
+                <div className="prose-content max-w-3xl">
+                  {country.technicalSupport.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -164,7 +281,7 @@ export default function ExportCountryPage({
         <JsonLd data={faqSchema(country.faqs)} />
         <h2 className="text-center text-2xl sm:text-3xl">Frequently Asked Questions</h2>
         <div className="mt-8">
-          <Faq items={country.faqs} />
+          <Faq items={country.faqs} columns={country.faqs.length > 6 ? 2 : 1} />
         </div>
       </section>
 

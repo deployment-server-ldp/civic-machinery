@@ -10,20 +10,54 @@ export interface FaqItem {
 /**
  * Accessible FAQ accordion. Pair with faqSchema() in the page for
  * FAQ rich results. (This component renders the visible UI only.)
+ *
+ * `columns={2}` splits a longer list into two side-by-side accordions
+ * (odd/even split) on large screens instead of one long stacked list.
  */
-export default function Faq({ items }: { items: FaqItem[] }) {
+export default function Faq({ items, columns = 1 }: { items: FaqItem[]; columns?: 1 | 2 }) {
   const [open, setOpen] = useState<number | null>(0);
 
+  if (columns === 2) {
+    const left = items.filter((_, i) => i % 2 === 0);
+    const right = items.filter((_, i) => i % 2 === 1);
+    return (
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
+        <FaqColumn items={left} baseIndex={0} open={open} setOpen={setOpen} />
+        <FaqColumn items={right} baseIndex={1} open={open} setOpen={setOpen} />
+      </div>
+    );
+  }
+
   return (
-    <div className="mx-auto max-w-3xl divide-y divide-brand-100 rounded-2xl border border-brand-100 bg-white">
+    <div className="mx-auto max-w-3xl">
+      <FaqColumn items={items} baseIndex={0} open={open} setOpen={setOpen} />
+    </div>
+  );
+}
+
+function FaqColumn({
+  items,
+  baseIndex,
+  open,
+  setOpen,
+}: {
+  items: FaqItem[];
+  /** Column's items sit at indices baseIndex, baseIndex+2, baseIndex+4… in the original list. */
+  baseIndex: number;
+  open: number | null;
+  setOpen: (i: number | null) => void;
+}) {
+  return (
+    <div className="divide-y divide-brand-100 rounded-2xl border border-brand-100 bg-white">
       {items.map((item, i) => {
-        const isOpen = open === i;
+        const globalIndex = baseIndex + i * 2;
+        const isOpen = open === globalIndex;
         return (
-          <div key={i}>
+          <div key={globalIndex}>
             <h3>
               <button
                 type="button"
-                onClick={() => setOpen(isOpen ? null : i)}
+                onClick={() => setOpen(isOpen ? null : globalIndex)}
                 aria-expanded={isOpen}
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-base font-semibold text-brand-900 hover:text-accent-700"
               >
