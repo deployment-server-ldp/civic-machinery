@@ -150,6 +150,18 @@ export default function ExportCountryPage({
             ))}
           </div>
 
+          {/* Country-specific differentiator — free zones, incentive programs, etc. */}
+          {country.highlights && (
+            <div className="mt-14">
+              <h2 className="text-2xl sm:text-3xl">
+                {country.highlightsHeading ?? `Why ${country.name} Stands Out`}
+              </h2>
+              <div className="mt-6">
+                <SectionCards items={country.highlights} columns={3} />
+              </div>
+            </div>
+          )}
+
           {/* What to look for — cards when available, prose otherwise */}
           <div className="mt-14">
             <h2 className="text-2xl sm:text-3xl">{h.supplierSelection}</h2>

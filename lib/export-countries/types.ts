@@ -46,6 +46,13 @@ export interface ExportCountry {
    */
   machineryCategories?: SectionCard[];
   /**
+   * Optional extra card section for a country-specific differentiator
+   * (free zones, a special incentive program, etc.), shown after the
+   * sourcing guide. Omit to skip the section.
+   */
+  highlightsHeading?: string;
+  highlights?: SectionCard[];
+  /**
    * Optional at-a-glance sidebar (customs duty, VAT, port, transit time…)
    * shown beside the overview. Omit to let the overview run full width.
    */

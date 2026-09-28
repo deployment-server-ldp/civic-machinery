@@ -164,77 +164,255 @@ export const middleEastCountries: ExportCountry[] = [
     name: "Oman",
     slug: "oman",
     region: "Middle East",
-    metaTitle: "Oman Cigarette Machinery | Civic Tobacco",
+    metaTitle: "Tobacco Machinery Export to Oman | Top Supplier & Free Zone Ready",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette machinery to Oman: making, packing, filter & wrapping lines, new & reconditioned, from Pakistan.",
+      "Civic exports cigarette making machines, tobacco equipment & spare parts to Oman. MK8, Protos, HLP machines shipped to Muscat, Sohar & Salalah.",
     heroIntro:
-      "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery. This page covers the machinery we can supply for operations in Oman.",
+      "Civic Tobacco Machinery exports a full range of cigarette manufacturing machines, tobacco processing equipment, and spare parts to the Sultanate of Oman. Whether your factory is located in Muscat, the Sohar Free Zone, Salalah, or the Duqm Special Economic Zone, we supply dependable tobacco machinery at competitive prices from Pakistan. Every machine ships with complete export documentation, technical support, and spare parts backup.",
+
+    machineryCategories: [
+      {
+        title: "Cigarette Making Machines",
+        text: "The MK8, MK9, Protos 70, and Protos 80 from HAUNI and Molins deliver high-speed rod formation, accurate paper wrapping, and consistent output across extended production runs. Oman-based manufacturers can rely on our HAUNI cigarette making machine inventory, thoroughly inspected and tested before shipment, available both new and reconditioned with complete technical records.",
+      },
+      {
+        title: "Cigarette Packing Machines",
+        text: "HLP and HLP2 cigarette packing machines designed for high-speed, high-precision cigarette packaging, covering soft pack, hard pack, cellophane overwrapping, carton packing, and case packing. The HLP remains among the most widely deployed packing units in the tobacco industry, and we keep consistent stock available for Oman-bound orders.",
+      },
+      {
+        title: "Filter Rod Making Machines",
+        text: "KDF2, KDF4, and AF series filter rod making machines produce acetate tow filter rods in various lengths and diameters, giving Oman-based factories precise control over their filter specifications — supporting both single-line startups and multi-line production facilities.",
+      },
+      {
+        title: "Tobacco Processing Machines",
+        text: "Cutting machines, conditioning cylinders, rotary dryers, threshing lines, and flavoring drums for the cutting, conditioning, drying, and blending raw tobacco needs before production. Oman's shisha tobacco market also creates demand for specialized processing equipment, handling both cigarette-grade and shisha-grade blends.",
+      },
+      {
+        title: "Spare Parts & Accessories",
+        text: "Unplanned downtime costs money. We export spare parts for HAUNI, Molins, Decoufle, Sasib, and other major brands — suction tapes, garniture belts, knives, gears, bearings, sensors, and format parts. Express air courier shipments from Pakistan reach Oman in 3 to 5 business days.",
+      },
+    ],
+
+    quickFacts: [
+      { label: "Customs Duty", value: "5% (GCC Common External Tariff)" },
+      { label: "VAT", value: "5% (introduced April 2021)" },
+      { label: "Main Ports", value: "Sohar Port / Salalah Port" },
+      { label: "Sea Transit", value: "3–7 days — fastest GCC route from Karachi" },
+      { label: "Typical Delivery", value: "2–3 weeks, order to port" },
+    ],
+
     overview: [
-      "Buyers in Oman sourcing cigarette or tobacco processing machinery range from those adding a single machine to an existing setup through to those sourcing a complete line, and the approach to specifying equipment is largely the same in either case.",
-      "Civic Tobacco Machinery supplies across making machines, packing machines, filter making machines, wrapping and boxing equipment, and supporting tobacco cutting, feeding and reclaiming machinery, available new and reconditioned.",
+      "Oman's Vision 2040 economic diversification strategy is attracting manufacturing investment across multiple sectors, and the country's extensive network of free zones and industrial estates offers duty-free import advantages that make establishing a tobacco production facility financially attractive. Civic is ready to supply the machinery that brings those plans to life.",
+      "Civic Tobacco Machinery serves buyers across the GCC from our base in Pakistan. Our existing client network in the UAE, Bahrain, and Kuwait demonstrates our ability to navigate GCC trade regulations, manage sea freight logistics, and deliver reliable machinery on schedule.",
+      "Pakistan and Oman share deep-rooted trade ties. Pakistani exports to Oman span industrial equipment, textiles, food products, and construction materials. Civic leverages this established trade corridor to offer tobacco machinery at prices that are significantly lower than European or East Asian alternatives. Our sourcing expertise, combined with Oman's favorable free zone incentives, creates a compelling value proposition for investors.",
+      "We understand that every buyer's situation is different. A startup needs guidance on machine selection and factory layout. An established manufacturer needs reliable spare parts and fast turnaround on reconditioned equipment. Civic tailors its approach to match your specific requirements.",
     ],
     sourcingGuide: [
-      "Starting from a clear production target, output, formats and pack styles required, makes it far easier to specify a maker, filter line, packer and wrapper that work together rather than as isolated purchases.",
-      "For reconditioned equipment, what has genuinely been inspected and serviced matters more than the machine's age alone. We disclose condition and history on every machine we offer.",
+      "Importing industrial machinery into Oman requires registration with the Ministry of Commerce, Industry, and Investment Promotion (MOCIIP) and membership in the Oman Chamber of Commerce and Industry (OCCI). Customs clearance falls under the Royal Oman Police, Directorate General of Customs.",
+      "Oman applies the GCC Common External Tariff at 5% on the CIF value for industrial machinery. A 5% Value Added Tax (VAT), introduced in April 2021, applies on top. Importantly, the 100% duty applies to tobacco products, not to the machinery used for manufacturing them. Buyers setting up in Oman's free zones (Sohar, Salalah, Duqm, or Al Mazunah) may benefit from full customs duty exemptions and VAT suspension on imported machinery and raw materials.",
+      "Civic prepares all export documentation from Pakistan: commercial invoice, packing list, certificate of origin, bill of lading, and any required inspection certificates. Our freight partners handle sea shipments from Karachi Port to Sohar Port or Salalah Port, ensuring smooth coordination with Omani customs authorities.",
     ],
+
+    highlightsHeading: "Free Zones for Tobacco Manufacturing in Oman",
+    highlights: [
+      {
+        title: "Sohar Free Zone",
+        text: "Located next to Sohar Port with full customs duty exemption and a 25-year tax holiday. 100% foreign ownership allowed — ideal for buyers who want machinery imports and finished-product export routed through the same port.",
+      },
+      {
+        title: "Salalah Free Zone",
+        text: "Located next to Salalah Port with a 30-year tax holiday and no customs duties. Also home to one of the fastest sea routes from Karachi, at just 3 to 7 days transit.",
+      },
+      {
+        title: "Duqm Special Economic Zone",
+        text: "A 2,000 km² zone offering a 30-year tax exemption and VAT suspension, with direct access to major ports for both raw material import and finished product export.",
+      },
+    ],
+
     supplierSelection: [
-      "Practical points to check include an honest description of machine condition, confirmed spare parts availability, and clear documentation and shipping information for your order.",
-      "We work with established brands, Molins, HLP and SASIB among them, whose parts and know-how remain widely available and well understood.",
+      "Serious machinery buyers in Oman should evaluate these factors before placing an order.",
+    ],
+    supplierSelectionPoints: [
+      {
+        title: "Machine Condition",
+        text: "Reconditioned equipment from Civic offers 40% to 60% cost savings compared to new machines while delivering near-original production performance. Every reconditioned cigarette making machine in our inventory undergoes mechanical overhaul, electrical testing, and documented trial runs.",
+      },
+      {
+        title: "Production Capacity",
+        text: "A Protos 70 serves smaller operations well, while a Protos 80 or MK9 delivers the throughput needed for large-volume production. Civic helps you select the right configuration based on your daily output targets.",
+      },
+      {
+        title: "Electrical Compatibility",
+        text: "Oman operates on a 240V, 50Hz power system. All machines we export are verified for compatibility and can be modified if needed.",
+      },
+      {
+        title: "After-Sales Support",
+        text: "Civic provides remote troubleshooting, on-site installation, and a steady tobacco machinery spare parts supply to Oman. Reliable support keeps your factory running and your investment productive.",
+      },
     ],
     whyChooseUs: [
-      "New and reconditioned machinery across making, packing, filter and wrapping equipment",
-      "Machine selection matched to your production requirements",
-      "Reconditioned machines inspected, serviced and tested before shipping",
-      "Ongoing spare parts support for supplied brands",
-      "Pakistan-based export support for international buyers",
+      "Competitive pricing sourced from Pakistan, well below Europe, Turkey and China",
+      "Complete machine range — making, packing, filter and spare parts under one roof",
+      "GCC-wide experience across UAE, Bahrain, Kuwait, Qatar, Saudi Arabia and Yemen",
+      "Flexible payment terms — L/C, T/T, and structured schedules",
+    ],
+    whyChooseUsPoints: [
+      {
+        title: "Competitive Pakistan Pricing",
+        text: "Our sourcing base delivers quality machinery at costs well below European, Turkish, and Chinese suppliers. The savings on a cigarette production machine line are significant, particularly for multi-machine purchases.",
+      },
+      {
+        title: "Complete Machine Range",
+        text: "Cigarette making machines (MK8, Protos 80), HLP packing machines, KDF2 filter machines, tobacco cutting machines, and spare parts. Everything a tobacco factory needs, from one supplier.",
+      },
+      {
+        title: "GCC-Wide Experience",
+        text: "We supply to the UAE, Bahrain, Kuwait, Qatar, Saudi Arabia, and Yemen. Our familiarity with regional customs, shipping, and trade compliance means fewer surprises and faster delivery.",
+      },
+      {
+        title: "Flexible Payment Terms",
+        text: "Letters of credit (L/C), telegraphic transfers (T/T), and structured payment schedules. We work with startups and established manufacturers alike.",
+      },
     ],
     productionScale: [
-      "Higher-volume operations generally need high-speed making and packing equipment, while smaller or newer operations are often better served by reconditioned machinery that adds capability at a lower capital cost.",
+      "Oman's free zones and industrial estates offer attractive conditions for tobacco manufacturing at any scale.",
+    ],
+    productionScalePoints: [
+      {
+        title: "Small-Scale & Startup Operations",
+        text: "Typically need one cigarette making machine (MK8 or Protos 70), one HLP packing machine, a KDF2 filter rod machine, and basic tobacco processing equipment including a tobacco cutting machine. This produces 1,000 to 2,000 cigarettes per minute and suits investors testing the market from Oman's Sohar or Salalah free zones.",
+      },
+      {
+        title: "Medium-Scale Production Lines",
+        text: "Use a Protos 80 or MK9 with multiple HLP2 packing units and KDF4 filter machines. Output reaches 3,000 to 5,000 cigarettes per minute with a more robust tobacco processing section.",
+      },
+      {
+        title: "Large-Scale Industrial Operations",
+        text: "Deploy multiple parallel lines, automated packing systems, and centralized tobacco processing. Civic provides complete turnkey solutions for this tier, including factory layout consultation and full equipment procurement.",
+      },
     ],
     usedReconditioned: [
-      "Reconditioned machinery offers a proven mechanical base at a lower cost than new equipment, and depending on current stock, can often be sourced on a shorter timeline. Every reconditioned machine is inspected, serviced and tested before shipping.",
+      "Reconditioned tobacco machinery gives Oman-based investors a cost-effective path to production. Civic specializes in sourcing, refurbishing, and exporting used cigarette making machines, packing machines, and processing equipment that perform at near-original specifications.",
+      "Every machine undergoes complete disassembly, component-level inspection, replacement of worn parts with genuine or compatible spares, electrical testing, and documented trial runs. We share inspection reports and photos with buyers before shipping.",
+      "A reconditioned Protos cigarette making machine or a refurbished HLP cigarette packing machine costs 40% to 60% less than new, making it ideal for startups entering Oman's manufacturing sector through the free zones. We also supply reconditioned tobacco cutting machines, filter rod machines, and conditioning cylinders. Every unit ships with spare parts support.",
     ],
+    usedReconditionedStat: {
+      value: "40–60%",
+      label: "Lower cost than new equipment, fully reconditioned & tested",
+    },
     completeSolutions: [
-      "We supply across making, filter, packing, wrapping and supporting tobacco machinery, helping buyers source a compatible set of equipment through a single supplier.",
+      "Civic delivers end-to-end solutions that take your Oman factory from concept to production.",
+    ],
+    completeSolutionsPoints: [
+      {
+        title: "Factory Layout Consultation",
+        text: "We design production floor layouts optimized for material flow, efficiency, and compliance with Omani industrial safety standards. For free zone setups, we account for zone-specific building and infrastructure requirements.",
+      },
+      {
+        title: "Integrated Procurement",
+        text: "One supplier for cigarette making machines, packing equipment, filter rod machines, tobacco processing lines, and all ancillary equipment. Coordinated shipments, simplified logistics.",
+      },
+      {
+        title: "Installation & Commissioning",
+        text: "Our engineers travel to Oman for on-site setup, calibration, and commissioning. We stay until your line runs at target capacity.",
+      },
+      {
+        title: "Operator Training",
+        text: "We train your staff on machine operation, maintenance, troubleshooting, and safety. Skilled operators reduce downtime and extend machine life.",
+      },
     ],
     exportShipping: [
-      "Exporting machinery from Pakistan follows requirement discussion, machine selection, condition confirmation, commercial quotation, then shipping and documentation coordination. Shipping arrangements and import requirements vary by destination and should be confirmed for each order.",
+      "Pakistan and Oman are natural trade partners, connected by well-established sea routes across the Arabian Sea.",
+    ],
+    exportShippingPoints: [
+      {
+        title: "Shipping Route",
+        text: "Machinery ships from Karachi Port to Sohar Port or Salalah Port. Sea freight transit averages 3 to 7 days, making Oman one of the fastest GCC destinations from Pakistan. Air freight via Jinnah International Airport to Muscat International Airport handles urgent spare parts and smaller items.",
+      },
+      {
+        title: "Documentation",
+        text: "Civic prepares commercial invoices, packing lists, certificates of origin, bills of lading, and inspection certificates. All paperwork meets Royal Oman Police customs requirements.",
+      },
+      {
+        title: "Packing Standards",
+        text: "Heavy-duty wooden crates and steel frames protect machinery during transit. We photograph and document the packing process for full transparency.",
+      },
+      {
+        title: "Delivery Timeline",
+        text: "In-stock machines reach Oman in 2 to 3 weeks from order confirmation. Reconditioning adds 4 to 6 weeks depending on scope.",
+      },
     ],
     technicalSupport: [
-      "We support the brands we supply with spare parts availability and technical guidance on setup, troubleshooting and maintenance.",
+      "Civic's relationship with Oman-based buyers extends well beyond delivery.",
+    ],
+    technicalSupportPoints: [
+      {
+        title: "Remote Support",
+        text: "Phone, WhatsApp, and video call troubleshooting from our technicians. Most routine issues resolve remotely within hours.",
+      },
+      {
+        title: "On-Site Service",
+        text: "Engineers travel to Oman for installations, overhauls, production optimization, and emergency repairs.",
+      },
+      {
+        title: "Spare Parts Pipeline",
+        text: "Deep inventory of tobacco machinery spare parts for HAUNI, Molins, Decoufle, and other brands. Air courier delivery to Oman in 3 to 5 business days.",
+      },
+      {
+        title: "Warranty & Maintenance",
+        text: "Reconditioned machines carry a warranty on major components. Annual maintenance contracts available for scheduled service and priority parts access.",
+      },
     ],
     faqs: [
       {
-        question: "Can Civic Tobacco Machinery supply cigarette machinery to Oman?",
+        question: "How can I import tobacco machinery to Oman?",
         answer:
-          "Yes, we supply cigarette making, packing, filter making, wrapping and tobacco cutting/feeding/reclaiming machinery to buyers internationally, including Oman.",
+          "You need to be registered with the Ministry of Commerce, Industry, and Investment Promotion (MOCIIP) and be a member of the Oman Chamber of Commerce and Industry (OCCI). Industrial machinery attracts a 5% customs duty under the GCC Common External Tariff, plus 5% VAT. Companies in Oman's free zones (Sohar, Salalah, Duqm) may qualify for customs duty exemptions. Civic handles all export documentation from Pakistan.",
       },
       {
-        question: "What machinery can you export to Oman?",
+        question: "What is the cost of a cigarette making machine in Oman?",
         answer:
-          "Molins and Protos cigarette makers, HLP and SASIB packing machines, KDF and Molins filter makers, wrapping and boxing machines, and supporting tobacco machinery.",
+          "A reconditioned MK8 or Protos 70 typically costs $25,000 to $80,000. Higher-speed models like the Protos 80 or MK9 are priced higher. New machines from OEMs cost significantly more. Contact Civic for a quotation tailored to your requirements.",
       },
       {
-        question: "Is used and reconditioned machinery available?",
-        answer: "Yes, reconditioned units are inspected, serviced and tested before shipping.",
-      },
-      {
-        question: "Can I order a single machine instead of a full line?",
-        answer: "Yes, individual machines or a complete, compatible line can both be arranged.",
-      },
-      {
-        question: "Do you provide spare parts after delivery?",
-        answer: "Yes, ongoing parts availability and technical guidance are part of our support.",
-      },
-      {
-        question: "How does the export process from Pakistan to Oman work?",
+        question: "Which tobacco machinery brands does Civic supply to Oman?",
         answer:
-          "Requirement discussion, machine selection, condition confirmation, quotation, then shipping and documentation coordination, confirmed per order.",
+          "We supply HAUNI (Protos 70, Protos 80), Molins (MK8, MK9), Decoufle, and Sasib. We also stock HLP and HLP2 packing machines, KDF2 and KDF4 filter rod machines, and a full range of tobacco processing equipment.",
       },
       {
-        question: "What should I include in a quotation request?",
+        question: "Do you provide installation support in Muscat and other cities in Oman?",
         answer:
-          "Your target output, required formats, preferred condition and whether you need a single machine or a full line.",
+          "Yes. Civic engineers provide on-site installation and commissioning across Oman, including Muscat, Sohar, Salalah, Duqm, Nizwa, and Sur. We handle machine setup, alignment, trial runs, and operator training at your factory or free zone facility.",
+      },
+      {
+        question: "Can I import tobacco machinery duty-free into Oman's free zones?",
+        answer:
+          "Companies established in Oman's free zones, including Sohar Free Zone, Salalah Free Zone, and Duqm Special Economic Zone, may benefit from full customs duty exemptions and VAT suspension on imported machinery and raw materials. These zones also allow 100% foreign ownership. Specific eligibility depends on your free zone agreement and the type of activity licensed.",
+      },
+      {
+        question: "Can I buy reconditioned tobacco machines for a factory in Oman?",
+        answer:
+          "Yes. Civic supplies reconditioned tobacco machinery including cigarette making machines, HLP packing machines, filter rod machines, and tobacco processing equipment. Every machine goes through full refurbishment with documented testing. Costs run 40% to 60% below new equipment.",
+      },
+      {
+        question: "How long does shipping take from Pakistan to Oman?",
+        answer:
+          "Sea freight from Karachi to Sohar Port or Salalah Port takes 3 to 7 days. Air freight reaches Muscat in 1 to 2 days. Total delivery time is 2 to 3 weeks from order confirmation for in-stock machines.",
+      },
+      {
+        question: "What spare parts do you supply for tobacco machines in Oman?",
+        answer:
+          "We supply tobacco machinery spare parts for all major brands: suction tapes, garniture belts, knives, gears, bearings, sensors, glue nozzles, and format parts for HAUNI, Molins, Decoufle, and Sasib. Air courier delivery to Oman takes 3 to 5 business days.",
+      },
+      {
+        question: "Can Civic set up a complete cigarette factory in Oman?",
+        answer:
+          "Yes. We provide turnkey solutions covering factory layout, machine procurement, shipping, installation, commissioning, and operator training. This service is especially relevant for investors setting up in Oman's Sohar Free Zone, Salalah Free Zone, or Duqm Special Economic Zone.",
+      },
+      {
+        question: "What free zones in Oman are suitable for tobacco manufacturing?",
+        answer:
+          "Sohar Free Zone (near Sohar Port, customs exemption, 25-year tax holiday), Salalah Free Zone (near Salalah Port, 30-year tax holiday, no customs duties), and Duqm Special Economic Zone (2,000 km², 30-year tax exemption, VAT suspension) are the most relevant options. All three allow 100% foreign ownership and offer proximity to major ports for raw material import and finished product export.",
       },
     ],
   },
