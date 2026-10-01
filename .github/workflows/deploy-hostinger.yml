@@ -51,12 +51,25 @@ jobs:
       # .htaccess lives in public/ so `next build` copies it into out/
       # automatically — no separate copy step needed.
 
+      - name: Guard - never overwrite the IMS subdomain folder
+        run: |
+          if [ -e out/ims ]; then
+            echo "::error::out/ims exists - it would overwrite public_html/ims (ims.civic-tobacco-machinery.com). Rename that route."
+            exit 1
+          fi
+
       - name: Deploy to Hostinger via lftp (FTPS)
         # lftp mirror uploads/updates the site's files. It deliberately does
         # NOT use --delete: public_html may also hold other apps the owner
         # uploaded manually (e.g. an HRM tool), and a delete-mirror would wipe
         # anything not in this repo. Without --delete the deploy only adds and
         # updates the website's own files and never removes unrelated content.
+        #
+        #
+        # public_html/ims/ is the inventory app (ims.civic-tobacco-machinery.com).
+        # It must never be changed or deleted by this deploy: the guard step
+        # below fails the build if the site ever outputs an ims/ folder, and
+        # mirror additionally excludes ^ims/ so it is never touched remotely.
         #
         # The `debug 3; pwd; debug off;` probe forces the login to happen
         # up front with the raw FTP/TLS dialogue visible (password masked),
@@ -83,6 +96,6 @@ jobs:
             debug 3;
             pwd;
             debug off;
-            mirror --reverse --parallel=2 --use-pget-n=1 --verbose ./out/ '$FTP_DIR';
+            mirror --reverse --parallel=2 --use-pget-n=1 --verbose --exclude '^ims/' ./out/ '$FTP_DIR';
             bye
           "

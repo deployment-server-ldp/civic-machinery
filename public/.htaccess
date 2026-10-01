@@ -30,6 +30,14 @@ Options -MultiViews
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Leave subdomains alone. Hostinger serves ims.civic-tobacco-machinery.com
+  # (the inventory app) from public_html/ims/, so this file's rules would
+  # otherwise also run for it — e.g. the canonical-host rule below would
+  # bounce http://ims.… to the main website. Any host that is not the main
+  # domain (with or without www) passes through untouched.
+  RewriteCond %{HTTP_HOST} !^(www\.)?civic-tobacco-machinery\.com$ [NC]
+  RewriteRule ^ - [L]
+
   # Canonical host: force HTTPS and drop www.
   # Any http:// or https://www. request 301s to https://civic-tobacco-machinery.com
   RewriteCond %{HTTPS} off [OR]
