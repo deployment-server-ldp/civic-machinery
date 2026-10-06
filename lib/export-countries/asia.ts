@@ -306,39 +306,60 @@ export const asiaCountries: ExportCountry[] = [
     name: "Indonesia",
     slug: "indonesia",
     region: "Asia",
-    metaTitle: "Indonesia Cigarette Machinery | Civic Tobacco",
+    metaTitle: "Cigarette & Tobacco Machinery Supplier in Indonesia | Civic",
     metaDescription:
-      "Civic Tobacco Machinery exports cigarette machinery to Indonesia: making, packing, filter and wrapping lines, new and reconditioned, from Pakistan.",
+      "Cigarette and tobacco machinery supplier for Indonesia: kretek-ready Molins & Protos makers, HLP & SASIB packers, filter and wrapping lines, new or reconditioned.",
+    h1: "Cigarette & Tobacco Machinery Supplier for Indonesia",
     heroIntro:
-      "Civic Tobacco Machinery is a Pakistan-based supplier of cigarette and tobacco processing machinery, working with manufacturers internationally. This page covers the machinery we can supply for cigarette and tobacco production in Indonesia.",
+      "Civic Tobacco Machinery is a Pakistan-based cigarette machinery supplier and tobacco machinery supplier offering new, used and reconditioned equipment to manufacturers worldwide. Indonesia is one of the largest tobacco markets anywhere, with a large domestic manufacturing sector producing both kretek (clove) cigarettes and white cigarettes side by side.",
+    heroIntroParagraphs: [
+      "Civic Tobacco Machinery is a Pakistan-based cigarette machinery supplier and tobacco machinery supplier offering new, used and reconditioned equipment to manufacturers worldwide. Indonesia is one of the largest tobacco markets anywhere, with a large domestic manufacturing sector producing both kretek (clove) cigarettes and white cigarettes side by side.",
+      "We supply both large-scale producers and growing manufacturers, from major factories in Surabaya to growing producers in Jakarta, with the capacity for high-volume output and the flexibility a mixed-format production line needs.",
+    ],
     overview: [
       "Indonesia has one of the most active cigarette manufacturing industries in the world, spanning large integrated producers through to a substantial number of smaller and mid-sized factories. That range creates genuinely varied machinery needs, from high-speed production lines to more modest, flexible setups.",
       "Civic Tobacco Machinery supplies across the five machinery categories a cigarette factory needs, cigarette making machines, packing machines, filter making machines, wrapping and boxing equipment, and the tobacco cutting, feeding and reclaiming machinery that supports a making line, available new and as reconditioned equipment.",
     ],
     sourcingGuide: [
-      "Sourcing machinery for an Indonesian factory works best starting from the production target: required output, the cigarette formats and pack styles the line needs to run, and how the maker, filter line, packer and wrapper need to work together. That clarity makes it far easier to specify a line that is genuinely balanced rather than a set of individually fast machines.",
-      "Given the scale and variety of manufacturers across Indonesia, from major producers to smaller regional operations, machinery requirements vary widely. We work through requirements with each buyer individually rather than assuming a single configuration fits every factory.",
+      "Sourcing machinery for an Indonesian factory works best starting from the production target: required output, the cigarette formats and pack styles the line needs to run, and how the maker, filter line, packer and wrapper need to work together.",
       "For used and reconditioned machinery, understanding what has actually been inspected and serviced, not just the machine's original rated speed, is central to a good purchase. We are transparent about condition and history on every machine we offer.",
     ],
     supplierSelection: [
-      "When evaluating a tobacco machinery supplier for a factory in Indonesia, look for an honest, specific description of machine condition and output, confirmed spare parts availability, and clarity on documentation and shipping for international orders.",
-      "We focus on established brands, Molins, HLP, SASIB and similar names, because their parts and know-how remain widely available, which matters over the working life of the machine far more than the headline speed on a spec sheet.",
+      "When evaluating a supplier, look for an honest, specific description of machine condition and output, confirmed spare parts availability, and clarity on documentation and shipping for international orders.",
+      "We focus on established brands, Molins, HAUNI, HLP and SASIB among them, because their parts and know-how remain widely available, which matters over the working life of the machine far more than the headline speed on a spec sheet.",
     ],
     whyChooseUs: [
-      "New and reconditioned machinery across making, packing, filter and wrapping equipment",
+      "New and reconditioned cigarette machinery across making, packing, filter and wrapping equipment",
       "Machine selection matched to your actual production requirements",
       "Reconditioned machines inspected, serviced and tested before shipping",
       "Ongoing spare parts support for the brands we supply",
       "Technical guidance from selection through to commissioning",
-      "Experience across manufacturers of different scales",
       "Pakistan-based export support for international buyers",
+    ],
+    whyChooseUsPoints: [
+      {
+        title: "Full Range, One Supplier",
+        text: "Cigarette making machines, packing machines, filter making machines, wrapping equipment and the tobacco cutting, feeding and reclaiming machinery that supports them, all from a single supplier, new or reconditioned.",
+      },
+      {
+        title: "Machines Matched to Your Line",
+        text: "We work from your target output, formats and pack styles, so the maker, filter line, packer and wrapper you buy actually work together as one balanced line.",
+      },
+      {
+        title: "Inspected, Serviced, Tested",
+        text: "Every reconditioned machine is inspected, serviced and tested before shipping, with condition disclosed upfront rather than sold on the machine's original rated speed alone.",
+      },
+      {
+        title: "Support Beyond Delivery",
+        text: "Spare parts availability, technical training and remote troubleshooting continue after your machinery ships, backed by experience supplying manufacturers across Asia, the Middle East and Europe.",
+      },
     ],
     productionScale: [
       "Large, high-volume manufacturers typically need high-speed making and packing equipment with matching filter and wrapping capacity to sustain output over long runs. Established regional producers often value flexible configurations that can handle a mix of formats.",
       "Smaller manufacturers and factories entering cigarette production or expanding a line often find reconditioned machinery the more accessible route, adding capability without the capital outlay of an entirely new line.",
     ],
     usedReconditioned: [
-      "Used and reconditioned machinery is a significant part of what we supply. A well-reconditioned machine from Molins, HLP or SASIB can offer years of further reliable service at a lower cost than new equipment, and depending on current stock can also be sourced on a shorter timeline.",
+      "Used and reconditioned equipment is a significant part of what we supply. A well-reconditioned machine from Molins, HAUNI, HLP or SASIB can offer years of further reliable service at a lower cost than new equipment, and depending on current stock can also be sourced on a shorter timeline.",
       "Every reconditioned machine is inspected, serviced and tested before shipping, with condition disclosed upfront. Availability of specific models depends on current stock at the time of enquiry.",
     ],
     completeSolutions: [
@@ -346,27 +367,61 @@ export const asiaCountries: ExportCountry[] = [
       "Whether the requirement is a single replacement machine or a complete new line, we work through the same process: understand the target output and formats, then help identify machinery that fits together as a coherent line.",
     ],
     exportShipping: [
-      "Exporting machinery from Pakistan follows a consistent process: requirement discussion, machine selection, specification and condition confirmation, commercial quotation, then shipping, documentation and delivery coordination.",
-      "Shipping arrangements and import requirements vary by destination and machinery involved, and should be confirmed for each order as part of the quotation process.",
+      "Exporting cigarette machinery from Pakistan follows a consistent process: requirement discussion, machine selection, specification and condition confirmation, a commercial quotation, then shipping and documentation coordination.",
+      "Shipping arrangements and import requirements vary by destination and the machinery involved, and are confirmed for each order as part of the quotation process.",
     ],
     technicalSupport: [
       "We back the brands we supply with spare parts availability, technical guidance on setup and troubleshooting, and maintenance advice, so a factory has support beyond the point of delivery.",
     ],
+    technicalSupportPoints: [
+      {
+        title: "Spare Parts & Maintenance",
+        text: "Spare parts supply for routine maintenance and repair, drawn from the same brands, Molins, HAUNI, HLP and SASIB, that make up our machinery range.",
+      },
+      {
+        title: "Custom Engineering",
+        text: "Machines built or modified for specific cigarette sizes or packaging styles, so the line you buy fits the formats you actually produce.",
+      },
+      {
+        title: "Technical Training & Remote Support",
+        text: "Operator and maintenance training at commissioning, backed by remote support for troubleshooting once your line is running.",
+      },
+      {
+        title: "End-to-End Service",
+        text: "Consultation, installation, training and after-sales service in one place, with new, used and reconditioned options configured for your factory layout, tobacco blend and pack type, backed by experience supplying manufacturers across Asia, the Middle East and Europe.",
+      },
+    ],
     faqs: [
       {
-        question: "Can Civic Tobacco Machinery supply cigarette machinery to Indonesia?",
+        question: "What cigarette machinery do manufacturers in Indonesia use?",
         answer:
-          "Yes. We supply cigarette making, packing, filter making, wrapping and tobacco cutting/feeding/reclaiming machinery to manufacturers internationally, including Indonesia.",
+          "Protos and Molins Mark series cigarette makers, tobacco cutting and blending equipment, and filter making units, configured for both kretek and white cigarette production.",
       },
       {
-        question: "What cigarette machinery can you export to Indonesia?",
+        question: "Can your machines produce kretek (clove) cigarettes?",
         answer:
-          "Molins Mark 8, Mark 9 and Mark 9.5 and Protos cigarette makers, HLP and SASIB packing machines, KDF and Molins filter makers, wrapping and boxing machines, and supporting tobacco machinery.",
+          "Yes. Our cigarette making machines can be configured for kretek formats, paired with tobacco cutting and blending equipment that keeps clove-tobacco blends consistent, and filter making units that work with clove-based filters.",
       },
       {
-        question: "Do you supply both new and used machinery?",
+        question: "Which cities in Indonesia do you supply?",
         answer:
-          "Yes, new machinery is available alongside reconditioned equipment that is inspected, serviced and tested before shipping.",
+          "We supply and support manufacturers across Jakarta, Surabaya, Bandung, Semarang, Medan, Makassar, Yogyakarta, Bali and other Indonesian industrial regions.",
+      },
+      {
+        question: "What cigarette formats can your machines produce?",
+        answer:
+          "Our machines produce king-size, slim, super-slim and kretek formats, with the maker configured to match your target format.",
+      },
+      {
+        question:
+          "Do you offer used or refurbished cigarette machinery for Indonesian manufacturers?",
+        answer:
+          "Yes. We supply overhauled and reconditioned equipment that is inspected and tested before shipping, giving Indonesian manufacturers a lower-cost route to added capacity.",
+      },
+      {
+        question: "How do I get a quote?",
+        answer:
+          "Message us on WhatsApp at +92 301 1111184 or submit the enquiry form. Include your output target, required formats, whether you want new or reconditioned machinery, and whether you need a single machine or a full line.",
       },
       {
         question: "Can I purchase a single machine instead of a full line?",
@@ -374,24 +429,9 @@ export const asiaCountries: ExportCountry[] = [
           "Yes, you can order an individual machine or work with us to specify a complete, compatible production line.",
       },
       {
-        question: "Do you supply cigarette packing machinery to Indonesia?",
-        answer:
-          "Yes, including HLP-180, HLP-200, HLP-225 and SASIB soft-pack machines, plus wrapping and boxing equipment.",
-      },
-      {
         question: "Can you provide spare parts after delivery?",
         answer:
           "Yes, ongoing spare parts availability and technical guidance are part of the support we provide for the brands we supply.",
-      },
-      {
-        question: "How does the export process from Pakistan to Indonesia work?",
-        answer:
-          "It covers requirement discussion, machine selection, condition confirmation, a commercial quotation, and shipping/documentation coordination, with details confirmed per order.",
-      },
-      {
-        question: "What should I include when requesting a quotation?",
-        answer:
-          "Your target output, required cigarette formats or pack styles, whether you prefer new or reconditioned machinery, and whether you need a single machine or a complete line.",
       },
     ],
   },

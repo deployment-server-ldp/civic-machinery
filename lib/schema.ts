@@ -9,6 +9,19 @@ import type { BlogPost } from "./blog";
 const abs = (path: string) =>
   path.startsWith("http") ? path : `${siteConfig.url}${path === "/" ? "" : path}`;
 
+/**
+ * Absolute URL for a *page* (never a file), with a trailing slash so it
+ * matches the site's canonical URLs (`trailingSlash: true` in next.config).
+ * Used by breadcrumbSchema/itemListSchema, whose `item`/`url` fields are
+ * always page paths — unlike `abs()`, which also serves file paths (images,
+ * logos) that must never gain a trailing slash.
+ */
+const absPage = (path: string) => {
+  if (path.startsWith("http")) return path.endsWith("/") ? path : `${path}/`;
+  const withSlash = path === "/" || path.endsWith("/") ? path : `${path}/`;
+  return `${siteConfig.url}${withSlash}`;
+};
+
 const postalAddress = () => ({
   "@type": "PostalAddress",
   streetAddress: siteConfig.address.street,
@@ -42,7 +55,7 @@ export function organizationSchema() {
     legalName: siteConfig.legalName,
     url: siteConfig.url,
     logo: abs("/logo.svg"),
-    image: abs("/og-default.svg"),
+    image: abs("/og-default.png"),
     description: siteConfig.description,
     telephone: siteConfig.phone,
     email: siteConfig.email,
@@ -82,7 +95,7 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: abs(item.path),
+      item: absPage(item.path),
     })),
   };
 }
@@ -96,8 +109,19 @@ export function itemListSchema(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      url: abs(item.path),
+      url: absPage(item.path),
     })),
+  };
+}
+
+/** Service schema for an /export-to/[country] page — this business's export offering to that market. */
+export function serviceSchema({ areaServedName }: { areaServedName: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Cigarette and tobacco machinery supply",
+    provider: { "@id": `${siteConfig.url}/#organization` },
+    areaServed: { "@type": "Country", name: areaServedName },
   };
 }
 

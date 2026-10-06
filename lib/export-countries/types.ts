@@ -39,6 +39,17 @@ export interface ExportCountry {
 
   /** Hero paragraph directly under the H1. Must not claim local presence. */
   heroIntro: string;
+  /**
+   * Optional 2+ paragraph hero intro. Takes priority over `heroIntro` when
+   * set (lets a page open with more than one short paragraph without
+   * breaking the single-paragraph default every other country uses).
+   */
+  heroIntroParagraphs?: string[];
+  /**
+   * Optional H1 override. Defaults to the shared
+   * "Cigarette & Tobacco Machinery Suppliers in [Country]" pattern.
+   */
+  h1?: string;
 
   /**
    * Optional "What We Export to [Country]" service-card grid, shown right

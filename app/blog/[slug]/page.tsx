@@ -59,7 +59,7 @@ export default function BlogPostPage({
 
   return (
     <>
-      <JsonLd data={articleSchema(post, path, post.featuredImage || "/og-default.svg")} />
+      <JsonLd data={articleSchema(post, path, post.featuredImage || "/og-default.png")} />
 
       <PageHero
         eyebrow="Blog"

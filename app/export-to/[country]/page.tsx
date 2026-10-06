@@ -6,8 +6,9 @@ import PageHero from "@/components/PageHero";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { faqSchema, itemListSchema } from "@/lib/schema";
+import { faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
 import CountryMachinesShowcase from "@/components/export/CountryMachinesShowcase";
+import IndonesiaExportSections from "@/components/export/IndonesiaExportSections";
 import SectionCards from "@/components/export/SectionCards";
 import QuickFacts from "@/components/export/QuickFacts";
 import StatCallout from "@/components/export/StatCallout";
@@ -27,6 +28,23 @@ export function generateMetadata({
 }): Metadata {
   const country = getExportCountry(params.country);
   if (!country) return {};
+
+  if (country.slug === "indonesia") {
+    // Indonesia-specific overrides: no meta keywords tag, en_US og:locale,
+    // and a real machine photo for og:image/twitter:image (section A/G).
+    const metadata = buildMetadata({
+      title: country.metaTitle,
+      description: country.metaDescription,
+      path: `/export-to/${country.slug}`,
+      images: ["/images/og/indonesia-protos-80-er.jpg"],
+    });
+    return {
+      ...metadata,
+      keywords: undefined,
+      openGraph: { ...metadata.openGraph, locale: "en_US" },
+    };
+  }
+
   return buildMetadata({
     title: country.metaTitle,
     description: country.metaDescription,
@@ -64,10 +82,11 @@ export default function ExportCountryPage({
   const country = getExportCountry(params.country);
   if (!country) notFound();
 
+  const isIndonesia = country.slug === "indonesia";
   const h = headings(country.name);
   const machineSections = getExportMachineSections().map((s) => ({
     key: s.key,
-    title: `${s.heading} in ${country.name}`,
+    title: isIndonesia ? s.heading : `${s.heading} in ${country.name}`,
     products: s.products,
   }));
 
@@ -77,8 +96,9 @@ export default function ExportCountryPage({
     <>
       <PageHero
         eyebrow="Export To"
-        title={`Cigarette & Tobacco Machinery Suppliers in ${country.name}`}
+        title={country.h1 ?? `Cigarette & Tobacco Machinery Suppliers in ${country.name}`}
         intro={country.heroIntro}
+        introParagraphs={country.heroIntroParagraphs}
         crumbs={[
           { name: "Home", path: "/" },
           { name: "Export To", path: "/export-to" },
@@ -91,6 +111,7 @@ export default function ExportCountryPage({
           allMachines.map((p) => ({ name: p.name, path: productHref(p) })),
         )}
       />
+      <JsonLd data={serviceSchema({ areaServedName: country.name })} />
 
       {/* Our Machines */}
       <section className="container mx-auto py-14">
@@ -126,6 +147,9 @@ export default function ExportCountryPage({
       )}
 
       {/* Long-form country content */}
+      {isIndonesia ? (
+        <IndonesiaExportSections country={country} />
+      ) : (
       <section className="border-t border-brand-100 bg-brand-50 py-14">
         <div className="container mx-auto">
           {/* Overview, with an optional quick-facts sidebar alongside it */}
@@ -287,6 +311,7 @@ export default function ExportCountryPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* FAQ */}
       <section className="container mx-auto py-14">
@@ -298,7 +323,11 @@ export default function ExportCountryPage({
       </section>
 
       <CtaBand
-        title={`Looking for Cigarette Machinery in ${country.name}?`}
+        title={
+          isIndonesia
+            ? "Looking for a Cigarette Machinery Supplier in Indonesia?"
+            : `Looking for Cigarette Machinery in ${country.name}?`
+        }
         text="Tell Civic Tobacco Machinery what you are looking to produce, your required output and the type of equipment you need. Our team can help you identify suitable new, used or reconditioned machinery and discuss export options from Pakistan."
       />
     </>

@@ -45,7 +45,7 @@ export function buildMetadata({
   // Self-referencing canonical for this locale (English stays unprefixed).
   const localizedPath = localePath(locale, path);
   const url = `${siteConfig.url}${localizedPath === "/" ? "" : localizedPath}`;
-  const ogImages = (images && images.length ? images : ["/og-default.svg"]).map(
+  const ogImages = (images && images.length ? images : ["/og-default.png"]).map(
     (img) => (img.startsWith("http") ? img : `${siteConfig.url}${img}`)
   );
 

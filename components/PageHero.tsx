@@ -8,13 +8,17 @@ export default function PageHero({
   eyebrow,
   title,
   intro,
+  introParagraphs,
   crumbs,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
+  /** Multiple short paragraphs. Takes priority over `intro` when set. */
+  introParagraphs?: string[];
   crumbs: Crumb[];
 }) {
+  const paragraphs = introParagraphs?.length ? introParagraphs : intro ? [intro] : [];
   return (
     <section className="border-b border-brand-100 bg-brand-50">
       <div className="container mx-auto py-8 sm:py-12">
@@ -22,9 +26,11 @@ export default function PageHero({
         <div className="mt-5 max-w-3xl">
           {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
           <h1 className="text-3xl sm:text-4xl lg:text-[2.7rem]">{title}</h1>
-          {intro && (
-            <p className="mt-4 text-lg leading-relaxed text-brand-600">{intro}</p>
-          )}
+          {paragraphs.map((p, i) => (
+            <p key={i} className="mt-4 text-lg leading-relaxed text-brand-600">
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>
