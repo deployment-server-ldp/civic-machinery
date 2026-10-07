@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { products, productHref } from "@/lib/products";
 import SectionCards from "@/components/export/SectionCards";
-import { getIndonesiaMachineSpeedRows, getMakerFormatRange } from "@/lib/export-indonesia";
 import type { ExportCountry } from "@/lib/export-countries/types";
 
 function productLink(slug: string, label: string) {
@@ -43,9 +42,6 @@ const CITIES = [
  * other country keeps the shared template unchanged.
  */
 export default function IndonesiaExportSections({ country }: { country: ExportCountry }) {
-  const speedRows = getIndonesiaMachineSpeedRows();
-  const formatRange = getMakerFormatRange();
-
   return (
     <section className="border-t border-brand-100 bg-brand-50 py-14">
       <div className="container mx-auto">
@@ -84,59 +80,21 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
 
         {/* 3. Across Indonesia */}
         <div className="mt-14">
-          <h2 className="text-2xl sm:text-3xl">Tobacco Machinery Supplier Across Indonesia</h2>
-          <p className="prose-content mx-auto mt-4 max-w-3xl">
-            We supply and support manufacturers across Indonesia&rsquo;s main industrial regions,
-            each with its own mix of production scale and machinery needs.
-          </p>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl sm:text-3xl">
+              Tobacco Machinery Supplier Across Indonesia
+            </h2>
+            <p className="prose-content mx-auto mt-4 max-w-3xl">
+              We supply and support manufacturers across Indonesia&rsquo;s main industrial
+              regions, each with its own mix of production scale and machinery needs.
+            </p>
+          </div>
           <div className="mt-6">
             <SectionCards items={CITIES} columns={3} />
           </div>
-          <p className="prose-content mx-auto mt-6 max-w-3xl">
-            World Tobacco Asia 2026 takes place in Surabaya, 22&ndash;23 October &mdash; see our{" "}
-            <Link href="/blog/world-tobacco-asia/">guide to the event</Link> for what is on show.
-          </p>
         </div>
 
-        {/* 4. Machine speeds and formats */}
-        <div className="mt-14">
-          <h2 className="text-2xl sm:text-3xl">Machine Speeds and Formats</h2>
-          {formatRange && (
-            <p className="prose-content mx-auto mt-4 max-w-3xl">
-              Our cigarette making machines handle {formatRange.circumference} circumference and{" "}
-              {formatRange.rodLength} rod lengths, covering king-size, slim, super-slim and
-              kretek formats.
-            </p>
-          )}
-          <div className="mt-6 overflow-x-auto rounded-xl border border-brand-100 bg-white">
-            <table className="w-full min-w-[640px] border-collapse text-sm">
-              <thead>
-                <tr className="bg-brand-50 text-left">
-                  <th className="px-4 py-3 font-semibold text-brand-900">Machine</th>
-                  <th className="px-4 py-3 font-semibold text-brand-900">Type</th>
-                  <th className="px-4 py-3 font-semibold text-brand-900">Speed</th>
-                  <th className="px-4 py-3 font-semibold text-brand-900">Formats / Sizes</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-brand-100">
-                {speedRows.map((row) => (
-                  <tr key={row.product.slug}>
-                    <td className="px-4 py-3 font-medium">
-                      <Link href={row.href} className="text-accent-700 hover:underline">
-                        {row.product.name}
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 text-brand-600">{row.type}</td>
-                    <td className="px-4 py-3 text-brand-600">{row.speed}</td>
-                    <td className="px-4 py-3 text-brand-600">{row.formats}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* 5. Guide to sourcing */}
+        {/* 4. Guide to sourcing */}
         <div className="prose-content mx-auto mt-14 max-w-3xl">
           <h2>Guide to Sourcing Tobacco Machinery in Indonesia</h2>
           {country.sourcingGuide.map((p, i) => (
@@ -144,7 +102,7 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
           ))}
         </div>
 
-        {/* 6. What to look for */}
+        {/* 5. What to look for */}
         <div className="prose-content mx-auto mt-14 max-w-3xl">
           <h2>What to Look for in a Tobacco Machinery Supplier</h2>
           {country.supplierSelection.map((p, i) => (
@@ -152,7 +110,7 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
           ))}
         </div>
 
-        {/* 7. Used & reconditioned */}
+        {/* 6. Used & reconditioned */}
         <div className="prose-content mx-auto mt-14 max-w-3xl">
           <h2>Used &amp; Reconditioned Cigarette Machinery</h2>
           {country.usedReconditioned.map((p, i) => (
@@ -160,7 +118,7 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
           ))}
         </div>
 
-        {/* 8. Spare parts, training and technical support */}
+        {/* 7. Spare parts, training and technical support */}
         <div className="mt-14">
           <h2 className="text-2xl sm:text-3xl">Spare Parts, Training and Technical Support</h2>
           <div className="mt-6">
@@ -168,7 +126,7 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
           </div>
         </div>
 
-        {/* 9. How export works */}
+        {/* 8. How export works */}
         <div className="prose-content mx-auto mt-14 max-w-3xl">
           <h2>How Export to Indonesia Works</h2>
           {country.exportShipping.map((p, i) => (
@@ -176,7 +134,7 @@ export default function IndonesiaExportSections({ country }: { country: ExportCo
           ))}
         </div>
 
-        {/* 10. Why choose us */}
+        {/* 9. Why choose us */}
         <div className="mt-14">
           <h2 className="text-2xl sm:text-3xl">
             Why Choose Civic Tobacco Machinery as Your Cigarette Machinery Supplier
