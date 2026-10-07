@@ -63,12 +63,17 @@ export default function Header() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  const isIndonesiaExport = pathname.startsWith("/export-to/indonesia");
+  const utilityTagline = isIndonesiaExport
+    ? "Cigarette & Tobacco Machinery Supplier for Indonesia"
+    : dict.header.tagline;
+
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100/80 bg-white/85 shadow-[0_1px_2px_rgba(16,23,30,0.04),0_16px_40px_-28px_rgba(16,23,30,0.45)] backdrop-blur-xl">
       {/* Utility bar */}
       <div className="hidden bg-brand-950 text-brand-100 xl:block">
         <div className="mx-auto flex h-9 w-full max-w-[1600px] items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
-          <p>{dict.header.tagline}</p>
+          <p>{utilityTagline}</p>
           <div className="flex items-center gap-5">
             <a href={`tel:${siteConfig.phone}`} className="hover:text-accent-300">
               {dict.header.call}: {siteConfig.phoneDisplay}
