@@ -3767,11 +3767,11 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pengemas Rokok HLP-180",
     metaTitle: "Mesin Pengemas HLP-180, 180 Kemasan/Menit",
     metaDescription:
-      "Mesin pengemas rokok HLP-180 di Pakistan – 180 kemasan per menit untuk format King hingga Nano dengan kontrol PLC. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pengemas rokok HLP-180 di Indonesia – 180 kemasan per menit untuk format King hingga Nano dengan kontrol PLC. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini kemasan keras berkecepatan tinggi, 180 kemasan per menit.",
     intro: [
       "HLP-180 adalah mesin generasi terbaru yang bertenaga, dibuat untuk pengemasan rokok berkecepatan tinggi. Dikenal karena performa yang konsisten dan output yang andal, mesin pengemas HLP-180 cocok untuk produsen yang ingin merampingkan proses pengemasan tanpa mengorbankan kualitas atau presisi.",
-      "Dengan output 180 kemasan per menit, mesin ini menjalankan siklus pengemasan yang efisien dan stabil berkat mekanisme plunger tunggalnya, menjaga keselarasan, pembungkusan, dan penyegelan yang sempurna pada setiap kemasan. Hal ini memungkinkan pabrik di Pakistan memenuhi permintaan besar sambil menjaga hasil akhir yang bersih dan berulang.",
+      "Dengan output 180 kemasan per menit, mesin ini menjalankan siklus pengemasan yang efisien dan stabil berkat mekanisme plunger tunggalnya, menjaga keselarasan, pembungkusan, dan penyegelan yang sempurna pada setiap kemasan. Hal ini memungkinkan pabrik di Indonesia memenuhi permintaan besar sambil menjaga hasil akhir yang bersih dan berulang.",
       "Mesin ini dirancang untuk menangani berbagai ukuran rokok, termasuk King Size, Demi, Slims, Super Slims, dan Nano. Fleksibilitas ini berarti Anda dapat melayani preferensi konsumen yang berbeda di pasar lokal dan ekspor, dari format tradisional hingga produk khusus, semuanya dengan satu mesin yang sama.",
       "Sistem kontrol PLC menjaga operasi tetap akurat dan sepenuhnya otomatis, sehingga setiap kemasan keluar seragam, terbungkus rapi, dan siap dijual. Antarmuka yang ramah pengguna memberi operator kendali penuh atas kecepatan, deteksi kesalahan, dan pemantauan produksi, yang mengurangi waktu henti dan meningkatkan efisiensi keseluruhan.",
       "Yang benar-benar membedakan HLP-180 adalah fleksibilitas bentuk kemasannya. Mesin ini mendukung format round corner, bevel edge, D-type, dan square, sehingga merek dapat membedakan kemasan mereka, menonjol di rak, dan mengikuti tren pasar yang berubah. Dibuat untuk produksi skala besar yang terus-menerus, ini adalah pilihan kuat baik untuk memperluas lini maupun meningkatkan peralatan lama.",
@@ -3782,10 +3782,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pengemas Rokok HLP-200",
     metaTitle: "Mesin Pengemas HLP-200, 200 Kemasan/Menit",
     metaDescription:
-      "Mesin pengemas rokok HLP-200 di Pakistan – lini plunger ganda 200 kemasan per menit untuk format King hingga Nano. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pengemas rokok HLP-200 di Indonesia – lini plunger ganda 200 kemasan per menit untuk format King hingga Nano. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini kemasan keras plunger ganda, 200 kemasan per menit.",
     intro: [
-      "HLP-200 adalah mesin pengemas hopper plunger ganda yang dibuat untuk produksi skala kecil hingga menengah dan besar. Ini menjadi pilihan populer di kalangan produsen di Pakistan karena hemat penggunaan material dan membantu menekan biaya operasional sambil tetap menjaga kecepatan yang stabil.",
+      "HLP-200 adalah mesin pengemas hopper plunger ganda yang dibuat untuk produksi skala kecil hingga menengah dan besar. Ini menjadi pilihan populer di kalangan produsen di Indonesia karena hemat penggunaan material dan membantu menekan biaya operasional sambil tetap menjaga kecepatan yang stabil.",
       "Berjalan pada 200 kemasan per menit dengan throughput maksimum sekitar 12.000 rokok, mesin ini menjadi unit pertama yang krusial di lini pengemasan, membentuk dan menyelesaikan kemasan sebelum berlanjut ke pembungkusan dan pengardusan. Mesin ini mendukung semua format kemasan rokok yang umum, sehingga mudah masuk ke sebagian besar jalur produksi.",
       "Mesin ini menangani berbagai ukuran rokok, termasuk King Size, Demi, Slims, Super Slims, dan Nano, dan sistem plunger gandanya menjaga siklus pengemasan tetap efisien dan hasil akhir yang konsisten. Sistem kontrol PLC menjaga operasi tetap akurat dan sepenuhnya otomatis, memberi operator kendali yang jelas atas kecepatan, deteksi kesalahan, dan pemantauan.",
       "Untuk tampilan kemasan, mesin ini menawarkan format round corner, bevel edge, D-type, dan square, sehingga merek dapat membentuk kemasan mereka agar menonjol di rak. Berjalan pada suplai 220V/380V dan dibuat untuk output yang andal dan berkelanjutan, HLP-200 adalah unit inti yang solid untuk setiap lini pengemasan terintegrasi.",
@@ -3796,11 +3796,11 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pengemas Rokok HLP-225",
     metaTitle: "Mesin Pengemas HLP-225, 225 Kemasan/Menit",
     metaDescription:
-      "Mesin pengemas rokok HLP-225 di Pakistan – lini plunger ganda berkecepatan tinggi 225 kemasan per menit dengan kontrol PLC. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pengemas rokok HLP-225 di Indonesia – lini plunger ganda berkecepatan tinggi 225 kemasan per menit dengan kontrol PLC. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini kemasan keras plunger ganda berkecepatan tinggi, 225 kemasan per menit.",
     intro: [
       "Lini pengemasan HLP-225 adalah langkah maju yang nyata dalam pengemasan rokok. Berjalan pada 225 kemasan per menit, mesin plunger ganda ini memberikan efisiensi dan throughput tinggi untuk pabrik yang perlu mengemas dalam skala besar.",
-      "Mesin ini direkayasa untuk menangani berbagai ukuran rokok, termasuk King, Demi, Slims, Super Slims, dan Nano, sehingga produsen di Pakistan mendapatkan fleksibilitas untuk memenuhi berbagai permintaan pasar pada satu mesin.",
+      "Mesin ini direkayasa untuk menangani berbagai ukuran rokok, termasuk King, Demi, Slims, Super Slims, dan Nano, sehingga produsen di Indonesia mendapatkan fleksibilitas untuk memenuhi berbagai permintaan pasar pada satu mesin.",
       "Sistem kontrol PLC modern meningkatkan akurasi dan mengotomatisasi proses pengemasan, mengurangi intervensi manual dan kesalahan. HLP-225 juga mendukung berbagai format kemasan, termasuk round corner, bevel edge, D-type, dan square, yang memungkinkan merek menyesuaikan kemasan mereka dengan preferensi dan kebutuhan konsumen yang berbeda.",
       "Dibuat untuk produksi skala besar, HLP-225 memadukan fitur canggih dengan konstruksi kokoh untuk performa yang andal dan konsisten. Kemampuannya mengemas dengan kecepatan tinggi tanpa mengorbankan kualitas menjadikannya aset berharga bagi setiap operasi yang ingin meningkatkan output dan tetap kompetitif.",
     ],
@@ -3810,11 +3810,11 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Kemasan Lunak SASIB 5000",
     metaTitle: "Mesin Kemasan Lunak Rokok SASIB 5000",
     metaDescription:
-      "Mesin kemasan lunak rokok SASIB 5000 di Pakistan – kemasan lunak 100mm dengan pembungkusan alufoil dan label. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin kemasan lunak rokok SASIB 5000 di Indonesia – kemasan lunak 100mm dengan pembungkusan alufoil dan label. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pengemas kemasan lunak SASIB untuk kemasan 100mm dengan sudut siku.",
     intro: [
       "SASIB 5000 adalah mesin serbaguna yang dibuat untuk memproduksi kemasan lunak rokok 100mm. Menggunakan pembungkusan alufoil dan label yang dilakukan di sekitar arbor, mesin ini menghasilkan kemasan yang sempurna dan konsisten dengan sudut siku yang rapi.",
-      "Metode pembungkusan ini tidak hanya terlihat bagus — mesin ini juga melindungi rokok dan menjaga setiap kemasan tetap utuh, sekaligus meningkatkan daya tarik visual produk jadi. Bagi produsen di Pakistan yang menginginkan hasil akhir kemasan lunak premium, ini adalah pilihan yang andal dan berkualitas tinggi.",
+      "Metode pembungkusan ini tidak hanya terlihat bagus — mesin ini juga melindungi rokok dan menjaga setiap kemasan tetap utuh, sekaligus meningkatkan daya tarik visual produk jadi. Bagi produsen di Indonesia yang menginginkan hasil akhir kemasan lunak premium, ini adalah pilihan yang andal dan berkualitas tinggi.",
       "Terbukti andal dan mudah dioperasikan, SASIB 5000 dipasok dalam keadaan sudah diperiksa dan disetel, siap untuk lantai produksi, sehingga Anda dapat menambah kapasitas kemasan lunak yang andal dengan percaya diri.",
     ],
     applications: ["Produksi kemasan lunak", "Format 100mm"],
@@ -3823,11 +3823,11 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Kemasan Lunak SASIB 3000",
     metaTitle: "Mesin Kemasan Lunak Rokok SASIB 3000",
     metaDescription:
-      "Mesin kemasan lunak rokok SASIB 3000 di Pakistan – menangani kemasan 84mm dan 100mm dengan pembungkusan alufoil dan label. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin kemasan lunak rokok SASIB 3000 di Indonesia – menangani kemasan 84mm dan 100mm dengan pembungkusan alufoil dan label. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Mesin pengemas kemasan lunak SASIB untuk kemasan 84mm dan 100mm dengan sudut siku.",
     intro: [
       "SASIB 3000 menambah fleksibilitas ekstra pada lini kemasan lunak SASIB berkat kemampuannya menangani kemasan rokok 84mm maupun 100mm. Menggunakan pembungkusan alufoil dan label di sekitar arbor, mesin ini mempertahankan hasil akhir khas SASIB — kemasan yang sempurna dan konsisten dengan sudut siku yang rapi.",
-      "Kemampuan dua ukuran ini menjadikan SASIB 3000 aset berharga bagi produsen di Pakistan yang membutuhkan fleksibilitas dalam produksi sambil menjaga setiap kemasan tetap pada standar tinggi dalam tampilan dan perlindungan.",
+      "Kemampuan dua ukuran ini menjadikan SASIB 3000 aset berharga bagi produsen di Indonesia yang membutuhkan fleksibilitas dalam produksi sambil menjaga setiap kemasan tetap pada standar tinggi dalam tampilan dan perlindungan.",
       "Sistem kontrolnya membuat penyesuaian dan pemeliharaan menjadi mudah, yang membantu mengurangi waktu henti dan menjaga produktivitas keseluruhan tetap tinggi. Dipasok dalam keadaan sudah diperiksa dan disetel, siap dijalankan, ini adalah lini kemasan lunak yang andal untuk pabrik yang menginginkan kualitas sekaligus fleksibilitas format.",
     ],
     applications: ["Produksi kemasan lunak", "Format 84mm dan 100mm"],
@@ -3836,10 +3836,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pembungkus Regular Wrapper CP1",
     metaTitle: "Mesin Pembungkus Kemasan Rokok CP-1, 250 PPM",
     metaDescription:
-      "Mesin pembungkus kemasan rokok CP-1 di Pakistan – hingga 250 kemasan per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pembungkus kemasan rokok CP-1 di Indonesia – hingga 250 kemasan per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembungkus kemasan rokok berkecepatan tinggi, hingga 250 kemasan per menit.",
     intro: [
-      "CP-1 adalah mesin pembungkus kemasan rokok berperforma tinggi yang dibuat untuk menangani permintaan produksi yang serius dengan mudah. Dengan kecepatan pembungkusan hingga 250 kemasan per menit, mesin ini meningkatkan efisiensi dan throughput lini pengemasan untuk pabrik di Pakistan.",
+      "CP-1 adalah mesin pembungkus kemasan rokok berperforma tinggi yang dibuat untuk menangani permintaan produksi yang serius dengan mudah. Dengan kecepatan pembungkusan hingga 250 kemasan per menit, mesin ini meningkatkan efisiensi dan throughput lini pengemasan untuk pabrik di Indonesia.",
       "Mesin ini beroperasi dengan kebutuhan daya sedang sebesar 6 KVA dan kebutuhan tekanan udara 0,05 m³/menit, sehingga memberikan performa kuat sambil tetap hemat energi. CP-1 direkayasa untuk pembungkusan yang presisi dan konsisten yang mengurangi pemborosan material dan menjaga setiap kemasan pada standar kualitas yang ketat.",
       "Konstruksinya yang kokoh dan operasinya yang andal menjadikannya aset yang dapat diandalkan untuk lini skala besar, menjaga proses tetap lancar dan output tetap bersih. Mesin ini juga terintegrasi dengan rapi ke dalam lini yang sudah ada, menjadikannya tambahan praktis dan berharga bagi fasilitas mana pun yang ingin meningkatkan produktivitas tanpa kehilangan kualitas.",
     ],
@@ -3849,10 +3849,10 @@ const id: Record<string, ProductContent> = {
     h1: "Naked Over Wrapper",
     metaTitle: "Naked Over Wrapper, Pembungkus Luar Kemasan Rokok",
     metaDescription:
-      "Naked Over Wrapper di Pakistan – pembungkus luar kemasan rokok, 25 kemasan luar per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Naked Over Wrapper di Indonesia – pembungkus luar kemasan rokok, 25 kemasan luar per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Pembungkus kemasan luar, 25 kemasan luar per menit.",
     intro: [
-      "Naked Over Wrapper adalah mesin yang direkayasa dengan baik untuk membungkus kemasan luar rokok dengan presisi dan kecepatan. Mesin ini membungkus 25 kemasan luar per menit, menjaga tingkat efisiensi yang tinggi di lini produksi untuk pabrik di Pakistan.",
+      "Naked Over Wrapper adalah mesin yang direkayasa dengan baik untuk membungkus kemasan luar rokok dengan presisi dan kecepatan. Mesin ini membungkus 25 kemasan luar per menit, menjaga tingkat efisiensi yang tinggi di lini produksi untuk pabrik di Indonesia.",
       "Mesin ini beroperasi dengan kebutuhan energi 6 KVA dan tekanan udara 0,05 m³/menit, memberikan performa kerja yang andal tanpa konsumsi daya yang besar. Kokoh dan efisien, ini adalah tambahan yang tepat untuk lini produksi rokok, meningkatkan kualitas kemasan pada tahap akhir.",
     ],
     applications: ["Pembungkusan kemasan luar", "Penyegelan akhir lini"],
@@ -3861,10 +3861,10 @@ const id: Record<string, ProductContent> = {
     h1: "Molins Boxer, Mesin Pengardus",
     metaTitle: "Molins Boxer, Mesin Pengardus Kemasan Rokok",
     metaDescription:
-      "Mesin pengardus kemasan rokok Molins Boxer di Pakistan – hingga 20 kardus per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pengardus kemasan rokok Molins Boxer di Indonesia – hingga 20 kardus per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pengardus kemasan rokok, hingga 20 kardus per menit.",
     intro: [
-      "Molins Boxer adalah mesin pengardus kemasan rokok yang andal, dikenal karena operasinya yang efisien dan throughput yang solid. Dengan kecepatan pengemasan hingga 20 kardus per menit, mesin ini meningkatkan produktivitas lini pengemasan rokok di Pakistan.",
+      "Molins Boxer adalah mesin pengardus kemasan rokok yang andal, dikenal karena operasinya yang efisien dan throughput yang solid. Dengan kecepatan pengemasan hingga 20 kardus per menit, mesin ini meningkatkan produktivitas lini pengemasan rokok di Indonesia.",
       "Mesin ini bekerja dengan tekanan udara 0,05 m³/menit, menyeimbangkan penggunaan energi dengan operasi yang stabil. Direkayasa untuk keandalan, Molins Boxer menjaga pengemasan tetap konsisten dan presisi, yang mengurangi waktu henti dan menjaga kualitas produk tetap tinggi.",
       "Hal itu menjadikannya bagian penting dari setiap jalur produksi yang berfokus pada efisiensi dan output yang stabil, menerima kemasan yang telah dibungkus dan membentuknya menjadi kardus yang rapi di ujung lini.",
     ],
@@ -3874,10 +3874,10 @@ const id: Record<string, ProductContent> = {
     h1: "SASIB Boxer, Mesin Pengardus",
     metaTitle: "SASIB Boxer, Mesin Pengardus Kemasan Rokok",
     metaDescription:
-      "Mesin pengardus kemasan rokok SASIB Boxer di Pakistan – hingga 25 kardus per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pengardus kemasan rokok SASIB Boxer di Indonesia – hingga 25 kardus per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pengardus kemasan rokok, hingga 25 kardus per menit.",
     intro: [
-      "SASIB Boxer adalah mesin pengardus kemasan rokok canggih yang dikenal karena kecepatan dan efisiensinya. Mampu mengemas hingga 25 kardus per menit, mesin ini memberikan dorongan nyata pada throughput lini produksi rokok di Pakistan.",
+      "SASIB Boxer adalah mesin pengardus kemasan rokok canggih yang dikenal karena kecepatan dan efisiensinya. Mampu mengemas hingga 25 kardus per menit, mesin ini memberikan dorongan nyata pada throughput lini produksi rokok di Indonesia.",
       "Mesin ini bekerja dengan kebutuhan daya 6 KVA, memadukan kekuatan dengan performa, dan kebutuhan tekanan udara 0,1 m³/menit, menjaga keseimbangan antara penggunaan energi dan efisiensi operasional.",
       "Dirancang untuk pengemasan yang sangat akurat dan konsisten, SASIB Boxer meminimalkan waktu henti dan merampingkan proses, menjadikannya aset berharga di lingkungan skala besar di mana kecepatan dan presisi penting bagi produktivitas dan kualitas produk.",
     ],
@@ -3887,7 +3887,7 @@ const id: Record<string, ProductContent> = {
     h1: "Mark 8 Post 64 – Mesin Pembuat Rokok di Indonesia",
     metaTitle: "MK 8 | Mesin Pembuat Rokok Mark 8 Post 64",
     metaDescription:
-      "Mesin pembuat rokok Molins Mark 8 Post 64 di Pakistan – mesin pembuat batang yang andal untuk produksi stabil. Direkondisi dan didukung oleh Civic Tobacco Machinery.",
+      "Mesin pembuat rokok Molins Mark 8 Post 64 di Indonesia – mesin pembuat batang yang andal untuk produksi stabil. Direkondisi dan didukung oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat yang telah terbukti dan andal yang masih diandalkan pabrik.",
     intro: [
       "Molins Mark 8 Post 64 adalah mesin pembuat rokok berkinerja tinggi yang telah terbukti, dibuat untuk kualitas maupun fleksibilitas. Mesin ini berjalan stabil pada 1.800 hingga 2.000 rokok per menit dan dilengkapi printer warna ganda, sehingga Anda dapat mencetak kertas persis seperti yang dibutuhkan merek Anda tanpa memperlambat lini.",
@@ -3907,7 +3907,7 @@ const id: Record<string, ProductContent> = {
     h1: "Mark 8D MAX 15",
     metaTitle: "MK 8D | Molins Mark 8D dengan Sistem MAX-15",
     metaDescription:
-      "Mesin pembuat rokok Molins Mark 8D dengan MAX-15 di Pakistan – 3.000 per menit untuk format King hingga Nano. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pembuat rokok Molins Mark 8D dengan MAX-15 di Indonesia – 3.000 per menit untuk format King hingga Nano. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat Mark 8D berkecepatan tinggi dengan sistem kontrol MAX-15.",
     intro: [
       "Molins Mark 8D dengan MAX-15 adalah mesin pembuat rokok yang kuat dan fleksibel, dibuat untuk memenuhi tuntutan pabrik tembakau modern. Mesin ini termasuk dalam keluarga mesin pembuat Mark 8 yang terkenal dan memberikan produsen Indonesia cara yang andal untuk meningkatkan output tanpa mengorbankan kualitas.",
@@ -3922,7 +3922,7 @@ const id: Record<string, ProductContent> = {
   "mark-9-5-lenze-servo-drives": {
     h1: "Molins Mark 9.5 dengan Penggerak Servo Lenze",
     metaDescription:
-      "Molins Mark 9.5 dengan penggerak servo Lenze di Pakistan – hingga 3.500 per menit dengan PLC Siemens dan kontrol berat gelombang mikro. Dipasok oleh Civic Tobacco Machinery.",
+      "Molins Mark 9.5 dengan penggerak servo Lenze di Indonesia – hingga 3.500 per menit dengan PLC Siemens dan kontrol berat gelombang mikro. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini pembuat Mark 9.5 berkecepatan tinggi dengan penggerak servo Lenze.",
     intro: [
       "Molins Mark 9.5 dengan penggerak servo Lenze dibuat untuk produsen yang menginginkan output serius tanpa kehilangan fleksibilitas. Mesin ini menghasilkan hingga 3.500 rokok per menit pada diameter reguler dan 3.200 per menit pada format slim dan super slim, sehingga satu lini dapat mencakup rangkaian produk yang luas dengan kecepatan produksi nyata.",
@@ -3937,10 +3937,10 @@ const id: Record<string, ProductContent> = {
     h1: "Molins Mark-9.5 dengan Max S & Pengisi Baki",
     metaTitle: "Molins Mark-9.5 dengan Max S & Pengisi Baki",
     metaDescription:
-      "Molins Mark-9.5 dengan Max S dan pengisi baki di Pakistan – 4.500 hingga 5.000 rokok per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Molins Mark-9.5 dengan Max S dan pengisi baki di Indonesia – 4.500 hingga 5.000 rokok per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat Mark-9.5 berkecepatan tinggi dengan Max S dan pengisi baki aliran massal.",
     intro: [
-      "Molins Mark-9.5 dengan Max S dan pengisi baki adalah pilihan premium bagi produsen yang membutuhkan output berkecepatan tinggi, integrasi filter yang rapi, dan kemampuan produksi yang andal dalam satu lini. Direkayasa untuk volume besar, mesin ini berjalan pada kecepatan luar biasa 4.500 hingga 5.000 rokok per menit, menempatkannya di antara sistem paling efisien yang tersedia untuk pabrik skala besar di Pakistan.",
+      "Molins Mark-9.5 dengan Max S dan pengisi baki adalah pilihan premium bagi produsen yang membutuhkan output berkecepatan tinggi, integrasi filter yang rapi, dan kemampuan produksi yang andal dalam satu lini. Direkayasa untuk volume besar, mesin ini berjalan pada kecepatan luar biasa 4.500 hingga 5.000 rokok per menit, menempatkannya di antara sistem paling efisien yang tersedia untuk pabrik skala besar di Indonesia.",
       "Di pusat konfigurasi ini adalah mesin pembuat MK-9.5, pengembangan dari seri Mark 9 yang telah terbukti, yang mempertahankan output kuat sambil menjaga presisi dan konsistensi tinggi. Mesin ini mendukung lingkar rokok dari 17mm hingga 28,3mm dan panjang gabungan batang filter dan tembakau dari 65mm hingga 110mm, sehingga Anda dapat berpindah antara King size, Slims, Demi, dan format lainnya tanpa kehilangan kualitas batang.",
       "Mesin pembuat ini dipadukan dengan perakit filter Max-S, yang memasang filter ke batang tembakau secara akurat dan dapat diulang. Bekerja melalui pengisi baki aliran massal, mesin ini meningkatkan throughput sambil menjaga limbah material dan ketidaksejajaran tetap rendah, sehingga integritas filter tetap konsisten di setiap siklus produksi.",
       "Ukuran setelan standar 84mm menjaga mesin tetap sesuai dengan dimensi rokok yang diterima secara global, menjadikannya solusi praktis baik untuk pasokan lokal maupun produksi ekspor. Baik Anda menjalankan merek sendiri atau memenuhi kontrak besar, mesin ini berpindah dengan lancar antar batch dan beradaptasi dengan mudah terhadap pesanan yang berubah.",
@@ -3952,10 +3952,10 @@ const id: Record<string, ProductContent> = {
     h1: "Molins MK-9 dengan Max S",
     metaTitle: "Molins MK-9 dengan Max S",
     metaDescription:
-      "Molins MK-9 dengan Max S di Pakistan – 4.500 hingga 5.000 rokok per menit dengan pengisi baki aliran massal. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Molins MK-9 dengan Max S di Indonesia – 4.500 hingga 5.000 rokok per menit dengan pengisi baki aliran massal. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat MK-9 berkecepatan tinggi dengan Max S dan pengisi baki aliran massal.",
     intro: [
-      "Molins MK-9 dengan Max S adalah mesin pembuat rokok berefisiensi tinggi lainnya yang dibuat untuk produksi serius, berjalan antara 4.500 dan 5.000 rokok per menit. Ini adalah pilihan yang andal untuk pabrik di Pakistan yang menginginkan output kuat dan stabil dari satu lini.",
+      "Molins MK-9 dengan Max S adalah mesin pembuat rokok berefisiensi tinggi lainnya yang dibuat untuk produksi serius, berjalan antara 4.500 dan 5.000 rokok per menit. Ini adalah pilihan yang andal untuk pabrik di Indonesia yang menginginkan output kuat dan stabil dari satu lini.",
       "Mesin pembuat MK-9 di intinya menjaga produksi tetap presisi dan konsisten shift demi shift. Mesin ini bekerja pada lingkar rokok dari 17mm hingga 28,3mm dan panjang gabungan batang filter dan tembakau dari 65mm hingga 110mm, sehingga Anda mendapatkan fleksibilitas nyata untuk berpindah antar format tanpa kehilangan kualitas batang.",
       "Mesin ini dilengkapi dengan perakit filter Max-S dan pengisi baki aliran massal, yang membuat langkah pemasangan filter lebih cepat dan lebih andal sambil menjaga limbah dan ketidaksejajaran tetap rendah. Ukuran setelan standar 84mm menjaganya tetap sesuai dengan dimensi rokok yang diterima secara luas, sehingga mudah masuk ke sebagian besar rencana produksi.",
       "Dengan berat sekitar 7.800kg, MK-9 adalah mesin yang berat dan stabil yang dibuat untuk operasi berkelanjutan dan masa pakai yang panjang. Bagi pabrik yang meningkatkan produksi skala besar sambil menjaga kualitas, ini adalah tambahan yang solid dan andal untuk lantai produksi.",
@@ -3966,10 +3966,10 @@ const id: Record<string, ProductContent> = {
     h1: "Protos 70",
     metaTitle: "Mesin Pembuat Rokok Hauni Protos 70",
     metaDescription:
-      "Mesin pembuat rokok Hauni Protos 70 di Pakistan – hingga 7.000 per menit dengan kontrol IPC Siemens atau Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pembuat rokok Hauni Protos 70 di Indonesia – hingga 7.000 per menit dengan kontrol IPC Siemens atau Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini pembuat Protos 70 berkecepatan tinggi, hingga 7.000 rokok per menit.",
     intro: [
-      "Hauni Protos 70 adalah mesin pembuat rokok canggih yang dibuat untuk memenuhi standar tertinggi efisiensi produksi dan presisi. Mesin ini berjalan pada kecepatan mengesankan 7.000 rokok per menit pada diameter reguler dan 6.000 per menit pada format slim dan super slim, memberikan pabrik di Pakistan kecepatan dan fleksibilitas nyata dari satu lini.",
+      "Hauni Protos 70 adalah mesin pembuat rokok canggih yang dibuat untuk memenuhi standar tertinggi efisiensi produksi dan presisi. Mesin ini berjalan pada kecepatan mengesankan 7.000 rokok per menit pada diameter reguler dan 6.000 per menit pada format slim dan super slim, memberikan pabrik di Indonesia kecepatan dan fleksibilitas nyata dari satu lini.",
       "Mesin ini menangani lingkar rokok dari 17mm hingga 28,3mm dan panjang gabungan batang filter dan tembakau dari 65mm hingga 110mm, sehingga Anda dapat berpindah antar format sambil tetap mempertahankan batang yang konsisten dari satu proses ke proses berikutnya.",
       "Sistem kontrol IPC Siemens atau IPC Beckhoff menjaga urutan tetap otomatis, lancar, dan andal, sementara sistem kontrol berat gelombang mikro menjaga berat setiap rokok tetap presisi untuk konsistensi produk yang stabil. Lini ini menyatukan mesin pembuat batang S7000, pemasangan ujung filter M8000, dan pengisi baki otomatis F80, masing-masing menangani tahap prosesnya sendiri dengan rapi.",
       "Dengan daya 50kW untuk S7000, 20kW untuk M8000, dan 15kW untuk F80, Protos 70 adalah lini yang kuat dan mumpuni. Dengan berat total sekitar 10.800kg, mesin ini berat dan stabil, dibuat untuk operasi berkelanjutan dan masa pakai yang panjang, menjadikannya pilihan ideal untuk produksi rokok skala besar.",
@@ -3980,10 +3980,10 @@ const id: Record<string, ProductContent> = {
     h1: "Protos 80 ER",
     metaTitle: "Mesin Pembuat Rokok Hauni Protos 80 ER",
     metaDescription:
-      "Mesin pembuat rokok Hauni Protos 80 ER di Pakistan – hingga 8.000 per menit dengan kontrol IPC Siemens atau Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pembuat rokok Hauni Protos 80 ER di Indonesia – hingga 8.000 per menit dengan kontrol IPC Siemens atau Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini pembuat Protos 80 ER berkecepatan tinggi, hingga 8.000 rokok per menit.",
     intro: [
-      "Protos 80 ER adalah mesin pembuat rokok berkinerja tinggi yang direkayasa untuk produsen yang menginginkan efisiensi, presisi, dan output maksimal. Dibuat oleh Hauni, seri Protos 80 dikenal karena keandalan dan otomatisasi canggihnya, dan baik Anda memproduksi rokok reguler atau slim, mesin ini memberikan konsistensi dan produktivitas yang kuat, menjadikannya pilihan tepercaya untuk lini skala besar di Pakistan.",
+      "Protos 80 ER adalah mesin pembuat rokok berkinerja tinggi yang direkayasa untuk produsen yang menginginkan efisiensi, presisi, dan output maksimal. Dibuat oleh Hauni, seri Protos 80 dikenal karena keandalan dan otomatisasi canggihnya, dan baik Anda memproduksi rokok reguler atau slim, mesin ini memberikan konsistensi dan produktivitas yang kuat, menjadikannya pilihan tepercaya untuk lini skala besar di Indonesia.",
       "Kapasitas adalah tempat mesin ini benar-benar menonjol. Mesin ini menghasilkan hingga 8.000 rokok per menit pada diameter reguler dan 7.000 per menit pada format slim dan super slim. Mesin ini menerima lingkar rokok dari 17mm hingga 28,3mm dan panjang gabungan batang filter dan tembakau dari 65mm hingga 110mm, sehingga tetap fleksibel terhadap berbagai jenis rokok dan permintaan pasar. Dari king size hingga slim hingga format khusus, Protos 80 ER beradaptasi dengan cara Anda berproduksi.",
       "Untuk presisi dan waktu operasional, mesin ini menjalankan sistem kontrol PLC tingkat tinggi pada IPC Siemens atau IPC Beckhoff, menjaga seluruh siklus tetap lancar dan otomatis. Pemantauan waktu nyata dan respons sistem yang cepat mengurangi kesalahan manusia dan menjaga lini tetap berjalan, sementara sistem kontrol berat gelombang mikro bawaan menjaga berat rokok tetap konsisten pada setiap unit untuk kontrol kualitas yang ketat.",
       "Lini ini terdiri dari tiga unit kuat yang bekerja bersama — mesin pembuat batang S7000 pada 50kW, pemasangan ujung filter M8000 pada 20kW, dan pengisi baki otomatis F80 pada 15kW. Dikenal karena keandalannya dan digunakan di pabrik rokok di seluruh dunia, seri Protos 80 memadukan penggunaan energi yang efisien, limbah rendah, dan rekayasa presisi untuk menjaga biaya operasional tetap rendah sementara standar produk tetap tinggi. Dengan berat total sekitar 10.800kg, ini adalah lini yang berat dan stabil yang dibuat untuk produksi berkelanjutan dan skala besar.",
@@ -3994,10 +3994,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pembuat Filter Rokok Hauni KDF-1",
     metaTitle: "Mesin Pembuat Filter Hauni KDF-1",
     metaDescription:
-      "Mesin pembuat filter Hauni KDF-1 di Pakistan – filter 120mm dengan PLC Siemens/Beckhoff dan kontrol lingkar berbasis laser. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pembuat filter Hauni KDF-1 di Indonesia – filter 120mm dengan PLC Siemens/Beckhoff dan kontrol lingkar berbasis laser. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini pembuat filter Hauni KDF-1 dengan kontrol lingkar berbasis laser.",
     intro: [
-      "Hauni KDF-1 adalah lini pembuat filter yang tepercaya dan bertenaga dengan reputasi kuat dalam performa, presisi, dan daya tahan dalam produksi rokok. Dibuat untuk tuntutan produksi skala besar, KDF-1 cocok untuk produsen di Pakistan yang mengutamakan konsistensi, kecepatan, dan kualitas.",
+      "Hauni KDF-1 adalah lini pembuat filter yang tepercaya dan bertenaga dengan reputasi kuat dalam performa, presisi, dan daya tahan dalam produksi rokok. Dibuat untuk tuntutan produksi skala besar, KDF-1 cocok untuk produsen di Indonesia yang mengutamakan konsistensi, kecepatan, dan kualitas.",
       "Dibuat untuk operasi berkapasitas tinggi, mesin ini menawarkan kapasitas produksi yang kuat untuk filter 120mm, yang bekerja dengan baik untuk format rokok standar maupun kustom. Mesin ini mendukung lingkar filter dari 16,8mm hingga 28,1mm dan panjang filter dari 64mm hingga 150mm, sehingga Anda dapat memproduksi berbagai ukuran dan jenis filter tanpa perubahan mesin yang terus-menerus. Dari filter King Size hingga Slims dan desain khusus, KDF-1 menanganinya semua secara efisien.",
       "Mesin ini berjalan pada sistem kontrol PLC canggih yang tersedia dalam konfigurasi Siemens atau Beckhoff, memberikan kontrol intuitif, diagnostik waktu nyata, dan otomatisasi andal yang menjaga kualitas filter tetap stabil sepanjang proses produksi. Sistem servo Lenze atau Beckhoff menambah stabilitas dan menjaga gerakan tetap lancar dan akurat.",
       "Fitur unggulan adalah sistem kontrol lingkar berbasis laser, yang mengukur lingkar setiap filter dengan presisi tinggi, mengurangi deviasi dan menjaga keseragaman setiap batch. Tingkat akurasi ini penting untuk menjaga standar kualitas merek pada produk premium.",
@@ -4009,10 +4009,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pembuat Filter Rokok Hauni KDF-2",
     metaTitle: "Mesin Pembuat Filter Berkecepatan Tinggi Hauni KDF-2",
     metaDescription:
-      "Mesin pembuat filter Hauni KDF-2 di Pakistan – 400 meter tow asetat per menit dengan PLC Siemens/Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
+      "Mesin pembuat filter Hauni KDF-2 di Indonesia – 400 meter tow asetat per menit dengan PLC Siemens/Beckhoff. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Lini pembuat filter Hauni KDF-2 berkecepatan tinggi pada 400 meter per menit.",
     intro: [
-      "Hauni KDF-2 adalah mesin pembuat filter kelas dunia yang dibuat untuk produksi filter rokok berefisiensi tinggi dan berkapasitas besar. Dikenal karena kualitas rekayasa dan otomatisasi canggihnya, KDF-2 adalah pilihan tepercaya bagi produsen skala besar di Pakistan yang membutuhkan presisi maupun produktivitas.",
+      "Hauni KDF-2 adalah mesin pembuat filter kelas dunia yang dibuat untuk produksi filter rokok berefisiensi tinggi dan berkapasitas besar. Dikenal karena kualitas rekayasa dan otomatisasi canggihnya, KDF-2 adalah pilihan tepercaya bagi produsen skala besar di Indonesia yang membutuhkan presisi maupun produktivitas.",
       "Mesin ini berjalan dengan kecepatan yang mengesankan, memproses 400 meter tow asetat per menit, sehingga cocok untuk tuntutan lini produksi modern. Kecepatan itu diimbangi dengan fleksibilitas nyata: mesin ini mendukung lingkar filter dari 16,8mm hingga 28,1mm dan panjang filter dari 64mm hingga 150mm, sehingga mencakup segala sesuatu dari filter King Size standar hingga format yang lebih khusus dengan konsistensi, kualitas, dan waktu henti minimal.",
       "Yang membedakan KDF-2 adalah otomatisasinya. Sistem kontrol PLC, tersedia dalam konfigurasi Siemens atau Beckhoff, memberikan kontrol penuh dan pemantauan waktu nyata, sementara sistem servo Lenze atau Beckhoff berkinerja tinggi menjaga gerakan tetap akurat dan operasi tetap andal. Hal ini mengurangi margin kesalahan dan menjaga kualitas filter tetap seragam, sehingga mesin terintegrasi dengan mulus sebagai tulang punggung yang andal untuk produksi skala besar yang berkelanjutan.",
       "Dibuat untuk daya tahan, KDF-2 dipasangkan dengan pembuka tow dan pengisi baki otomatis HCF80 untuk merampingkan alur kerja dan mengurangi penanganan manual. Mesin ini mengonsumsi 40kW untuk unit KDF-2 utama dan 15kW untuk pengisi HCF80, memadukan efisiensi energi dengan performa yang kuat.",
@@ -4024,10 +4024,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Filter Molins PM-5",
     metaTitle: "Mesin Pembuat Filter Rokok Molins PM-5",
     metaDescription:
-      "Mesin pembuat filter Molins PM-5 di Pakistan – mesin berkapasitas tinggi dengan 4.000 filter per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pembuat filter Molins PM-5 di Indonesia – mesin berkapasitas tinggi dengan 4.000 filter per menit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat filter berkapasitas tinggi Molins, 4.000 filter per menit.",
     intro: [
-      "Molins PM-5 adalah mesin pembuat filter rokok berkapasitas tinggi yang dibuat untuk tuntutan produksi skala besar. Dengan kapasitas 4.000 filter per menit, mesin ini merupakan contoh kuat efisiensi dan presisi dalam manufaktur filter, pilihan yang andal untuk pabrik yang sibuk di Pakistan.",
+      "Molins PM-5 adalah mesin pembuat filter rokok berkapasitas tinggi yang dibuat untuk tuntutan produksi skala besar. Dengan kapasitas 4.000 filter per menit, mesin ini merupakan contoh kuat efisiensi dan presisi dalam manufaktur filter, pilihan yang andal untuk pabrik yang sibuk di Indonesia.",
       "Mesin ini menawarkan fleksibilitas berguna pada ukuran filter, dengan diameter batang filter 7,5–7,8mm dan panjang batang filter dari 108 hingga 126mm, sehingga dapat mengakomodasi berbagai spesifikasi filter tanpa kesulitan.",
       "Dengan berat sekitar 2.000kg, PM-5 memiliki konstruksi kokoh yang memberikan daya tahan dan operasi yang stabil dalam jangka panjang. Dibuat oleh Molins, nama yang terkenal di industri ini, mesin ini memadukan rekayasa yang telah terbukti dengan output berkecepatan tinggi, menjadikannya aset penting bagi produsen yang menginginkan filter berkualitas sambil memaksimalkan throughput.",
     ],
@@ -4037,10 +4037,10 @@ const id: Record<string, ProductContent> = {
     h1: "Mesin Pembuat Tabung Berongga",
     metaTitle: "Mesin Pembuat Tabung Berongga, Mesin Filter Rokok",
     metaDescription:
-      "Mesin pembuat tabung berongga di Pakistan – 2.100 per menit dengan perakit filter untuk tabung filter khusus. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Mesin pembuat tabung berongga di Indonesia – 2.100 per menit dengan perakit filter untuk tabung filter khusus. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Mesin pembuat tabung berongga berkecepatan tinggi, 2.100 rokok per menit.",
     intro: [
-      "Mesin Pembuat Tabung Berongga menonjol karena kapasitas produksi dan operasi berkecepatan tingginya. Mampu memproduksi 2.100 rokok per menit, mesin ini memberikan efisiensi yang kuat dan output yang konsisten. Rentang kecepatan batang dari 140 hingga 175 meter per menit, bersama dengan kecepatan potong hingga 2.500 batang per menit, menegaskan betapa cocoknya mesin ini untuk produksi skala besar bagi pabrik di Pakistan.",
+      "Mesin Pembuat Tabung Berongga menonjol karena kapasitas produksi dan operasi berkecepatan tingginya. Mampu memproduksi 2.100 rokok per menit, mesin ini memberikan efisiensi yang kuat dan output yang konsisten. Rentang kecepatan batang dari 140 hingga 175 meter per menit, bersama dengan kecepatan potong hingga 2.500 batang per menit, menegaskan betapa cocoknya mesin ini untuk produksi skala besar bagi pabrik di Indonesia.",
       "Pada 3.050kg, mesin ini memiliki konstruksi kokoh untuk daya tahan dan keandalan jangka panjang. Perakit filter menambah 1.800kg lagi dan bekerja selaras dengan mesin untuk produksi tabung yang presisi dan efisien. Total konsumsi daya adalah 14kW, terbagi antara 6,5kW untuk mesin dan 7,5kW untuk perakit filter, yang mencapai keseimbangan baik antara performa dan konsumsi energi.",
       "Dirancang untuk manufaktur skala besar, Mesin Pembuat Tabung Berongga menggunakan teknologi terkini untuk menghasilkan tabung berkualitas tinggi. Kemampuan berkecepatan tinggi dan rekayasa yang kokoh menjadikannya aset berharga bagi produsen yang perlu memenuhi permintaan besar sambil menjaga standar produksi yang unggul.",
     ],
@@ -4050,7 +4050,7 @@ const id: Record<string, ProductContent> = {
     h1: "Pengumpan Tembakau",
     metaTitle: "Pengumpan Tembakau untuk Mesin Pembuat Rokok",
     metaDescription:
-      "Pengumpan tembakau di Pakistan – aliran tembakau yang stabil dan merata untuk mesin pembuat Mark 8 dan Mark 9. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Pengumpan tembakau di Indonesia – aliran tembakau yang stabil dan merata untuk mesin pembuat Mark 8 dan Mark 9. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Memasok aliran tembakau yang stabil dan merata untuk mesin pembuat Mark 8 dan Mark 9.",
     intro: [
       "Pengumpan tembakau adalah mesin input yang krusial untuk pabrik rokok. Mesin ini memasok tembakau secara terus-menerus dan merata ke mesin pembuat, melapisinya dengan rapi sehingga siap tepat seperti yang dibutuhkan produksi.",
@@ -4062,12 +4062,12 @@ const id: Record<string, ProductContent> = {
     h1: "Reklaimer Rokok",
     metaTitle: "Reklaimer Rokok, Mesin Pemulihan Tembakau",
     metaDescription:
-      "Reklaimer rokok di Pakistan – memulihkan tembakau dari limbah produksi pada 120 kg/jam dengan efisiensi 99,8%. Dipasok oleh Civic Tobacco Machinery.",
+      "Reklaimer rokok di Indonesia – memulihkan tembakau dari limbah produksi pada 120 kg/jam dengan efisiensi 99,8%. Dipasok oleh Civic Tobacco Machinery.",
     tagline: "Memulihkan tembakau dari limbah pada 120 kg/jam dengan efisiensi 99,8%.",
     intro: [
       "Reklaimer Rokok adalah mesin pemulihan tembakau yang sangat baik untuk limbah manufaktur rokok. Mesin ini memisahkan tembakau yang dapat digunakan kembali dari material limbah dengan kehilangan yang sangat kecil, sehingga tembakau yang seharusnya Anda buang kembali masuk ke produksi.",
       "Pada kapasitas maksimum, mesin ini memulihkan 120 kg per jam dan bekerja dengan efisiensi mengesankan 99,8%, memberi Anda pemanfaatan setinggi mungkin. Dengan tingkat pemulihan 90%, mesin ini memberikan keuntungan nyata dalam mengurangi limbah dan meningkatkan efisiensi produksi secara keseluruhan.",
-      "Mesin ini ramah pengguna dan mudah dipasang di lini produksi Anda, menjadikannya tambahan praktis dan hemat biaya bagi pabrik di Pakistan yang ingin memaksimalkan setiap batch.",
+      "Mesin ini ramah pengguna dan mudah dipasang di lini produksi Anda, menjadikannya tambahan praktis dan hemat biaya bagi pabrik di Indonesia yang ingin memaksimalkan setiap batch.",
     ],
     applications: ["Pengurangan limbah", "Pemulihan tembakau"],
   },
@@ -4075,11 +4075,11 @@ const id: Record<string, ProductContent> = {
     h1: "Pemotong Tembakau Hauni KT-400",
     metaTitle: "Pemotong Tembakau Hauni KT-400",
     metaDescription:
-      "Pemotong Tembakau Hauni KT-400 di Pakistan – pemotong lima pisau dengan ukuran potongan yang diatur PLC. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Pemotong Tembakau Hauni KT-400 di Indonesia – pemotong lima pisau dengan ukuran potongan yang diatur PLC. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Pemotong Tembakau Hauni KT-400 dengan lima pisau dan kontrol ukuran potongan berbasis PLC.",
     intro: [
       "Pemotong Tembakau Hauni KT-400 adalah mesin yang direkayasa dengan presisi yang memainkan peran krusial dalam menjaga kualitas potongan yang konsisten dalam pengolahan tembakau. Mesin ini memiliki lima pisau, yang memberikan potongan seragam dan meningkatkan kualitas keseluruhan campuran tembakau, dan silinder pneumatik menggerakkan rahang untuk pemotongan yang lancar dan efisien dengan waktu henti dan perawatan yang lebih sedikit.",
-      "KT-400 juga menjalankan sistem penggerak PLC canggih pada bilah lengkung kuningan, yang mengatur ukuran potongan secara presisi. Hal ini menjaga setiap batch tetap seragam dan memungkinkan Anda menyesuaikan ukuran potongan dengan kebutuhan spesifik, menambah fleksibilitas nyata. Dengan presisi dan keandalannya, KT-400 adalah aset penting untuk setiap fasilitas pengolahan tembakau di Pakistan yang menargetkan kualitas dan efisiensi terbaik.",
+      "KT-400 juga menjalankan sistem penggerak PLC canggih pada bilah lengkung kuningan, yang mengatur ukuran potongan secara presisi. Hal ini menjaga setiap batch tetap seragam dan memungkinkan Anda menyesuaikan ukuran potongan dengan kebutuhan spesifik, menambah fleksibilitas nyata. Dengan presisi dan keandalannya, KT-400 adalah aset penting untuk setiap fasilitas pengolahan tembakau di Indonesia yang menargetkan kualitas dan efisiensi terbaik.",
     ],
     applications: ["Pengolahan primer", "Persiapan rajangan"],
   },
@@ -4087,11 +4087,11 @@ const id: Record<string, ProductContent> = {
     h1: "Pemipih Batang Tembakau",
     metaTitle: "Pemipih Batang Tembakau, Mesin Pengolahan Primer",
     metaDescription:
-      "Pemipih batang tembakau di Pakistan – memipihkan batang untuk pencampuran seragam dan limbah daun yang lebih sedikit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
+      "Pemipih batang tembakau di Indonesia – memipihkan batang untuk pencampuran seragam dan limbah daun yang lebih sedikit. Dipasok dan diservis oleh Civic Tobacco Machinery.",
     tagline: "Memipihkan batang tembakau untuk pencampuran seragam dan limbah daun yang lebih sedikit.",
     intro: [
       "Pemipih Batang Tembakau memainkan peran kunci dalam mengoptimalkan alur kerja pengolahan tembakau. Dengan memipihkan batang tembakau, mesin ini menyiapkannya untuk pencampuran seragam dengan daun, yang meningkatkan kemudahan pengolahan dan mengurangi kemungkinan ketidakkonsistenan pada produk akhir.",
-      "Dengan memipihkan batang secara efisien, mesin ini juga meminimalkan limbah daun, membuat seluruh proses lebih ekonomis dan berkelanjutan. Hasilnya adalah produk yang konsisten dan berkualitas tinggi yang memenuhi standar industri yang ketat, menjadikan pemipih batang aset berharga bagi setiap operasi pengolahan tembakau di Pakistan.",
+      "Dengan memipihkan batang secara efisien, mesin ini juga meminimalkan limbah daun, membuat seluruh proses lebih ekonomis dan berkelanjutan. Hasilnya adalah produk yang konsisten dan berkualitas tinggi yang memenuhi standar industri yang ketat, menjadikan pemipih batang aset berharga bagi setiap operasi pengolahan tembakau di Indonesia.",
     ],
     applications: ["Pengolahan primer", "Peningkatan hasil"],
   },

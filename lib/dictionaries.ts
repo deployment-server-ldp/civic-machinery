@@ -4353,7 +4353,7 @@ const id: Dictionary = {
   },
   footer: {
     blurb:
-      "Pemasok mesin pembuat, pengemas, dan pembungkus rokok baru dan bekas di Pakistan, dengan pemasangan, suku cadang, dan servis yang dapat Anda andalkan.",
+      "Pemasok mesin pembuat, pengemas, dan pembungkus rokok baru dan bekas di Indonesia, dengan pemasangan, suku cadang, dan servis yang dapat Anda andalkan.",
     machines: "Mesin",
     manufacturing: "Produksi",
     reachUs: "Hubungi Kami",
@@ -4375,7 +4375,7 @@ const id: Dictionary = {
   home: {
     metaTitle: "Civic Tobacco Machinery | Mesin Rokok Indonesia",
     metaDescription:
-      "Civic Tobacco Machinery memasok mesin pembuat, pengemas, dan pembungkus rokok di Pakistan. Peralatan tembakau baru dan bekas, lini pembuat filter, suku cadang, dan dukungan pemasangan penuh.",
+      "Civic Tobacco Machinery memasok mesin pembuat, pengemas, dan pembungkus rokok di Indonesia. Peralatan tembakau baru dan bekas, lini pembuat filter, suku cadang, dan dukungan pemasangan penuh.",
     hero: {
       h1: "Mencari Mesin Rokok & Tembakau di Indonesia?",
       lead: "Anda berada di tempat yang tepat. Dari batang rokok pertama hingga karton jadi, Civic Tobacco Machinery melengkapi Anda dengan lini pembuat, filter, pengemas, dan pembungkus baru maupun rekondisi, terpasang, disetel, dan didukung oleh suku cadang serta servis yang dapat Anda andalkan.",
@@ -4394,7 +4394,7 @@ const id: Dictionary = {
       eyebrow: "Tentang Kami",
       h2: "Generasi Keunggulan Rekayasa dalam Mesin Tembakau",
       lead: "Bisnis keluarga ayah dan anak, kini memasuki generasi ketiga, dengan pengalaman langsung lebih dari 35 tahun di industri tembakau.",
-      p1: "Selama beberapa dekade, keluarga kami bekerja di satu bidang mesin tembakau. Yang dimulai sebagai usaha dagang kecil telah berkembang menjadi nama tepercaya lintas generasi yang diandalkan oleh perusahaan rokok baru maupun mapan di seluruh Pakistan untuk membangun dan menjalankan lini produksi mereka.",
+      p1: "Selama beberapa dekade, keluarga kami bekerja di satu bidang mesin tembakau. Yang dimulai sebagai usaha dagang kecil di Pakistan telah berkembang menjadi nama tepercaya lintas generasi, kini dipercaya oleh produsen rokok di Indonesia, baik yang baru merintis maupun yang sudah mapan, untuk membangun dan menjalankan lini produksi mereka.",
       p2: "Kami adalah produsen mesin tembakau spesialis yang menawarkan solusi lengkap satu atap. Dari mesin pembuat dan filter hingga pengemas dan pembungkus, kami membantu Anda mendapatkan peralatan yang tepat, melihatnya beroperasi sebelum membeli, dan memasang serta menyetelnya di lantai produksi Anda sendiri. Kami juga menyediakan demonstrasi dan pelatihan gratis untuk teknisi Anda, agar tim Anda percaya diri menggunakan mesin sejak hari pertama.",
       bullets: [
         "Bisnis keluarga lintas generasi",
@@ -4426,8 +4426,8 @@ const id: Dictionary = {
           text: "Dari pembuat hingga pengemas, kami membantu Anda memadukan mesin agar tidak ada yang menjadi hambatan, dan kami memasang serta mendukungnya.",
         },
         {
-          title: "Bantuan lokal, langsung di lapangan",
-          text: "Kami berbasis tepat di sini, di Pakistan. Saat Anda membutuhkan suku cadang atau teknisi, bantuan selalu dekat, bukan dari luar negeri.",
+          title: "Dukungan Ekspor yang Berpengalaman",
+          text: "Kami telah mendukung pabrik rokok di berbagai negara, termasuk Indonesia, dengan suku cadang, panduan teknis, dan proses pengiriman yang jelas sejak pemesanan hingga mesin terpasang.",
         },
       ],
     },
@@ -4449,12 +4449,12 @@ const id: Dictionary = {
       text: "Momen dari pameran tembakau internasional dan pertemuan dengan mitra serta pelanggan kami di seluruh dunia.",
     },
     local: {
-      eyebrow: "Melayani Seluruh Pakistan",
-      h2: "Mitra Mesin Tembakau Anda di Pakistan",
-      text: "Berbasis di kawasan industri SITE membuat kami dekat dengan pabrik yang kami layani. Saat Anda membutuhkan suku cadang, teknisi, atau saran jujur tentang sebuah mesin, Anda berhadapan dengan orang-orang yang tinggal di kota yang sama, bukan pemasok dari benua lain.",
+      eyebrow: "Melayani Pasar Indonesia",
+      h2: "Mitra Mesin Tembakau Terpercaya untuk Indonesia",
+      text: "Sebagai pemasok mesin tembakau yang berpengalaman melayani pelanggan internasional, kami memahami kebutuhan pabrik rokok di Indonesia. Saat Anda membutuhkan suku cadang, panduan teknis, atau saran jujur tentang sebuah mesin, tim kami siap membantu dari awal pemilihan hingga mesin beroperasi di lini produksi Anda.",
       bullets: [
-        "Dukungan lokal cepat dan suku cadang",
-        "Pemasangan dan penyetelan di pabrik Anda",
+        "Dukungan suku cadang dan teknis yang responsif",
+        "Panduan pemasangan dan commissioning untuk pabrik Anda",
         "Mesin baru dan rekondisi untuk setiap anggaran",
       ],
       visitHeading: "Kunjungi atau Hubungi Kami",
@@ -4481,9 +4481,9 @@ const id: Dictionary = {
           "Ya. Kami membantu pemasangan dan penyetelan mesin dengan benar di lantai produksi Anda, dan mendukung Anda setelahnya dengan suku cadang dan servis. Menjalankan mesin pembuat atau pengemas bukan pekerjaan yang langsung siap pakai, jadi kami tetap terlibat hingga mesin berjalan sebagaimana mestinya.",
       },
       {
-        question: "Di mana lokasi Anda dan apakah Anda mengirim ke seluruh Pakistan?",
+        question: "Di mana lokasi Anda dan apakah Anda mengirim ke Indonesia?",
         answer:
-          "Bengkel kami berada di kawasan industri SITE di Karachi. Kami melayani pelanggan di seluruh Pakistan dan dapat mengatur pengiriman serta pemasangan di mana pun pabrik Anda berada.",
+          "Bengkel kami berada di kawasan industri SITE di Karachi, Pakistan. Kami berpengalaman mengekspor mesin rokok dan tembakau secara internasional, dan dapat mengatur proses pengiriman serta dokumentasi untuk pabrik Anda di Indonesia.",
       },
     ],
   },
@@ -4491,22 +4491,22 @@ const id: Dictionary = {
   about: {
     metaTitle: "Tentang Kami | Civic Tobacco Machinery",
     metaDescription:
-      "Tentang Civic Tobacco Machinery, pemasok mesin rokok dan tembakau di Pakistan. Siapa kami, apa yang kami perjuangkan, dan bagaimana kami mendukung pabrik Anda dengan mesin baru dan bekas.",
+      "Tentang Civic Tobacco Machinery, pemasok mesin rokok dan tembakau untuk Indonesia. Siapa kami, apa yang kami perjuangkan, dan bagaimana kami mendukung pabrik Anda dengan mesin baru dan bekas.",
     hero: {
       eyebrow: "Tentang Kami",
       title: "Mesin Rokok & Tembakau, Didukung oleh Orang-orang yang Memahaminya",
       intro:
-        "Civic Tobacco Machinery telah bertahun-tahun membantu pabrik di seluruh Pakistan membangun, memperluas, dan memelihara lini produksi rokok mereka.",
+        "Civic Tobacco Machinery telah bertahun-tahun membantu pabrik rokok membangun, memperluas, dan memelihara lini produksi mereka, dan kini membawa pengalaman yang sama untuk mendukung produsen di Indonesia.",
     },
     whoHeading: "Siapa kami",
     who: [
-      "Kami adalah pemasok mesin rokok dan tembakau yang berbasis di Pakistan. Selama bertahun-tahun kami telah bekerja dengan berbagai jenis pelanggan, dari bengkel kecil yang baru memulai langkah pertama mereka dalam produksi rokok hingga pabrik mapan yang menambah lini kedua atau ketiga. Pengalaman itu membentuk cara kami bekerja — kami mendengarkan terlebih dahulu, memahami apa yang benar-benar Anda butuhkan, lalu mengarahkan Anda ke mesin yang sesuai.",
+      "Kami adalah pemasok mesin rokok dan tembakau yang berbasis di Pakistan dan melayani produsen di Indonesia serta pasar internasional lainnya. Selama bertahun-tahun kami telah bekerja dengan berbagai jenis pelanggan, dari bengkel kecil yang baru memulai langkah pertama mereka dalam produksi rokok hingga pabrik mapan yang menambah lini kedua atau ketiga. Pengalaman itu membentuk cara kami bekerja — kami mendengarkan terlebih dahulu, memahami apa yang benar-benar Anda butuhkan, lalu mengarahkan Anda ke mesin yang sesuai.",
       "Jangkauan produk kami mencakup seluruh lini: mesin pembuat yang membentuk batang rokok, mesin pembuat filter, mesin pengemas untuk kemasan keras dan lunak, mesin pembungkus dan pengardus, serta peralatan tembakau yang menjaga lantai produksi tetap terpasok. Kami menyediakan peralatan baru maupun bekas yang direkondisi dengan cermat, sehingga selalu ada pilihan yang masuk akal untuk anggaran Anda.",
     ],
     howHeading: "Cara kami bekerja",
     how: [
       "Membeli mesin hanyalah setengah dari cerita. Mesin pembuat atau pengemas harus dipasang dengan benar, disetel dengan tepat, dan dijaga tetap berjalan, dan di sanalah banyak pemasok menghilang. Kami tidak. Kami membantu Anda memasang mesin di lantai produksi dan menjalankannya sebagaimana mestinya, dan kami tetap dapat dihubungi setelahnya untuk suku cadang dan servis.",
-      "Karena kami berbasis tepat di kawasan industri SITE, dukungan itu benar-benar bersifat lokal. Saat ada sesuatu yang perlu ditangani, Anda berbicara dengan orang-orang di kota yang sama, bukan menunggu pemasok di negara dan zona waktu lain.",
+      "Kami memahami bahwa pelanggan di Indonesia membutuhkan kepastian, bukan janji kosong. Itulah sebabnya kami tetap responsif melalui WhatsApp dan telepon, dengan proses suku cadang dan dukungan teknis yang jelas sejak hari pertama hingga mesin Anda berjalan stabil.",
     ],
     brandsHeading: "Merek yang kami percayai",
     brands:
@@ -4518,7 +4518,7 @@ const id: Dictionary = {
       supply: "Kami memasok",
       supplyValue: "Peralatan tembakau baru & bekas",
       serve: "Kami melayani",
-      serveValue: "Seluruh Pakistan",
+      serveValue: "Produsen di Indonesia",
       call: "Telepon / WhatsApp",
       talk: "Hubungi Kami",
     },
@@ -4550,7 +4550,7 @@ const id: Dictionary = {
   contact: {
     metaTitle: "Hubungi Kami | Civic Tobacco Machinery",
     metaDescription:
-      "Hubungi Civic Tobacco Machinery di Pakistan. Telepon, WhatsApp, atau kirim pertanyaan tentang mesin pembuat, pengemas, pembungkus rokok, dan mesin bekas. Bengkel di SITE, Karachi.",
+      "Hubungi Civic Tobacco Machinery, pemasok mesin rokok dan tembakau untuk Indonesia. Telepon, WhatsApp, atau kirim pertanyaan tentang mesin pembuat, pengemas, pembungkus rokok, dan mesin bekas. Bengkel di SITE, Karachi, Pakistan.",
     hero: {
       eyebrow: "Hubungi Kami",
       title: "Hubungi Civic Tobacco Machinery",
@@ -4605,9 +4605,9 @@ const id: Dictionary = {
       eyebrow: "Mesin Produksi",
       title: "Mesin Pembuat Rokok di Indonesia",
       description:
-        "Mesin pembuat rokok di Pakistan, mesin pembuat Molins, mesin pembuat filter, dan peralatan tembakau. Lini baru dan rekondisi dari Civic Tobacco Machinery.",
+        "Mesin pembuat rokok di Indonesia, mesin pembuat Molins, mesin pembuat filter, dan peralatan tembakau. Lini baru dan rekondisi dari Civic Tobacco Machinery.",
       intro: [
-        "Rokok yang baik dimulai jauh sebelum kemasan. Semuanya dimulai dari mesin pembuat yang menghasilkan batang yang rata, lini filter yang memotong dengan bersih, dan peralatan tembakau yang menjaga seluruh lantai produksi tetap terpasok. Civic Tobacco Machinery memasok mesin pembuat rokok di Pakistan untuk ketiga bidang tersebut.",
+        "Rokok yang baik dimulai jauh sebelum kemasan. Semuanya dimulai dari mesin pembuat yang menghasilkan batang yang rata, lini filter yang memotong dengan bersih, dan peralatan tembakau yang menjaga seluruh lantai produksi tetap terpasok. Civic Tobacco Machinery memasok mesin pembuat rokok di Indonesia untuk ketiga bidang tersebut.",
         "Kami menangani mesin pembuat Molins, mesin pembuat filter KDF dan PM, serta pengumpan, pemotong, dan reklaimer yang mendukungnya. Beri tahu kami merek yang Anda jalankan dan output yang Anda butuhkan, dan kami akan membantu Anda membangun lini yang menjaga kecepatan dan kualitasnya hari demi hari.",
       ],
       faqs: [
@@ -4637,9 +4637,9 @@ const id: Dictionary = {
       eyebrow: "Mesin Pengemas",
       title: "Mesin Pengemas Rokok di Indonesia",
       description:
-        "Mesin pengemas rokok di Pakistan, lini HLP dan SASIB untuk kemasan keras dan lunak dari 180 hingga 225 kemasan per menit. Dipasok, dipasang, dan didukung oleh Civic Tobacco Machinery.",
+        "Mesin pengemas rokok di Indonesia, lini HLP dan SASIB untuk kemasan keras dan lunak dari 180 hingga 225 kemasan per menit. Dipasok, dipasang, dan didukung oleh Civic Tobacco Machinery.",
       intro: [
-        "Lini pengemasan adalah tempat produk Anda akhirnya terbentuk, sehingga harus stabil, bersih, dan mudah dijalankan shift demi shift. Di Civic Tobacco Machinery kami memasok mesin pengemas rokok di Pakistan yang dipilih tepat untuk itu — output yang dapat diandalkan dan kemasan yang terlihat sama setiap saat.",
+        "Lini pengemasan adalah tempat produk Anda akhirnya terbentuk, sehingga harus stabil, bersih, dan mudah dijalankan shift demi shift. Di Civic Tobacco Machinery kami memasok mesin pengemas rokok di Indonesia yang dipilih tepat untuk itu — output yang dapat diandalkan dan kemasan yang terlihat sama setiap saat.",
         "Jangkauan produk kami mencakup format kemasan keras dan lunak, dari 180 hingga 225 kemasan per menit, dengan opsi baru maupun rekondisi yang dicermati. Baik Anda menyiapkan lini baru atau menambah kapasitas pada lini yang ada, kami membantu Anda memadukan mesin yang tepat dengan volume, anggaran, dan merek yang Anda produksi.",
       ],
       faqs: [
@@ -4669,9 +4669,9 @@ const id: Dictionary = {
       eyebrow: "Mesin Pembungkus",
       title: "Mesin Pembungkus Rokok di Indonesia",
       description:
-        "Mesin pembungkus rokok di Pakistan, pembungkus luar, pengardus, dan mesin pembungkus selofan yang menyegel kemasan Anda dengan bersih. Penjualan, suku cadang, dan servis dari Civic Tobacco Machinery.",
+        "Mesin pembungkus rokok di Indonesia, pembungkus luar, pengardus, dan mesin pembungkus selofan yang menyegel kemasan Anda dengan bersih. Penjualan, suku cadang, dan servis dari Civic Tobacco Machinery.",
       intro: [
-        "Pembungkus adalah hal terakhir yang dilihat pelanggan Anda sebelum membuka kemasan, itulah sebabnya penyegelan yang bersih dan rapat begitu penting. Civic Tobacco Machinery memasok mesin pembungkus rokok di Pakistan yang memberi Anda hasil akhir film yang rapi, pita sobek yang lurus, dan kemasan yang tetap segar di rak.",
+        "Pembungkus adalah hal terakhir yang dilihat pelanggan Anda sebelum membuka kemasan, itulah sebabnya penyegelan yang bersih dan rapat begitu penting. Civic Tobacco Machinery memasok mesin pembungkus rokok di Indonesia yang memberi Anda hasil akhir film yang rapi, pita sobek yang lurus, dan kemasan yang tetap segar di rak.",
         "Dari pembungkus satu kemasan hingga mesin pembungkus kotak dan pengardus, kami mencakup seluruh jangkauan. Setiap mesin yang kami jual diperiksa, disetel, dan diserahkan siap dijalankan, dengan suku cadang dan servis yang dapat Anda andalkan saat dibutuhkan.",
       ],
       faqs: [
@@ -4701,9 +4701,9 @@ const id: Dictionary = {
       eyebrow: "Mesin Produksi",
       title: "Mesin Pembuat Filter Rokok di Indonesia",
       description:
-        "Mesin pembuat filter rokok di Pakistan, Molins KDF, Molins PM, dan mesin pembuat tabung berongga. Lini batang filter dipasok dan didukung oleh Civic Tobacco Machinery.",
+        "Mesin pembuat filter rokok di Indonesia, Molins KDF, Molins PM, dan mesin pembuat tabung berongga. Lini batang filter dipasok dan didukung oleh Civic Tobacco Machinery.",
       intro: [
-        "Filter yang baik melakukan lebih dari sekadar menyelesaikan rokok — ia mengendalikan hisapan, kekokohan, dan seluruh sensasi asap. Civic Tobacco Machinery memasok mesin pembuat filter rokok di Pakistan yang menghasilkan batang konsisten yang dapat diandalkan oleh mesin pembuat Anda.",
+        "Filter yang baik melakukan lebih dari sekadar menyelesaikan rokok — ia mengendalikan hisapan, kekokohan, dan seluruh sensasi asap. Civic Tobacco Machinery memasok mesin pembuat filter rokok di Indonesia yang menghasilkan batang konsisten yang dapat diandalkan oleh mesin pembuat Anda.",
         "Kami menyediakan mesin pembuat filter Molins KDF dan Molins PM bersama mesin pembuat tabung berongga untuk format khusus. Apa pun panjang atau jenis filter yang Anda produksi, kami akan membantu Anda memilih lini yang sesuai dengan kecepatan mesin pembuat Anda.",
       ],
       faqs: [
@@ -4733,9 +4733,9 @@ const id: Dictionary = {
       eyebrow: "Mesin Produksi",
       title: "Mesin Pemotong, Pengumpan & Reklaimer Tembakau di Indonesia",
       description:
-        "Peralatan tembakau di Pakistan, pengumpan, pemotong, reklaimer, dan pemipih batang yang menjaga lantai produksi utama dan sekunder Anda tetap berjalan. Dipasok oleh Civic Tobacco Machinery.",
+        "Peralatan tembakau di Indonesia, pengumpan, pemotong, reklaimer, dan pemipih batang yang menjaga lantai produksi utama dan sekunder Anda tetap berjalan. Dipasok oleh Civic Tobacco Machinery.",
       intro: [
-        "Di balik setiap mesin pembuat dan pengemas terdapat serangkaian mesin yang lebih tenang yang melakukan pekerjaan berat — memasok tembakau, memotongnya, menyelamatkan apa yang jika tidak akan terbuang. Civic Tobacco Machinery memasok peralatan tembakau di Pakistan yang menjaga sisi lantai produksi ini tetap bergerak.",
+        "Di balik setiap mesin pembuat dan pengemas terdapat serangkaian mesin yang lebih tenang yang melakukan pekerjaan berat — memasok tembakau, memotongnya, menyelamatkan apa yang jika tidak akan terbuang. Civic Tobacco Machinery memasok peralatan tembakau di Indonesia yang menjaga sisi lantai produksi ini tetap bergerak.",
         "Pengumpan, pemotong, reklaimer, dan pemipih batang bekerja sama untuk menjaga pasokan yang stabil ke lini Anda dan mengurangi limbah. Kami membantu Anda memasang unit yang tepat di sekitar mesin pembuat dan pengemas yang sudah Anda jalankan.",
       ],
       faqs: [
@@ -4775,7 +4775,7 @@ const id: Dictionary = {
       "Artikel yang jujur dan lugas untuk membantu Anda memilih, membeli, dan menjalankan mesin rokok dan tembakau, ditulis oleh orang-orang yang bekerja dengan mesin ini setiap hari.",
     metaTitle: "Blog | Civic Tobacco Machinery",
     metaDescription:
-      "Panduan praktis tentang mesin rokok dan tembakau, memilih mesin pengemas, membandingkan mesin pembuat, dan membeli mesin bekas di Pakistan. Dari Civic Tobacco Machinery.",
+      "Panduan praktis tentang mesin rokok dan tembakau, memilih mesin pengemas, membandingkan mesin pembuat, dan membeli mesin bekas di Indonesia. Dari Civic Tobacco Machinery.",
     readArticle: "Baca artikel →",
     minRead: "menit baca",
     tags: "Tag:",
