@@ -26,6 +26,17 @@ on:
       - claude/sweet-heisenberg-qlvxuw
   workflow_dispatch:
 
+# The CMS sometimes pushes two commits back to back (an image, then the
+# post that references it), which used to start two overlapping deploy
+# runs. Without this, the older commit's run could finish its FTP upload
+# after the newer one and silently overwrite newer pages (e.g. blog/)
+# with stale content, even though both runs reported success. Scoping the
+# concurrency group by branch and cancelling any in-progress run ensures
+# only the latest push for a branch ever finishes deploying.
+concurrency:
+  group: deploy-hostinger-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
