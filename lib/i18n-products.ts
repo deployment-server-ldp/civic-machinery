@@ -2,7 +2,8 @@
  * Translated product content, layered over the English catalogue in
  * `products.ts`. Machine names, model numbers and technical values stay as-is
  * (they are language-neutral); only the prose (tagline, intro, features,
- * applications, meta) and the spec/feature-table *labels* are translated.
+ * applications, meta) and the spec/feature-table *labels* are translated —
+ * plus FAQs and feature-table values where a product's overlay supplies them.
  *
  * A product appears in the /[locale] tree only once it has an entry here for
  * that locale — so this file also drives which product paths advertise
@@ -21,11 +22,17 @@ export interface ProductContent {
   intro: string[];
   features?: string[];
   applications?: string[];
+  /** Translated FAQs; without them the translated page shows no FAQ block. */
+  faqs?: { question: string; answer: string }[];
+  /** Translated feature-table values, keyed by the English row label. */
+  featureValues?: Record<string, string>;
 }
 
 /* Shared spec / feature-table label translations (values are left untouched). */
 const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
   de: {
+    "Filter Size": "Filtergröße",
+    "PLC Control": "SPS-Steuerung",
     "Machine Speed": "Maschinengeschwindigkeit",
     "Filter + Tobacco Rod Length": "Filter- + Tabakstranglänge",
     "Cigarette Circumference": "Zigarettenumfang",
@@ -86,6 +93,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Automatisierung",
   },
   it: {
+    "Filter Size": "Dimensione filtro",
+    "PLC Control": "Controllo PLC",
     "Machine Speed": "Velocità macchina",
     "Filter + Tobacco Rod Length": "Lunghezza baco filtro + tabacco",
     "Cigarette Circumference": "Circonferenza sigaretta",
@@ -146,6 +155,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Automazione",
   },
   ru: {
+    "Filter Size": "Размер фильтра",
+    "PLC Control": "Управление ПЛК",
     "Machine Speed": "Скорость машины",
     "Filter + Tobacco Rod Length": "Длина стержня фильтр + табак",
     "Cigarette Circumference": "Окружность сигареты",
@@ -206,6 +217,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Автоматизация",
   },
   ar: {
+    "Filter Size": "مقاس الفلتر",
+    "PLC Control": "التحكم PLC",
     "Machine Speed": "سرعة الماكينة",
     "Filter + Tobacco Rod Length": "طول عود الفلتر + التبغ",
     "Cigarette Circumference": "محيط السيجارة",
@@ -266,6 +279,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "الأتمتة",
   },
   pl: {
+    "Filter Size": "Rozmiar filtra",
+    "PLC Control": "Sterowanie PLC",
     "Machine Speed": "Prędkość maszyny",
     "Filter + Tobacco Rod Length": "Długość pręta filtr + tytoń",
     "Cigarette Circumference": "Obwód papierosa",
@@ -326,6 +341,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Automatyzacja",
   },
   bg: {
+    "Filter Size": "Размер на филтъра",
+    "PLC Control": "PLC управление",
     "Machine Speed": "Скорост на машината",
     "Filter + Tobacco Rod Length": "Дължина на пръчката филтър + тютюн",
     "Cigarette Circumference": "Обиколка на цигарата",
@@ -386,6 +403,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Автоматизация",
   },
   vi: {
+    "Filter Size": "Kích thước đầu lọc",
+    "PLC Control": "Điều khiển PLC",
     "Machine Speed": "Tốc độ máy",
     "Filter + Tobacco Rod Length": "Chiều dài đoạn đầu lọc + thuốc sợi",
     "Cigarette Circumference": "Chu vi điếu thuốc",
@@ -446,6 +465,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Tự động hóa",
   },
   id: {
+    "Filter Size": "Ukuran Filter",
+    "PLC Control": "Kontrol PLC",
     "Machine Speed": "Kecepatan Mesin",
     "Filter + Tobacco Rod Length": "Panjang Batang Filter + Tembakau",
     "Cigarette Circumference": "Lingkar Rokok",
@@ -506,6 +527,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Otomatisasi",
   },
   tr: {
+    "Filter Size": "Filtre Boyutu",
+    "PLC Control": "PLC Kontrolü",
     "Machine Speed": "Makine Hızı",
     "Filter + Tobacco Rod Length": "Filtre + Tütün Çubuğu Uzunluğu",
     "Cigarette Circumference": "Sigara Çevresi",
@@ -566,6 +589,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "Otomasyon",
   },
   zh: {
+    "Filter Size": "滤棒尺寸",
+    "PLC Control": "PLC 控制",
     "Machine Speed": "机器速度",
     "Filter + Tobacco Rod Length": "滤棒＋烟支组合长度",
     "Cigarette Circumference": "卷烟周长",
@@ -626,6 +651,8 @@ const specLabels: Partial<Record<LocaleCode, Record<string, string>>> = {
     Automation: "自动化",
   },
   fa: {
+    "Filter Size": "اندازه فیلتر",
+    "PLC Control": "کنترل PLC",
     "Machine Speed": "سرعت ماشین",
     "Filter + Tobacco Rod Length": "طول ساقه فیلتر + تنباکو",
     "Cigarette Circumference": "محیط سیگار",
@@ -914,18 +941,67 @@ const de: Record<string, ProductContent> = {
 
   "kdf-1": {
     h1: "Hauni KDF-1 Zigarettenfilter-Herstellungsmaschine",
-    metaTitle: "Hauni KDF-1 Filtermaschine",
+    metaTitle: "Hauni KDF-1 Filtermaschine | Daten & Preis | Civic Tobacco",
     tagline: "Hauni-KDF-1-Filterlinie mit laserbasierter Umfangskontrolle.",
     metaDescription:
-      "Hauni KDF-1 Filtermaschine in Pakistan – 120-mm-Filter mit Siemens-/Beckhoff-SPS und laserbasierter Umfangskontrolle. Geliefert von Civic Tobacco Machinery.",
+      "Hauni-KDF-1-Filterlinie mit laserbasierter Umfangskontrolle, 16,8–28,1 mm Umfang und 64–150 mm Filterlänge. Fragen Sie Preis und Verfügbarkeit an.",
     intro: [
-      "Die Hauni KDF-1 ist eine bewährte, leistungsstarke Filterlinie mit einem starken Ruf für Leistung, Präzision und Langlebigkeit in der Zigarettenfertigung. Für die Anforderungen der Großserienproduktion gebaut, eignet sich die KDF-1 für Hersteller in Pakistan, die Gleichmäßigkeit, Tempo und Qualität an erste Stelle setzen.",
-      "Für den Betrieb mit hoher Ausbringung gemacht, bietet sie eine robuste Produktionskapazität für 120-mm-Filter, die sich sowohl für Standard- als auch für kundenspezifische Zigarettenformate gut eignet. Sie unterstützt Filterumfänge von 16,8 mm bis 28,1 mm und Filterlängen von 64 mm bis 150 mm, sodass Sie ein breites Spektrum an Filtergrößen und -typen ohne ständige Umbauten produzieren können. Von King-Size-Filtern über Slims bis zu Spezialdesigns bewältigt die KDF-1 sie alle effizient.",
-      "Sie läuft mit einer fortschrittlichen SPS-Steuerung, verfügbar in Siemens- oder Beckhoff-Konfiguration, die intuitive Bedienung, Echtzeitdiagnose und zuverlässige Automatisierung bietet und die Filterqualität über den gesamten Lauf gleichmäßig hält. Lenze- oder Beckhoff-Servosysteme erhöhen die Stabilität und halten die Bewegung ruhig und genau.",
-      "Ein herausragendes Merkmal ist das laserbasierte Umfangskontrollsystem, das den Umfang jedes Filters hochpräzise misst, Abweichungen reduziert und jede Charge gleichmäßig hält. Diese Genauigkeit ist entscheidend, um die Markenqualitätsstandards bei Premiumprodukten zu halten.",
-      "Bei all ihrer Ausbringung hält die KDF-1 mit insgesamt 40 kW ein ausgewogenes Energieprofil, was sie langfristig wirtschaftlich macht. Ihre robuste, gut konstruierte Bauweise gibt lange Lebensdauer, und ihr modularer Aufbau sowie ihre Kompatibilität mit verschiedenen Zigarettentypen machen sie sowohl für die kleinere als auch für die große Filterproduktion zur starken Wahl – ob Sie Kapazität erweitern oder ältere Maschinen ersetzen.",
+      "Die Hauni KDF-1 ist eine Filterlinie, die Acetat-Filterstäbe mit 16,8 bis 28,1 mm Umfang und 64 bis 150 mm Länge herstellt. Sie arbeitet mit laserbasierter Umfangskontrolle, Siemens- oder Beckhoff-SPS-Automatisierung und Lenze- oder Beckhoff-Servoantrieben und hat eine Leistungsaufnahme von 40 kW. Civic Tobacco Machinery liefert sie aus Karachi, Pakistan.",
+      "Die KDF-1 eignet sich für Hersteller, die über mehrere Filterformate hinweg – von King Size bis Slims – eine enge Maßhaltigkeit brauchen, ohne die Linie ständig umzurüsten. Die genaue Konfiguration ist je nach Maschine unterschiedlich. Fragen Sie uns nach den Details der aktuell verfügbaren Maschine.",
+      "### Was die KDF-1 auszeichnet: laserbasierte Umfangskontrolle",
+      "Der Umfang gehört zu den Filtermaßen, die sich bei hoher Geschwindigkeit am schwersten konstant halten lassen. Schon eine Abweichung von Bruchteilen eines Millimeters kann an der Zigarettenmaschine Probleme verursachen und zu Ausschusschargen führen.",
+      "Die KDF-1 misst den Stabumfang im laufenden Betrieb mit einem Lasersystem, sodass Bediener Abweichungen erkennen, bevor daraus Ausschuss wird. Für Marken mit engen Maßtoleranzen, besonders bei Premium- und Slim-Formaten, ist das der wichtigste Grund für die KDF-1.",
+      "### Welche Filterformate kann die KDF-1 herstellen?",
+      "Mit einem Umfangsbereich von 16,8–28,1 mm und Längen von 64–150 mm deckt die KDF-1 die meisten gängigen Formate ab:",
+      "- Slim- und Super-Slim-Filter am unteren Ende des Umfangsbereichs\n- King-Size- und Regular-Filter im mittleren Bereich\n- Längere Mehrsegmentstäbe, die später im Prozess zugeschnitten werden",
+      "Dank dieses Bereichs kann eine Maschine mehrere Produktlinien bedienen – ein Vorteil für kleinere Fabriken, die sich keine eigene Filterlinie für jedes Format leisten können.",
+      "### Steuerung und Automatisierung",
+      "Die KDF-1 läuft je nach Maschine mit einer Siemens- oder Beckhoff-SPS. Bediener erhalten Echtzeitdiagnosen, und Instandhaltungsteams bekommen Störungsinformationen, mit denen sie direkt arbeiten können. Lenze- oder Beckhoff-Servoantriebe übernehmen die Bewegungssteuerung und halten Stabführung und Schnitt auch über lange Schichten genau.",
+      "Wenn Ihr Werk bereits auf Siemens oder Beckhoff standardisiert ist, sagen Sie es uns. Eine passende Steuerungsplattform macht Schulung und Ersatzteile deutlich einfacher.",
+      "### Ist die KDF-1 die richtige Maschine für Ihre Fabrik?",
+      "Die KDF-1 passt gut zu Ihnen, wenn Sie:",
+      "- mehrere Filtergrößen auf einer Linie produzieren müssen\n- Maßgenauigkeit über maximalen Durchsatz stellen\n- eine ältere Filtermaschine ersetzen und moderne SPS- und Servosteuerung möchten\n- einen 40-kW-Anschluss für die Filterlinie zur Verfügung haben",
+      "Wenn maximale Ausbringung mit automatisiertem Stabhandling Ihre Priorität ist, vergleichen Sie sie mit der Hauni KDF-2, die mit Tow-Öffner und HCF80-Schragenfüller geliefert wird.",
+      "### Preis der Hauni KDF-1",
+      "Der Preis einer Hauni KDF-1 hängt von ihrem Zustand, der Steuerungskonfiguration (Siemens oder Beckhoff), den enthaltenen Komponenten und Ihrem Lieferziel ab. Senden Sie uns Ihre gewünschten Filtergrößen, das Zielland und ob Sie eine überholte Maschine möchten, und wir erstellen ein Angebot für die konkrete Maschine.",
+      "### Anfrage zur Hauni KDF-1",
+      "Schreiben Sie uns auf WhatsApp unter +92 301 1111184 oder nutzen Sie das Formular unten. Nennen Sie uns Ihre Filtergrößen und Ihr Lieferziel, und wir bestätigen Preis, Verfügbarkeit und Zustand – meist noch am selben Arbeitstag.",
     ],
-    applications: ["Großserien-Filterproduktion", "Standard- und Spezialfilter"],
+    applications: ["Filterproduktion in mehreren Formaten", "Slim- und King-Size-Filter"],
+    faqs: [
+      {
+        question: "Wofür wird die Hauni KDF-1 eingesetzt?",
+        answer: "Sie stellt Acetat-Filterstäbe für die Zigarettenfertigung her, mit Umfängen von 16,8 bis 28,1 mm und Längen von 64 bis 150 mm.",
+      },
+      {
+        question: "Hat die KDF-1 eine Umfangskontrolle?",
+        answer: "Ja. Sie misst den Filterumfang während der Produktion mit einem Lasersystem, was hilft, die Chargen innerhalb der Toleranz zu halten.",
+      },
+      {
+        question: "Wie viel Leistung benötigt die Hauni KDF-1?",
+        answer: "Die KDF-1 ist für 40 kW ausgelegt.",
+      },
+      {
+        question: "Welche Steuerungssysteme gibt es für die KDF-1?",
+        answer: "Die Maschinen haben entweder eine Siemens- oder Beckhoff-SPS und entweder Lenze- oder Beckhoff-Servoantriebe.",
+      },
+      {
+        question: "Ist die KDF-1 auch überholt erhältlich?",
+        answer: "Ja. Jede überholte Maschine wird vor dem Versand geprüft, gewartet und getestet, und Sie erhalten einen konkreten Zustandsbericht für die Maschine statt einer allgemeinen Beschreibung.",
+      },
+      {
+        question: "Exportieren Sie die KDF-1 auch außerhalb Pakistans?",
+        answer: "Ja. Civic Tobacco Machinery liefert an Hersteller weltweit. Kontaktieren Sie uns, um die Lieferung in Ihr Land zu bestätigen.",
+      },
+    ],
+    featureValues: {
+      "Model": "Hauni-KDF-1-Filterlinie",
+      "Filter Size": "120-mm-Filter",
+      "PLC Control": "Siemens oder Beckhoff",
+      "Servo System": "Lenze oder Beckhoff",
+      "Circumference Control": "Lasermesssystem",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Hauni KDF-2 Zigarettenfilter-Herstellungsmaschine",
@@ -1233,18 +1309,67 @@ const it: Record<string, ProductContent> = {
 
   "kdf-1": {
     h1: "Macchina per filtri per sigarette Hauni KDF-1",
-    metaTitle: "Macchina per filtri Hauni KDF-1",
+    metaTitle: "Macchina per filtri Hauni KDF-1 | Specifiche e prezzo",
     tagline: "Linea per filtri Hauni KDF-1 con controllo laser della circonferenza.",
     metaDescription:
-      "Macchina per filtri Hauni KDF-1 in Pakistan: filtri da 120 mm con PLC Siemens/Beckhoff e controllo laser della circonferenza. Fornita da Civic Tobacco Machinery.",
+      "Linea per filtri Hauni KDF-1 con controllo laser della circonferenza, circonferenza 16,8–28,1 mm e lunghezze filtro 64–150 mm. Richiedi prezzo e disponibilità.",
     intro: [
-      "La Hauni KDF-1 è una collaudata e potente linea per filtri con una solida reputazione di prestazioni, precisione e durata nella produzione di sigarette. Costruita per le esigenze della produzione ad alto volume, la KDF-1 è adatta ai produttori in Pakistan che mettono al primo posto uniformità, velocità e qualità.",
-      "Pensata per un funzionamento ad alta produzione, offre una robusta capacità produttiva per filtri da 120 mm, adatta sia a formati di sigaretta standard che personalizzati. Supporta circonferenze del filtro da 16,8 mm a 28,1 mm e lunghezze del filtro da 64 mm a 150 mm, così puoi produrre un'ampia gamma di dimensioni e tipi di filtro senza continui cambi macchina. Dai filtri King Size agli Slims fino ai design speciali, la KDF-1 li gestisce tutti in modo efficiente.",
-      "Funziona con un sistema di controllo PLC avanzato disponibile nelle configurazioni Siemens o Beckhoff, che offre controllo intuitivo, diagnostica in tempo reale e un'automazione affidabile che mantiene stabile la qualità del filtro per tutta la produzione. I sistemi servo Lenze o Beckhoff aumentano la stabilità e mantengono il movimento fluido e preciso.",
-      "Una caratteristica di spicco è il sistema di controllo della circonferenza basato su laser, che misura la circonferenza di ogni filtro con alta precisione, riducendo gli scostamenti e mantenendo ogni lotto uniforme. Questo livello di precisione è importante per rispettare gli standard qualitativi del marchio sui prodotti premium.",
-      "Con tutta la sua produzione, la KDF-1 mantiene un profilo energetico bilanciato a un totale di 40 kW, il che la rende efficiente da gestire nel lungo periodo. La sua struttura robusta e ben progettata offre una lunga vita utile, e il design modulare e la compatibilità con diversi tipi di sigaretta la rendono adatta sia alla produzione di filtri su piccola che su grande scala, che tu stia ampliando la capacità o sostituendo macchinari più vecchi.",
+      "La Hauni KDF-1 è una linea per filtri che produce bacchette filtro in acetato con circonferenza da 16,8 a 28,1 mm e lunghezza da 64 a 150 mm. Utilizza il controllo laser della circonferenza, l'automazione con PLC Siemens o Beckhoff e servoazionamenti Lenze o Beckhoff, con un assorbimento di 40 kW. Civic Tobacco Machinery la fornisce da Karachi, in Pakistan.",
+      "La KDF-1 è adatta ai produttori che hanno bisogno di un controllo stretto delle dimensioni su più formati di filtro, dal King Size agli Slims, senza riattrezzare continuamente la linea. La configurazione esatta varia da macchina a macchina. Chiedici i dettagli della macchina attualmente disponibile.",
+      "### Cosa rende diversa la KDF-1: il controllo laser della circonferenza",
+      "La circonferenza è una delle dimensioni del filtro più difficili da mantenere costante ad alta velocità. Uno scostamento di una frazione di millimetro può creare problemi sulla macchina per sigarette e portare a lotti scartati.",
+      "La KDF-1 misura la circonferenza della bacchetta con un sistema laser durante la produzione, così gli operatori possono intercettare la deviazione prima che diventi scarto. Per i marchi con tolleranze dimensionali rigorose, soprattutto nei formati premium e Slim, questo è il motivo principale per scegliere la KDF-1.",
+      "### Quali formati di filtro può produrre la KDF-1?",
+      "Con una gamma di circonferenze di 16,8–28,1 mm e lunghezze di 64–150 mm, la KDF-1 copre la maggior parte dei formati più comuni:",
+      "- Filtri Slim e Super Slim nella parte bassa della gamma di circonferenze\n- Filtri King Size e Regular nella fascia intermedia\n- Bacchette multisegmento più lunghe, che vengono tagliate più avanti nel processo",
+      "Questa gamma permette a una sola macchina di servire più linee di prodotto, un vantaggio per le fabbriche più piccole che non possono giustificare una linea filtri separata per ogni formato.",
+      "### Controllo e automazione",
+      "La KDF-1 funziona con un PLC Siemens o Beckhoff, a seconda della macchina. Gli operatori dispongono di diagnostica in tempo reale e i team di manutenzione ricevono informazioni sui guasti su cui possono intervenire. I servoazionamenti Lenze o Beckhoff gestiscono il controllo del movimento, mantenendo precisi il percorso della bacchetta e il taglio anche nei turni lunghi.",
+      "Se il tuo stabilimento è già standardizzato su Siemens o Beckhoff, faccelo sapere. Avere la stessa piattaforma di controllo semplifica molto la formazione e la gestione dei ricambi.",
+      "### La KDF-1 è adatta alla tua fabbrica?",
+      "La KDF-1 fa per te se:",
+      "- devi produrre più dimensioni di filtro su un'unica linea\n- dai priorità alla precisione dimensionale rispetto alla massima produttività\n- stai sostituendo una vecchia macchina per filtri e vuoi un controllo moderno con PLC e servo\n- hai a disposizione un'alimentazione da 40 kW per la linea filtri",
+      "Se la tua priorità è la massima produzione con movimentazione automatica delle bacchette, confrontala con la Hauni KDF-2, fornita con apritore di tow e caricatore di vassoi HCF80.",
+      "### Prezzo della Hauni KDF-1",
+      "Il prezzo di una Hauni KDF-1 dipende dalle sue condizioni, dalla configurazione del controllo (Siemens o Beckhoff), dai componenti inclusi e dalla destinazione di consegna. Inviaci le dimensioni di filtro richieste, il paese di destinazione e se desideri una macchina ricondizionata, e ti faremo un preventivo per la macchina specifica.",
+      "### Richiedi informazioni sulla Hauni KDF-1",
+      "Scrivici su WhatsApp al +92 301 1111184 oppure usa il modulo qui sotto. Indicaci le dimensioni dei filtri e la destinazione, e ti confermeremo prezzo, disponibilità e condizioni, di solito entro la stessa giornata lavorativa.",
     ],
-    applications: ["Produzione di filtri in grandi volumi", "Filtri standard e speciali"],
+    applications: ["Produzione di filtri multiformato", "Filtri Slim e King Size"],
+    faqs: [
+      {
+        question: "A cosa serve la Hauni KDF-1?",
+        answer: "Produce bacchette filtro in acetato per la produzione di sigarette, con circonferenze da 16,8 a 28,1 mm e lunghezze da 64 a 150 mm.",
+      },
+      {
+        question: "La KDF-1 ha il controllo della circonferenza?",
+        answer: "Sì. Utilizza un sistema laser per misurare la circonferenza del filtro durante la produzione, il che aiuta a mantenere i lotti entro la tolleranza.",
+      },
+      {
+        question: "Quanta potenza assorbe la Hauni KDF-1?",
+        answer: "La KDF-1 ha una potenza nominale di 40 kW.",
+      },
+      {
+        question: "Quali sistemi di controllo sono disponibili sulla KDF-1?",
+        answer: "Le macchine montano un PLC Siemens o Beckhoff e servoazionamenti Lenze o Beckhoff.",
+      },
+      {
+        question: "La KDF-1 è disponibile ricondizionata?",
+        answer: "Sì. Ogni macchina ricondizionata viene ispezionata, revisionata e collaudata prima della spedizione, e ricevi un rapporto specifico sulle condizioni della macchina, non una descrizione generica.",
+      },
+      {
+        question: "Esportate la KDF-1 fuori dal Pakistan?",
+        answer: "Sì. Civic Tobacco Machinery spedisce ai produttori di tutto il mondo. Contattaci per confermare la consegna nel tuo paese.",
+      },
+    ],
+    featureValues: {
+      "Model": "Linea per filtri Hauni KDF-1",
+      "Filter Size": "Filtri da 120 mm",
+      "PLC Control": "Siemens o Beckhoff",
+      "Servo System": "Lenze o Beckhoff",
+      "Circumference Control": "Sistema di misura laser",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Macchina per filtri per sigarette Hauni KDF-2",
@@ -1552,18 +1677,69 @@ const ru: Record<string, ProductContent> = {
 
   "kdf-1": {
     h1: "Машина для производства сигаретных фильтров Hauni KDF-1",
-    metaTitle: "Фильтровальная машина Hauni KDF-1",
+    metaTitle: "Фильтровальная машина Hauni KDF-1 | Характеристики и цена",
     tagline: "Фильтровальная линия Hauni KDF-1 с лазерным контролем окружности.",
     metaDescription:
-      "Фильтровальная машина Hauni KDF-1 в Пакистане: фильтры 120 мм с ПЛК Siemens/Beckhoff и лазерным контролем окружности. Поставка от Civic Tobacco Machinery.",
+      "Фильтровальная линия Hauni KDF-1 с лазерным контролем окружности: окружность 16,8–28,1 мм, длина фильтра 64–150 мм. Узнайте цену и наличие.",
     intro: [
-      "Hauni KDF-1 — проверенная, мощная фильтровальная линия с прочной репутацией по производительности, точности и долговечности в производстве сигарет. Созданная для нужд высокообъёмного производства, KDF-1 подходит производителям в Пакистане, ставящим на первое место однородность, скорость и качество.",
-      "Созданная для работы с высоким выпуском, она предлагает надёжную производительность для фильтров 120 мм, которая хорошо подходит как для стандартных, так и для нестандартных форматов сигарет. Она поддерживает окружность фильтра от 16,8 мм до 28,1 мм и длину фильтра от 64 мм до 150 мм, так что вы можете производить широкий диапазон размеров и типов фильтров без постоянных переналадок. От фильтров King Size до Slims и специализированных конструкций KDF-1 эффективно справляется со всеми.",
-      "Она работает с передовой системой управления ПЛК, доступной в конфигурациях Siemens или Beckhoff, обеспечивая интуитивное управление, диагностику в реальном времени и надёжную автоматизацию, удерживающую качество фильтра стабильным на протяжении всего цикла. Сервосистемы Lenze или Beckhoff добавляют стабильности и удерживают движение плавным и точным.",
-      "Выдающаяся особенность — лазерная система контроля окружности, измеряющая окружность каждого фильтра с высокой точностью, сокращая отклонения и удерживая каждую партию однородной. Такой уровень точности важен для соблюдения стандартов качества бренда на премиальных продуктах.",
-      "При всём своём выпуске KDF-1 сохраняет сбалансированный энергетический профиль при общей мощности 40 кВт, что делает её экономичной в эксплуатации в долгосрочной перспективе. Её прочная, хорошо спроектированная конструкция обеспечивает долгий срок службы, а модульная конструкция и совместимость с разными типами сигарет делают её подходящей как для мелко-, так и для крупносерийного производства фильтров, расширяете ли вы мощность или заменяете старое оборудование.",
+      "Hauni KDF-1 — фильтровальная линия, которая производит ацетатные фильтрующие палочки окружностью от 16,8 до 28,1 мм и длиной от 64 до 150 мм. В ней используются лазерный контроль окружности, автоматизация на ПЛК Siemens или Beckhoff и сервоприводы Lenze или Beckhoff; потребляемая мощность — 40 кВт. Civic Tobacco Machinery поставляет её из Карачи, Пакистан.",
+      "KDF-1 подходит производителям, которым нужен точный контроль размеров в нескольких форматах фильтров, от King Size до Slims, без постоянной переналадки линии. Точная комплектация зависит от конкретной машины. Уточните у нас детали машины, которая есть в наличии сейчас.",
+      "### Чем отличается KDF-1: лазерный контроль окружности",
+      "Окружность — один из самых сложных размеров фильтра, который нужно удерживать стабильным на высокой скорости. Отклонение даже на доли миллиметра может вызвать проблемы на сигаретной машине и привести к браку целых партий.",
+      "KDF-1 измеряет окружность палочки лазерной системой прямо во время работы, поэтому операторы замечают отклонение до того, как оно превратится в отходы. Для брендов со строгими допусками по размерам, особенно в премиальных и Slim-форматах, это главная причина выбрать KDF-1.",
+      "### Какие форматы фильтров выпускает KDF-1?",
+      "С диапазоном окружности 16,8–28,1 мм и длиной 64–150 мм KDF-1 охватывает большинство распространённых форматов:",
+      "- фильтры Slim и Super Slim в нижней части диапазона окружности\n- фильтры King Size и Regular в среднем диапазоне\n- более длинные многосегментные палочки, которые разрезаются на следующих этапах процесса",
+      "Такой диапазон позволяет одной машине обслуживать несколько продуктовых линеек, что выгодно небольшим фабрикам, которым невыгодно держать отдельную фильтровальную линию под каждый формат.",
+      "### Управление и автоматизация",
+      "KDF-1 работает на ПЛК Siemens или Beckhoff, в зависимости от машины. Операторы получают диагностику в реальном времени, а службы обслуживания — информацию о неисправностях, с которой можно сразу работать. Сервоприводы Lenze или Beckhoff отвечают за управление движением и сохраняют точность траектории палочки и резки на протяжении длинных смен.",
+      "Если ваш завод уже стандартизирован на Siemens или Beckhoff, сообщите нам. Единая платформа управления значительно упрощает обучение персонала и снабжение запчастями.",
+      "### Подходит ли KDF-1 вашей фабрике?",
+      "KDF-1 хорошо подойдёт, если вы:",
+      "- выпускаете несколько размеров фильтров на одной линии\n- ставите точность размеров выше максимальной производительности\n- заменяете старую фильтровальную машину и хотите современное управление на ПЛК и сервоприводах\n- располагаете подключением на 40 кВт для фильтровальной линии",
+      "Если ваш приоритет — максимальный выпуск с автоматической обработкой палочек, сравните её с Hauni KDF-2, которая поставляется с раскрывателем жгута и загрузчиком лотков HCF80.",
+      "### Цена Hauni KDF-1",
+      "Цена Hauni KDF-1 зависит от её состояния, конфигурации управления (Siemens или Beckhoff), входящих в комплект узлов и места доставки. Пришлите нам нужные размеры фильтров, страну доставки и укажите, нужна ли вам восстановленная машина, — и мы подготовим предложение по конкретной машине.",
+      "### Запрос по Hauni KDF-1",
+      "Напишите нам в WhatsApp по номеру +92 301 1111184 или воспользуйтесь формой ниже. Укажите размеры фильтров и место доставки, и мы подтвердим цену, наличие и состояние — обычно в тот же рабочий день.",
     ],
-    applications: ["Крупносерийное производство фильтров", "Стандартные и специализированные фильтры"],
+    applications: ["Производство фильтров нескольких форматов", "Фильтры Slim и King Size"],
+    faqs: [
+      {
+        question: "Для чего используется Hauni KDF-1?",
+        answer: "Она производит ацетатные фильтрующие палочки для сигаретного производства окружностью от 16,8 до 28,1 мм и длиной от 64 до 150 мм.",
+      },
+      {
+        question: "Есть ли у KDF-1 контроль окружности?",
+        answer: "Да. Лазерная система измеряет окружность фильтра во время производства, что помогает удерживать партии в пределах допуска.",
+      },
+      {
+        question: "Какую мощность потребляет Hauni KDF-1?",
+        answer: "Номинальная мощность KDF-1 — 40 кВт.",
+      },
+      {
+        question: "Какие системы управления доступны для KDF-1?",
+        answer: "Машины оснащаются ПЛК Siemens или Beckhoff и сервоприводами Lenze или Beckhoff.",
+      },
+      {
+        question: "Можно ли купить KDF-1 в восстановленном состоянии?",
+        answer: "Да. Каждая восстановленная машина проходит осмотр, обслуживание и испытания перед отправкой, и вы получаете конкретный отчёт о состоянии именно этой машины, а не общее описание.",
+      },
+      {
+        question: "Экспортируете ли вы KDF-1 за пределы Пакистана?",
+        answer: "Да. Civic Tobacco Machinery поставляет оборудование производителям по всему миру. Свяжитесь с нами, чтобы подтвердить доставку в вашу страну.",
+      },
+    ],
+    featureValues: {
+      "Model": "Фильтровальная линия Hauni KDF-1",
+      "Filter Size": "Фильтры 120 мм",
+      "PLC Control": "Siemens или Beckhoff",
+      "Servo System": "Lenze или Beckhoff",
+      "Circumference Control": "Лазерная измерительная система",
+      "Filter Circumference": "16,8 – 28,1 мм",
+      "Filter Length": "64 – 150 мм",
+      "Power": "40 кВт",
+    },
   },
   "kdf-2": {
     h1: "Машина для производства сигаретных фильтров Hauni KDF-2",
@@ -1871,18 +2047,69 @@ const ar: Record<string, ProductContent> = {
 
   "kdf-1": {
     h1: "ماكينة صناعة فلاتر السجائر Hauni KDF-1",
-    metaTitle: "ماكينة فلاتر Hauni KDF-1",
+    metaTitle: "ماكينة فلاتر Hauni KDF-1 | المواصفات والسعر",
     tagline: "خط فلاتر Hauni KDF-1 مع تحكم بالمحيط بالليزر.",
     metaDescription:
-      "ماكينة فلاتر Hauni KDF-1 في باكستان: فلاتر 120 مم مع PLC من Siemens/Beckhoff وتحكم بالمحيط بالليزر. تُورّد من Civic Tobacco Machinery.",
+      "خط فلاتر Hauni KDF-1 مع تحكم بالمحيط بالليزر، محيط 16.8–28.1 مم وأطوال فلتر 64–150 مم. استفسر عن السعر والتوفر.",
     intro: [
-      "Hauni KDF-1 خط فلاتر موثوق وقوي بسمعة راسخة في الأداء والدقة والمتانة في تصنيع السجائر. مبني لمتطلبات الإنتاج عالي الكميات، وتناسب KDF-1 المصنّعين في باكستان الذين يضعون التجانس والسرعة والجودة في المقدمة.",
-      "مصنوعة للتشغيل عالي الإنتاج، تقدّم طاقة إنتاجية متينة لفلاتر 120 مم، تناسب الصيغ القياسية والمخصصة للسجائر. تدعم محيط فلتر من 16.8 مم إلى 28.1 مم وأطوال فلتر من 64 مم إلى 150 مم، لتنتج نطاقًا واسعًا من مقاسات وأنواع الفلاتر دون تغييرات دائمة للماكينة. من فلاتر King Size إلى Slims إلى التصاميم المتخصصة، تتعامل KDF-1 معها جميعًا بكفاءة.",
-      "تعمل بنظام تحكم PLC متقدم متوفر بإعدادات Siemens أو Beckhoff، يمنح تحكمًا بديهيًا وتشخيصًا لحظيًا وأتمتة موثوقة تُبقي جودة الفلتر ثابتة طوال الدورة. وتضيف أنظمة سيرفو Lenze أو Beckhoff إلى الاستقرار وتُبقي الحركة سلسة ودقيقة.",
-      "من أبرز الميزات نظام التحكم بالمحيط القائم على الليزر، الذي يقيس محيط كل فلتر بدقة عالية، مقلّلًا الانحراف ومُبقيًا كل دفعة متجانسة. هذا المستوى من الدقة مهم للحفاظ على معايير جودة العلامة في المنتجات الراقية.",
-      "مع كل إنتاجها، تحافظ KDF-1 على ملف طاقة متوازن بإجمالي 40 كيلوواط، ما يجعلها اقتصادية التشغيل على المدى الطويل. بنيتها المتينة جيدة التصميم تمنح عمر خدمة طويلًا، ويجعلها تصميمها المعياري وتوافقها مع أنواع سجائر مختلفة مناسبة لإنتاج الفلاتر الصغير والكبير معًا، سواء وسّعت الطاقة أو استبدلت معدات قديمة.",
+      "Hauni KDF-1 خط لصناعة الفلاتر يُنتج أعواد فلاتر الأسيتات بمحيط من 16.8 إلى 28.1 مم وبطول من 64 إلى 150 مم. يعتمد على التحكم بالمحيط بالليزر، وأتمتة عبر وحدة تحكم PLC من Siemens أو Beckhoff، ومحركات سيرفو من Lenze أو Beckhoff، ويستهلك 40 كيلوواط. تورّده Civic Tobacco Machinery من كراتشي، باكستان.",
+      "تناسب KDF-1 المصنّعين الذين يحتاجون إلى تحكم دقيق في المقاسات عبر عدة صيغ للفلاتر، من King Size إلى Slims، دون إعادة تجهيز الخط باستمرار. تختلف المواصفات الدقيقة من ماكينة إلى أخرى. اسألنا عن تفاصيل الماكينة المتوفرة حاليًا.",
+      "### ما الذي يميّز KDF-1: التحكم بالمحيط بالليزر",
+      "المحيط من أصعب مقاسات الفلتر التي يمكن الحفاظ على ثباتها عند السرعات العالية. فانحراف بجزء من المليمتر قد يسبب مشكلات على ماكينة السجائر ويؤدي إلى رفض دفعات كاملة.",
+      "تقيس KDF-1 محيط العود بنظام ليزر أثناء التشغيل، فيتمكّن المشغّلون من رصد الانحراف قبل أن يتحوّل إلى هدر. وللعلامات التجارية ذات التفاوتات الصارمة في المقاسات، خصوصًا في الصيغ الفاخرة وصيغ Slim، هذا هو السبب الرئيسي لاختيار KDF-1.",
+      "### ما صيغ الفلاتر التي يمكن أن تُنتجها KDF-1؟",
+      "بمدى محيط يتراوح بين 16.8 و28.1 مم وأطوال بين 64 و150 مم، تغطي KDF-1 معظم الصيغ الشائعة:",
+      "- فلاتر Slim وSuper Slim في الطرف الأدنى من مدى المحيط\n- فلاتر King Size وRegular في المدى المتوسط\n- أعواد أطول متعددة المقاطع تُقطع لاحقًا في مراحل الإنتاج",
+      "يتيح هذا المدى لماكينة واحدة خدمة عدة خطوط منتجات، وهو ما يفيد المصانع الأصغر التي لا تستطيع تبرير خط فلاتر منفصل لكل صيغة.",
+      "### التحكم والأتمتة",
+      "تعمل KDF-1 بوحدة تحكم PLC من Siemens أو Beckhoff بحسب الماكينة. يحصل المشغّلون على تشخيص فوري، وتحصل فرق الصيانة على معلومات أعطال يمكنهم التصرّف بناءً عليها. وتتولّى محركات السيرفو من Lenze أو Beckhoff التحكم في الحركة، فتحافظ على دقة مسار العود والقطع طوال الورديات الطويلة.",
+      "إذا كان مصنعك يعتمد أصلًا على Siemens أو Beckhoff، فأخبرنا بذلك. فتوحيد منصة التحكم يجعل التدريب وقطع الغيار أبسط بكثير.",
+      "### هل KDF-1 مناسبة لمصنعك؟",
+      "تُعد KDF-1 خيارًا مناسبًا إذا كنت:",
+      "- تحتاج إلى إنتاج عدة مقاسات من الفلاتر على خط واحد\n- تقدّم دقة المقاسات على أقصى إنتاجية\n- تستبدل ماكينة فلاتر قديمة وتريد تحكمًا حديثًا بوحدة PLC ومحركات سيرفو\n- تملك تغذية كهربائية بقدرة 40 كيلوواط متاحة لخط الفلاتر",
+      "إذا كانت أولويتك أقصى إنتاج مع مناولة آلية للأعواد، فقارنها بـ Hauni KDF-2 التي تُورَّد مع فاتحة ألياف (tow opener) وملقّم صواني HCF80.",
+      "### سعر Hauni KDF-1",
+      "يعتمد سعر Hauni KDF-1 على حالتها، وتهيئة التحكم (Siemens أو Beckhoff)، والمكوّنات المرفقة، ووجهة التسليم. أرسل لنا مقاسات الفلاتر المطلوبة وبلد الوجهة، وأخبرنا إن كنت تريد ماكينة مُجدّدة، وسنقدّم لك عرض سعر للماكينة المحددة.",
+      "### استفسر عن Hauni KDF-1",
+      "راسلنا على واتساب على الرقم ‎+92 301 1111184‎ أو استخدم النموذج أدناه. شاركنا مقاسات الفلاتر والوجهة، وسنؤكّد لك السعر والتوفر والحالة، وعادةً في يوم العمل نفسه.",
     ],
-    applications: ["إنتاج الفلاتر بكميات كبيرة", "فلاتر قياسية ومتخصصة"],
+    applications: ["إنتاج فلاتر بصيغ متعددة", "فلاتر Slim وKing Size"],
+    faqs: [
+      {
+        question: "فيمَ تُستخدم Hauni KDF-1؟",
+        answer: "تُنتج أعواد فلاتر الأسيتات لصناعة السجائر بمحيط من 16.8 إلى 28.1 مم وبطول من 64 إلى 150 مم.",
+      },
+      {
+        question: "هل تحتوي KDF-1 على تحكم بالمحيط؟",
+        answer: "نعم. تستخدم نظام ليزر لقياس محيط الفلتر أثناء الإنتاج، ما يساعد على إبقاء الدفعات ضمن حدود التفاوت المسموح.",
+      },
+      {
+        question: "كم تستهلك Hauni KDF-1 من الطاقة؟",
+        answer: "القدرة المقنّنة لـ KDF-1 هي 40 كيلوواط.",
+      },
+      {
+        question: "ما أنظمة التحكم المتاحة في KDF-1؟",
+        answer: "تأتي الماكينات بوحدة PLC من Siemens أو Beckhoff، ومحركات سيرفو من Lenze أو Beckhoff.",
+      },
+      {
+        question: "هل تتوفر KDF-1 مُجدّدة؟",
+        answer: "نعم. تخضع كل ماكينة مُجدّدة للفحص والصيانة والاختبار قبل الشحن، وتحصل على تقرير حالة خاص بالماكينة نفسها، لا وصفًا عامًا.",
+      },
+      {
+        question: "هل تصدّرون KDF-1 خارج باكستان؟",
+        answer: "نعم. تشحن Civic Tobacco Machinery إلى المصنّعين حول العالم. تواصل معنا لتأكيد التسليم إلى بلدك.",
+      },
+    ],
+    featureValues: {
+      "Model": "خط فلاتر Hauni KDF-1",
+      "Filter Size": "فلاتر 120 مم",
+      "PLC Control": "Siemens أو Beckhoff",
+      "Servo System": "Lenze أو Beckhoff",
+      "Circumference Control": "نظام قياس بالليزر",
+      "Filter Circumference": "16.8 – 28.1 مم",
+      "Filter Length": "64 – 150 مم",
+      "Power": "40 كيلوواط",
+    },
   },
   "kdf-2": {
     h1: "ماكينة صناعة فلاتر السجائر Hauni KDF-2",
@@ -2233,20 +2460,59 @@ const za: Record<string, ProductContent> = {
     ],
   },
   "kdf-1": {
+    h1: "Hauni KDF-1 Cigarette Filter Making Machine",
+    metaTitle: "Hauni KDF-1 Filter Maker | Specs & Price | Civic Tobacco",
     tagline: "Hauni KDF-1, a filter line built on a strong reputation for precision and durability.",
-    h1: "Hauni KDF-1 Cigarette Filter Manufacturing Machine",
-    metaTitle: "Hauni KDF-1 Filter Making Machine",
-    metaDescription: "Hauni KDF-1 filter making machine, 120mm filters with laser circumference control, exported from Pakistan to South Africa.",
+    metaDescription:
+      "Hauni KDF-1 filter making line with laser circumference control, 16.8–28.1 mm circumference and 64–150 mm filter lengths, exported to South Africa. Enquire for price.",
     intro: [
-      "With a strong reputation for performance, precision and durability, the Hauni KDF-1 is a proven filter line for the demands of high-volume production, suiting manufacturers who put consistency, speed and quality first.",
-      "Built for high-output running, it handles 120mm filters comfortably, working well for both standard and customised cigarette formats. Filter circumference range spans 16.8mm to 28.1mm with lengths from 64mm to 150mm, covering King Size filters through to Slims and specialised designs without constant machine changes.",
-      "An advanced PLC control system, available in Siemens or Beckhoff configurations, gives intuitive control, real-time diagnostics and reliable automation that holds filter quality steady through the run, with Lenze or Beckhoff servo systems adding stability and smooth, accurate motion.",
-      "A standout feature is the laser-based circumference control system, measuring each filter's circumference with high precision to cut deviation and keep every batch uniform, a level of accuracy that matters for holding brand quality standards on premium products.",
-      "For all its output, the KDF-1 keeps a balanced energy profile at a total of 40KW, efficient to run over the long term. Its sturdy build gives long service life, and its modular design fits both smaller and large-scale filter production, whether expanding capacity or upgrading older machinery.",
+      "The Hauni KDF-1 is a filter making line that produces acetate filter rods from 16.8 to 28.1 mm in circumference and 64 to 150 mm in length. It uses laser circumference control, Siemens or Beckhoff PLC automation and Lenze or Beckhoff servo drives, and draws 40 kW of power. Civic Tobacco Machinery supplies it from Karachi, Pakistan, and exports it to South Africa.",
+      "The KDF-1 suits manufacturers who need tight size control across several filter formats, from King Size to Slims, without constantly retooling the line. Exact configuration varies by unit. Ask us for the details of the machine currently available.",
+      "### What Makes the KDF-1 Different: Laser Circumference Control",
+      "Circumference is one of the hardest filter dimensions to hold steady at speed. A drift of a fraction of a millimetre can cause problems at the cigarette maker and lead to rejected batches.",
+      "The KDF-1 measures rod circumference with a laser system as it runs, so operators can catch deviation before it turns into waste. For brands with strict size tolerances, especially premium and Slim formats, this is the main reason to choose the KDF-1.",
+      "### Which Filter Formats Can the KDF-1 Produce?",
+      "With a circumference range of 16.8–28.1 mm and lengths of 64–150 mm, the KDF-1 covers most common formats:",
+      "- Slim and Super Slim filters at the lower end of the circumference range\n- King Size and Regular filters in the mid range\n- Longer multi-segment rods that are cut down later in the process",
+      "This range lets one machine serve several product lines, which helps smaller factories that can't justify a separate filter line for each format.",
+      "### Control and Automation",
+      "The KDF-1 runs on a Siemens or Beckhoff PLC, depending on the unit. Operators get real-time diagnostics, and maintenance teams get fault information they can act on. Lenze or Beckhoff servo drives handle motion control, keeping the rod path and cut accurate over long shifts.",
+      "If your plant already standardises on Siemens or Beckhoff, tell us. Matching the control platform makes training and spare parts much simpler.",
+      "### Is the KDF-1 Right for Your Factory?",
+      "The KDF-1 is a good fit if you:",
+      "- Need to produce several filter sizes on one line\n- Prioritise dimensional accuracy over maximum throughput\n- Are replacing an older filter maker and want modern PLC and servo control\n- Have a 40 kW supply available for the filter line",
+      "If your priority is maximum output with automated rod handling, compare it with the Hauni KDF-2, which is supplied with a tow opener and HCF80 tray filler.",
+      "### Hauni KDF-1 Price",
+      "The price of a Hauni KDF-1 depends on its condition, control configuration (Siemens or Beckhoff), included components and your delivery destination. Send us your required filter sizes, destination country and whether you want a reconditioned unit, and we'll quote for the specific machine.",
+      "### Enquire About the Hauni KDF-1",
+      "Message us on WhatsApp at +92 301 1111184 or use the form below. Share your filter sizes and destination, and we'll confirm price, availability and condition, usually the same working day.",
     ],
-    applications: [
-      "High-volume filter production",
-      "Standard and specialised filters",
+    applications: ["Multi-format filter production", "Slim and King Size filters"],
+    faqs: [
+      {
+        question: "What is the Hauni KDF-1 used for?",
+        answer: "It produces acetate filter rods for cigarette manufacturing, in circumferences from 16.8 to 28.1 mm and lengths from 64 to 150 mm.",
+      },
+      {
+        question: "Does the KDF-1 have circumference control?",
+        answer: "Yes. It uses a laser system to measure filter circumference during production, which helps keep batches within tolerance.",
+      },
+      {
+        question: "How much power does the Hauni KDF-1 use?",
+        answer: "The KDF-1 is rated at 40 kW.",
+      },
+      {
+        question: "Which control systems are available on the KDF-1?",
+        answer: "Units come with either a Siemens or Beckhoff PLC and either Lenze or Beckhoff servo drives.",
+      },
+      {
+        question: "Is the KDF-1 available reconditioned?",
+        answer: "Yes. Every reconditioned machine is inspected, serviced and tested before dispatch, and you get a specific condition report for the unit, not a generic description.",
+      },
+      {
+        question: "Do you export the KDF-1 to South Africa?",
+        answer: "Yes. Civic Tobacco Machinery ships to manufacturers in South Africa and internationally. Contact us to confirm delivery to your factory.",
+      },
     ],
   },
   "kdf-2": {
@@ -2618,20 +2884,59 @@ const zw: Record<string, ProductContent> = {
     ],
   },
   "kdf-1": {
+    h1: "Hauni KDF-1 Cigarette Filter Making Machine",
+    metaTitle: "Hauni KDF-1 Filter Maker | Specs & Price | Civic Tobacco",
     tagline: "Hauni KDF-1 filter line with laser circumference control.",
-    h1: "Hauni KDF-1 Cigarette Filter Manufacturing Machine",
-    metaTitle: "Hauni KDF-1 Filter Making Machine",
-    metaDescription: "Hauni KDF-1 filter making machine exported to Zimbabwe, 120mm filters with Siemens/Beckhoff PLC and laser circumference control. Supplied by Civic Tobacco Machinery.",
+    metaDescription:
+      "Hauni KDF-1 filter making line with laser circumference control, 16.8–28.1 mm circumference and 64–150 mm filter lengths, exported to Zimbabwe. Enquire for price.",
     intro: [
-      "The KDF-1 has built its reputation on performance, precision and durability, and it suits manufacturers who put consistency and speed first in high-volume filter production.",
-      "Production capacity centres on 120mm filters, useful for both standard and customised cigarette formats, and it covers filter circumferences from 16.8mm to 28.1mm and filter lengths from 64mm to 150mm, so King Size filters, Slims and more specialised designs can all run without constant machine changeovers.",
-      "Control runs through an advanced PLC system in either Siemens or Beckhoff configuration, giving intuitive operation, real-time diagnostics and reliable automation, with Lenze or Beckhoff servo systems adding smooth, accurate motion.",
-      "A laser-based circumference control system measures each filter with high precision, cutting deviation and keeping every batch uniform, which matters when a brand's quality standard depends on consistency at this stage.",
-      "Total power draw is a balanced 40KW, and the KDF-1's sturdy build gives it long service life; its modular design and compatibility with different cigarette types make it a fit for both smaller operations and large-scale filter production, whether expanding capacity or replacing older machinery.",
+      "The Hauni KDF-1 is a filter making line that produces acetate filter rods from 16.8 to 28.1 mm in circumference and 64 to 150 mm in length. It uses laser circumference control, Siemens or Beckhoff PLC automation and Lenze or Beckhoff servo drives, and draws 40 kW of power. Civic Tobacco Machinery supplies it from Karachi, Pakistan, and exports it to Zimbabwe.",
+      "The KDF-1 suits manufacturers who need tight size control across several filter formats, from King Size to Slims, without constantly retooling the line. Exact configuration varies by unit. Ask us for the details of the machine currently available.",
+      "### What Makes the KDF-1 Different: Laser Circumference Control",
+      "Circumference is one of the hardest filter dimensions to hold steady at speed. A drift of a fraction of a millimetre can cause problems at the cigarette maker and lead to rejected batches.",
+      "The KDF-1 measures rod circumference with a laser system as it runs, so operators can catch deviation before it turns into waste. For brands with strict size tolerances, especially premium and Slim formats, this is the main reason to choose the KDF-1.",
+      "### Which Filter Formats Can the KDF-1 Produce?",
+      "With a circumference range of 16.8–28.1 mm and lengths of 64–150 mm, the KDF-1 covers most common formats:",
+      "- Slim and Super Slim filters at the lower end of the circumference range\n- King Size and Regular filters in the mid range\n- Longer multi-segment rods that are cut down later in the process",
+      "This range lets one machine serve several product lines, which helps smaller factories that can't justify a separate filter line for each format.",
+      "### Control and Automation",
+      "The KDF-1 runs on a Siemens or Beckhoff PLC, depending on the unit. Operators get real-time diagnostics, and maintenance teams get fault information they can act on. Lenze or Beckhoff servo drives handle motion control, keeping the rod path and cut accurate over long shifts.",
+      "If your plant already standardises on Siemens or Beckhoff, tell us. Matching the control platform makes training and spare parts much simpler.",
+      "### Is the KDF-1 Right for Your Factory?",
+      "The KDF-1 is a good fit if you:",
+      "- Need to produce several filter sizes on one line\n- Prioritise dimensional accuracy over maximum throughput\n- Are replacing an older filter maker and want modern PLC and servo control\n- Have a 40 kW supply available for the filter line",
+      "If your priority is maximum output with automated rod handling, compare it with the Hauni KDF-2, which is supplied with a tow opener and HCF80 tray filler.",
+      "### Hauni KDF-1 Price",
+      "The price of a Hauni KDF-1 depends on its condition, control configuration (Siemens or Beckhoff), included components and your delivery destination. Send us your required filter sizes, destination country and whether you want a reconditioned unit, and we'll quote for the specific machine.",
+      "### Enquire About the Hauni KDF-1",
+      "Message us on WhatsApp at +92 301 1111184 or use the form below. Share your filter sizes and destination, and we'll confirm price, availability and condition, usually the same working day.",
     ],
-    applications: [
-      "High-volume filter production",
-      "Standard and specialised filters",
+    applications: ["Multi-format filter production", "Slim and King Size filters"],
+    faqs: [
+      {
+        question: "What is the Hauni KDF-1 used for?",
+        answer: "It produces acetate filter rods for cigarette manufacturing, in circumferences from 16.8 to 28.1 mm and lengths from 64 to 150 mm.",
+      },
+      {
+        question: "Does the KDF-1 have circumference control?",
+        answer: "Yes. It uses a laser system to measure filter circumference during production, which helps keep batches within tolerance.",
+      },
+      {
+        question: "How much power does the Hauni KDF-1 use?",
+        answer: "The KDF-1 is rated at 40 kW.",
+      },
+      {
+        question: "Which control systems are available on the KDF-1?",
+        answer: "Units come with either a Siemens or Beckhoff PLC and either Lenze or Beckhoff servo drives.",
+      },
+      {
+        question: "Is the KDF-1 available reconditioned?",
+        answer: "Yes. Every reconditioned machine is inspected, serviced and tested before dispatch, and you get a specific condition report for the unit, not a generic description.",
+      },
+      {
+        question: "Do you export the KDF-1 to Zimbabwe?",
+        answer: "Yes. Civic Tobacco Machinery ships to manufacturers in Zimbabwe and internationally. Contact us to confirm delivery to your factory.",
+      },
     ],
   },
   "kdf-2": {
@@ -2981,18 +3286,67 @@ const pl: Record<string, ProductContent> = {
   },
   "kdf-1": {
     h1: "Maszyna do produkcji filtrów papierosowych Hauni KDF-1",
-    metaTitle: "Maszyna do produkcji filtrów Hauni KDF-1",
-    metaDescription:
-      "Maszyna do produkcji filtrów Hauni KDF-1 w Pakistanie – filtry 120 mm ze sterownikiem PLC Siemens/Beckhoff i laserową kontrolą obwodu. Dostarczana przez Civic Tobacco Machinery.",
+    metaTitle: "Maszyna filtrowa Hauni KDF-1 | Dane techniczne i cena",
     tagline: "Linia do produkcji filtrów Hauni KDF-1 z laserową kontrolą obwodu.",
+    metaDescription:
+      "Linia filtrowa Hauni KDF-1 z laserową kontrolą obwodu, obwód 16,8–28,1 mm i długość filtra 64–150 mm. Zapytaj o cenę i dostępność.",
     intro: [
-      "Hauni KDF-1 to zaufana, mocna linia do produkcji filtrów o silnej reputacji pod względem wydajności, precyzji i trwałości w produkcji papierosów. Zbudowana pod kątem wymagań wielkoseryjnej produkcji, KDF-1 sprawdza się u producentów w Pakistanie, którzy stawiają na pierwszym miejscu jednorodność, prędkość i jakość.",
-      "Zbudowana do wydajnej pracy, oferuje solidną wydajność produkcyjną dla filtrów 120 mm, co dobrze sprawdza się zarówno w standardowych, jak i niestandardowych formatach papierosów. Obsługuje obwody filtra od 16,8 mm do 28,1 mm oraz długości filtra od 64 mm do 150 mm, dzięki czemu można produkować szeroki zakres rozmiarów i typów filtrów bez ciągłych zmian maszyny. Od filtrów King Size po Slims i konstrukcje specjalistyczne, KDF-1 obsługuje je wszystkie wydajnie.",
-      "Pracuje na zaawansowanym systemie sterowania PLC dostępnym w konfiguracjach Siemens lub Beckhoff, dając intuicyjne sterowanie, diagnostykę w czasie rzeczywistym i niezawodną automatyzację, która utrzymuje stałą jakość filtra przez całą serię. Systemy serwo Lenze lub Beckhoff dodatkowo zwiększają stabilność i utrzymują płynny, precyzyjny ruch.",
-      "Wyróżniającą cechą jest laserowy system kontroli obwodu, który mierzy obwód każdego filtra z dużą precyzją, ograniczając odchylenia i utrzymując jednorodność każdej partii. Ten poziom dokładności ma znaczenie dla utrzymania standardów jakości marki w produktach premium.",
-      "Mimo swojej wydajności, KDF-1 utrzymuje zrównoważony profil energetyczny na poziomie łącznie 40 kW, co czyni ją efektywną w długoterminowej eksploatacji. Jej solidna, dobrze zaprojektowana konstrukcja zapewnia długą żywotność, a modułowa budowa i kompatybilność z różnymi typami papierosów sprawiają, że dobrze sprawdza się zarówno w mniejszej, jak i wielkoseryjnej produkcji filtrów, niezależnie od tego, czy zwiększasz moce, czy modernizujesz starszy sprzęt.",
+      "Hauni KDF-1 to linia do produkcji filtrów, która wytwarza octanowe wałki filtrowe o obwodzie od 16,8 do 28,1 mm i długości od 64 do 150 mm. Wykorzystuje laserową kontrolę obwodu, automatykę opartą na sterowniku PLC Siemens lub Beckhoff oraz serwonapędy Lenze lub Beckhoff, a jej pobór mocy wynosi 40 kW. Civic Tobacco Machinery dostarcza ją z Karaczi w Pakistanie.",
+      "KDF-1 sprawdzi się u producentów, którzy potrzebują ścisłej kontroli wymiarów w kilku formatach filtrów, od King Size po Slims, bez ciągłego przezbrajania linii. Dokładna konfiguracja zależy od egzemplarza. Zapytaj nas o szczegóły maszyny dostępnej obecnie.",
+      "### Co wyróżnia KDF-1: laserowa kontrola obwodu",
+      "Obwód to jeden z najtrudniejszych do utrzymania wymiarów filtra przy wysokiej prędkości. Odchyłka rzędu ułamka milimetra może powodować problemy na maszynie papierosowej i prowadzić do odrzucenia całych partii.",
+      "KDF-1 mierzy obwód wałka systemem laserowym w trakcie pracy, dzięki czemu operatorzy wychwytują odchyłki, zanim zamienią się w odpad. Dla marek o ścisłych tolerancjach wymiarowych, zwłaszcza w formatach premium i Slim, to główny powód wyboru KDF-1.",
+      "### Jakie formaty filtrów może produkować KDF-1?",
+      "Dzięki zakresowi obwodu 16,8–28,1 mm i długości 64–150 mm KDF-1 obejmuje większość popularnych formatów:",
+      "- filtry Slim i Super Slim w dolnej części zakresu obwodu\n- filtry King Size i Regular w środkowym zakresie\n- dłuższe wałki wielosegmentowe, które są docinane na dalszym etapie procesu",
+      "Taki zakres pozwala jednej maszynie obsługiwać kilka linii produktów, co pomaga mniejszym fabrykom, które nie mogą uzasadnić osobnej linii filtrowej dla każdego formatu.",
+      "### Sterowanie i automatyka",
+      "KDF-1 pracuje na sterowniku PLC Siemens lub Beckhoff, w zależności od egzemplarza. Operatorzy mają diagnostykę w czasie rzeczywistym, a służby utrzymania ruchu otrzymują informacje o usterkach, na podstawie których mogą działać. Serwonapędy Lenze lub Beckhoff odpowiadają za sterowanie ruchem, utrzymując dokładność prowadzenia wałka i cięcia przez długie zmiany.",
+      "Jeśli Twój zakład jest już ustandaryzowany na Siemens lub Beckhoff, daj nam znać. Ta sama platforma sterowania znacznie upraszcza szkolenia i zaopatrzenie w części zamienne.",
+      "### Czy KDF-1 pasuje do Twojej fabryki?",
+      "KDF-1 będzie dobrym wyborem, jeśli:",
+      "- musisz produkować kilka rozmiarów filtrów na jednej linii\n- dokładność wymiarów jest dla Ciebie ważniejsza niż maksymalna wydajność\n- wymieniasz starszą maszynę filtrową i chcesz nowoczesnego sterowania PLC i serwo\n- masz dostępne zasilanie 40 kW dla linii filtrowej",
+      "Jeśli priorytetem jest maksymalna wydajność z automatyczną obsługą wałków, porównaj ją z Hauni KDF-2, dostarczaną z otwieraczem towu i podajnikiem tac HCF80.",
+      "### Cena Hauni KDF-1",
+      "Cena Hauni KDF-1 zależy od jej stanu, konfiguracji sterowania (Siemens lub Beckhoff), dołączonych podzespołów i miejsca dostawy. Prześlij nam wymagane rozmiary filtrów, kraj docelowy oraz informację, czy interesuje Cię maszyna regenerowana, a przygotujemy wycenę konkretnej maszyny.",
+      "### Zapytaj o Hauni KDF-1",
+      "Napisz do nas na WhatsApp pod numer +92 301 1111184 lub skorzystaj z formularza poniżej. Podaj rozmiary filtrów i miejsce dostawy, a potwierdzimy cenę, dostępność i stan – zwykle tego samego dnia roboczego.",
     ],
-    applications: ["Wielkoseryjna produkcja filtrów", "Filtry standardowe i specjalistyczne"],
+    applications: ["Produkcja filtrów w wielu formatach", "Filtry Slim i King Size"],
+    faqs: [
+      {
+        question: "Do czego służy Hauni KDF-1?",
+        answer: "Produkuje octanowe wałki filtrowe do produkcji papierosów, o obwodzie od 16,8 do 28,1 mm i długości od 64 do 150 mm.",
+      },
+      {
+        question: "Czy KDF-1 ma kontrolę obwodu?",
+        answer: "Tak. Wykorzystuje system laserowy do pomiaru obwodu filtra w trakcie produkcji, co pomaga utrzymać partie w granicach tolerancji.",
+      },
+      {
+        question: "Ile mocy pobiera Hauni KDF-1?",
+        answer: "Moc znamionowa KDF-1 wynosi 40 kW.",
+      },
+      {
+        question: "Jakie systemy sterowania są dostępne w KDF-1?",
+        answer: "Maszyny mają sterownik PLC Siemens lub Beckhoff oraz serwonapędy Lenze lub Beckhoff.",
+      },
+      {
+        question: "Czy KDF-1 jest dostępna po regeneracji?",
+        answer: "Tak. Każda regenerowana maszyna jest sprawdzana, serwisowana i testowana przed wysyłką, a Ty otrzymujesz konkretny raport stanu tego egzemplarza, a nie ogólny opis.",
+      },
+      {
+        question: "Czy eksportujecie KDF-1 poza Pakistan?",
+        answer: "Tak. Civic Tobacco Machinery wysyła maszyny do producentów na całym świecie. Skontaktuj się z nami, aby potwierdzić dostawę do Twojego kraju.",
+      },
+    ],
+    featureValues: {
+      "Model": "Linia filtrowa Hauni KDF-1",
+      "Filter Size": "Filtry 120 mm",
+      "PLC Control": "Siemens lub Beckhoff",
+      "Servo System": "Lenze lub Beckhoff",
+      "Circumference Control": "Laserowy system pomiarowy",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Maszyna do produkcji filtrów papierosowych Hauni KDF-2",
@@ -3317,19 +3671,69 @@ const bg: Record<string, ProductContent> = {
     applications: ["Мащабно производство", "Широкомащабно производство"],
   },
   "kdf-1": {
-    h1: "Машина за производство на филтри за цигари Hauni KDF-1",
-    metaTitle: "Машина за производство на филтри Hauni KDF-1",
-    metaDescription:
-      "Машина за производство на филтри Hauni KDF-1 в Пакистан – филтри 120 мм със Siemens/Beckhoff PLC и лазерен контрол на обиколката. Доставена от Civic Tobacco Machinery.",
+    h1: "Машина за производство на цигарени филтри Hauni KDF-1",
+    metaTitle: "Машина за филтри Hauni KDF-1 | Характеристики и цена",
     tagline: "Линия за производство на филтри Hauni KDF-1 с лазерен контрол на обиколката.",
+    metaDescription:
+      "Линия за филтри Hauni KDF-1 с лазерен контрол на обиколката, обиколка 16,8–28,1 мм и дължина на филтъра 64–150 мм. Попитайте за цена и наличност.",
     intro: [
-      "Hauni KDF-1 е доверена, мощна линия за производство на филтри със силна репутация за производителност, прецизност и издръжливост в производството на цигари. Изградена за изискванията на мащабно производство, KDF-1 подхожда на производители в Пакистан, които поставят постоянство, скорост и качество на първо място.",
-      "Изградена за високопроизводителна работа, тя предлага солиден производствен капацитет за филтри 120 мм, което работи добре както за стандартни, така и за персонализирани формати цигари. Поддържа обиколка на филтъра от 16,8 мм до 28,1 мм и дължина на филтъра от 64 мм до 150 мм, така че можете да произвеждате широка гама размери и видове филтри без постоянни промени на машината. От филтри King Size до Slims и специализирани дизайни, KDF-1 ги обработва всички ефективно.",
-      "Работи с усъвършенствана система за PLC управление, налична в конфигурации Siemens или Beckhoff, давайки интуитивен контрол, диагностика в реално време и надеждна автоматизация, която поддържа постоянно качество на филтъра през цялата серия. Серво системи Lenze или Beckhoff допълват стабилността и поддържат плавно, точно движение.",
-      "Отличителна характеристика е лазерната система за контрол на обиколката, която измерва обиколката на всеки филтър с висока прецизност, намалявайки отклоненията и поддържайки еднородност на всяка партида. Това ниво на точност има значение за поддържане на стандартите за качество на марката при премиум продукти.",
-      "Въпреки целия си добив, KDF-1 поддържа балансиран енергиен профил от общо 40 kW, което я прави ефективна за дългосрочна работа. Здравата, добре проектирана конструкция ѝ дава дълъг експлоатационен живот, а модулният дизайн и съвместимостта с различни типове цигари я правят подходяща както за по-малко, така и за мащабно производство на филтри, независимо дали разширявате капацитета, или обновявате по-старо оборудване.",
+      "Hauni KDF-1 е линия за производство на филтри, която изработва ацетатни филтърни пръчки с обиколка от 16,8 до 28,1 мм и дължина от 64 до 150 мм. Използва лазерен контрол на обиколката, автоматизация с PLC на Siemens или Beckhoff и серво задвижвания Lenze или Beckhoff, а консумацията ѝ е 40 kW. Civic Tobacco Machinery я доставя от Карачи, Пакистан.",
+      "KDF-1 е подходяща за производители, които се нуждаят от точен контрол на размерите в няколко формата филтри, от King Size до Slims, без постоянно пренастройване на линията. Точната конфигурация зависи от конкретната машина. Попитайте ни за подробности за машината, която е налична в момента.",
+      "### Какво отличава KDF-1: лазерен контрол на обиколката",
+      "Обиколката е един от най-трудните за поддържане размери на филтъра при висока скорост. Отклонение с част от милиметъра може да създаде проблеми на цигарената машина и да доведе до бракувани партиди.",
+      "KDF-1 измерва обиколката на пръчката с лазерна система по време на работа, така че операторите да забележат отклонението, преди то да се превърне в отпадък. За марки със строги допуски по размерите, особено при премиум и Slim формати, това е основната причина да изберете KDF-1.",
+      "### Какви формати филтри може да произвежда KDF-1?",
+      "С диапазон на обиколката 16,8–28,1 мм и дължини 64–150 мм KDF-1 покрива повечето разпространени формати:",
+      "- филтри Slim и Super Slim в долния край на диапазона на обиколката\n- филтри King Size и Regular в средния диапазон\n- по-дълги многосегментни пръчки, които се нарязват по-късно в процеса",
+      "Този диапазон позволява една машина да обслужва няколко продуктови линии, което помага на по-малките фабрики, които не могат да оправдаят отделна линия за филтри за всеки формат.",
+      "### Управление и автоматизация",
+      "KDF-1 работи с PLC на Siemens или Beckhoff, в зависимост от машината. Операторите получават диагностика в реално време, а екипите по поддръжка – информация за неизправности, по която могат да действат. Серво задвижванията Lenze или Beckhoff управляват движението и поддържат точни траекторията на пръчката и рязането през дългите смени.",
+      "Ако заводът ви вече е стандартизиран на Siemens или Beckhoff, кажете ни. Еднаквата платформа за управление прави обучението и резервните части много по-лесни.",
+      "### Подходяща ли е KDF-1 за вашата фабрика?",
+      "KDF-1 е добър избор, ако:",
+      "- трябва да произвеждате няколко размера филтри на една линия\n- поставяте точността на размерите пред максималния капацитет\n- заменяте по-стара машина за филтри и искате модерно управление с PLC и серво\n- разполагате със захранване от 40 kW за линията за филтри",
+      "Ако приоритетът ви е максимална продукция с автоматизирана обработка на пръчките, сравнете я с Hauni KDF-2, която се доставя с отварачка за кабел (tow opener) и пълнач на тави HCF80.",
+      "### Цена на Hauni KDF-1",
+      "Цената на Hauni KDF-1 зависи от състоянието ѝ, конфигурацията на управлението (Siemens или Beckhoff), включените компоненти и мястото на доставка. Изпратете ни нужните размери филтри, държавата на доставка и дали искате реновирана машина, и ще ви изготвим оферта за конкретната машина.",
+      "### Запитване за Hauni KDF-1",
+      "Пишете ни в WhatsApp на +92 301 1111184 или използвайте формата по-долу. Споделете размерите на филтрите и мястото на доставка и ще потвърдим цена, наличност и състояние, обикновено в същия работен ден.",
     ],
-    applications: ["Мащабно производство на филтри", "Стандартни и специализирани филтри"],
+    applications: ["Производство на филтри в няколко формата", "Филтри Slim и King Size"],
+    faqs: [
+      {
+        question: "За какво се използва Hauni KDF-1?",
+        answer: "Тя произвежда ацетатни филтърни пръчки за производство на цигари, с обиколка от 16,8 до 28,1 мм и дължина от 64 до 150 мм.",
+      },
+      {
+        question: "Има ли KDF-1 контрол на обиколката?",
+        answer: "Да. Използва лазерна система за измерване на обиколката на филтъра по време на производството, което помага партидите да остават в допуска.",
+      },
+      {
+        question: "Колко мощност консумира Hauni KDF-1?",
+        answer: "Номиналната мощност на KDF-1 е 40 kW.",
+      },
+      {
+        question: "Какви системи за управление се предлагат за KDF-1?",
+        answer: "Машините са с PLC на Siemens или Beckhoff и серво задвижвания Lenze или Beckhoff.",
+      },
+      {
+        question: "Предлага ли се KDF-1 реновирана?",
+        answer: "Да. Всяка реновирана машина се проверява, обслужва и тества преди изпращане, а вие получавате конкретен доклад за състоянието на машината, а не общо описание.",
+      },
+      {
+        question: "Изнасяте ли KDF-1 извън Пакистан?",
+        answer: "Да. Civic Tobacco Machinery доставя на производители по целия свят. Свържете се с нас, за да потвърдите доставката до вашата държава.",
+      },
+    ],
+    featureValues: {
+      "Model": "Линия за филтри Hauni KDF-1",
+      "Filter Size": "Филтри 120 мм",
+      "PLC Control": "Siemens или Beckhoff",
+      "Servo System": "Lenze или Beckhoff",
+      "Circumference Control": "Лазерна измервателна система",
+      "Filter Circumference": "16,8 – 28,1 мм",
+      "Filter Length": "64 – 150 мм",
+    },
   },
   "kdf-2": {
     h1: "Машина за производство на филтри за цигари Hauni KDF-2",
@@ -3655,18 +4059,67 @@ const vi: Record<string, ProductContent> = {
   },
   "kdf-1": {
     h1: "Máy làm đầu lọc thuốc lá Hauni KDF-1",
-    metaTitle: "Máy làm đầu lọc Hauni KDF-1",
-    metaDescription:
-      "Máy làm đầu lọc Hauni KDF-1 tại Pakistan – đầu lọc 120mm với PLC Siemens/Beckhoff và kiểm soát chu vi bằng laser. Được cung cấp bởi Civic Tobacco Machinery.",
+    metaTitle: "Máy làm đầu lọc Hauni KDF-1 | Thông số & Giá",
     tagline: "Dây chuyền làm đầu lọc Hauni KDF-1 với kiểm soát chu vi bằng laser.",
+    metaDescription:
+      "Dây chuyền làm đầu lọc Hauni KDF-1 kiểm soát chu vi bằng laser, chu vi 16,8–28,1 mm, chiều dài đầu lọc 64–150 mm. Liên hệ để biết giá và tình trạng máy.",
     intro: [
-      "Hauni KDF-1 là dây chuyền làm đầu lọc đáng tin cậy, mạnh mẽ với danh tiếng vững chắc về hiệu suất, độ chính xác và độ bền trong sản xuất thuốc lá. Được chế tạo cho các yêu cầu sản xuất quy mô lớn, KDF-1 phù hợp với các nhà sản xuất tại Pakistan đặt tính nhất quán, tốc độ và chất lượng lên hàng đầu.",
-      "Được chế tạo để vận hành sản lượng cao, máy cung cấp công suất sản xuất vững chắc cho đầu lọc 120mm, phù hợp cho cả định dạng thuốc lá tiêu chuẩn và tùy chỉnh. Máy hỗ trợ chu vi đầu lọc từ 16,8mm đến 28,1mm và chiều dài đầu lọc từ 64mm đến 150mm, để bạn có thể sản xuất nhiều kích cỡ và loại đầu lọc mà không cần thay đổi máy liên tục. Từ đầu lọc King Size đến Slims và các thiết kế chuyên biệt, KDF-1 xử lý tất cả một cách hiệu quả.",
-      "Máy chạy trên hệ thống điều khiển PLC tiên tiến, có sẵn ở cấu hình Siemens hoặc Beckhoff, mang lại điều khiển trực quan, chẩn đoán thời gian thực và tự động hóa đáng tin cậy giữ cho chất lượng đầu lọc ổn định suốt cả đợt sản xuất. Hệ thống servo Lenze hoặc Beckhoff bổ sung thêm sự ổn định và giữ chuyển động trơn tru, chính xác.",
-      "Một đặc điểm nổi bật là hệ thống kiểm soát chu vi dựa trên laser, đo chu vi từng đầu lọc với độ chính xác cao, giảm sai lệch và giữ tính đồng nhất cho mỗi lô sản xuất. Mức độ chính xác đó rất quan trọng để duy trì tiêu chuẩn chất lượng thương hiệu trên các sản phẩm cao cấp.",
-      "Dù có sản lượng lớn, KDF-1 vẫn giữ hồ sơ năng lượng cân bằng ở tổng mức 40kW, giúp máy hiệu quả khi vận hành lâu dài. Cấu trúc chắc chắn, được thiết kế tốt mang lại tuổi thọ sử dụng lâu dài, và thiết kế dạng mô-đun cùng khả năng tương thích với nhiều loại thuốc lá khiến máy phù hợp cho cả sản xuất đầu lọc quy mô nhỏ lẫn quy mô lớn, dù bạn đang mở rộng công suất hay nâng cấp thiết bị cũ.",
+      "Hauni KDF-1 là dây chuyền làm đầu lọc sản xuất các đoạn đầu lọc acetate có chu vi từ 16,8 đến 28,1 mm và chiều dài từ 64 đến 150 mm. Máy sử dụng hệ thống kiểm soát chu vi bằng laser, tự động hóa bằng PLC Siemens hoặc Beckhoff cùng bộ truyền động servo Lenze hoặc Beckhoff, với công suất tiêu thụ 40 kW. Civic Tobacco Machinery cung cấp máy từ Karachi, Pakistan.",
+      "KDF-1 phù hợp với nhà sản xuất cần kiểm soát kích thước chặt chẽ trên nhiều định dạng đầu lọc, từ King Size đến Slims, mà không phải liên tục thay đổi cấu hình dây chuyền. Cấu hình cụ thể khác nhau tùy từng máy. Hãy hỏi chúng tôi thông tin chi tiết về máy đang có sẵn.",
+      "### Điểm khác biệt của KDF-1: kiểm soát chu vi bằng laser",
+      "Chu vi là một trong những kích thước đầu lọc khó giữ ổn định nhất khi chạy ở tốc độ cao. Chỉ một sai lệch nhỏ hơn một milimét cũng có thể gây sự cố ở máy cuốn điếu và khiến cả lô hàng bị loại.",
+      "KDF-1 đo chu vi đoạn lọc bằng hệ thống laser ngay trong quá trình chạy, giúp người vận hành phát hiện sai lệch trước khi nó trở thành phế phẩm. Với các thương hiệu có dung sai kích thước nghiêm ngặt, đặc biệt là dòng cao cấp và Slim, đây là lý do chính để chọn KDF-1.",
+      "### KDF-1 có thể sản xuất những định dạng đầu lọc nào?",
+      "Với dải chu vi 16,8–28,1 mm và chiều dài 64–150 mm, KDF-1 đáp ứng hầu hết các định dạng phổ biến:",
+      "- Đầu lọc Slim và Super Slim ở phần thấp của dải chu vi\n- Đầu lọc King Size và Regular ở dải giữa\n- Các đoạn lọc nhiều phân đoạn dài hơn, được cắt nhỏ ở công đoạn sau",
+      "Dải kích thước này cho phép một máy phục vụ nhiều dòng sản phẩm, rất có lợi cho các nhà máy nhỏ không thể đầu tư một dây chuyền đầu lọc riêng cho từng định dạng.",
+      "### Điều khiển và tự động hóa",
+      "KDF-1 chạy bằng PLC Siemens hoặc Beckhoff, tùy từng máy. Người vận hành có chẩn đoán theo thời gian thực, còn đội bảo trì nhận được thông tin lỗi để xử lý ngay. Bộ truyền động servo Lenze hoặc Beckhoff điều khiển chuyển động, giữ cho đường chạy đoạn lọc và vết cắt luôn chính xác qua các ca làm việc dài.",
+      "Nếu nhà máy của bạn đã tiêu chuẩn hóa theo Siemens hoặc Beckhoff, hãy cho chúng tôi biết. Dùng cùng nền tảng điều khiển giúp việc đào tạo và quản lý phụ tùng đơn giản hơn nhiều.",
+      "### KDF-1 có phù hợp với nhà máy của bạn?",
+      "KDF-1 là lựa chọn phù hợp nếu bạn:",
+      "- Cần sản xuất nhiều kích thước đầu lọc trên một dây chuyền\n- Ưu tiên độ chính xác kích thước hơn sản lượng tối đa\n- Đang thay thế một máy làm đầu lọc cũ và muốn có hệ thống điều khiển PLC và servo hiện đại\n- Có sẵn nguồn điện 40 kW cho dây chuyền đầu lọc",
+      "Nếu ưu tiên của bạn là sản lượng tối đa với khâu xử lý đoạn lọc tự động, hãy so sánh với Hauni KDF-2, máy được cung cấp kèm bộ mở sợi tow và bộ nạp khay HCF80.",
+      "### Giá Hauni KDF-1",
+      "Giá của Hauni KDF-1 phụ thuộc vào tình trạng máy, cấu hình điều khiển (Siemens hoặc Beckhoff), các bộ phận đi kèm và điểm giao hàng. Hãy gửi cho chúng tôi kích thước đầu lọc cần sản xuất, quốc gia nhận hàng và cho biết bạn có muốn máy tân trang hay không, chúng tôi sẽ báo giá cho chính chiếc máy đó.",
+      "### Yêu cầu báo giá Hauni KDF-1",
+      "Nhắn tin cho chúng tôi qua WhatsApp theo số +92 301 1111184 hoặc dùng biểu mẫu bên dưới. Cho chúng tôi biết kích thước đầu lọc và điểm giao hàng, chúng tôi sẽ xác nhận giá, tình trạng sẵn có và tình trạng máy, thường ngay trong ngày làm việc.",
     ],
-    applications: ["Sản xuất đầu lọc quy mô lớn", "Đầu lọc tiêu chuẩn và chuyên biệt"],
+    applications: ["Sản xuất đầu lọc nhiều định dạng", "Đầu lọc Slim và King Size"],
+    faqs: [
+      {
+        question: "Hauni KDF-1 được dùng để làm gì?",
+        answer: "Máy sản xuất các đoạn đầu lọc acetate cho ngành sản xuất thuốc lá điếu, với chu vi từ 16,8 đến 28,1 mm và chiều dài từ 64 đến 150 mm.",
+      },
+      {
+        question: "KDF-1 có kiểm soát chu vi không?",
+        answer: "Có. Máy dùng hệ thống laser để đo chu vi đầu lọc trong quá trình sản xuất, giúp các lô hàng luôn nằm trong dung sai.",
+      },
+      {
+        question: "Hauni KDF-1 tiêu thụ bao nhiêu điện?",
+        answer: "Công suất định mức của KDF-1 là 40 kW.",
+      },
+      {
+        question: "KDF-1 có những hệ thống điều khiển nào?",
+        answer: "Máy được trang bị PLC Siemens hoặc Beckhoff và bộ truyền động servo Lenze hoặc Beckhoff.",
+      },
+      {
+        question: "KDF-1 có bản tân trang không?",
+        answer: "Có. Mỗi máy tân trang đều được kiểm tra, bảo dưỡng và chạy thử trước khi xuất xưởng, và bạn nhận được báo cáo tình trạng cụ thể cho chính chiếc máy đó, không phải mô tả chung chung.",
+      },
+      {
+        question: "Các bạn có xuất khẩu KDF-1 ra ngoài Pakistan không?",
+        answer: "Có. Civic Tobacco Machinery giao hàng cho các nhà sản xuất trên toàn thế giới. Hãy liên hệ để xác nhận việc giao hàng đến quốc gia của bạn.",
+      },
+    ],
+    featureValues: {
+      "Model": "Dây chuyền làm đầu lọc Hauni KDF-1",
+      "Filter Size": "Đầu lọc 120 mm",
+      "PLC Control": "Siemens hoặc Beckhoff",
+      "Servo System": "Lenze hoặc Beckhoff",
+      "Circumference Control": "Hệ thống đo bằng laser",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Máy làm đầu lọc thuốc lá Hauni KDF-2",
@@ -3992,18 +4445,67 @@ const id: Record<string, ProductContent> = {
   },
   "kdf-1": {
     h1: "Mesin Pembuat Filter Rokok Hauni KDF-1",
-    metaTitle: "Mesin Pembuat Filter Hauni KDF-1",
-    metaDescription:
-      "Mesin pembuat filter Hauni KDF-1 di Indonesia – filter 120mm dengan PLC Siemens/Beckhoff dan kontrol lingkar berbasis laser. Dipasok oleh Civic Tobacco Machinery.",
+    metaTitle: "Mesin Pembuat Filter Hauni KDF-1 | Spesifikasi & Harga",
     tagline: "Lini pembuat filter Hauni KDF-1 dengan kontrol lingkar berbasis laser.",
+    metaDescription:
+      "Lini pembuat filter Hauni KDF-1 dengan kontrol lingkar berbasis laser, lingkar 16,8–28,1 mm dan panjang filter 64–150 mm, dikirim ke Indonesia. Tanyakan harga dan ketersediaan.",
     intro: [
-      "Hauni KDF-1 adalah lini pembuat filter yang tepercaya dan bertenaga dengan reputasi kuat dalam performa, presisi, dan daya tahan dalam produksi rokok. Dibuat untuk tuntutan produksi skala besar, KDF-1 cocok untuk produsen di Indonesia yang mengutamakan konsistensi, kecepatan, dan kualitas.",
-      "Dibuat untuk operasi berkapasitas tinggi, mesin ini menawarkan kapasitas produksi yang kuat untuk filter 120mm, yang bekerja dengan baik untuk format rokok standar maupun kustom. Mesin ini mendukung lingkar filter dari 16,8mm hingga 28,1mm dan panjang filter dari 64mm hingga 150mm, sehingga Anda dapat memproduksi berbagai ukuran dan jenis filter tanpa perubahan mesin yang terus-menerus. Dari filter King Size hingga Slims dan desain khusus, KDF-1 menanganinya semua secara efisien.",
-      "Mesin ini berjalan pada sistem kontrol PLC canggih yang tersedia dalam konfigurasi Siemens atau Beckhoff, memberikan kontrol intuitif, diagnostik waktu nyata, dan otomatisasi andal yang menjaga kualitas filter tetap stabil sepanjang proses produksi. Sistem servo Lenze atau Beckhoff menambah stabilitas dan menjaga gerakan tetap lancar dan akurat.",
-      "Fitur unggulan adalah sistem kontrol lingkar berbasis laser, yang mengukur lingkar setiap filter dengan presisi tinggi, mengurangi deviasi dan menjaga keseragaman setiap batch. Tingkat akurasi ini penting untuk menjaga standar kualitas merek pada produk premium.",
-      "Meski memiliki output besar, KDF-1 menjaga profil energi yang seimbang dengan total 40kW, membuatnya efisien untuk operasi jangka panjang. Konstruksinya yang kokoh dan direkayasa dengan baik memberikan masa pakai yang panjang, dan desain modular serta kompatibilitas dengan berbagai jenis rokok menjadikannya cocok untuk produksi filter skala kecil maupun besar, baik Anda memperluas kapasitas atau meningkatkan peralatan lama.",
+      "Hauni KDF-1 adalah lini pembuat filter yang memproduksi batang filter asetat dengan lingkar 16,8 hingga 28,1 mm dan panjang 64 hingga 150 mm. Mesin ini menggunakan kontrol lingkar berbasis laser, otomasi PLC Siemens atau Beckhoff, dan penggerak servo Lenze atau Beckhoff, dengan daya 40 kW. Civic Tobacco Machinery memasoknya dari Karachi, Pakistan, dan mengirimkannya ke pabrik di Indonesia.",
+      "KDF-1 cocok untuk produsen yang membutuhkan kontrol ukuran yang ketat di beberapa format filter, dari King Size hingga Slims, tanpa harus terus-menerus mengganti setelan lini. Konfigurasi persisnya berbeda untuk tiap unit. Tanyakan kepada kami detail mesin yang tersedia saat ini.",
+      "### Keunggulan KDF-1: Kontrol Lingkar Berbasis Laser",
+      "Lingkar adalah salah satu dimensi filter yang paling sulit dijaga tetap stabil pada kecepatan tinggi. Penyimpangan sepersekian milimeter saja bisa menimbulkan masalah di mesin pembuat rokok dan membuat batch ditolak.",
+      "KDF-1 mengukur lingkar batang filter dengan sistem laser selama mesin berjalan, sehingga operator bisa mendeteksi penyimpangan sebelum menjadi limbah. Bagi merek dengan toleransi ukuran yang ketat, terutama format premium dan Slim, inilah alasan utama memilih KDF-1.",
+      "### Format Filter Apa Saja yang Bisa Diproduksi KDF-1?",
+      "Dengan rentang lingkar 16,8–28,1 mm dan panjang 64–150 mm, KDF-1 mencakup sebagian besar format umum:",
+      "- Filter Slim dan Super Slim di ujung bawah rentang lingkar\n- Filter King Size dan Regular di rentang tengah\n- Batang multisegmen yang lebih panjang, yang dipotong pada tahap proses berikutnya",
+      "Rentang ini memungkinkan satu mesin melayani beberapa lini produk, sehingga membantu pabrik kecil yang tidak bisa menyediakan lini filter terpisah untuk setiap format.",
+      "### Kontrol dan Otomasi",
+      "KDF-1 berjalan dengan PLC Siemens atau Beckhoff, tergantung unitnya. Operator mendapatkan diagnostik waktu nyata, dan tim perawatan mendapatkan informasi gangguan yang bisa langsung ditindaklanjuti. Penggerak servo Lenze atau Beckhoff menangani kontrol gerak, menjaga jalur batang dan potongan tetap akurat sepanjang shift yang panjang.",
+      "Jika pabrik Anda sudah menstandarkan Siemens atau Beckhoff, beri tahu kami. Platform kontrol yang sama membuat pelatihan dan suku cadang jauh lebih sederhana.",
+      "### Apakah KDF-1 Tepat untuk Pabrik Anda?",
+      "KDF-1 cocok untuk Anda jika Anda:",
+      "- Perlu memproduksi beberapa ukuran filter dalam satu lini\n- Lebih mengutamakan akurasi dimensi daripada output maksimum\n- Sedang mengganti mesin pembuat filter lama dan menginginkan kontrol PLC dan servo modern\n- Memiliki pasokan listrik 40 kW untuk lini filter",
+      "Jika prioritas Anda adalah output maksimum dengan penanganan batang otomatis, bandingkan dengan Hauni KDF-2, yang dipasok dengan pembuka tow dan pengisi baki HCF80.",
+      "### Harga Hauni KDF-1",
+      "Harga Hauni KDF-1 bergantung pada kondisinya, konfigurasi kontrol (Siemens atau Beckhoff), komponen yang disertakan, dan tujuan pengiriman. Kirimkan kepada kami ukuran filter yang Anda butuhkan, lokasi pabrik Anda, dan apakah Anda menginginkan unit rekondisi, lalu kami akan memberikan penawaran untuk mesin tersebut.",
+      "### Tanyakan tentang Hauni KDF-1",
+      "Kirim pesan kepada kami melalui WhatsApp di +92 301 1111184 atau gunakan formulir di bawah. Sampaikan ukuran filter dan tujuan pengiriman Anda, dan kami akan mengonfirmasi harga, ketersediaan, dan kondisi mesin, biasanya pada hari kerja yang sama.",
     ],
-    applications: ["Produksi filter skala besar", "Filter standar dan khusus"],
+    applications: ["Produksi filter multiformat", "Filter Slim dan King Size"],
+    faqs: [
+      {
+        question: "Untuk apa Hauni KDF-1 digunakan?",
+        answer: "Mesin ini memproduksi batang filter asetat untuk pembuatan rokok, dengan lingkar 16,8 hingga 28,1 mm dan panjang 64 hingga 150 mm.",
+      },
+      {
+        question: "Apakah KDF-1 memiliki kontrol lingkar?",
+        answer: "Ya. Mesin ini menggunakan sistem laser untuk mengukur lingkar filter selama produksi, sehingga batch tetap berada dalam toleransi.",
+      },
+      {
+        question: "Berapa daya yang digunakan Hauni KDF-1?",
+        answer: "Daya terukur KDF-1 adalah 40 kW.",
+      },
+      {
+        question: "Sistem kontrol apa saja yang tersedia pada KDF-1?",
+        answer: "Unit dilengkapi PLC Siemens atau Beckhoff dan penggerak servo Lenze atau Beckhoff.",
+      },
+      {
+        question: "Apakah KDF-1 tersedia dalam kondisi rekondisi?",
+        answer: "Ya. Setiap mesin rekondisi diperiksa, diservis, dan diuji sebelum dikirim, dan Anda mendapatkan laporan kondisi khusus untuk unit tersebut, bukan deskripsi umum.",
+      },
+      {
+        question: "Apakah Anda mengirim KDF-1 ke Indonesia?",
+        answer: "Ya. Civic Tobacco Machinery mengirim mesin ke produsen di Indonesia dan negara lain. Hubungi kami untuk memastikan pengiriman ke lokasi pabrik Anda.",
+      },
+    ],
+    featureValues: {
+      "Model": "Lini pembuat filter Hauni KDF-1",
+      "Filter Size": "Filter 120 mm",
+      "PLC Control": "Siemens atau Beckhoff",
+      "Servo System": "Lenze atau Beckhoff",
+      "Circumference Control": "Sistem pengukuran laser",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Mesin Pembuat Filter Rokok Hauni KDF-2",
@@ -4328,19 +4830,68 @@ const tr: Record<string, ProductContent> = {
     applications: ["Yüksek hacimli üretim", "Büyük ölçekli üretim"],
   },
   "kdf-1": {
-    h1: "Hauni KDF-1 Sigara Filtre Üretim Makinesi",
-    metaTitle: "Hauni KDF-1 Filtre Üretim Makinesi",
-    metaDescription:
-      "Hauni KDF-1 filtre üretim makinesi, Pakistan'da – Siemens/Beckhoff PLC ve lazer çevre kontrollü 120mm filtreler. Civic Tobacco Machinery tarafından tedarik edilir.",
+    h1: "Hauni KDF-1 Sigara Filtresi Üretim Makinesi",
+    metaTitle: "Hauni KDF-1 Filtre Makinesi | Teknik Özellikler ve Fiyat",
     tagline: "Lazer çevre kontrollü Hauni KDF-1 filtre üretim hattı.",
+    metaDescription:
+      "Lazer çevre kontrollü Hauni KDF-1 filtre üretim hattı; 16,8–28,1 mm çevre ve 64–150 mm filtre uzunluğu. Fiyat ve stok durumu için bize ulaşın.",
     intro: [
-      "Hauni KDF-1, sigara üretiminde performans, hassasiyet ve dayanıklılık konusunda güçlü bir üne sahip, güvenilir, güçlü bir filtre üretim hattıdır. Büyük ölçekli üretimin taleplerine göre üretilen KDF-1, tutarlılığı, hızı ve kaliteyi ön planda tutan Pakistan'daki üreticilere uygundur.",
-      "Yüksek verimli çalışma için üretilmiş olan makine, hem standart hem de özel sigara formatları için iyi çalışan 120mm filtreler için sağlam bir üretim kapasitesi sunar. 16,8mm ila 28,1mm filtre çevresini ve 64mm ila 150mm filtre uzunluğunu destekler, böylece sürekli makine değişimi olmadan geniş bir yelpazede filtre boyutu ve türü üretebilirsiniz. King Size filtrelerden Slims'e ve özel tasarımlara kadar, KDF-1 hepsini verimli bir şekilde işler.",
-      "Siemens veya Beckhoff yapılandırmalarında mevcut gelişmiş bir PLC kontrol sistemiyle çalışır; sezgisel kontrol, gerçek zamanlı tanılama ve tüm koşu boyunca filtre kalitesini istikrarlı tutan güvenilir otomasyon sağlar. Lenze veya Beckhoff servo sistemleri, kararlılığa katkıda bulunur ve hareketi sorunsuz ve doğru tutar.",
-      "Öne çıkan bir özellik, her filtrenin çevresini yüksek hassasiyetle ölçen, sapmayı azaltan ve her partinin tekdüzeliğini koruyan lazer tabanlı çevre kontrol sistemidir. Bu doğruluk seviyesi, premium ürünlerde marka kalite standartlarını korumak için önemlidir.",
-      "Tüm verimine rağmen, KDF-1 toplam 40kW'lık dengeli bir enerji profilini korur, bu da uzun vadeli çalışma için verimli olmasını sağlar. Sağlam, iyi tasarlanmış yapısı uzun bir servis ömrü verir ve modüler tasarımı ile farklı sigara türleriyle uyumluluğu, kapasite genişletme veya eski makineleri yükseltme durumunda hem küçük hem de büyük ölçekli filtre üretimi için güçlü bir seçim haline getirir.",
+      "Hauni KDF-1, çevresi 16,8 ile 28,1 mm, uzunluğu 64 ile 150 mm arasında asetat filtre çubukları üreten bir filtre üretim hattıdır. Lazer çevre kontrolü, Siemens veya Beckhoff PLC otomasyonu ve Lenze veya Beckhoff servo sürücüler kullanır; güç tüketimi 40 kW'tır. Civic Tobacco Machinery bu makineyi Karaçi, Pakistan'dan tedarik eder.",
+      "KDF-1, King Size'dan Slims'e kadar birden fazla filtre formatında, hattı sürekli yeniden ayarlamadan sıkı ölçü kontrolüne ihtiyaç duyan üreticilere uygundur. Kesin konfigürasyon makineden makineye değişir. Şu anda mevcut makinenin ayrıntılarını bize sorun.",
+      "### KDF-1'i Farklı Kılan: Lazer Çevre Kontrolü",
+      "Çevre, yüksek hızda sabit tutulması en zor filtre ölçülerinden biridir. Milimetrenin küçük bir kesrindeki sapma bile sigara makinesinde sorunlara yol açabilir ve partilerin reddedilmesine neden olabilir.",
+      "KDF-1, çubuk çevresini çalışma sırasında bir lazer sistemiyle ölçer; böylece operatörler sapmayı fireye dönüşmeden yakalayabilir. Özellikle premium ve Slim formatlarda sıkı ölçü toleranslarına sahip markalar için KDF-1'i seçmenin ana nedeni budur.",
+      "### KDF-1 Hangi Filtre Formatlarını Üretebilir?",
+      "16,8–28,1 mm çevre aralığı ve 64–150 mm uzunluklarıyla KDF-1, yaygın formatların çoğunu karşılar:",
+      "- Çevre aralığının alt ucunda Slim ve Super Slim filtreler\n- Orta aralıkta King Size ve Regular filtreler\n- Sürecin ilerleyen aşamalarında kesilen daha uzun çok segmentli çubuklar",
+      "Bu aralık, tek bir makinenin birden fazla ürün hattına hizmet etmesini sağlar; her format için ayrı bir filtre hattı kuramayan küçük fabrikalar için bu büyük bir avantajdır.",
+      "### Kontrol ve Otomasyon",
+      "KDF-1, makineye göre Siemens veya Beckhoff PLC ile çalışır. Operatörler gerçek zamanlı teşhis alır, bakım ekipleri ise üzerinde işlem yapabilecekleri arıza bilgilerine ulaşır. Lenze veya Beckhoff servo sürücüler hareket kontrolünü yürütür ve uzun vardiyalar boyunca çubuk yolunu ve kesimi hassas tutar.",
+      "Tesisiniz zaten Siemens veya Beckhoff üzerinde standartlaşmışsa bize bildirin. Aynı kontrol platformunu kullanmak eğitimi ve yedek parça tedarikini çok daha kolay hale getirir.",
+      "### KDF-1 Fabrikanız İçin Doğru Seçim mi?",
+      "KDF-1 sizin için uygundur, eğer:",
+      "- Tek bir hatta birden fazla filtre ölçüsü üretmeniz gerekiyorsa\n- Ölçü hassasiyetini maksimum üretim kapasitesinin önünde tutuyorsanız\n- Eski bir filtre makinesini değiştiriyor ve modern PLC ve servo kontrol istiyorsanız\n- Filtre hattı için 40 kW'lık bir güç kaynağınız varsa",
+      "Önceliğiniz otomatik çubuk taşıma ile maksimum üretimse, tow açıcı ve HCF80 tepsi doldurucu ile birlikte sunulan Hauni KDF-2 ile karşılaştırın.",
+      "### Hauni KDF-1 Fiyatı",
+      "Hauni KDF-1'in fiyatı; makinenin durumuna, kontrol konfigürasyonuna (Siemens veya Beckhoff), dahil edilen bileşenlere ve teslimat noktanıza bağlıdır. İhtiyaç duyduğunuz filtre ölçülerini, teslimat ülkesini ve yenilenmiş bir makine isteyip istemediğinizi bize gönderin; söz konusu makine için fiyat teklifi hazırlayalım.",
+      "### Hauni KDF-1 Hakkında Bilgi Alın",
+      "Bize WhatsApp üzerinden +92 301 1111184 numarasından yazın veya aşağıdaki formu kullanın. Filtre ölçülerinizi ve teslimat noktanızı paylaşın; fiyat, stok durumu ve makine durumunu genellikle aynı iş günü içinde teyit edelim.",
     ],
-    applications: ["Yüksek hacimli filtre üretimi", "Standart ve özel filtreler"],
+    applications: ["Çok formatlı filtre üretimi", "Slim ve King Size filtreler"],
+    faqs: [
+      {
+        question: "Hauni KDF-1 ne için kullanılır?",
+        answer: "Sigara üretimi için çevresi 16,8 ile 28,1 mm, uzunluğu 64 ile 150 mm arasında asetat filtre çubukları üretir.",
+      },
+      {
+        question: "KDF-1'de çevre kontrolü var mı?",
+        answer: "Evet. Üretim sırasında filtre çevresini ölçmek için lazer sistemi kullanır; bu da partilerin tolerans içinde kalmasına yardımcı olur.",
+      },
+      {
+        question: "Hauni KDF-1 ne kadar güç tüketir?",
+        answer: "KDF-1'in nominal gücü 40 kW'tır.",
+      },
+      {
+        question: "KDF-1'de hangi kontrol sistemleri mevcut?",
+        answer: "Makineler Siemens veya Beckhoff PLC ile Lenze veya Beckhoff servo sürücülerle gelir.",
+      },
+      {
+        question: "KDF-1 yenilenmiş olarak mevcut mu?",
+        answer: "Evet. Yenilenen her makine sevkiyattan önce incelenir, bakımı yapılır ve test edilir; size genel bir açıklama değil, o makineye özel bir durum raporu verilir.",
+      },
+      {
+        question: "KDF-1'i Pakistan dışına ihraç ediyor musunuz?",
+        answer: "Evet. Civic Tobacco Machinery dünya genelindeki üreticilere sevkiyat yapar. Ülkenize teslimatı teyit etmek için bizimle iletişime geçin.",
+      },
+    ],
+    featureValues: {
+      "Model": "Hauni KDF-1 filtre üretim hattı",
+      "Filter Size": "120 mm filtreler",
+      "PLC Control": "Siemens veya Beckhoff",
+      "Servo System": "Lenze veya Beckhoff",
+      "Circumference Control": "Lazer ölçüm sistemi",
+      "Filter Circumference": "16,8 – 28,1 mm",
+    },
   },
   "kdf-2": {
     h1: "Hauni KDF-2 Sigara Filtre Üretim Makinesi",
@@ -4643,18 +5194,70 @@ const zh: Record<string, ProductContent> = {
     applications: ["大批量生产", "大规模制造"],
   },
   "kdf-1": {
-    h1: "豪尼KDF-1卷烟滤棒制造机",
-    metaTitle: "豪尼KDF-1滤棒制造机",
-    metaDescription: "豪尼KDF-1滤棒制造机，在巴基斯坦——120mm滤棒，配西门子/倍福PLC及激光周长控制。由 Civic Tobacco Machinery 供应。",
+    h1: "Hauni KDF-1 卷烟滤棒成型机",
+    metaTitle: "Hauni KDF-1 滤棒成型机 | 规格与价格",
     tagline: "配备激光周长控制的豪尼KDF-1滤棒制造生产线。",
+    metaDescription:
+      "Hauni KDF-1 滤棒成型机组，配备激光圆周控制，圆周 16.8–28.1 毫米，滤棒长度 64–150 毫米。欢迎咨询价格和供货情况。",
     intro: [
-      "豪尼KDF-1是一条值得信赖、强大的滤棒制造生产线，在卷烟制造领域以性能、精度和耐用性著称。该生产线专为大批量生产的需求而打造，适合将一致性、速度和质量放在首位的巴基斯坦制造商。",
-      "该机器专为高产量运行而打造，为120mm滤棒提供强大的生产能力，适用于标准和定制卷烟规格。它支持16.8mm至28.1mm的滤嘴周长以及64mm至150mm的滤嘴长度，因此您可以生产各种规格和类型的滤棒，而无需持续更换机器。从King Size滤棒到Slims以及特殊设计，KDF-1都能高效处理。",
-      "该机器采用西门子或倍福配置的先进PLC控制系统运行，提供直观的控制、实时诊断和可靠的自动化，在整个生产过程中保持滤棒质量的稳定。伦茨或倍福伺服系统进一步增强了稳定性，保持运动的平稳和精确。",
-      "一个突出特点是基于激光的周长控制系统，能以高精度测量每根滤棒的周长，减少偏差，保持每批产品的一致性。这种精度水平对于在高端产品上维持品牌质量标准至关重要。",
-      "尽管产量巨大，KDF-1仍保持均衡的能耗，总功耗为40kW，使其在长期运行中保持高效。其坚固、精心设计的结构赋予了它较长的使用寿命，其模块化设计和与不同卷烟类型的兼容性，使其适用于中小规模和大规模的滤棒生产，无论您是要扩大产能还是升级旧设备。",
+      "Hauni KDF-1 是一条滤棒成型机组，可生产圆周 16.8 至 28.1 毫米、长度 64 至 150 毫米的醋酸纤维滤棒。它采用激光圆周控制、西门子或倍福 PLC 自动化以及伦茨或倍福伺服驱动，功率为 40 千瓦。Civic Tobacco Machinery 从巴基斯坦卡拉奇供应该设备。",
+      "KDF-1 适合需要在多种滤棒规格（从 King Size 到 Slims）之间保持严格尺寸控制、又不想频繁调整机组的生产商。具体配置因设备而异。请向我们咨询现有设备的详细信息。",
+      "### KDF-1 的不同之处：激光圆周控制",
+      "圆周是高速生产时最难保持稳定的滤棒尺寸之一。哪怕只有零点几毫米的偏差，也可能在卷烟机上引发问题，导致整批产品被拒收。",
+      "KDF-1 在运行过程中用激光系统测量滤棒圆周，操作人员可以在偏差变成废品之前及时发现。对于尺寸公差要求严格的品牌，尤其是高端和 Slim 规格，这是选择 KDF-1 的主要原因。",
+      "### KDF-1 能生产哪些滤棒规格？",
+      "凭借 16.8–28.1 毫米的圆周范围和 64–150 毫米的长度范围，KDF-1 覆盖了大多数常见规格：",
+      "- 圆周范围下端的 Slim 和 Super Slim 滤棒\n- 中间范围的 King Size 和常规滤棒\n- 在后续工序中再切割的较长多段复合滤棒",
+      "这一范围让一台设备即可服务多条产品线，对于无法为每种规格单独配置滤棒机组的小型工厂尤其有帮助。",
+      "### 控制与自动化",
+      "KDF-1 根据设备不同，采用西门子或倍福 PLC 控制。操作人员可获得实时诊断，维护团队可获得可直接处理的故障信息。伦茨或倍福伺服驱动负责运动控制，在长时间班次中保持滤棒运行路径和切割的精确。",
+      "如果您的工厂已经统一使用西门子或倍福，请告诉我们。采用相同的控制平台会让培训和备件管理简单得多。",
+      "### KDF-1 适合您的工厂吗？",
+      "如果您符合以下情况，KDF-1 会是不错的选择：",
+      "- 需要在一条机组上生产多种尺寸的滤棒\n- 更看重尺寸精度，而非最大产量\n- 正在更换旧滤棒机，希望采用现代 PLC 和伺服控制\n- 可为滤棒机组提供 40 千瓦的电源",
+      "如果您的首要目标是最大产量并实现滤棒自动化输送，可以对比 Hauni KDF-2，该机配有开松装置（tow opener）和 HCF80 装盘机。",
+      "### Hauni KDF-1 价格",
+      "Hauni KDF-1 的价格取决于设备状况、控制配置（西门子或倍福）、所含部件以及交货目的地。请将您需要的滤棒尺寸、目的国家以及是否需要翻新设备发给我们，我们会针对具体设备报价。",
+      "### 咨询 Hauni KDF-1",
+      "请通过 WhatsApp +92 301 1111184 联系我们，或使用下方表单。告诉我们您的滤棒尺寸和交货目的地，我们通常会在同一个工作日内确认价格、供货情况和设备状况。",
     ],
-    applications: ["大批量滤棒生产", "标准及特殊滤棒"],
+    applications: ["多规格滤棒生产", "Slim 和 King Size 滤棒"],
+    faqs: [
+      {
+        question: "Hauni KDF-1 用于什么？",
+        answer: "它为卷烟生产制造醋酸纤维滤棒，圆周 16.8 至 28.1 毫米，长度 64 至 150 毫米。",
+      },
+      {
+        question: "KDF-1 有圆周控制吗？",
+        answer: "有。它在生产过程中使用激光系统测量滤棒圆周，有助于让每批产品保持在公差范围内。",
+      },
+      {
+        question: "Hauni KDF-1 的功率是多少？",
+        answer: "KDF-1 的额定功率为 40 千瓦。",
+      },
+      {
+        question: "KDF-1 有哪些控制系统可选？",
+        answer: "设备配备西门子或倍福 PLC，以及伦茨或倍福伺服驱动。",
+      },
+      {
+        question: "KDF-1 有翻新机吗？",
+        answer: "有。每台翻新设备在发货前都会经过检查、保养和测试，您会收到针对该设备的具体状况报告，而不是笼统的描述。",
+      },
+      {
+        question: "你们会把 KDF-1 出口到巴基斯坦以外吗？",
+        answer: "会。Civic Tobacco Machinery 向世界各地的生产商发货。请联系我们确认能否送达您所在的国家。",
+      },
+    ],
+    featureValues: {
+      "Model": "Hauni KDF-1 滤棒成型机组",
+      "Filter Size": "120 毫米滤棒",
+      "PLC Control": "西门子或倍福",
+      "Servo System": "伦茨或倍福",
+      "Circumference Control": "激光测量系统",
+      "Filter Circumference": "16.8 – 28.1 毫米",
+      "Filter Length": "64 – 150 毫米",
+      "Power": "40 千瓦",
+    },
   },
   "kdf-2": {
     h1: "豪尼KDF-2卷烟滤棒制造机",
@@ -4951,17 +5554,69 @@ const fa: Record<string, ProductContent> = {
   },
   "kdf-1": {
     h1: "ماشین تولید فیلتر سیگار Hauni KDF-1",
-    metaTitle: "ماشین تولید فیلتر Hauni KDF-1",
-    metaDescription: "ماشین تولید فیلتر Hauni KDF-1 در پاکستان — فیلترهای ۱۲۰ میلی‌متری با PLC زیمنس/Beckhoff و کنترل محیط لیزری. تأمین‌شده توسط Civic Tobacco Machinery.",
+    metaTitle: "ماشین فیلترساز Hauni KDF-1 | مشخصات و قیمت",
     tagline: "خط تولید فیلتر Hauni KDF-1 با کنترل محیط لیزری.",
+    metaDescription:
+      "خط تولید فیلتر Hauni KDF-1 با کنترل لیزری محیط، محیط ۱۶٫۸ تا ۲۸٫۱ میلی‌متر و طول فیلتر ۶۴ تا ۱۵۰ میلی‌متر. برای قیمت و موجودی استعلام بگیرید.",
     intro: [
-      "Hauni KDF-1 خط تولید فیلتر قابل اعتماد و قدرتمندی است که به عملکرد، دقت و دوام در تولید سیگار شهرت دارد. این ماشین که برای نیازهای تولید در مقیاس بزرگ ساخته شده، برای تولیدکنندگانی در پاکستان مناسب است که ثبات، سرعت و کیفیت را در اولویت قرار می‌دهند.",
-      "این ماشین که برای عملکرد پرتولید ساخته شده، ظرفیت تولید مستحکمی برای فیلترهای ۱۲۰ میلی‌متری ارائه می‌دهد که هم برای فرمت‌های استاندارد و هم سفارشی سیگار خوب کار می‌کند. این ماشین از محیط فیلتر ۱۶.۸ تا ۲۸.۱ میلی‌متر و طول فیلتر ۶۴ تا ۱۵۰ میلی‌متر پشتیبانی می‌کند، بنابراین می‌توانید طیف گسترده‌ای از اندازه‌ها و انواع فیلتر را بدون تغییرات مداوم ماشین تولید کنید. از فیلترهای King Size تا Slims و طرح‌های تخصصی، KDF-1 همه آن‌ها را به‌طور کارآمد مدیریت می‌کند.",
-      "این ماشین با یک سیستم کنترل PLC پیشرفته که در پیکربندی‌های زیمنس یا Beckhoff موجود است کار می‌کند و کنترل شهودی، تشخیص لحظه‌ای و اتوماسیون قابل اعتمادی ارائه می‌دهد که کیفیت فیلتر را در طول کل تولید ثابت نگه می‌دارد. سیستم‌های سروو Lenze یا Beckhoff به ثبات بیشتر کمک کرده و حرکت را روان و دقیق نگه می‌دارند.",
-      "یک ویژگی برجسته، سیستم کنترل محیط مبتنی بر لیزر است که محیط هر فیلتر را با دقت بالا اندازه‌گیری می‌کند، انحراف را کاهش می‌دهد و یکنواختی هر دسته را حفظ می‌کند. این سطح از دقت برای حفظ استانداردهای کیفیت برند در محصولات پریمیوم اهمیت دارد.",
-      "با وجود تمام تولید خود، KDF-1 پروفایل انرژی متعادلی در مجموع ۴۰ کیلووات حفظ می‌کند که آن را برای عملکرد بلندمدت کارآمد می‌سازد. ساختار مستحکم و به‌خوبی مهندسی‌شده آن، عمر خدماتی طولانی می‌دهد و طراحی ماژولار و سازگاری آن با انواع مختلف سیگار، آن را برای تولید فیلتر هم در مقیاس کوچک و هم بزرگ مناسب می‌سازد، چه در حال گسترش ظرفیت باشید و چه ارتقای ماشین‌آلات قدیمی.",
+      "Hauni KDF-1 یک خط تولید فیلتر است که ساقه‌های فیلتر استات با محیط ۱۶٫۸ تا ۲۸٫۱ میلی‌متر و طول ۶۴ تا ۱۵۰ میلی‌متر تولید می‌کند. این دستگاه از کنترل لیزری محیط، اتوماسیون با PLC زیمنس یا بکهوف و درایوهای سروو Lenze یا بکهوف استفاده می‌کند و ۴۰ کیلووات توان مصرف می‌کند. Civic Tobacco Machinery آن را از کراچی، پاکستان تأمین می‌کند.",
+      "KDF-1 برای تولیدکنندگانی مناسب است که در چند فرمت فیلتر، از King Size تا Slims، به کنترل دقیق ابعاد نیاز دارند، بدون اینکه مدام خط را از نو تنظیم کنند. پیکربندی دقیق در هر دستگاه متفاوت است. جزئیات دستگاه موجود را از ما بپرسید.",
+      "### وجه تمایز KDF-1: کنترل لیزری محیط",
+      "محیط یکی از سخت‌ترین ابعاد فیلتر برای ثابت نگه داشتن در سرعت بالاست. انحرافی به اندازه کسری از میلی‌متر می‌تواند در ماشین سیگار مشکل ایجاد کند و به رد شدن کل بچ‌ها منجر شود.",
+      "KDF-1 محیط ساقه را حین کار با یک سیستم لیزری اندازه می‌گیرد تا اپراتورها انحراف را پیش از تبدیل شدن به ضایعات تشخیص دهند. برای برندهایی با تلرانس ابعادی سخت‌گیرانه، به‌ویژه در فرمت‌های پریمیوم و Slim، این مهم‌ترین دلیل انتخاب KDF-1 است.",
+      "### KDF-1 چه فرمت‌هایی از فیلتر را تولید می‌کند؟",
+      "KDF-1 با بازه محیط ۱۶٫۸ تا ۲۸٫۱ میلی‌متر و طول ۶۴ تا ۱۵۰ میلی‌متر، بیشتر فرمت‌های رایج را پوشش می‌دهد:",
+      "- فیلترهای Slim و Super Slim در انتهای پایین بازه محیط\n- فیلترهای King Size و Regular در بازه میانی\n- ساقه‌های بلندتر چندبخشی که در مراحل بعدی فرایند برش داده می‌شوند",
+      "این بازه به یک دستگاه اجازه می‌دهد چند خط محصول را پوشش دهد؛ موضوعی که به کارخانه‌های کوچک‌تر که نمی‌توانند برای هر فرمت یک خط فیلتر جداگانه داشته باشند، کمک زیادی می‌کند.",
+      "### کنترل و اتوماسیون",
+      "KDF-1 بسته به دستگاه با PLC زیمنس یا بکهوف کار می‌کند. اپراتورها عیب‌یابی لحظه‌ای دریافت می‌کنند و تیم‌های نگهداری اطلاعات خطایی به دست می‌آورند که می‌توانند بر اساس آن اقدام کنند. درایوهای سروو Lenze یا بکهوف کنترل حرکت را بر عهده دارند و مسیر ساقه و برش را در شیفت‌های طولانی دقیق نگه می‌دارند.",
+      "اگر کارخانه شما از قبل روی زیمنس یا بکهوف استانداردسازی شده است، به ما بگویید. یکسان بودن پلتفرم کنترل، آموزش و تأمین قطعات یدکی را بسیار ساده‌تر می‌کند.",
+      "### آیا KDF-1 برای کارخانه شما مناسب است؟",
+      "KDF-1 انتخاب مناسبی است اگر:",
+      "- باید چند اندازه فیلتر را روی یک خط تولید کنید\n- دقت ابعادی برایتان از حداکثر ظرفیت تولید مهم‌تر است\n- در حال جایگزینی یک دستگاه فیلترساز قدیمی هستید و کنترل مدرن PLC و سروو می‌خواهید\n- برای خط فیلتر برق ۴۰ کیلوواتی در اختیار دارید",
+      "اگر اولویت شما حداکثر تولید همراه با جابه‌جایی خودکار ساقه‌هاست، آن را با Hauni KDF-2 مقایسه کنید که همراه با بازکننده تو (tow opener) و پرکننده سینی HCF80 عرضه می‌شود.",
+      "### قیمت Hauni KDF-1",
+      "قیمت Hauni KDF-1 به وضعیت دستگاه، پیکربندی کنترل (زیمنس یا بکهوف)، قطعات همراه و مقصد تحویل بستگی دارد. اندازه‌های فیلتر مورد نیاز، کشور مقصد و اینکه دستگاه بازسازی‌شده می‌خواهید یا نه را برای ما بفرستید تا برای همان دستگاه مشخص قیمت بدهیم.",
+      "### استعلام Hauni KDF-1",
+      "از طریق واتس‌اپ به شماره ‎+92 301 1111184‎ به ما پیام دهید یا از فرم زیر استفاده کنید. اندازه‌های فیلتر و مقصد را با ما در میان بگذارید تا قیمت، موجودی و وضعیت دستگاه را معمولاً در همان روز کاری تأیید کنیم.",
     ],
-    applications: ["تولید فیلتر با حجم بالا", "فیلترهای استاندارد و تخصصی"],
+    applications: ["تولید فیلتر در چند فرمت", "فیلترهای Slim و King Size"],
+    faqs: [
+      {
+        question: "Hauni KDF-1 برای چه کاری استفاده می‌شود؟",
+        answer: "این دستگاه ساقه‌های فیلتر استات را برای تولید سیگار با محیط ۱۶٫۸ تا ۲۸٫۱ میلی‌متر و طول ۶۴ تا ۱۵۰ میلی‌متر تولید می‌کند.",
+      },
+      {
+        question: "آیا KDF-1 کنترل محیط دارد؟",
+        answer: "بله. از یک سیستم لیزری برای اندازه‌گیری محیط فیلتر در حین تولید استفاده می‌کند که به ماندن بچ‌ها در محدوده تلرانس کمک می‌کند.",
+      },
+      {
+        question: "Hauni KDF-1 چقدر برق مصرف می‌کند؟",
+        answer: "توان نامی KDF-1 برابر ۴۰ کیلووات است.",
+      },
+      {
+        question: "چه سیستم‌های کنترلی برای KDF-1 موجود است؟",
+        answer: "دستگاه‌ها با PLC زیمنس یا بکهوف و درایوهای سروو Lenze یا بکهوف عرضه می‌شوند.",
+      },
+      {
+        question: "آیا KDF-1 به صورت بازسازی‌شده موجود است؟",
+        answer: "بله. هر دستگاه بازسازی‌شده پیش از ارسال بازرسی، سرویس و آزمایش می‌شود و شما گزارش وضعیت مشخصِ همان دستگاه را دریافت می‌کنید، نه یک توضیح کلی.",
+      },
+      {
+        question: "آیا KDF-1 را به خارج از پاکستان صادر می‌کنید؟",
+        answer: "بله. Civic Tobacco Machinery برای تولیدکنندگان در سراسر جهان ارسال می‌کند. برای تأیید تحویل به کشور خود با ما تماس بگیرید.",
+      },
+    ],
+    featureValues: {
+      "Model": "خط تولید فیلتر Hauni KDF-1",
+      "Filter Size": "فیلتر ۱۲۰ میلی‌متری",
+      "PLC Control": "زیمنس یا بکهوف",
+      "Servo System": "Lenze یا بکهوف",
+      "Circumference Control": "سیستم اندازه‌گیری لیزری",
+      "Filter Circumference": "۱۶٫۸ – ۲۸٫۱ میلی‌متر",
+      "Filter Length": "۶۴ – ۱۵۰ میلی‌متر",
+      "Power": "۴۰ کیلووات",
+    },
   },
   "kdf-2": {
     h1: "ماشین تولید فیلتر سیگار Hauni KDF-2",
@@ -5097,9 +5752,10 @@ export function localizedProduct(locale: LocaleCode, product: Product): Product 
     applications: c.applications ?? product.applications,
     specs: product.specs.map((s) => ({ ...s, label: translateSpecLabel(locale, s.label) })),
     featureTable: product.featureTable?.map((s) => ({
-      ...s,
       label: translateSpecLabel(locale, s.label),
+      value: c.featureValues?.[s.label] ?? s.value,
     })),
+    faqs: c.faqs,
   };
 }
 

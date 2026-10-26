@@ -74,7 +74,11 @@ export interface Product {
   /** Full meta description. */
   metaDescription: string;
   keywords: string[];
-  /** Body paragraphs. Written to read like a person wrote them. */
+  /**
+   * Body paragraphs. Written to read like a person wrote them. An entry
+   * starting with "### " renders as a sub-heading; one whose lines all start
+   * with "- " renders as a bullet list.
+   */
   intro: string[];
   features: string[];
   specs: { label: string; value: string }[];
@@ -905,11 +909,23 @@ const filter: Product[] = [
     intro: [
       "The Hauni KDF-1 is a filter making line that produces acetate filter rods from 16.8 to 28.1 mm in circumference and 64 to 150 mm in length. It uses laser circumference control, Siemens or Beckhoff PLC automation and Lenze or Beckhoff servo drives, and draws 40 kW of power. Civic Tobacco Machinery supplies it from Karachi, Pakistan.",
       "The KDF-1 suits manufacturers who need tight size control across several filter formats, from King Size to Slims, without constantly retooling the line. Exact configuration varies by unit. Ask us for the details of the machine currently available.",
-      "What makes the KDF-1 different is its laser circumference control. Circumference is one of the hardest filter dimensions to hold steady at speed. A drift of a fraction of a millimetre can cause problems at the cigarette maker and lead to rejected batches. The KDF-1 measures rod circumference with a laser system as it runs, so operators can catch deviation before it turns into waste. For brands with strict size tolerances, especially premium and Slim formats, this is the main reason to choose the KDF-1.",
-      "With a circumference range of 16.8–28.1 mm and lengths of 64–150 mm, the KDF-1 covers most common filter formats: Slim and Super Slim filters at the lower end of the circumference range, King Size and Regular filters in the mid range, and longer multi-segment rods that are cut down later in the process. This range lets one machine serve several product lines, which helps smaller factories that can't justify a separate filter line for each format.",
-      "For control and automation, the KDF-1 runs on a Siemens or Beckhoff PLC, depending on the unit. Operators get real-time diagnostics, and maintenance teams get fault information they can act on. Lenze or Beckhoff servo drives handle motion control, keeping the rod path and cut accurate over long shifts. If your plant already standardises on Siemens or Beckhoff, tell us. Matching the control platform makes training and spare parts much simpler.",
-      "The KDF-1 is a good fit if you need to produce several filter sizes on one line, prioritise dimensional accuracy over maximum throughput, are replacing an older filter maker and want modern PLC and servo control, and have a 40 kW supply available for the filter line. If your priority is maximum output with automated rod handling, compare it with the Hauni KDF-2, which is supplied with a tow opener and HCF80 tray filler.",
+      "### What Makes the KDF-1 Different: Laser Circumference Control",
+      "Circumference is one of the hardest filter dimensions to hold steady at speed. A drift of a fraction of a millimetre can cause problems at the cigarette maker and lead to rejected batches.",
+      "The KDF-1 measures rod circumference with a laser system as it runs, so operators can catch deviation before it turns into waste. For brands with strict size tolerances, especially premium and Slim formats, this is the main reason to choose the KDF-1.",
+      "### Which Filter Formats Can the KDF-1 Produce?",
+      "With a circumference range of 16.8–28.1 mm and lengths of 64–150 mm, the KDF-1 covers most common formats:",
+      "- Slim and Super Slim filters at the lower end of the circumference range\n- King Size and Regular filters in the mid range\n- Longer multi-segment rods that are cut down later in the process",
+      "This range lets one machine serve several product lines, which helps smaller factories that can't justify a separate filter line for each format.",
+      "### Control and Automation",
+      "The KDF-1 runs on a Siemens or Beckhoff PLC, depending on the unit. Operators get real-time diagnostics, and maintenance teams get fault information they can act on. Lenze or Beckhoff servo drives handle motion control, keeping the rod path and cut accurate over long shifts.",
+      "If your plant already standardises on Siemens or Beckhoff, tell us. Matching the control platform makes training and spare parts much simpler.",
+      "### Is the KDF-1 Right for Your Factory?",
+      "The KDF-1 is a good fit if you:",
+      "- Need to produce several filter sizes on one line\n- Prioritise dimensional accuracy over maximum throughput\n- Are replacing an older filter maker and want modern PLC and servo control\n- Have a 40 kW supply available for the filter line",
+      "If your priority is maximum output with automated rod handling, compare it with the Hauni KDF-2, which is supplied with a tow opener and HCF80 tray filler.",
+      "### Hauni KDF-1 Price",
       "The price of a Hauni KDF-1 depends on its condition, control configuration (Siemens or Beckhoff), included components and your delivery destination. Send us your required filter sizes, destination country and whether you want a reconditioned unit, and we'll quote for the specific machine.",
+      "### Enquire About the Hauni KDF-1",
       "Message us on WhatsApp at +92 301 1111184 or use the form below. Share your filter sizes and destination, and we'll confirm price, availability and condition, usually the same working day.",
     ],
     features: [],
@@ -928,13 +944,11 @@ const filter: Product[] = [
     faqs: [
       {
         question: "What is the Hauni KDF-1 used for?",
-        answer:
-          "It produces acetate filter rods for cigarette manufacturing, in circumferences from 16.8 to 28.1 mm and lengths from 64 to 150 mm.",
+        answer: "It produces acetate filter rods for cigarette manufacturing, in circumferences from 16.8 to 28.1 mm and lengths from 64 to 150 mm.",
       },
       {
         question: "Does the KDF-1 have circumference control?",
-        answer:
-          "Yes. It uses a laser system to measure filter circumference during production, which helps keep batches within tolerance.",
+        answer: "Yes. It uses a laser system to measure filter circumference during production, which helps keep batches within tolerance.",
       },
       {
         question: "How much power does the Hauni KDF-1 use?",
@@ -942,18 +956,15 @@ const filter: Product[] = [
       },
       {
         question: "Which control systems are available on the KDF-1?",
-        answer:
-          "Units come with either a Siemens or Beckhoff PLC and either Lenze or Beckhoff servo drives.",
+        answer: "Units come with either a Siemens or Beckhoff PLC and either Lenze or Beckhoff servo drives.",
       },
       {
         question: "Is the KDF-1 available reconditioned?",
-        answer:
-          "Yes. Every reconditioned machine is inspected, serviced and tested before dispatch, and you get a specific condition report for the unit, not a generic description.",
+        answer: "Yes. Every reconditioned machine is inspected, serviced and tested before dispatch, and you get a specific condition report for the unit, not a generic description.",
       },
       {
         question: "Do you export the KDF-1 outside Pakistan?",
-        answer:
-          "Yes. Civic Tobacco Machinery ships to manufacturers internationally. Contact us to confirm delivery to your country.",
+        answer: "Yes. Civic Tobacco Machinery ships to manufacturers internationally. Contact us to confirm delivery to your country.",
       },
     ],
   },

@@ -27,12 +27,13 @@ export default function ProductDetail({
   categoryLabel: string;
   locale?: LocaleCode;
 }) {
-  const t = getDict(locale).product;
+  const dict = getDict(locale);
+  const t = dict.product;
   const wa = whatsappLink(t.waMessage(product.name));
-  // English-only for now: the FAQ copy isn't translated per locale yet, so
-  // showing it only on the default-locale page avoids mixing English answers
-  // into a translated product page.
-  const faqs = locale === defaultLocale ? productFaqs(product) : [];
+  // Generated FAQs are English-only, so translated pages show FAQs only when
+  // the product's locale overlay supplies its own (see i18n-products.ts).
+  const faqs =
+    locale === defaultLocale ? productFaqs(product) : (product.faqs ?? []);
 
   return (
     <>
@@ -186,7 +187,7 @@ export default function ProductDetail({
           <h2 className="text-2xl">{t.description}</h2>
           <div className="prose-content mt-4 max-w-3xl">
             {product.intro.map((p, i) => (
-              <p key={i}>{p}</p>
+              <IntroBlock key={i} text={p} />
             ))}
           </div>
         </div>
@@ -194,7 +195,9 @@ export default function ProductDetail({
         {/* FAQ */}
         {faqs.length > 0 && (
           <div className="mt-14 border-t border-brand-100 pt-10">
-            <h2 className="text-2xl">Frequently Asked Questions</h2>
+            <h2 className="text-2xl">
+              {locale === defaultLocale ? "Frequently Asked Questions" : dict.faqHeading}
+            </h2>
             <div className="mt-6">
               <Faq items={faqs} />
             </div>
@@ -233,6 +236,25 @@ export default function ProductDetail({
       )}
     </>
   );
+}
+
+/**
+ * One description entry: "### Heading" renders a sub-heading, an entry whose
+ * lines all start with "- " renders a bullet list, anything else a paragraph.
+ */
+function IntroBlock({ text }: { text: string }) {
+  if (text.startsWith("### ")) return <h3>{text.slice(4)}</h3>;
+  const lines = text.split("\n");
+  if (lines.every((l) => l.startsWith("- "))) {
+    return (
+      <ul>
+        {lines.map((l, i) => (
+          <li key={i}>{l.slice(2)}</li>
+        ))}
+      </ul>
+    );
+  }
+  return <p>{text}</p>;
 }
 
 function shortName(name: string) {
