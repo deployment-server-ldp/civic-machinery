@@ -240,7 +240,8 @@ export default function ProductDetail({
 
 /**
  * One description entry: "### Heading" renders a sub-heading, an entry whose
- * lines all start with "- " renders a bullet list, anything else a paragraph.
+ * lines all start with "- " renders a bullet list (with "1. ", "2. "… a
+ * numbered list), anything else a paragraph.
  */
 function IntroBlock({ text }: { text: string }) {
   if (text.startsWith("### ")) return <h3>{text.slice(4)}</h3>;
@@ -252,6 +253,15 @@ function IntroBlock({ text }: { text: string }) {
           <li key={i}>{l.slice(2)}</li>
         ))}
       </ul>
+    );
+  }
+  if (lines.every((l) => /^\d+\. /.test(l))) {
+    return (
+      <ol>
+        {lines.map((l, i) => (
+          <li key={i}>{l.replace(/^\d+\. /, "")}</li>
+        ))}
+      </ol>
     );
   }
   return <p>{text}</p>;

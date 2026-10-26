@@ -77,7 +77,7 @@ export interface Product {
   /**
    * Body paragraphs. Written to read like a person wrote them. An entry
    * starting with "### " renders as a sub-heading; one whose lines all start
-   * with "- " renders as a bullet list.
+   * with "- " renders as a bullet list, or with "1. ", "2. "… a numbered list.
    */
   intro: string[];
   features: string[];
@@ -971,38 +971,78 @@ const filter: Product[] = [
   {
     slug: "kdf-2",
     name: "Hauni KDF-2 Cigarette Filter Manufacturing Machine",
-    h1: "Hauni KDF-2 Cigarette Filter Manufacturing Machine",
-    metaTitle: "Hauni KDF-2 High-Speed Filter Making Machine",
+    h1: "Hauni KDF-2 Filter Making Line with HCF80 Tray Filler",
+    metaTitle: "Hauni KDF-2 Filter Maker with HCF80 | Civic Tobacco Machinery",
     category: "manufacturing-machines",
     subcategory: "cigarette-filter-making-machines",
     brand: "Hauni",
     condition: "Used",
     tagline: "High-speed Hauni KDF-2 filter line at 400 metres per minute.",
     metaDescription:
-      "Hauni KDF-2 filter making machine in Pakistan, 400 metres per minute of acetate tow with Siemens/Beckhoff PLC. Supplied by Civic Tobacco Machinery.",
+      "Hauni KDF-2 filter line running 400 m/min of acetate tow, supplied with tow opener and HCF80 tray filler. View specs and request a quote.",
     keywords: ["Hauni KDF-2", "KDF-2 filter making line", "high speed filter maker Pakistan"],
     image: "/images/machines/kdf-2.webp",
     intro: [
-      "The Hauni KDF-2 is a world-class filter making machine built for high-efficiency, high-output cigarette filter production. Known for its engineering quality and advanced automation, the KDF-2 is a trusted choice for large-scale manufacturers in Pakistan who need both precision and productivity.",
-      "It runs at an impressive pace, processing 400 metres of acetate tow a minute, which makes it well suited to the demands of modern production lines. That speed is matched by real versatility: it supports filter circumferences from 16.8mm to 28.1mm and filter lengths from 64mm to 150mm, so it covers everything from standard King Size filters to more specialised formats with consistency, quality and minimal downtime.",
-      "What sets the KDF-2 apart is its automation. A PLC control system, available in Siemens or Beckhoff configurations, gives full control and real-time monitoring, while a high-performance Lenze or Beckhoff servo system keeps movements accurate and operation dependable. That reduces the margin of error and keeps filter quality uniform, so the machine integrates smoothly as a reliable backbone for continuous, large-scale manufacturing.",
-      "Built for durability, the KDF-2 pairs with a tow opener and the HCF80 automatic tray filler to streamline the workflow and cut manual handling. It draws 40KW for the main KDF-2 unit and 15KW for the HCF80 filler, combining energy efficiency with strong performance.",
-      "Even with all that capability, the KDF-2 keeps a manageable footprint at around 6,500kg, and its solid construction gives long-term durability under demanding production schedules. Whether you are setting up a new facility or upgrading existing machinery, it is a smart investment that fits neatly into modern production systems while delivering excellent filter quality.",
+      "The Hauni KDF-2 is a high-speed filter making line that processes 400 metres of acetate tow per minute. This unit is supplied with a tow opener and an HCF80 automatic tray filler, and produces filters from 16.8 to 28.1 mm in circumference and 64 to 150 mm in length. Total connected power is 55 kW, and the complete line weighs about 6,500 kg.",
+      "The KDF-2 is built for large-scale factories where filter supply can't fall behind the cigarette makers.",
+      "### What's Included: A Complete Filter Line",
+      "Unlike a standalone filter maker, this KDF-2 is supplied as a working line with three main units:",
+      "1. Tow opener. Opens and conditions the acetate tow from the bale before it enters the maker.\n2. KDF-2 filter maker. Forms, wraps and cuts the filter rods at up to 400 m/min.\n3. HCF80 automatic tray filler. Collects finished rods and loads them into trays, so operators don't have to handle them manually.",
+      "Buying the units together saves you sourcing and matching separate equipment, and cuts down on integration work during installation.",
+      "### How Fast Is the KDF-2?",
+      "The KDF-2 processes acetate tow at 400 metres per minute. How many filter rods that produces depends on the rod length you run. Shorter rods mean more pieces per minute from the same tow speed.",
+      "To work out whether one KDF-2 can supply your cigarette makers, share your rod length and maker speeds with us and we'll help you check the numbers.",
+      "### KDF-2 vs KDF-1: Which Should You Choose?",
+      "Both machines cover the same filter size range and use the same PLC and servo options. The difference is in how they're configured:",
+      "- Choose the KDF-2 for a high-throughput line with tow opening and tray filling already included.\n- Choose the KDF-1 for a 40 kW standalone filter maker with laser circumference control, suited to multi-format production.",
+      "### Installation Requirements",
+      "Plan for these before the KDF-2 arrives:",
+      "- Power: 55 kW combined supply for the maker and HCF80\n- Floor loading and space: about 6,500 kg across the full line, plus room for tow bales and tray handling\n- Control platform: confirm whether your unit is Siemens or Beckhoff, so your maintenance team can prepare",
+      "### Hauni KDF-2 Price",
+      "Pricing depends on the unit's condition, control configuration and destination. Because this KDF-2 comes as a complete line, compare quotes on the full package rather than the filter maker alone. Contact us with your requirements for a quote on the available unit.",
+      "### Enquire About the Hauni KDF-2",
+      "Message us on WhatsApp at +92 301 1111184 or send an enquiry below. We'll confirm current price, availability and condition, and suggest machines to complete your line.",
     ],
     features: [],
     featureTable: [
-      { label: "Model", value: "KDF-2 filter making line" },
-      { label: "Production Capacity", value: "400 metres / min for acetate tow" },
+      { label: "Model", value: "Hauni KDF-2 filter making line" },
+      { label: "Tow Processing Speed", value: "400 m/min (acetate tow)" },
       { label: "Filter Circumference", value: "16.8 – 28.1 mm" },
-      { label: "Filter Length", value: "64mm – 150mm" },
-      { label: "PLC Control System", value: "Siemens or Beckhoff" },
+      { label: "Filter Length", value: "64 – 150 mm" },
+      { label: "PLC Control", value: "Siemens or Beckhoff" },
       { label: "Servo System", value: "Lenze or Beckhoff" },
-      { label: "Machine Unit", value: "KDF-2 filter maker with tow opener, HCF80 auto tray filler" },
-      { label: "Power", value: "KDF-2 / 40 KW, HCF80 / 15 KW" },
+      { label: "Line Configuration", value: "KDF-2 filter maker + tow opener + HCF80 auto tray filler" },
+      { label: "Power", value: "KDF-2: 40 kW, HCF80: 15 kW (55 kW total)" },
       { label: "Total Weight", value: "6,500 kg" },
     ],
     specs: [],
-    applications: ["High-volume filter production", "Large-scale manufacturing"],
+    applications: ["High-volume filter production", "Complete filter line with tray filling"],
+    faqs: [
+      {
+        question: "What is the production speed of the Hauni KDF-2?",
+        answer: "It processes acetate tow at 400 metres per minute.",
+      },
+      {
+        question: "What equipment comes with this KDF-2?",
+        answer: "The unit is supplied with a tow opener and an HCF80 automatic tray filler.",
+      },
+      {
+        question: "How much power does the KDF-2 line need?",
+        answer: "The KDF-2 maker draws 40 kW and the HCF80 tray filler 15 kW, for a total of 55 kW.",
+      },
+      {
+        question: "How heavy is the KDF-2?",
+        answer: "The complete line weighs approximately 6,500 kg.",
+      },
+      {
+        question: "What filter sizes can the KDF-2 make?",
+        answer: "Circumferences from 16.8 to 28.1 mm and lengths from 64 to 150 mm.",
+      },
+      {
+        question: "Is the KDF-2 available reconditioned, and do you ship internationally?",
+        answer: "Yes to both. Reconditioned units are inspected, serviced and tested, with a specific condition report. We export to manufacturers outside Pakistan, so contact us to confirm delivery to your country.",
+      },
+    ],
   },
   {
     slug: "molins-pm-5",
