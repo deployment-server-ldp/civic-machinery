@@ -10,6 +10,8 @@ import type { Product } from "./products";
  * any other figure that isn't already on the page or provably true.
  */
 export function productFaqs(product: Product): { question: string; answer: string }[] {
+  if (product.faqs?.length) return product.faqs;
+
   const name = product.name;
 
   const conditionFaq =
