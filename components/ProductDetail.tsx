@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "./PageHero";
 import MachineImage from "./MachineImage";
 import ProductImageZoom from "./ProductImageZoom";
@@ -12,7 +13,7 @@ import { type Product, productHref } from "@/lib/products";
 import { productFaqs } from "@/lib/product-faqs";
 import { faqSchema } from "@/lib/schema";
 import { getDict } from "@/lib/dictionaries";
-import { defaultLocale, type LocaleCode } from "@/lib/i18n";
+import { defaultLocale, localePath, type LocaleCode } from "@/lib/i18n";
 
 export default function ProductDetail({
   product,
@@ -187,7 +188,7 @@ export default function ProductDetail({
           <h2 className="text-2xl">{t.description}</h2>
           <div className="prose-content mt-4 max-w-3xl">
             {product.intro.map((p, i) => (
-              <IntroBlock key={i} text={p} />
+              <IntroBlock key={i} text={p} locale={locale} />
             ))}
           </div>
         </div>
@@ -241,16 +242,17 @@ export default function ProductDetail({
 /**
  * One description entry: "### Heading" renders a sub-heading, an entry whose
  * lines all start with "- " renders a bullet list (with "1. ", "2. "… a
- * numbered list), anything else a paragraph.
+ * numbered list), anything else a paragraph. Inside text, "[label](/path)"
+ * renders a link to that page in the current locale.
  */
-function IntroBlock({ text }: { text: string }) {
+function IntroBlock({ text, locale }: { text: string; locale: LocaleCode }) {
   if (text.startsWith("### ")) return <h3>{text.slice(4)}</h3>;
   const lines = text.split("\n");
   if (lines.every((l) => l.startsWith("- "))) {
     return (
       <ul>
         {lines.map((l, i) => (
-          <li key={i}>{l.slice(2)}</li>
+          <li key={i}>{withLinks(l.slice(2), locale)}</li>
         ))}
       </ul>
     );
@@ -259,12 +261,28 @@ function IntroBlock({ text }: { text: string }) {
     return (
       <ol>
         {lines.map((l, i) => (
-          <li key={i}>{l.replace(/^\d+\. /, "")}</li>
+          <li key={i}>{withLinks(l.replace(/^\d+\. /, ""), locale)}</li>
         ))}
       </ol>
     );
   }
-  return <p>{text}</p>;
+  return <p>{withLinks(text, locale)}</p>;
+}
+
+function withLinks(text: string, locale: LocaleCode) {
+  const parts = text.split(/\[([^\]]+)\]\((\/[^)]*)\)/);
+  if (parts.length === 1) return text;
+  // split() with two capture groups yields [text, label, href, text, …].
+  return parts.map((part, i) => {
+    if (i % 3 === 1) {
+      return (
+        <Link key={i} href={localePath(locale, parts[i + 1])}>
+          {part}
+        </Link>
+      );
+    }
+    return i % 3 === 2 ? null : part;
+  });
 }
 
 function shortName(name: string) {
