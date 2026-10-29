@@ -53,8 +53,9 @@ export function organizationSchema() {
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
-    url: siteConfig.url,
-    logo: abs("/logo.svg"),
+    url: absPage("/"),
+    // Raster logo: Google's logo/site-name features prefer PNG/JPG over SVG.
+    logo: abs("/og-default.png"),
     image: abs("/og-default.png"),
     description: siteConfig.description,
     telephone: siteConfig.phone,
@@ -79,8 +80,11 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${siteConfig.url}/#website`,
+    // Google uses name/alternateName for the site name shown in search
+    // results; url must match the homepage canonical (with trailing slash).
     name: siteConfig.name,
-    url: siteConfig.url,
+    alternateName: siteConfig.alternateNames,
+    url: absPage("/"),
     description: siteConfig.description,
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "en",

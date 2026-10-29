@@ -99,6 +99,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${sans.variable} ${display.variable} ${logoFont.variable}`}>
+      <head>
+        {/* Site-wide WebSite + Organization schema (drives the site name in Google results). */}
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+      </head>
       <body className="min-h-screen bg-white font-sans text-brand-800 antialiased">
         {/* Set text direction before paint so RTL locales (/ar, /fa) don't flash LTR. */}
         <script
@@ -108,9 +112,6 @@ export default function RootLayout({
           }}
         />
         <HtmlLangSync />
-        <JsonLd
-          data={[organizationSchema(), websiteSchema()]}
-        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand-900 focus:px-4 focus:py-2 focus:text-white"

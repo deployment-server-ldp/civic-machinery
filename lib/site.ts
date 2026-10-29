@@ -8,6 +8,7 @@ export const siteConfig = {
   name: "Civic Tobacco Machinery",
   shortName: "Civic Tobacco Machinery",
   legalName: "Civic Tobacco Machinery",
+  alternateNames: ["Civic Tobacco Machinery Pakistan"],
   // Set the real domain in production via NEXT_PUBLIC_SITE_URL.
   url:
     (process.env.NEXT_PUBLIC_SITE_URL || "https://civic-tobacco-machinery.com").replace(
