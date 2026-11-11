@@ -11,6 +11,7 @@ import type { Crumb } from "./Breadcrumbs";
 import { whatsappLink, siteConfig } from "@/lib/site";
 import { type Product, productHref } from "@/lib/products";
 import { productFaqs } from "@/lib/product-faqs";
+import { productSchemas } from "@/lib/product-schemas";
 import { faqSchema } from "@/lib/schema";
 import { getDict } from "@/lib/dictionaries";
 import { defaultLocale, localePath, type LocaleCode } from "@/lib/i18n";
@@ -35,9 +36,13 @@ export default function ProductDetail({
   // the product's locale overlay supplies its own (see i18n-products.ts).
   const faqs =
     locale === defaultLocale ? productFaqs(product) : (product.faqs ?? []);
+  // Product schema URLs are the English page's, so only render it there.
+  const productLd =
+    locale === defaultLocale ? productSchemas[productHref(product)] : undefined;
 
   return (
     <>
+      {productLd && <JsonLd data={productLd} />}
       {faqs.length > 0 && <JsonLd data={faqSchema(faqs)} />}
 
       <PageHero
