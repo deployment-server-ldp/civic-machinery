@@ -99,7 +99,7 @@ export default function Header() {
 
       {/* Main bar */}
       <div className="mx-auto flex h-[6.6rem] w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:h-[7.5rem]">
-        <Logo className="text-[1.45rem] sm:text-[1.65rem] 2xl:text-[1.95rem]" tagline="Karachi - Pakistan" href={localeHref(locale, "/")} />
+        <Logo className="h-[42px] sm:h-[47px] 2xl:h-[56px]" href={localeHref(locale, "/")} />
 
         {/* Desktop nav, single-line glass pill */}
         <nav aria-label="Primary" className="hidden xl:block">

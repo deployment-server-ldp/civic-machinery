@@ -1,43 +1,43 @@
 import Link from "next/link";
 
 /**
- * Brand wordmark, rendered as text in the Poppins logo font so it never
- * clips and stays crisp at any size. Pass `tagline` to show a small line
- * (e.g. location) under the wordmark.
- * `variant="light"` is for dark backgrounds (footer, dark hero).
+ * Brand logo image. `variant="dark"` (default) is the red wordmark with the
+ * "Karachi - Pakistan" line, for light backgrounds (header).
+ * `variant="light"` is the white wordmark for dark backgrounds (footer).
+ * Pass `className` to set the rendered height; width follows the image.
  */
+const LOGOS = {
+  dark: { src: "/logo-red.png", width: 395, height: 56 },
+  light: { src: "/logo-white.png", width: 316, height: 29 },
+};
+
 export default function Logo({
   variant = "dark",
-  className = "text-[1.35rem] sm:text-[1.55rem]",
-  tagline,
+  className,
   href = "/",
 }: {
   variant?: "dark" | "light";
   className?: string;
-  tagline?: string;
   href?: string;
 }) {
-  const color = variant === "light" ? "text-white" : "text-accent-600";
-  const tagColor = variant === "light" ? "text-brand-300" : "text-brand-500";
+  const logo = LOGOS[variant];
+  const size =
+    className ?? (variant === "light" ? "h-[25px] sm:h-[29px]" : "h-[42px] sm:h-[47px]");
 
   return (
     <Link
       href={href}
       aria-label="Civic Tobacco Machinery — Home"
-      className="inline-flex shrink-0 flex-col items-start justify-center leading-none"
+      className="inline-flex shrink-0 items-center"
     >
-      <span
-        className={`whitespace-nowrap font-logo font-bold leading-none tracking-tight ${color} ${className}`}
-      >
-        Civic Tobacco Machinery
-      </span>
-      {tagline && (
-        <span
-          className={`mt-1.5 w-full whitespace-nowrap text-center text-[0.8rem] font-semibold tracking-wide sm:text-[0.9rem] ${tagColor}`}
-        >
-          {tagline}
-        </span>
-      )}
+      {/* eslint-disable-next-line @next/next/no-img-element -- static export serves images unoptimized */}
+      <img
+        src={logo.src}
+        width={logo.width}
+        height={logo.height}
+        alt="Civic Tobacco Machinery"
+        className={`w-auto ${size}`}
+      />
     </Link>
   );
 }
