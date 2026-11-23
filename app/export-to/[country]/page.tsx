@@ -47,11 +47,13 @@ export function generateMetadata({
   }
 
   if (country.slug === "uzbekistan") {
-    // Uzbekistan's brief: exact meta title/description, no meta keywords.
+    // Uzbekistan's brief: exact meta title/description, no meta keywords,
+    // and a real machine photo for og:image/twitter:image.
     return buildMetadata({
       title: country.metaTitle,
       description: country.metaDescription,
       path: `/export-to/${country.slug}`,
+      images: ["/images/og/uzbekistan-protos-80-er.jpg"],
     });
   }
 
