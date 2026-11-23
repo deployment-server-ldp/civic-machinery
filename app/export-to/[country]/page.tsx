@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
 import CountryMachinesShowcase from "@/components/export/CountryMachinesShowcase";
 import IndonesiaExportSections from "@/components/export/IndonesiaExportSections";
+import UzbekistanExportPage from "@/components/export/UzbekistanExportPage";
 import SectionCards from "@/components/export/SectionCards";
 import QuickFacts from "@/components/export/QuickFacts";
 import StatCallout from "@/components/export/StatCallout";
@@ -43,6 +44,15 @@ export function generateMetadata({
       keywords: undefined,
       openGraph: { ...metadata.openGraph, locale: "en_US" },
     };
+  }
+
+  if (country.slug === "uzbekistan") {
+    // Uzbekistan's brief: exact meta title/description, no meta keywords.
+    return buildMetadata({
+      title: country.metaTitle,
+      description: country.metaDescription,
+      path: `/export-to/${country.slug}`,
+    });
   }
 
   return buildMetadata({
@@ -81,6 +91,9 @@ export default function ExportCountryPage({
 }) {
   const country = getExportCountry(params.country);
   if (!country) notFound();
+
+  // Uzbekistan has its own section order and @graph schema block.
+  if (country.slug === "uzbekistan") return <UzbekistanExportPage country={country} />;
 
   const isIndonesia = country.slug === "indonesia";
   const h = headings(country.name);

@@ -857,4 +857,61 @@ export const asiaCountries: ExportCountry[] = [
       },
     ],
   },
+
+  // ------------------------------------------------------------------
+  // Uzbekistan — bespoke layout, rendered by UzbekistanExportPage
+  // (the long-form fields below are unused by that layout)
+  // ------------------------------------------------------------------
+  {
+    name: "Uzbekistan",
+    slug: "uzbekistan",
+    region: "Asia",
+    metaTitle: "Tobacco & Cigarette Machinery Supplier in Uzbekistan",
+    metaDescription:
+      "Cigarette machinery supplier for Uzbekistan: Molins and Hauni cigarette machines, HLP and SASIB packers and tobacco machines, new or reconditioned.",
+    h1: "Cigarette & Tobacco Machinery Supplier Uzbekistan",
+    heroIntro: "",
+    overview: [],
+    sourcingGuide: [],
+    supplierSelection: [],
+    whyChooseUs: [],
+    productionScale: [],
+    usedReconditioned: [],
+    completeSolutions: [],
+    exportShipping: [],
+    technicalSupport: [],
+    // Must match the FAQPage JSON-LD exactly (built from this list).
+    faqs: [
+      {
+        question: "What cigarette machinery do manufacturers in Uzbekistan use?",
+        answer:
+          "Most cigarette factories in Uzbekistan run Molins Mark 8 and Mark 9 or Hauni Protos cigarette makers, followed by hard pack or soft pack packing machines, an overwrapper and a boxer; Civic Tobacco Machinery supplies all of these, new or reconditioned.",
+      },
+      {
+        question: "Can your cigarette machines produce king size, slim and super slim cigarettes?",
+        answer:
+          "Yes. Our Molins and Hauni cigarette makers can be set up for king size, slim and super slim formats, and our HLP packing machines handle all three.",
+      },
+      {
+        question: "Which cities in Uzbekistan do you supply tobacco machinery to?",
+        answer:
+          "We supply tobacco machinery to factories across Uzbekistan, including Tashkent, Samarkand, Urgut, Bukhara, Navoi and the Fergana Valley cities of Andijan, Fergana and Namangan.",
+      },
+      {
+        question: "Do you offer used or reconditioned cigarette machinery for Uzbekistan?",
+        answer:
+          "Yes. Every used cigarette machine we sell is stripped, rebuilt with new wear parts and test-run in our Karachi workshop, and you receive a video of the test run before it ships.",
+      },
+      {
+        question: "How is cigarette machinery shipped from Pakistan to Uzbekistan?",
+        answer:
+          "Machines travel by road from Karachi to Tashkent, usually in 7 to 10 days on the Trans-Afghan corridor when it is open, with routes through Iran or China as alternatives; we confirm the route in each quote.",
+      },
+      {
+        question: "How can I get a quote for tobacco machinery in Uzbekistan?",
+        answer:
+          "Send your cigarette format, target output and city on WhatsApp at +92 301 1111184 or through the quote form, and we reply with machine options, videos and a delivered price.",
+      },
+    ],
+  },
 ];

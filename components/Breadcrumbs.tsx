@@ -11,10 +11,17 @@ export interface Crumb {
  * Accessible breadcrumb navigation. Always include Home as the first crumb.
  * Emits BreadcrumbList JSON-LD alongside the visible trail.
  */
-export default function Breadcrumbs({ items }: { items: Crumb[] }) {
+export default function Breadcrumbs({
+  items,
+  schema = true,
+}: {
+  items: Crumb[];
+  /** Set false when the page emits its own BreadcrumbList (e.g. in an @graph). */
+  schema?: boolean;
+}) {
   return (
     <>
-      <JsonLd data={breadcrumbSchema(items)} />
+      {schema && <JsonLd data={breadcrumbSchema(items)} />}
       <nav aria-label="Breadcrumb" className="text-sm">
         <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-brand-500">
           {items.map((item, i) => {
