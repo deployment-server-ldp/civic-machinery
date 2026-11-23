@@ -1,5 +1,6 @@
 import { siteConfig } from "./site";
 import type { BlogPost } from "./blog";
+import { exportCountries } from "./export-countries";
 
 /**
  * JSON-LD structured data builders. Each returns a plain object that is
@@ -31,10 +32,17 @@ const postalAddress = () => ({
   addressCountry: siteConfig.address.country,
 });
 
+// Every market we serve: the configured service areas plus each country
+// with its own /export-to/ page (so a new country page is picked up here too).
+const serviceAreaNames = () =>
+  [...siteConfig.serviceAreas, ...exportCountries.map((c) => c.name)].filter(
+    (name, i, all) => all.indexOf(name) === i,
+  );
+
 // Continents/regions are described as Place; everything else as a Country.
 const REGIONS = new Set(["Europe", "North America", "South America"]);
 const areaServed = () =>
-  siteConfig.serviceAreas.map((name) => ({
+  serviceAreaNames().map((name) => ({
     "@type": REGIONS.has(name) ? "Place" : "Country",
     name,
   }));
@@ -68,7 +76,7 @@ export function organizationSchema() {
       contactType: "sales",
       telephone: siteConfig.phone,
       email: siteConfig.email,
-      areaServed: siteConfig.serviceAreas,
+      areaServed: serviceAreaNames(),
       availableLanguage: ["en", "ur"],
     },
     sameAs: socialProfiles(),
