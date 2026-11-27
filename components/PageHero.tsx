@@ -10,6 +10,7 @@ export default function PageHero({
   intro,
   introParagraphs,
   crumbs,
+  breadcrumbSchema = true,
 }: {
   eyebrow?: string;
   title: string;
@@ -17,12 +18,14 @@ export default function PageHero({
   /** Multiple short paragraphs. Takes priority over `intro` when set. */
   introParagraphs?: string[];
   crumbs: Crumb[];
+  /** Set false when the page emits its own BreadcrumbList JSON-LD. */
+  breadcrumbSchema?: boolean;
 }) {
   const paragraphs = introParagraphs?.length ? introParagraphs : intro ? [intro] : [];
   return (
     <section className="border-b border-brand-100 bg-brand-50">
       <div className="container mx-auto py-8 sm:py-12">
-        <Breadcrumbs items={crumbs} />
+        <Breadcrumbs items={crumbs} schema={breadcrumbSchema} />
         <div className="mt-5 max-w-3xl">
           {eyebrow && <p className="eyebrow mb-2">{eyebrow}</p>}
           <h1 className="text-3xl sm:text-4xl lg:text-[2.7rem]">{title}</h1>

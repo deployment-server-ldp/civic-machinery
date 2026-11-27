@@ -8,6 +8,8 @@ import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import Markdown from "@/components/Markdown";
 import { articleSchema } from "@/lib/schema";
+import { blogPostSchemas } from "@/lib/blog-schemas";
+import { siteConfig } from "@/lib/site";
 import { blogPosts, getPost } from "@/lib/blog";
 
 // Only the posts we generate are valid; anything else 404s.
@@ -56,12 +58,22 @@ export default function BlogPostPage({
 
   const path = `/blog/${post.slug}`;
   const others = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  // A post with its own @graph (lib/blog-schemas.ts) replaces the default
+  // Article and BreadcrumbList schema.
+  const customSchema = blogPostSchemas[post.slug];
 
   return (
     <>
-      <JsonLd data={articleSchema(post, path, post.featuredImage || "/og-default.png")} />
+      <JsonLd
+        data={
+          customSchema
+            ? customSchema(post, `${siteConfig.url}${path}/`)
+            : articleSchema(post, path, post.featuredImage || "/og-default.png")
+        }
+      />
 
       <PageHero
+        breadcrumbSchema={!customSchema}
         eyebrow="Blog"
         title={post.title}
         crumbs={[
